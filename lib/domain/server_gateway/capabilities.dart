@@ -169,6 +169,11 @@ class ServerCapabilities {
   final bool clientDiagnostics;
   final bool gitInit;
   final bool providerRuntimeRefresh;
+
+  /// The server accepts provider entries written into its configuration
+  /// (OpenCode 2's config patch), so a custom API endpoint can be added
+  /// from the providers page ([CustomProviderGateway]).
+  final bool customProviders;
   final bool configuredProviderFallback;
   final bool globalEventStream;
   final bool worktreeReset;
@@ -290,6 +295,7 @@ class ServerCapabilities {
     this.clientDiagnostics = true,
     this.gitInit = true,
     this.providerRuntimeRefresh = true,
+    this.customProviders = false,
     this.configuredProviderFallback = true,
     this.globalEventStream = true,
     this.worktreeReset = true,
@@ -380,6 +386,7 @@ class ServerCapabilities {
         clientDiagnostics: clientDiagnostics,
         gitInit: gitInit,
         providerRuntimeRefresh: providerRuntimeRefresh,
+        customProviders: customProviders,
         configuredProviderFallback: configuredProviderFallback,
         globalEventStream: globalEventStream,
         worktreeReset: worktreeReset,

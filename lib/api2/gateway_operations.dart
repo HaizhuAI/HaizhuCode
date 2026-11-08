@@ -61,6 +61,7 @@ class Api2OperationsGateway extends _Api2Core
         IntegrationCredentialGateway,
         IntegrationCommandGateway,
         IntegrationAuthRecoveryGateway,
+        CustomProviderGateway,
         UsageStatisticsGateway,
         HistoryMigrationGateway {
   Api2OperationsGateway({required super.client});
@@ -81,6 +82,7 @@ abstract class _Api2Core extends ProductRepository
         IntegrationCredentialGateway,
         IntegrationCommandGateway,
         IntegrationAuthRecoveryGateway,
+        CustomProviderGateway,
         UsageStatisticsGateway,
         HistoryMigrationGateway {
   final Api2Client client;

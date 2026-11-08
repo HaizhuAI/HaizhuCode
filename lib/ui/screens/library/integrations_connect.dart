@@ -586,4 +586,57 @@ extension _IntegrationsConnect on _IntegrationsScreenState {
       if (mounted) _set(() => _busy.remove(id));
     }
   }
+
+  /// "Add a custom API": the form writes `provider.<id>` into the server's
+  /// configuration; the controller reloads the location so a fresh
+  /// instance loads it, then the lists read the truth again.
+  Future<void> _openCustomProvider() async {
+    final l10n = _l10n;
+    final saved = await showKitSheet<String>(
+      context,
+      title: l10n.customProviderSheetTitle,
+      icon: AppIconography.add,
+      height: KitSheetHeight.full,
+      sheetKey: const ValueKey('custom-provider-sheet'),
+      body: (_) => _CustomProviderSheet(controller: widget.controller),
+    );
+    if (!mounted || saved == null) return;
+    _say(l10n.customProviderSaved(saved));
+    await _load();
+  }
+
+  /// Removing a provider the configuration file declared: no sign-in was
+  /// ever made from the app, so the confirm names the entry's deletion.
+  Future<void> _removeProviderConfig(PresentedIntegration presented) async {
+    final l10n = _l10n;
+    final integration = presented.integration;
+    if (_busy.contains(integration.id)) return;
+    var failed = false;
+    final confirmed = await showKitConfirm(
+      context,
+      icon: AppIconography.delete,
+      title: l10n.customProviderRemoveTitle(presented.name),
+      body: l10n.customProviderRemoveBody(presented.name),
+      confirmLabel: l10n.customProviderRemove(presented.name),
+      kind: KitConfirmKind.destructive,
+      confirmKey: const ValueKey('confirm-provider-config-remove'),
+      action: () async {
+        try {
+          await widget.controller.removeCustomProvider(
+            integration.id,
+            locationRevision: widget.controller.locationRevision,
+          );
+        } catch (_) {
+          failed = true;
+        }
+      },
+    );
+    if (!confirmed || !mounted) return;
+    if (failed) {
+      _say(l10n.customProviderRemoveFailed, tone: AppStatusTone.failure);
+      return;
+    }
+    _say(l10n.customProviderRemoved(presented.name));
+    await _load();
+  }
 }

@@ -78,10 +78,6 @@
     "e7SettingsCurrentServer": {
       "ar version \"{version}\"": 1
     },
-    "e7SettingsHealthVersion": {
-      "ar version \"{version}\"": 1,
-      "en version \"{version}\"": 1
-    },
     "e7SettingsInstallVersion": {
       "ar version \"{version}\"": 1,
       "en version \"{version}\"": 1
@@ -252,9 +248,6 @@
     }
   },
   "G28": {
-    "activityUnknownStatusDetail": {
-      "noun sentence activity": 1
-    },
     "agentAccountConnected": {
       "noun sentence host": 1
     },
@@ -287,12 +280,6 @@
     },
     "agentAccountUsageUnavailable": {
       "noun sentence host": 1
-    },
-    "approvalsUiEverythingTitle": {
-      "title over four words": 1
-    },
-    "approvalsUiRecordTitle": {
-      "title over four words": 1
     },
     "attentionTitle": {
       "noun label attention": 1
@@ -583,9 +570,6 @@
     "phoneSetupNotificationTitle": {
       "title over four words": 1
     },
-    "phoneSetupOpenWelcomeContinue": {
-      "bare Continue": 1
-    },
     "phoneSetupProgressTitle": {
       "title over four words": 1
     },
@@ -642,9 +626,6 @@
     "teamDiscoverBatteryTitle": {
       "title over four words": 1
     },
-    "teamDiscoverComputerChoiceTitle": {
-      "title over four words": 1
-    },
     "teamDiscoverEntryTitle": {
       "title over four words": 1
     },
@@ -677,9 +658,6 @@
     },
     "teamUiControlStopConfirmBody": {
       "noun sentence session": 1
-    },
-    "teamUiHomeNeedsYouFallbackTitle": {
-      "title over four words": 1
     },
     "teamUiHostGuideTitle": {
       "title over four words": 1
@@ -740,9 +718,6 @@
     },
     "usageEmpty": {
       "noun sentence activity": 1
-    },
-    "workNotAnsweringListTitle": {
-      "title over four words": 1
     },
     "workServerRestartTitle": {
       "title over four words": 1

@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:opencode_mobile/builtin/agents/agent_scripts.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
+import 'package:haizhucode/builtin/agents/agent_scripts.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
 
 void main(List<String> args) {
   if (args.length != 2 || !RegExp(r'^[A-Za-z0-9_-]{1,80}$').hasMatch(args[0])) {

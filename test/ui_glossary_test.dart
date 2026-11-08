@@ -697,8 +697,13 @@ List<_ConfirmSite> _confirmSites() {
     for (final file in Directory('lib').listSync(recursive: true))
       if (file is File &&
           file.path.endsWith('.dart') &&
+          !file.path.startsWith(
+            'lib${Platform.pathSeparator}l10n${Platform.pathSeparator}',
+          ) &&
           !file.path.startsWith('lib/l10n/'))
-        file.path: _blankComments(file.readAsStringSync()),
+        file.path.replaceAll('\\', '/'): _blankComments(
+          file.readAsStringSync(),
+        ),
   };
   const kitSlots = (
     title: (name: 'title', index: null),
@@ -1137,9 +1142,6 @@ const _allowedProductKeys = <String>{
   // says which program a group, a row or a Stop is about.
   'runningPhoneGroup',
   'runningPhoneName',
-  // The app's own name, not a backend label.
-  'appTitle',
-  'aboutBuildVersion',
 };
 
 /// Values no button may be (COPY-8).

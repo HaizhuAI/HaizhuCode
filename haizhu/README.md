@@ -58,6 +58,15 @@ hz seed          # 重新 seed 所有 home
 hz mcp doctor    # MCP 依赖检查
 hz mcp install rea   # vendor 化安全平台
 hz mcp sync      # 把 registry 中 enabled 的 MCP 同步进所有 agent 配置
+hz provider add deepseek https://api.deepseek.com/v1 deepseek-chat \
+  --key $DEEPSEEK_KEY --default   # 自定义 OpenAI/Anthropic 兼容 provider
+hz provider list                 # 列出 provider.<id> 条目
+hz provider remove deepseek      # 删除条目（连带清理指向它的默认模型）
 ```
+
+App 侧 Providers 页的 "Add a custom API" 走同一条数据面（PATCH
+`/experimental/config` 写 `provider.<id>`），保存后重建实例加载配置。
+`--npm` 默认 `@ai-sdk/openai-compatible`，Anthropic 兼容端点传
+`@ai-sdk/anthropic`。key 只进配置文件，任何输出不回显。
 
 仅在你拥有或已获书面授权的环境使用渗透/红队能力。

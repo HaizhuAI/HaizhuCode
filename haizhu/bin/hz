@@ -372,6 +372,84 @@ TXT
   esac
 }
 
+# ---- provider --------------------------------------------------------------
+# 自定义 provider 写进 OC2 的 opencode.json（与 App 的 PATCH /experimental/config
+# 同一数据面）。key 只进配置文件，不回显；remove 走置 null 的合并语义。
+OC2_JSON="${OC2_CONFIG:-/root/.oc-opencode2/config/opencode}/opencode.json"
+provider_list() {
+  [ -f "$OC2_JSON" ] || die "no $OC2_JSON (seed first)"
+  command -v node >/dev/null 2>&1 || die "provider needs node"
+  HZ_JSON="$OC2_JSON" node -e '
+    const fs = require("fs");
+    const j = JSON.parse(fs.readFileSync(process.env.HZ_JSON, "utf8"));
+    const p = j.provider || {};
+    const ids = Object.keys(p);
+    if (!ids.length) { console.log("(no custom providers)"); process.exit(0); }
+    for (const id of ids) {
+      const v = p[id] || {}, o = v.options || {};
+      const models = Object.keys(v.models || {}).join(", ");
+      console.log(`${id}\t${o.baseURL || "-"}\t${v.name || "-"}\tmodels: ${models || "-"}`);
+    }
+  '
+}
+# provider add <id> <baseURL> <model...> [--name N] [--key K] [--npm P] [--default]
+provider_add() {
+  [ $# -ge 3 ] || die "provider add <id> <baseURL> <model...> [--name N] [--key K] [--npm P] [--default]"
+  command -v node >/dev/null 2>&1 || die "provider needs node"
+  local id="$1" url="$2"; shift 2
+  local name="" key="" npm="@ai-sdk/openai-compatible" def="" models=""
+  while [ $# -gt 0 ]; do
+    case "$1" in
+      --name) name="$2"; shift 2 ;;
+      --key) key="$2"; shift 2 ;;
+      --npm) npm="$2"; shift 2 ;;
+      --default) def="1"; shift ;;
+      *) models="$models $1"; shift ;;
+    esac
+  done
+  [ -n "$models" ] || die "provider add: at least one model id"
+  [ -d "${OC2_JSON%/*}" ] || mkdir -p "${OC2_JSON%/*}"
+  HZ_JSON="$OC2_JSON" HZ_ID="$id" HZ_URL="$url" HZ_NAME="$name" HZ_KEY="$key" \
+    HZ_NPM="$npm" HZ_MODELS="$models" HZ_DEF="$def" node -e '
+    const fs = require("fs"), e = process.env;
+    const f = e.HZ_JSON;
+    let j = {};
+    try { j = JSON.parse(fs.readFileSync(f, "utf8")); } catch (x) {}
+    const models = e.HZ_MODELS.trim().split(/\s+/);
+    const entry = {
+      npm: e.HZ_NPM,
+      options: {
+        baseURL: e.HZ_URL,
+        apiKey: e.HZ_KEY.trim() === "" ? "none" : e.HZ_KEY.trim(),
+      },
+      models: Object.fromEntries(models.map(m => [m, {}])),
+    };
+    if (e.HZ_NAME.trim() !== "") entry.name = e.HZ_NAME.trim();
+    j.provider = j.provider || {};
+    j.provider[e.HZ_ID] = entry;
+    if (e.HZ_DEF === "1") j.model = `${e.HZ_ID}/${models[0]}`;
+    fs.writeFileSync(f, JSON.stringify(j, null, 2) + "\n");
+    console.log("hz: provider", e.HZ_ID, "->", f);
+    if (e.HZ_DEF === "1") console.log("hz: default model ->", j.model);
+    console.log("hz: restart the OpenCode instance to load it");
+  '
+}
+provider_remove() {
+  local id="${1:?provider remove <id>}"
+  command -v node >/dev/null 2>&1 || die "provider needs node"
+  [ -f "$OC2_JSON" ] || die "no $OC2_JSON"
+  HZ_JSON="$OC2_JSON" HZ_ID="$id" node -e '
+    const fs = require("fs"), e = process.env;
+    const f = e.HZ_JSON;
+    const j = JSON.parse(fs.readFileSync(f, "utf8"));
+    if (!j.provider || !(e.HZ_ID in j.provider)) { console.error("hz: no such provider"); process.exit(1); }
+    delete j.provider[e.HZ_ID];
+    if (typeof j.model === "string" && j.model.startsWith(e.HZ_ID + "/")) delete j.model;
+    fs.writeFileSync(f, JSON.stringify(j, null, 2) + "\n");
+    console.log("hz: provider", e.HZ_ID, "removed");
+  '
+}
+
 verb="${1:-help}"; shift || true
 case "$verb" in
   seed) [ $# -gt 0 ] && { for h in "$@"; do seed_home "$h"; done; seed_oc2; } || seed_all ;;
@@ -405,5 +483,12 @@ case "$verb" in
       *) die "mcp: list|run|install|enable|disable|sync|doctor" ;;
     esac ;;
   red) red "$@" ;;
-  version|*) echo "haizhu $VERSION — hz seed|status|kernel|agents|skills|prompts|mcp|red" ;;
+  provider)
+    case "${1:-list}" in
+      list) provider_list ;;
+      add) shift; provider_add "$@" ;;
+      remove|rm) shift; provider_remove "$@" ;;
+      *) die "provider: list|add|remove" ;;
+    esac ;;
+  version|*) echo "haizhu $VERSION — hz seed|status|kernel|agents|skills|prompts|mcp|provider|red" ;;
 esac

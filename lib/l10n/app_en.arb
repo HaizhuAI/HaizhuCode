@@ -43899,5 +43899,154 @@
         "type": "String"
       }
     }
+  },
+  "customProviderAddTitle": "Add a custom API",
+  "@customProviderAddTitle": {
+    "description": "Providers page: row that opens the custom provider form"
+  },
+  "customProviderAddHint": "Point the server at your own OpenAI- or Anthropic-compatible endpoint",
+  "@customProviderAddHint": {
+    "description": "Providers page: supporting line under the custom API row"
+  },
+  "customProviderSheetTitle": "Custom API provider",
+  "@customProviderSheetTitle": {
+    "description": "Custom provider form: sheet title"
+  },
+  "customProviderSheetIntro": "The server saves this endpoint in its configuration and serves its models in the picker. Saving an existing ID replaces it, key included.",
+  "@customProviderSheetIntro": {
+    "description": "Custom provider form: intro line"
+  },
+  "customProviderNameField": "Display name",
+  "@customProviderNameField": {
+    "description": "Custom provider form: display name field label"
+  },
+  "customProviderIdField": "Provider ID",
+  "@customProviderIdField": {
+    "description": "Custom provider form: provider id field label"
+  },
+  "customProviderIdHelper": "Lowercase letters, digits and dashes; its models appear as provider/model.",
+  "@customProviderIdHelper": {
+    "description": "Custom provider form: provider id helper"
+  },
+  "customProviderBaseUrlField": "API base URL",
+  "@customProviderBaseUrlField": {
+    "description": "Custom provider form: base URL field label"
+  },
+  "customProviderKeyField": "API key",
+  "@customProviderKeyField": {
+    "description": "Custom provider form: API key field label"
+  },
+  "customProviderKeyHelper": "Written into the server's configuration and never shown again. Leave empty only for an endpoint that needs no key.",
+  "@customProviderKeyHelper": {
+    "description": "Custom provider form: API key helper"
+  },
+  "customProviderModelsField": "Models",
+  "@customProviderModelsField": {
+    "description": "Custom provider form: models field label"
+  },
+  "customProviderModelsHelper": "One model ID per line, such as gpt-4o or deepseek-chat.",
+  "@customProviderModelsHelper": {
+    "description": "Custom provider form: models helper"
+  },
+  "customProviderHeadersField": "Extra headers (optional)",
+  "@customProviderHeadersField": {
+    "description": "Custom provider form: headers field label"
+  },
+  "customProviderHeadersHelper": "One Header-Name: value per line.",
+  "@customProviderHeadersHelper": {
+    "description": "Custom provider form: headers helper"
+  },
+  "customProviderProtocolLabel": "Protocol",
+  "@customProviderProtocolLabel": {
+    "description": "Custom provider form: protocol choice label"
+  },
+  "customProviderProtocolOpenAI": "OpenAI-compatible",
+  "@customProviderProtocolOpenAI": {
+    "description": "Custom provider form: OpenAI-compatible protocol segment"
+  },
+  "customProviderProtocolAnthropic": "Anthropic-compatible",
+  "@customProviderProtocolAnthropic": {
+    "description": "Custom provider form: Anthropic-compatible protocol segment"
+  },
+  "customProviderSetDefault": "Make it the default model",
+  "@customProviderSetDefault": {
+    "description": "Custom provider form: default-model switch title"
+  },
+  "customProviderSetDefaultHint": "New conversations use this provider's first listed model.",
+  "@customProviderSetDefaultHint": {
+    "description": "Custom provider form: default-model switch supporting line"
+  },
+  "customProviderSave": "Save provider",
+  "@customProviderSave": {
+    "description": "Custom provider form: save button"
+  },
+  "customProviderSaved": "{name} added — its models are in the model picker.",
+  "@customProviderSaved": {
+    "description": "Providers page: notice after a custom provider was saved",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "customProviderSaveFailed": "Could not save the provider. Check the fields and try again.",
+  "@customProviderSaveFailed": {
+    "description": "Custom provider form: save failure"
+  },
+  "customProviderRemoveTitle": "Remove {name}?",
+  "@customProviderRemoveTitle": {
+    "description": "Providers page: confirm title for removing a config-declared provider",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "customProviderRemove": "Remove {name}",
+  "@customProviderRemove": {
+    "description": "Providers page: remove a config-declared provider",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "customProviderRemoveBody": "Remove {name} from the server's configuration? Its models disappear from the picker.",
+  "@customProviderRemoveBody": {
+    "description": "Providers page: body of the remove-provider confirmation",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "customProviderRemoved": "{name} removed",
+  "@customProviderRemoved": {
+    "description": "Providers page: notice after a config provider was removed",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "customProviderRemoveFailed": "Could not remove the provider. Refresh and try again.",
+  "@customProviderRemoveFailed": {
+    "description": "Providers page: remove failure"
+  },
+  "customProviderErrorId": "Start with a letter or digit; lowercase letters, digits, dashes and underscores only.",
+  "@customProviderErrorId": {
+    "description": "Custom provider form: invalid provider id"
+  },
+  "customProviderErrorUrl": "Enter an http or https URL.",
+  "@customProviderErrorUrl": {
+    "description": "Custom provider form: invalid base URL"
+  },
+  "customProviderErrorModels": "Enter at least one model ID.",
+  "@customProviderErrorModels": {
+    "description": "Custom provider form: missing model IDs"
+  },
+  "customProviderErrorHeaders": "Write each header as Header-Name: value.",
+  "@customProviderErrorHeaders": {
+    "description": "Custom provider form: malformed header line"
   }
 }

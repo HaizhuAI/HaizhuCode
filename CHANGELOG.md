@@ -2,6 +2,16 @@
 
 This project is in public alpha. Only the newest preview is supported.
 
+## 1.0.0+1 — 2026-11-08
+
+HaizhuCode: a community fork of OpenCode Mobile embedding the Haizhu
+security-agent payload — kernel prompt, agents, skill packs and an MCP
+registry seeded into the phone's Linux on setup — plus custom API provider
+import on the Providers page. Full notes:
+[docs/releases/v1.0.0+1.md](docs/releases/v1.0.0+1.md).
+- New: Haizhu setup component installs `/opt/haizhu` and seeds every agent home.
+- New: import custom OpenAI/Anthropic-compatible providers (app and `hz provider`).
+
 ## 2.1.1+59 — 2026-11-04
 
 AI Team on Android 16 and newer (#111, #112): the safety check passes, OpenCode

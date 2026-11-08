@@ -35812,4 +35812,117 @@ class AppLocalizationsJa extends AppLocalizations {
   String phoneTeamProofOther(String check) {
     return 'The safety check stopped at “$check”.';
   }
+
+  @override
+  String get customProviderAddTitle => 'Add a custom API';
+
+  @override
+  String get customProviderAddHint =>
+      'Point the server at your own OpenAI- or Anthropic-compatible endpoint';
+
+  @override
+  String get customProviderSheetTitle => 'Custom API provider';
+
+  @override
+  String get customProviderSheetIntro =>
+      'The server saves this endpoint in its configuration and serves its models in the picker. Saving an existing ID replaces it, key included.';
+
+  @override
+  String get customProviderNameField => 'Display name';
+
+  @override
+  String get customProviderIdField => 'Provider ID';
+
+  @override
+  String get customProviderIdHelper =>
+      'Lowercase letters, digits and dashes; its models appear as provider/model.';
+
+  @override
+  String get customProviderBaseUrlField => 'API base URL';
+
+  @override
+  String get customProviderKeyField => 'API key';
+
+  @override
+  String get customProviderKeyHelper =>
+      'Written into the server\'s configuration and never shown again. Leave empty only for an endpoint that needs no key.';
+
+  @override
+  String get customProviderModelsField => 'Models';
+
+  @override
+  String get customProviderModelsHelper =>
+      'One model ID per line, such as gpt-4o or deepseek-chat.';
+
+  @override
+  String get customProviderHeadersField => 'Extra headers (optional)';
+
+  @override
+  String get customProviderHeadersHelper => 'One Header-Name: value per line.';
+
+  @override
+  String get customProviderProtocolLabel => 'Protocol';
+
+  @override
+  String get customProviderProtocolOpenAI => 'OpenAI-compatible';
+
+  @override
+  String get customProviderProtocolAnthropic => 'Anthropic-compatible';
+
+  @override
+  String get customProviderSetDefault => 'Make it the default model';
+
+  @override
+  String get customProviderSetDefaultHint =>
+      'New conversations use this provider\'s first listed model.';
+
+  @override
+  String get customProviderSave => 'Save provider';
+
+  @override
+  String customProviderSaved(String name) {
+    return '$name added — its models are in the model picker.';
+  }
+
+  @override
+  String get customProviderSaveFailed =>
+      'Could not save the provider. Check the fields and try again.';
+
+  @override
+  String customProviderRemoveTitle(String name) {
+    return 'Remove $name?';
+  }
+
+  @override
+  String customProviderRemove(String name) {
+    return 'Remove $name';
+  }
+
+  @override
+  String customProviderRemoveBody(String name) {
+    return 'Remove $name from the server\'s configuration? Its models disappear from the picker.';
+  }
+
+  @override
+  String customProviderRemoved(String name) {
+    return '$name removed';
+  }
+
+  @override
+  String get customProviderRemoveFailed =>
+      'Could not remove the provider. Refresh and try again.';
+
+  @override
+  String get customProviderErrorId =>
+      'Start with a letter or digit; lowercase letters, digits, dashes and underscores only.';
+
+  @override
+  String get customProviderErrorUrl => 'Enter an http or https URL.';
+
+  @override
+  String get customProviderErrorModels => 'Enter at least one model ID.';
+
+  @override
+  String get customProviderErrorHeaders =>
+      'Write each header as Header-Name: value.';
 }

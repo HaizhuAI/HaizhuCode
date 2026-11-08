@@ -77,6 +77,9 @@ const ServerCapabilities api2ServerCapabilities = ServerCapabilities(
   mcpRuntimeRemovals: true,
   integrationCredentials: true,
   integrationCommandAuth: true,
+  // `PATCH /experimental/config` writes provider entries into the server's
+  // config file; the instance reload picks them up (protocol notes §config).
+  customProviders: true,
   pluginInventory: true,
   webSearch: true,
   sessionShare: false,

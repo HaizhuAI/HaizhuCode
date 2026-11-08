@@ -35,7 +35,7 @@ def main() -> int:
         "",
         "/// The HaizhuCode payload: every file under haizhu/, base64-encoded,",
         "/// keyed by its path relative to the payload root.",
-        "/// [HaizhuSetupComponent] decodes each entry into /opt/haizhu/<path>.",
+        "/// [HaizhuSetupComponent] decodes each entry into `/opt/haizhu/<path>`.",
         "abstract final class HaizhuBundle {",
         f"  static const version = '{(SRC / 'VERSION').read_text().strip()}';",
         f"  static const sha256 = '{bundle_sha}';",
@@ -46,7 +46,9 @@ def main() -> int:
     for rel, b64 in entries:
         escaped = rel.replace("\\", "\\\\").replace("'", "\\'")
         lines.append(f"    '{escaped}':")
-        chunks = [b64[i : i + 76] for i in range(0, len(b64), 76)]
+        # The ratchet caps every lib file at 1500 lines; 4k-char chunks keep
+        # the generated map small while staying diffable in review.
+        chunks = [b64[i : i + 4000] for i in range(0, len(b64), 4000)]
         if len(chunks) == 1:
             lines.append(f"      '{chunks[0]}',")
         else:
@@ -54,7 +56,7 @@ def main() -> int:
                 sep = "," if i == len(chunks) - 1 else ""
                 lines.append(f"      '{chunk}'{sep}")
     lines += ["  };", "}", ""]
-    OUT.write_text("\n".join(lines))
+    OUT.write_text("\n".join(lines), encoding="utf-8", newline="\n")
     print(f"{len(entries)} files, {OUT.stat().st_size} bytes -> {OUT}")
     return 0
 

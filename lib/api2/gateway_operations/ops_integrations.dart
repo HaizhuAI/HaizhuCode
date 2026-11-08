@@ -478,4 +478,47 @@ mixin _Api2IntegrationOps on _Api2Core {
       throw ProductException(message);
     }
   }
+
+  /// `PATCH /experimental/config` merge-patches the server's config file;
+  /// a `null` value deletes the key (the same contract
+  /// [_Api2DevOps.selectTerminalShell] relies on to clear `shell`). The
+  /// caller reloads the location afterwards — the running instance picks
+  /// up the file only on a fresh instance.
+  Future<void> _patchProviderEntry(String providerID, Object? value) =>
+      _transport.patchJson(
+        '/experimental/config',
+        query: _loc(),
+        body: {
+          'provider': {providerID: value},
+        },
+      );
+
+  @override
+  Future<void> upsertCustomProvider(CustomProviderSpec spec) =>
+      _guard('Could not save the provider', () async {
+        // Validation lives in toConfigJson so a bad spec never reaches the
+        // wire. The apiKey inside the patch body is never logged: _guard
+        // wraps errors without echoing request data.
+        await _patchProviderEntry(spec.id, spec.toConfigJson());
+      });
+
+  @override
+  Future<void> removeCustomProvider(String providerID) =>
+      _guard('Could not remove the provider', () async {
+        final id = providerID.trim();
+        if (id.isEmpty) {
+          throw const ProductException('Enter a provider id');
+        }
+        await _patchProviderEntry(id, null);
+      });
+
+  @override
+  Future<void> setServerDefaultModel(String providerID, String modelID) =>
+      _guard('Could not set the default model', () async {
+        await _transport.patchJson(
+          '/experimental/config',
+          query: _loc(),
+          body: {'model': '${providerID.trim()}/${modelID.trim()}'},
+        );
+      });
 }

@@ -56411,6 +56411,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'The safety check stopped at “{check}”.'**
   String phoneTeamProofOther(String check);
+
+  /// Providers page: row that opens the custom provider form
+  ///
+  /// In en, this message translates to:
+  /// **'Add a custom API'**
+  String get customProviderAddTitle;
+
+  /// Providers page: supporting line under the custom API row
+  ///
+  /// In en, this message translates to:
+  /// **'Point the server at your own OpenAI- or Anthropic-compatible endpoint'**
+  String get customProviderAddHint;
+
+  /// Custom provider form: sheet title
+  ///
+  /// In en, this message translates to:
+  /// **'Custom API provider'**
+  String get customProviderSheetTitle;
+
+  /// Custom provider form: intro line
+  ///
+  /// In en, this message translates to:
+  /// **'The server saves this endpoint in its configuration and serves its models in the picker. Saving an existing ID replaces it, key included.'**
+  String get customProviderSheetIntro;
+
+  /// Custom provider form: display name field label
+  ///
+  /// In en, this message translates to:
+  /// **'Display name'**
+  String get customProviderNameField;
+
+  /// Custom provider form: provider id field label
+  ///
+  /// In en, this message translates to:
+  /// **'Provider ID'**
+  String get customProviderIdField;
+
+  /// Custom provider form: provider id helper
+  ///
+  /// In en, this message translates to:
+  /// **'Lowercase letters, digits and dashes; its models appear as provider/model.'**
+  String get customProviderIdHelper;
+
+  /// Custom provider form: base URL field label
+  ///
+  /// In en, this message translates to:
+  /// **'API base URL'**
+  String get customProviderBaseUrlField;
+
+  /// Custom provider form: API key field label
+  ///
+  /// In en, this message translates to:
+  /// **'API key'**
+  String get customProviderKeyField;
+
+  /// Custom provider form: API key helper
+  ///
+  /// In en, this message translates to:
+  /// **'Written into the server\'s configuration and never shown again. Leave empty only for an endpoint that needs no key.'**
+  String get customProviderKeyHelper;
+
+  /// Custom provider form: models field label
+  ///
+  /// In en, this message translates to:
+  /// **'Models'**
+  String get customProviderModelsField;
+
+  /// Custom provider form: models helper
+  ///
+  /// In en, this message translates to:
+  /// **'One model ID per line, such as gpt-4o or deepseek-chat.'**
+  String get customProviderModelsHelper;
+
+  /// Custom provider form: headers field label
+  ///
+  /// In en, this message translates to:
+  /// **'Extra headers (optional)'**
+  String get customProviderHeadersField;
+
+  /// Custom provider form: headers helper
+  ///
+  /// In en, this message translates to:
+  /// **'One Header-Name: value per line.'**
+  String get customProviderHeadersHelper;
+
+  /// Custom provider form: protocol choice label
+  ///
+  /// In en, this message translates to:
+  /// **'Protocol'**
+  String get customProviderProtocolLabel;
+
+  /// Custom provider form: OpenAI-compatible protocol segment
+  ///
+  /// In en, this message translates to:
+  /// **'OpenAI-compatible'**
+  String get customProviderProtocolOpenAI;
+
+  /// Custom provider form: Anthropic-compatible protocol segment
+  ///
+  /// In en, this message translates to:
+  /// **'Anthropic-compatible'**
+  String get customProviderProtocolAnthropic;
+
+  /// Custom provider form: default-model switch title
+  ///
+  /// In en, this message translates to:
+  /// **'Make it the default model'**
+  String get customProviderSetDefault;
+
+  /// Custom provider form: default-model switch supporting line
+  ///
+  /// In en, this message translates to:
+  /// **'New conversations use this provider\'s first listed model.'**
+  String get customProviderSetDefaultHint;
+
+  /// Custom provider form: save button
+  ///
+  /// In en, this message translates to:
+  /// **'Save provider'**
+  String get customProviderSave;
+
+  /// Providers page: notice after a custom provider was saved
+  ///
+  /// In en, this message translates to:
+  /// **'{name} added — its models are in the model picker.'**
+  String customProviderSaved(String name);
+
+  /// Custom provider form: save failure
+  ///
+  /// In en, this message translates to:
+  /// **'Could not save the provider. Check the fields and try again.'**
+  String get customProviderSaveFailed;
+
+  /// Providers page: confirm title for removing a config-declared provider
+  ///
+  /// In en, this message translates to:
+  /// **'Remove {name}?'**
+  String customProviderRemoveTitle(String name);
+
+  /// Providers page: remove a config-declared provider
+  ///
+  /// In en, this message translates to:
+  /// **'Remove {name}'**
+  String customProviderRemove(String name);
+
+  /// Providers page: body of the remove-provider confirmation
+  ///
+  /// In en, this message translates to:
+  /// **'Remove {name} from the server\'s configuration? Its models disappear from the picker.'**
+  String customProviderRemoveBody(String name);
+
+  /// Providers page: notice after a config provider was removed
+  ///
+  /// In en, this message translates to:
+  /// **'{name} removed'**
+  String customProviderRemoved(String name);
+
+  /// Providers page: remove failure
+  ///
+  /// In en, this message translates to:
+  /// **'Could not remove the provider. Refresh and try again.'**
+  String get customProviderRemoveFailed;
+
+  /// Custom provider form: invalid provider id
+  ///
+  /// In en, this message translates to:
+  /// **'Start with a letter or digit; lowercase letters, digits, dashes and underscores only.'**
+  String get customProviderErrorId;
+
+  /// Custom provider form: invalid base URL
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an http or https URL.'**
+  String get customProviderErrorUrl;
+
+  /// Custom provider form: missing model IDs
+  ///
+  /// In en, this message translates to:
+  /// **'Enter at least one model ID.'**
+  String get customProviderErrorModels;
+
+  /// Custom provider form: malformed header line
+  ///
+  /// In en, this message translates to:
+  /// **'Write each header as Header-Name: value.'**
+  String get customProviderErrorHeaders;
 }
 
 class _AppLocalizationsDelegate

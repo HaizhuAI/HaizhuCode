@@ -2491,6 +2491,10 @@
   ],
   "notPages": [
     {
+      "file": "lib/ui/screens/library/custom_provider_sheet.dart",
+      "reason": "Part file of lib/ui/screens/library_screen.dart (same screen, same library): its elements are listed under that screen's ledger entries; no separate surface."
+    },
+    {
       "file": "lib/ui/screens/library/integrations_connect.dart",
       "reason": "Part file of lib/ui/screens/library_screen.dart (same screen, same library): its elements are listed under that screen's ledger entries; no separate surface."
     },

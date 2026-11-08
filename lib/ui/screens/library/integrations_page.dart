@@ -45,71 +45,84 @@ extension _IntegrationsPage on _IntegrationsScreenState {
                   ),
               ],
             ),
-      body: KitRefresh(
-        onRefresh: _load,
-        child: ListView(
-          physics: const AlwaysScrollableScrollPhysics(),
-          padding: EdgeInsetsDirectional.only(
-            bottom: KitScreen.endPadding(context),
+      body: Column(
+        children: [
+          // Pinned above the scroll region: an act's outcome stays visible
+          // however far the list is scrolled (a lazy ListView would drop
+          // the notice once it leaves the cache window).
+          if (notice != null)
+            Padding(
+              padding: rails.add(
+                EdgeInsetsDirectional.only(
+                  top: tokens.space2,
+                  bottom: tokens.space3,
+                ),
+              ),
+              child: KitNotice(
+                key: const ValueKey('integrations-notice'),
+                message: notice.message,
+                tone: notice.tone,
+                icon: notice.tone == AppStatusTone.failure
+                    ? AppIconography.warning
+                    : AppIconography.checkCircle,
+                onDismiss: () => _set(() => _notice = null),
+                dismissLabel: l10n.workspaceDismissNotice,
+              ),
+            ),
+          Expanded(
+            child: KitRefresh(
+              onRefresh: _load,
+              child: ListView(
+                physics: const AlwaysScrollableScrollPhysics(),
+                padding: EdgeInsetsDirectional.only(
+                  bottom: KitScreen.endPadding(context),
+                ),
+                children: [
+                  if (!_catalogAvailable)
+                    Padding(
+                      padding: rails,
+                      // Codex and Paseo keep their providers and tools to
+                      // themselves: say so, and which servers can, instead
+                      // of a load error (P7.4, explain instead of vanish).
+                      child: KitCapabilityExplainer.state(
+                        key: const ValueKey('integrations-unavailable'),
+                        capability: 'flag:serverCatalog',
+                        serverName: widget.controller.profile?.name,
+                        source: 'integrations',
+                      ),
+                    )
+                  else ...[
+                    if (addInList)
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(
+                          start: tokens.gutter,
+                          end: tokens.gutter,
+                          top: tokens.space3,
+                        ),
+                        child: Align(
+                          alignment: AlignmentDirectional.centerStart,
+                          child: KitButton.secondary(
+                            key: const ValueKey('add-mcp-server'),
+                            label: l10n.mcpAdd,
+                            icon: AppIconography.add,
+                            expand: false,
+                            onPressed: _openMcpAdd,
+                          ),
+                        ),
+                      ),
+                    // Providers lead: a new user needs a model before
+                    // anything else.
+                    if (_showProviders) ..._providerSection(context),
+                    if (_showMcp) ...[
+                      ..._mcpSection(context),
+                      ..._resourceSection(context),
+                    ],
+                  ],
+                ],
+              ),
+            ),
           ),
-          children: [
-            if (!_catalogAvailable)
-              Padding(
-                padding: rails,
-                // Codex and Paseo keep their providers and tools to
-                // themselves: say so, and which servers can, instead of a
-                // load error (P7.4, explain instead of vanish).
-                child: KitCapabilityExplainer.state(
-                  key: const ValueKey('integrations-unavailable'),
-                  capability: 'flag:serverCatalog',
-                  serverName: widget.controller.profile?.name,
-                  source: 'integrations',
-                ),
-              )
-            else ...[
-              if (addInList)
-                Padding(
-                  padding: EdgeInsetsDirectional.only(
-                    start: tokens.gutter,
-                    end: tokens.gutter,
-                    top: tokens.space3,
-                  ),
-                  child: Align(
-                    alignment: AlignmentDirectional.centerStart,
-                    child: KitButton.secondary(
-                      key: const ValueKey('add-mcp-server'),
-                      label: l10n.mcpAdd,
-                      icon: AppIconography.add,
-                      expand: false,
-                      onPressed: _openMcpAdd,
-                    ),
-                  ),
-                ),
-              if (notice != null)
-                Padding(
-                  padding: rails.add(
-                    EdgeInsetsDirectional.only(bottom: tokens.space3),
-                  ),
-                  child: KitNotice(
-                    key: const ValueKey('integrations-notice'),
-                    message: notice.message,
-                    tone: notice.tone,
-                    icon: notice.tone == AppStatusTone.failure
-                        ? AppIconography.warning
-                        : AppIconography.checkCircle,
-                    onDismiss: () => _set(() => _notice = null),
-                    dismissLabel: l10n.workspaceDismissNotice,
-                  ),
-                ),
-              // Providers lead: a new user needs a model before anything else.
-              if (_showProviders) ..._providerSection(context),
-              if (_showMcp) ...[
-                ..._mcpSection(context),
-                ..._resourceSection(context),
-              ],
-            ],
-          ],
-        ),
+        ],
       ),
     );
   }
@@ -294,6 +307,22 @@ extension _IntegrationsPage on _IntegrationsScreenState {
                     presented.integration,
                     onlyCommand: true,
                   ),
+                  customProvidersSupported:
+                      widget.controller.capabilities.customProviders,
+                  onRemoveConfig: () =>
+                      unawaited(_removeProviderConfig(presented)),
+                ),
+              // A provider the server does not ship: write its entry into
+              // the server's configuration instead of a sign-in.
+              if (widget.controller.capabilities.customProviders)
+                KitRow(
+                  key: const ValueKey('add-custom-provider'),
+                  leading: KitRow.icon(context, AppIconography.add),
+                  title: l10n.customProviderAddTitle,
+                  supporting: TextSpan(text: l10n.customProviderAddHint),
+                  supportingMaxLines: 2,
+                  trailing: const KitChevron(),
+                  onTap: () => unawaited(_openCustomProvider()),
                 ),
             ],
           ),

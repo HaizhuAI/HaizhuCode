@@ -34004,4 +34004,109 @@ class AppLocalizationsZh extends AppLocalizations {
   String phoneTeamProofOther(String check) {
     return 'The safety check stopped at “$check”.';
   }
+
+  @override
+  String get customProviderAddTitle => '添加自定义 API';
+
+  @override
+  String get customProviderAddHint => '将服务器指向你自己的 OpenAI 或 Anthropic 兼容端点';
+
+  @override
+  String get customProviderSheetTitle => '自定义 API 供应商';
+
+  @override
+  String get customProviderSheetIntro =>
+      '服务器会把该端点写入配置，模型随即出现在选择器中。使用已有 ID 保存会整体替换该供应商（包括密钥）。';
+
+  @override
+  String get customProviderNameField => '显示名称';
+
+  @override
+  String get customProviderIdField => '供应商 ID';
+
+  @override
+  String get customProviderIdHelper => '小写字母、数字与连字符；模型将以 供应商/模型 形式出现。';
+
+  @override
+  String get customProviderBaseUrlField => 'API 基础地址';
+
+  @override
+  String get customProviderKeyField => 'API 密钥';
+
+  @override
+  String get customProviderKeyHelper => '写入服务器配置后不再显示。仅当端点无需密钥时可留空。';
+
+  @override
+  String get customProviderModelsField => '模型';
+
+  @override
+  String get customProviderModelsHelper =>
+      '每行一个模型 ID，例如 gpt-4o 或 deepseek-chat。';
+
+  @override
+  String get customProviderHeadersField => '额外请求头（可选）';
+
+  @override
+  String get customProviderHeadersHelper => '每行一个 Header-Name: 值。';
+
+  @override
+  String get customProviderProtocolLabel => '协议';
+
+  @override
+  String get customProviderProtocolOpenAI => 'OpenAI 兼容';
+
+  @override
+  String get customProviderProtocolAnthropic => 'Anthropic 兼容';
+
+  @override
+  String get customProviderSetDefault => '设为默认模型';
+
+  @override
+  String get customProviderSetDefaultHint => '新对话将使用该供应商列表中的第一个模型。';
+
+  @override
+  String get customProviderSave => '保存供应商';
+
+  @override
+  String customProviderSaved(String name) {
+    return '已添加 $name——模型已进入选择器。';
+  }
+
+  @override
+  String get customProviderSaveFailed => '保存供应商失败。请检查字段后重试。';
+
+  @override
+  String customProviderRemoveTitle(String name) {
+    return '移除 $name？';
+  }
+
+  @override
+  String customProviderRemove(String name) {
+    return '移除 $name';
+  }
+
+  @override
+  String customProviderRemoveBody(String name) {
+    return '从服务器配置中移除 $name？其模型将从选择器中消失。';
+  }
+
+  @override
+  String customProviderRemoved(String name) {
+    return '已移除 $name';
+  }
+
+  @override
+  String get customProviderRemoveFailed => '移除供应商失败。刷新后重试。';
+
+  @override
+  String get customProviderErrorId => '以字母或数字开头；仅限小写字母、数字、- 和 _。';
+
+  @override
+  String get customProviderErrorUrl => '请输入 http 或 https 地址。';
+
+  @override
+  String get customProviderErrorModels => '至少输入一个模型 ID。';
+
+  @override
+  String get customProviderErrorHeaders => '每个请求头按 Header-Name: 值 的格式书写。';
 }

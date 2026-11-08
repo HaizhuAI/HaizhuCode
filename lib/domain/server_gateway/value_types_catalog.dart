@@ -204,6 +204,105 @@ class IntegrationMethodInfo {
   });
 }
 
+/// A provider the server does not know: the app writes its entry into
+/// `opencode.json` (`provider.<id>`) so the catalog starts serving its
+/// models. [apiKey] is write-only — the server never returns it and the
+/// app never asks for it back; leaving it null keeps the stored key.
+class CustomProviderSpec {
+  /// The `provider.<id>` key and the wire id the models hang under.
+  final String id;
+
+  /// Display name; empty falls back to [id] on the server.
+  final String name;
+
+  /// The endpoint the adapter calls (`options.baseURL` in the config).
+  final String baseURL;
+
+  /// The key stored in the provider's `options.apiKey`; never read back.
+  /// Null or blank writes the placeholder `'none'` — the OpenAI-compatible
+  /// adapter refuses an empty key, so an unauthenticated endpoint (a
+  /// loopback gateway) still needs a string. Replacing a provider always
+  /// rewrites its key, so the form asks for it again.
+  final String? apiKey;
+
+  /// Model wire ids this endpoint serves (`models.<id>` entries).
+  final List<String> models;
+
+  /// The AI SDK package that speaks to the endpoint (`npm` in the
+  /// config). Defaults to the OpenAI-compatible adapter.
+  final String npm;
+
+  /// Extra HTTP headers merged into `options.headers`.
+  final Map<String, String> headers;
+
+  const CustomProviderSpec({
+    required this.id,
+    required this.name,
+    required this.baseURL,
+    required this.models,
+    this.apiKey,
+    this.npm = openAICompatibleNpm,
+    this.headers = const {},
+  });
+
+  /// The adapter for endpoints that speak `/v1/chat/completions` (also
+  /// `/v1/responses` when the gateway supports it): OpenRouter, DeepSeek,
+  /// vLLM, LM Studio, and OpenAI-compatible gateways generally.
+  static const openAICompatibleNpm = '@ai-sdk/openai-compatible';
+
+  /// The adapter for endpoints that speak Anthropic's `/v1/messages`.
+  static const anthropicNpm = '@ai-sdk/anthropic';
+
+  static final _idPattern = RegExp(r'^[a-z0-9][a-z0-9-_]{0,62}$');
+  static final _modelPattern = RegExp(r'^[A-Za-z0-9._:/-]+$');
+
+  /// The `provider.<id>` config value the patch writes.
+  Map<String, Object?> toConfigJson() {
+    final providerID = id.trim();
+    if (!_idPattern.hasMatch(providerID)) {
+      throw const ProductException(
+        'Enter a provider id in lowercase letters, digits, dashes',
+      );
+    }
+    final uri = Uri.tryParse(baseURL.trim());
+    if (uri == null ||
+        !uri.hasAuthority ||
+        (uri.scheme != 'https' && uri.scheme != 'http')) {
+      throw const ProductException('Enter an HTTP or HTTPS API base URL');
+    }
+    final modelIDs = <String>{
+      for (final model in models)
+        if (model.trim().isNotEmpty) model.trim(),
+    };
+    if (modelIDs.isEmpty ||
+        modelIDs.any((model) => !_modelPattern.hasMatch(model))) {
+      throw const ProductException('Enter at least one valid model id');
+    }
+    for (final entry in headers.entries) {
+      if (entry.key.trim().isEmpty ||
+          entry.key.contains(RegExp(r'[\r\n=]')) ||
+          entry.value.contains(RegExp(r'[\r\n]'))) {
+        throw const ProductException(
+          'Enter a valid HTTP header name and value',
+        );
+      }
+    }
+    final key = apiKey;
+    return {
+      if (npm.trim().isNotEmpty) 'npm': npm.trim(),
+      if (name.trim().isNotEmpty) 'name': name.trim(),
+      'options': {
+        'baseURL': uri.toString(),
+        // The OpenAI-compatible adapter refuses an empty key; a loopback
+        // or unauthenticated endpoint still gets a placeholder string.
+        'apiKey': (key == null || key.trim().isEmpty) ? 'none' : key.trim(),
+        if (headers.isNotEmpty) 'headers': Map.of(headers),
+      },
+      'models': {for (final model in modelIDs) model: <String, Object?>{}},
+    };
+  }
+}
+
 class IntegrationAuthLaunch {
   final String attemptID;
   final String url;

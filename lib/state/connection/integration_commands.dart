@@ -98,6 +98,30 @@ mixin _ConnectionControllerIntegrationCommands on ChangeNotifier {
   Future<void> removeMcpServer(String name, {required int locationRevision}) =>
       _self._removeMcpServer(name, locationRevision: locationRevision);
 
+  /// Writes `provider.<spec.id>` into the server's configuration through the
+  /// config patch, then rebuilds the location so a fresh instance loads it
+  /// and the catalog starts serving the provider's models. A non-empty
+  /// [defaultModelID] also writes `model` as the server's default.
+  Future<void> importCustomProvider(
+    CustomProviderSpec spec, {
+    String? defaultModelID,
+    required int locationRevision,
+  }) => _self._mutateCustomProvider(
+    spec: spec,
+    defaultModelID: defaultModelID,
+    locationRevision: locationRevision,
+  );
+
+  /// Deletes `provider.<providerID>` from the server's configuration and
+  /// rebuilds the location.
+  Future<void> removeCustomProvider(
+    String providerID, {
+    required int locationRevision,
+  }) => _self._mutateCustomProvider(
+    removeID: providerID,
+    locationRevision: locationRevision,
+  );
+
   /// Rebuilds the selected location after a configuration patch invalidates
   /// the OpenCode instance that served it.
   Future<void> reloadAfterConfigurationChange() =>
@@ -687,6 +711,103 @@ extension _ConnectionControllerIntegrationCommandsImpl on ConnectionController {
     }();
     _mcpRemovals[key] = operation;
     return operation;
+  }
+
+  /// The body of [importCustomProvider] and [removeCustomProvider]: one
+  /// pinned profile/location scope around a config patch, then the
+  /// instance rebuild that makes the server load the file.
+  Future<void> _mutateCustomProvider({
+    CustomProviderSpec? spec,
+    String? defaultModelID,
+    String? removeID,
+    required int locationRevision,
+  }) async {
+    // Validate before any wire work so a bad spec reports its own reason,
+    // not the generic failure below.
+    spec?.toConfigJson();
+    final saved = profile;
+    final connected = _connectedProfile;
+    if (saved == null || connected == null) {
+      throw StateError('Provider configuration is unavailable.');
+    }
+    final owner = saved.id;
+    final savedOrigin = saved.baseUrl;
+    final connectedOrigin = connected.baseUrl;
+    final location = (directory, workspace);
+    final deletion = _profileDeletionRevisions[owner] ?? 0;
+    void checkScope() {
+      if (!isProfileReadable(owner) ||
+          store.activeId != owner ||
+          !identical(profile, saved) ||
+          !identical(_connectedProfile, connected) ||
+          connected.id != owner ||
+          saved.baseUrl != savedOrigin ||
+          connected.baseUrl != connectedOrigin ||
+          savedOrigin != connectedOrigin ||
+          this.locationRevision != locationRevision ||
+          (directory, workspace) != location ||
+          (_profileDeletionRevisions[owner] ?? 0) != deletion) {
+        throw StateError(
+          'The provider location changed. Refresh and try again.',
+        );
+      }
+    }
+
+    checkScope();
+    try {
+      final actionRepository = await prepareActionRepository();
+      checkScope();
+      final actionApi = api;
+      final generation = _generation;
+      void checkTransport() {
+        checkScope();
+        if (_lifecycleSuspended ||
+            actionApi == null ||
+            actionRepository == null ||
+            generation != _generation ||
+            !identical(api, actionApi) ||
+            !identical(repository, actionRepository)) {
+          throw StateError(
+            'The provider connection changed. Refresh and try again.',
+          );
+        }
+      }
+
+      checkTransport();
+      if (actionRepository == null ||
+          !capabilities.customProviders ||
+          actionRepository is! CustomProviderGateway) {
+        throw StateError('Custom providers are unavailable on this server.');
+      }
+      final gateway = actionRepository as CustomProviderGateway;
+      final entry = spec;
+      final removed = removeID?.trim();
+      if (entry != null) {
+        await gateway.upsertCustomProvider(entry);
+        checkTransport();
+        final model = defaultModelID?.trim();
+        if (model != null && model.isNotEmpty) {
+          await gateway.setServerDefaultModel(entry.id, model);
+          checkTransport();
+        }
+      } else if (removed != null && removed.isNotEmpty) {
+        await gateway.removeCustomProvider(removed);
+        checkTransport();
+      } else {
+        throw StateError('Provider configuration is unavailable.');
+      }
+    } on ProductException {
+      checkScope();
+      rethrow;
+    } catch (_) {
+      checkScope();
+      throw StateError(
+        'Could not confirm the provider change. Refresh and try again.',
+      );
+    }
+    // The patch lands in the config file; only a fresh instance loads it.
+    await _reloadAfterConfigurationChange();
+    await refreshCatalog();
   }
 
   /// The body of [reloadAfterConfigurationChange].

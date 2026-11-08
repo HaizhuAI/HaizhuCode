@@ -451,6 +451,23 @@ abstract interface class IntegrationCommandGateway {
   Future<void> cancelIntegrationCommand(String integrationID, String attemptID);
 }
 
+/// Providers the server does not ship: the app writes a `provider.<id>`
+/// entry into the server's configuration (OpenCode 2's config patch), and
+/// the catalog starts serving the provider's models after the instance
+/// reloads. Implemented only where the server accepts configuration
+/// patches; [removeCustomProvider] deletes the key.
+abstract interface class CustomProviderGateway {
+  /// Writes `provider.<spec.id>` from [spec]. The same id rewrites the
+  /// entry — the stored key included, since it cannot be read back.
+  Future<void> upsertCustomProvider(CustomProviderSpec spec);
+
+  /// Deletes `provider.<id>` from the server configuration.
+  Future<void> removeCustomProvider(String providerID);
+
+  /// Writes `model` (`providerID/modelID`) as the server's default model.
+  Future<void> setServerDefaultModel(String providerID, String modelID);
+}
+
 /// Provider integrations: keys, OAuth attempts, and runtime refresh.
 abstract class IntegrationGateway {
   Future<List<IntegrationInfo>> listIntegrations();

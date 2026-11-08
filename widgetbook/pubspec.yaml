@@ -17,7 +17,7 @@ dependencies:
   clock: any
   flutter_secure_storage: any
   widgetbook: ^3.25.0
-  opencode_mobile:
+  haizhucode:
     path: ..
 
 dev_dependencies:

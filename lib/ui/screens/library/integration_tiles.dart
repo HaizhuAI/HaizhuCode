@@ -283,6 +283,12 @@ class _ProviderRow extends StatelessWidget {
   final VoidCallback onManageAccounts;
   final VoidCallback onServerSignIn;
 
+  /// The server takes provider entries in its configuration file
+  /// ([ServerCapabilities.customProviders]): a provider present only
+  /// through `provider.<id>` there gets a Remove act in the menu.
+  final bool customProvidersSupported;
+  final VoidCallback onRemoveConfig;
+
   const _ProviderRow({
     required this.presented,
     required this.subtitle,
@@ -292,11 +298,13 @@ class _ProviderRow extends StatelessWidget {
     required this.onManageAccounts,
     required this.onServerSignIn,
     required this.onAddKey,
+    required this.onRemoveConfig,
     this.modelCount,
     this.notLoaded = false,
     this.notUsable = false,
     this.commandAuthSupported = false,
     this.credentialsSupported = false,
+    this.customProvidersSupported = false,
   });
 
   IntegrationInfo get _integration => presented.integration;
@@ -324,6 +332,17 @@ class _ProviderRow extends StatelessWidget {
       _integration.credentialIDs.isNotEmpty ||
       (presented.connected &&
           _integration.methods.any((method) => method.type == 'oauth'));
+
+  /// A provider present only because `opencode.json` names it: nothing
+  /// was ever signed in from the app, so "Disconnect" does not apply —
+  /// removing the config entry is the act instead.
+  bool get _configOnly =>
+      _integration.connections.any(
+        (connection) => connection.type == 'config',
+      ) &&
+      _integration.connections.every(
+        (connection) => connection.type == 'config',
+      );
 
   /// The server environment variables this provider's key is read from:
   /// technical words, shown only on the Details sheet (emulator QA B10).
@@ -415,6 +434,14 @@ class _ProviderRow extends StatelessWidget {
           icon: AppIconography.unlink,
           destructive: true,
           onSelected: onDisconnect,
+        ),
+      if (_configOnly && customProvidersSupported)
+        KitMenuItem(
+          key: ValueKey('remove-provider-config-${_integration.id}'),
+          label: l10n.customProviderRemove(name),
+          icon: AppIconography.delete,
+          destructive: true,
+          onSelected: onRemoveConfig,
         ),
     ];
     return KitRow(
