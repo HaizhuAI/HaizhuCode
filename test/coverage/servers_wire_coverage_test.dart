@@ -6,19 +6,19 @@
 // Messages the app never asks a server for are in the ledger as ignored.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import '../support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
+import 'package:haizhucode/domain/server_probe.dart';
 import '../support/fake_event_channel.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/server_gateway.dart'
     show ServerCapabilities;
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
-import 'package:opencode_mobile/state/paseo_connection_probe.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/server_trust_probe.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
+import 'package:haizhucode/state/paseo_connection_probe.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/server_trust_probe.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

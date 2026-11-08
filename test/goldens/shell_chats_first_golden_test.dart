@@ -7,15 +7,15 @@
 //   flutter test --update-goldens test/goldens/shell_chats_first_golden_test.dart
 // and look at every changed image before committing it.
 import 'dart:async';
-import 'package:opencode_mobile/ui/screens/project_hub_screen.dart'
+import 'package:haizhucode/ui/screens/project_hub_screen.dart'
     show openProjectFiles;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart';

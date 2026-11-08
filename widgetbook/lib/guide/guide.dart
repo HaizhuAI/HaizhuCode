@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/ui/screens/guide_screen.dart';
+import 'package:haizhucode/ui/screens/guide_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

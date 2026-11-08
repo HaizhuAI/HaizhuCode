@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
 
 import '../support/fake_webview_platform.dart';

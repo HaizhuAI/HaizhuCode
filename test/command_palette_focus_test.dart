@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/desktop/shortcuts.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/desktop/shortcuts.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 void main() {
   testWidgets('the launcher opened from a Search button is ready to type', (

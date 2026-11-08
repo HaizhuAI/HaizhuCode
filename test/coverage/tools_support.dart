@@ -5,13 +5,13 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
 import '../support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 import '../support/product_repository_fixtures.dart';
 import 'servers_support.dart';

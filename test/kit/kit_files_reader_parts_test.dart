@@ -5,11 +5,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_code_block.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_viewer.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_code_block.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_viewer.dart';
 
 import '../support/part_semantics.dart';
 import 'kit_harness.dart';

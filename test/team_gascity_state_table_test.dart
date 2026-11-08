@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/dto/dto.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_mappers.dart';
-import 'package:opencode_mobile/orchestration/dispatch.dart'
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/dto/dto.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_mappers.dart';
+import 'package:haizhucode/orchestration/dispatch.dart'
     show isRefineryName, workHandedToMerge;
 import 'support/team_gascity_mappers_fixtures.dart';
 

@@ -11,10 +11,10 @@ import subprocess
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[2]
-PACKAGE = "io.github.eslamasabry.opencode_mobile"
+PACKAGE = "io.github.haizhu.code"
 GRADLE = "/home/eslam/.gradle/wrapper/dists/gradle-9.5.0-all/aca6g93cdtcf0oapcfka748qh/gradle-9.5.0/bin/gradle"
 OUT = ROOT / "docs/qa/BB2-2026-10-07"
-SOURCES = ROOT / "android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile"
+SOURCES = ROOT / "android/app/src/main/kotlin/io/github/haizhu/code"
 RED = {
     f"{PACKAGE}.RestartBackoffTest.repeatedShortExitsDoubleDelayUntilTheSixtySecondCap",
     f"{PACKAGE}.RestartBackoffTest.thirtySecondsOfUptimeResetsDelayButOneMillisecondLessDoesNot",

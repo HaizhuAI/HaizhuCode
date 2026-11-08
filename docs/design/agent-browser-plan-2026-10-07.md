@@ -46,10 +46,10 @@ References below are file:line at the baseline, not claims of runtime success.
 
 | Finding | Evidence | Consequence |
 | --- | --- | --- |
-| Built-in Ubuntu is private app storage and uses native PRoot | `android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/BuiltinLinux.kt:42`, `:281` | Create a narrow native-owned socket bind; do not expose the full app directory to Ubuntu. |
+| Built-in Ubuntu is private app storage and uses native PRoot | `android/app/src/main/kotlin/io/github/haizhu/code/BuiltinLinux.kt:42`, `:281` | Create a narrow native-owned socket bind; do not expose the full app directory to Ubuntu. |
 | Agent PRoot has fake UID 1000, `/proc` and `/sys` binds, a separate `/root` view and a shared projects bind | `BuiltinLinux.kt:284`, `:289`, `:296`, `:301`, `:307` in the same directory | PRoot username and HOME do not establish an Android UID or session security boundary. Confinement tiers must be qualified separately. |
-| Native path helper rejects linked descendants below a canonical app anchor | `android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/PhoneAgentPaths.kt:6` | Reuse that policy, strengthened with no-follow/descriptor-relative handling for socket and grant files. |
-| Android channel ownership and disposal are centralized | `android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/MainActivity.kt:55`, `:66`, `:137` | One owner changes both new browser channel halves and the small registration/disposal hook. |
+| Native path helper rejects linked descendants below a canonical app anchor | `android/app/src/main/kotlin/io/github/haizhu/code/PhoneAgentPaths.kt:6` | Reuse that policy, strengthened with no-follow/descriptor-relative handling for socket and grant files. |
+| Android channel ownership and disposal are centralized | `android/app/src/main/kotlin/io/github/haizhu/code/MainActivity.kt:55`, `:66`, `:137` | One owner changes both new browser channel halves and the small registration/disposal hook. |
 | No existing WebView, platform-view factory or AndroidX WebKit dependency was found in `lib/`, native Kotlin, `pubspec.yaml`, or app Gradle | source search; dependency block `android/app/build.gradle.kts:129` | New native browser plumbing and dependency: new release, not a Dart patch. |
 | Minimum Android API is at least 26; compile SDK is 37 | `android/app/build.gradle.kts:24`, `:36` | Platform API 28 profile suffix alone cannot be the universal path. |
 | Global Android network policy permits cleartext | `android/app/src/main/res/xml/network_security_config.xml:14` | Do not infer WebView HTTP restrictions from manifest `usesCleartextTraffic=false`; apply a browser-specific policy. |

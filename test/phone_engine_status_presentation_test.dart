@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/team_project_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/inapp/phone_engine_gateway.dart';
+import 'package:haizhucode/domain/team_project_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/inapp/phone_engine_gateway.dart';
 
 import 'phone_project_engine_gateway_test.dart' as engine;
 

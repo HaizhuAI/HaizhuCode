@@ -315,7 +315,7 @@ abstract class AppLocalizations {
   /// Application title shown in the task switcher / window title
   ///
   /// In en, this message translates to:
-  /// **'OpenCode Mobile'**
+  /// **'HaizhuCode'**
   String get appTitle;
 
   /// More hub card: model and agent catalog
@@ -357,7 +357,7 @@ abstract class AppLocalizations {
   /// Installed app version and build shown in About
   ///
   /// In en, this message translates to:
-  /// **'OpenCode Mobile {version}+{buildNumber}'**
+  /// **'HaizhuCode {version}+{buildNumber}'**
   String aboutBuildVersion(String version, String buildNumber);
 
   /// Label for the installed Android APK signer fingerprint
@@ -7047,7 +7047,7 @@ abstract class AppLocalizations {
   /// Settings and appearance user interface.
   ///
   /// In en, this message translates to:
-  /// **'OpenCode Mobile is an independent community project. It is not built, maintained, endorsed by, or affiliated with the official OpenCode team.'**
+  /// **'HaizhuCode is an independent community project. It is not built, maintained, endorsed by, or affiliated with the official OpenCode team.'**
   String get e7SettingsNonAffiliation;
 
   /// Settings and appearance user interface.
@@ -13375,7 +13375,7 @@ abstract class AppLocalizations {
   /// QR sheet lead paragraph
   ///
   /// In en, this message translates to:
-  /// **'Scan with OpenCode Mobile on the other phone. The code holds only the server and conversation IDs.'**
+  /// **'Scan with HaizhuCode on the other phone. The code holds only the server and conversation IDs.'**
   String get handoffUiPhoneIntro;
 
   /// Accessibility label for the QR image
@@ -21319,25 +21319,25 @@ abstract class AppLocalizations {
   /// After a force stop (from Settings, a Recents swipe on some phones, or a battery manager: not always Android itself): first half of the one-time notice; time is like 'at 12:06 AM' or 'on Sep 25 at 8:19 PM'
   ///
   /// In en, this message translates to:
-  /// **'OpenCode Mobile was closed {time}'**
+  /// **'HaizhuCode was closed {time}'**
   String appExitForceStopped(String time);
 
   /// After a low-memory kill: first half of the notice
   ///
   /// In en, this message translates to:
-  /// **'Android closed OpenCode Mobile {time} to free memory'**
+  /// **'Android closed HaizhuCode {time} to free memory'**
   String appExitLowMemory(String time);
 
   /// After a crash or not-responding: first half of the notice
   ///
   /// In en, this message translates to:
-  /// **'OpenCode Mobile stopped unexpectedly {time}'**
+  /// **'HaizhuCode stopped unexpectedly {time}'**
   String appExitCrashed(String time);
 
   /// After another system kill: first half of the notice
   ///
   /// In en, this message translates to:
-  /// **'Android stopped OpenCode Mobile {time}'**
+  /// **'Android stopped HaizhuCode {time}'**
   String appExitKilled(String time);
 
   /// The notice when only the phone's OpenCode server was running; what is one of the appExit first halves
@@ -21451,19 +21451,19 @@ abstract class AppLocalizations {
   /// Lock step on Nubia/RedMagic
   ///
   /// In en, this message translates to:
-  /// **'Open Recent apps and pull OpenCode Mobile\'s card down until the lock shows.'**
+  /// **'Open Recent apps and pull HaizhuCode\'s card down until the lock shows.'**
   String get keepRunningLockNubia;
 
   /// Lock step on Samsung
   ///
   /// In en, this message translates to:
-  /// **'Open Recent apps, tap OpenCode Mobile\'s icon above its card and choose Keep open.'**
+  /// **'Open Recent apps, tap HaizhuCode\'s icon above its card and choose Keep open.'**
   String get keepRunningLockSamsung;
 
   /// Lock step on other makers
   ///
   /// In en, this message translates to:
-  /// **'Open Recent apps, long-press OpenCode Mobile\'s card and tap the lock.'**
+  /// **'Open Recent apps, long-press HaizhuCode\'s card and tap the lock.'**
   String get keepRunningLockOther;
 
   /// Step: vendor autostart
@@ -21475,13 +21475,13 @@ abstract class AppLocalizations {
   /// Autostart step detail
   ///
   /// In en, this message translates to:
-  /// **'Turn it on for OpenCode Mobile so the phone doesn\'t stop it in the background.'**
+  /// **'Turn it on for HaizhuCode so the phone doesn\'t stop it in the background.'**
   String get keepRunningAutostartDetail;
 
   /// Autostart step on Huawei/Honor
   ///
   /// In en, this message translates to:
-  /// **'Under App launch, set OpenCode Mobile to Manage manually and turn on all three switches.'**
+  /// **'Under App launch, set HaizhuCode to Manage manually and turn on all three switches.'**
   String get keepRunningAutostartHuawei;
 
   /// Step: vendor background activity setting in app info
@@ -21529,7 +21529,7 @@ abstract class AppLocalizations {
   /// Snackbar when a settings screen could not be opened
   ///
   /// In en, this message translates to:
-  /// **'This phone has no such screen. Open Settings › Apps › OpenCode Mobile instead.'**
+  /// **'This phone has no such screen. Open Settings › Apps › HaizhuCode instead.'**
   String get keepRunningOpenFailed;
 
   /// Keep running screen: what happens when it is closed anyway
@@ -33107,7 +33107,7 @@ abstract class AppLocalizations {
   /// Session links with the server address (P3.9, contract docs/design/session-address-link-contract.md): sheet lead paragraph while the address is included
   ///
   /// In en, this message translates to:
-  /// **'Scan with OpenCode Mobile on the other phone. The code holds this server’s address and the conversation ID.'**
+  /// **'Scan with HaizhuCode on the other phone. The code holds this server’s address and the conversation ID.'**
   String get sessionAddressIntro;
 
   /// Session links with the server address (P3.9, contract docs/design/session-address-link-contract.md): why the switch is off for a server whose saved address cannot be shared
@@ -35277,7 +35277,7 @@ abstract class AppLocalizations {
   /// Manage-space page: the warning at the top.
   ///
   /// In en, this message translates to:
-  /// **'Clearing deletes everything OpenCode Mobile keeps on this phone, and it cannot be undone. Export your projects first if you want to keep them.'**
+  /// **'Clearing deletes everything HaizhuCode keeps on this phone, and it cannot be undone. Export your projects first if you want to keep them.'**
   String get manageSpaceIntro;
 
   /// Manage-space page: the export row's title.
@@ -35343,7 +35343,7 @@ abstract class AppLocalizations {
   /// Manage-space page: the delete confirm's body.
   ///
   /// In en, this message translates to:
-  /// **'OpenCode Mobile then starts again as if it were new. This cannot be undone.'**
+  /// **'HaizhuCode then starts again as if it were new. This cannot be undone.'**
   String get manageSpaceDeleteBody;
 
   /// Manage-space delete confirm: lost item.
@@ -35685,7 +35685,7 @@ abstract class AppLocalizations {
   /// Manage-space page: the warning at the top when there are no projects to export (so it offers no export).
   ///
   /// In en, this message translates to:
-  /// **'Clearing deletes everything OpenCode Mobile keeps on this phone, and it cannot be undone.'**
+  /// **'Clearing deletes everything HaizhuCode keeps on this phone, and it cannot be undone.'**
   String get manageSpaceIntroNothingToExport;
 
   /// Providers › API key dialog for Anthropic or Google: why browser sign-in is not offered, and where the key goes.

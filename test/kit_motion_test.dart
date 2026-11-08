@@ -24,8 +24,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 import 'kit/kit_manifest_test.dart' show KitManifestKind, readKitManifest;
 import 'kit/kit_motion_still.dart';

@@ -7,16 +7,16 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/git/git_shell.dart';
-import 'package:opencode_mobile/domain/git/github_device_flow.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/chat_git_holder.dart';
-import 'package:opencode_mobile/state/git_page_controller.dart';
-import 'package:opencode_mobile/state/git_workspace.dart';
-import 'package:opencode_mobile/state/github_account.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/git/git_sheet.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/domain/git/git_shell.dart';
+import 'package:haizhucode/domain/git/github_device_flow.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/chat_git_holder.dart';
+import 'package:haizhucode/state/git_page_controller.dart';
+import 'package:haizhucode/state/git_workspace.dart';
+import 'package:haizhucode/state/github_account.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/git/git_sheet.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 import '../kit/kit_harness.dart';
 import 'git_fixtures.dart' as fx;

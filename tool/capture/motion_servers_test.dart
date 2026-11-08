@@ -13,7 +13,7 @@
 // Output: docs/qa/motion-servers-2026-09-25/<before|after>-<n>-<scene>[-light].png
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_motion.dart';
+import 'package:haizhucode/ui/kit/kit_motion.dart';
 
 import '../../test/support/servers_motion_scenes.dart';
 import 'fixtures.dart';

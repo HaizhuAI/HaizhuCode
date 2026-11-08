@@ -7,17 +7,17 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import '../support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 import '../support/fake_event_channel.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/review_handoff.dart';
-import 'package:opencode_mobile/ui/screens/files_screen.dart';
-import 'package:opencode_mobile/ui/screens/project_hub_screen.dart';
-import 'package:opencode_mobile/ui/widgets/remote_folder_picker.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/review_handoff.dart';
+import 'package:haizhucode/ui/screens/files_screen.dart';
+import 'package:haizhucode/ui/screens/project_hub_screen.dart';
+import 'package:haizhucode/ui/widgets/remote_folder_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Api extends FakeServerGateway {

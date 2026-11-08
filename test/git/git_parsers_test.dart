@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/git/git_models.dart';
-import 'package:opencode_mobile/domain/git/git_parsers.dart';
-import 'package:opencode_mobile/domain/git/git_problem.dart';
+import 'package:haizhucode/domain/git/git_models.dart';
+import 'package:haizhucode/domain/git/git_parsers.dart';
+import 'package:haizhucode/domain/git/git_problem.dart';
 
 import 'git_fixtures.dart' as fx;
 

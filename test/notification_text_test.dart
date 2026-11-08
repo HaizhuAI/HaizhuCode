@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/background/notification_text.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/background/notification_text.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 MessageWithParts _message(String role, String text, {bool synthetic = false}) =>
     MessageWithParts(

@@ -4,9 +4,9 @@
 // floors for any accent and ground.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/theme_packs.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 /// Every floor a role set promises, as failure lines.
 List<String> _floors(String tag, ThemeRoles r) {

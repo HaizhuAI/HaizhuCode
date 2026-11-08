@@ -3,9 +3,9 @@ import 'dart:io';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/migration/termux_migration_transport.dart';
-import 'package:opencode_mobile/domain/termux_migration.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/builtin/migration/termux_migration_transport.dart';
+import 'package:haizhucode/domain/termux_migration.dart';
+import 'package:haizhucode/termux/bridge.dart';
 
 const _job = '0123456789abcdef0123456789abcdef';
 

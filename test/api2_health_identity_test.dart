@@ -2,8 +2,8 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/domain/models.dart';
 
 class _HealthAdapter implements HttpClientAdapter {
   _HealthAdapter(this.body, this.contentType);

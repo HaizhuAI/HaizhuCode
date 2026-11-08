@@ -13,10 +13,10 @@ import 'package:clock/clock.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_account.dart';
-import 'package:opencode_mobile/state/agent_account.dart';
-import 'package:opencode_mobile/ui/screens/agent_account_screen.dart';
-import 'package:opencode_mobile/ui/screens/usage_screen.dart';
+import 'package:haizhucode/domain/agent_account.dart';
+import 'package:haizhucode/state/agent_account.dart';
+import 'package:haizhucode/ui/screens/agent_account_screen.dart';
+import 'package:haizhucode/ui/screens/usage_screen.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../support/account_fakes.dart';

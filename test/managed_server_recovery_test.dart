@@ -4,10 +4,10 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/state/automation_policy.dart';
-import 'package:opencode_mobile/termux/managed_server_recovery.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/state/automation_policy.dart';
+import 'package:haizhucode/termux/managed_server_recovery.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _FailingPreferences implements SharedPreferences {

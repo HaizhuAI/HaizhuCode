@@ -76,7 +76,7 @@ class WidgetOverlayApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final pack = effectiveThemePack(themePack);
     return MaterialApp(
-      title: 'OpenCode Mobile',
+      title: 'HaizhuCode',
       debugShowCheckedModeBanner: false,
       color: Colors.transparent,
       themeMode: switch (appearance) {

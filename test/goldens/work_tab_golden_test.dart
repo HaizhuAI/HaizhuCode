@@ -9,10 +9,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/kit/kit_motion.dart';
-import 'package:opencode_mobile/ui/widgets/app_connection_status.dart';
-import 'package:opencode_mobile/ui/widgets/saved_server_connection_card.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/kit/kit_motion.dart';
+import 'package:haizhucode/ui/widgets/app_connection_status.dart';
+import 'package:haizhucode/ui/widgets/saved_server_connection_card.dart';
 
 import '../../tool/capture/fixtures.dart' show captureApp, loadCaptureFonts;
 import '../support/work_tab_fixture.dart';

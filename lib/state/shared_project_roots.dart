@@ -14,7 +14,7 @@ class SharedProjectRoots {
 
   static const prefix = 'oc.sharedProjects.';
   static const _channel = MethodChannel(
-    'io.github.eslamasabry.opencode_mobile/builtin_linux',
+    'io.github.haizhu.code/builtin_linux',
   );
 
   @visibleForTesting

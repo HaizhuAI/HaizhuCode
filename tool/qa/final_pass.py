@@ -25,7 +25,7 @@ if __package__ in (None, ''):
 ROOT = Path(__file__).resolve().parents[2]
 LOCK = Path('/home/eslam/Storage/tmp/oc-emulator.lock')
 NORMAL = Path('/home/eslam/Storage/tmp/oc-apk-share/oc-2203.apk')
-PACKAGE = 'io.github.eslamasabry.opencode_mobile'
+PACKAGE = 'io.github.haizhu.code'
 ROWS = ('fq9-upgrade', 'ba-install', 'ba-removal', 'ba-storage-floor', 'bb5',
         'fq3', 'fq9-background', 'bd7', 'fb1', 'demo')
 

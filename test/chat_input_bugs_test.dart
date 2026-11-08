@@ -3,10 +3,10 @@ import 'dart:ui' show PointerDeviceKind;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_composer.dart';
-import 'package:opencode_mobile/ui/kit/kit_code_block.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_composer.dart';
+import 'package:haizhucode/ui/kit/kit_code_block.dart';
 
 Widget _app(Widget child) => MaterialApp(
   theme: AppTheme.dark(),

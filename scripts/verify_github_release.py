@@ -141,7 +141,7 @@ def verify_quality_jobs(data, shard_count):
 
 def verify_notes(root, version):
     committed = Path(f"docs/releases/v{version}.md").read_text().strip()
-    require(committed.startswith(f"# OpenCode Mobile {version}\n"), "Missing versioned stable notes")
+    require(committed.startswith(f"# HaizhuCode {version}\n"), "Missing versioned stable notes")
     notes = (root / "ci/RELEASE_NOTES.md").read_text().strip()
     require(notes.startswith(committed + "\n"), "CI notes differ from committed release notes")
     release = read_json(root, "release.json")

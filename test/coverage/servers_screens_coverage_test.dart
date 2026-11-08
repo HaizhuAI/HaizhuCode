@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/platform/camera.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/host_management_screen.dart';
-import 'package:opencode_mobile/ui/screens/pairing_scanner_screen.dart';
-import 'package:opencode_mobile/ui/screens/tailscale_setup_screen.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/platform/camera.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/host_management_screen.dart';
+import 'package:haizhucode/ui/screens/pairing_scanner_screen.dart';
+import 'package:haizhucode/ui/screens/tailscale_setup_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

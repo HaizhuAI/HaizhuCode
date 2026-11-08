@@ -13,13 +13,13 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/product_repository.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/product_repository.dart'
     show ProductException;
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/review_handoff.dart';
-import 'package:opencode_mobile/ui/kit/kit_undo.dart';
-import 'package:opencode_mobile/ui/screens/review_workspace.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/review_handoff.dart';
+import 'package:haizhucode/ui/kit/kit_undo.dart';
+import 'package:haizhucode/ui/screens/review_workspace.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;

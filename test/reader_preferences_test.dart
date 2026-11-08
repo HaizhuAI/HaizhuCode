@@ -1,4 +1,4 @@
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -7,20 +7,20 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
 import 'support/fake_event_channel.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/reader_preferences.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/files_screen.dart';
-import 'package:opencode_mobile/ui/screens/review_workspace.dart';
-import 'package:opencode_mobile/ui/widgets/file_preview.dart';
-import 'package:opencode_mobile/ui/widgets/markdown.dart';
-import 'package:opencode_mobile/ui/widgets/reader_preferences.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/reader_preferences.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/files_screen.dart';
+import 'package:haizhucode/ui/screens/review_workspace.dart';
+import 'package:haizhucode/ui/widgets/file_preview.dart';
+import 'package:haizhucode/ui/widgets/markdown.dart';
+import 'package:haizhucode/ui/widgets/reader_preferences.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _RefusingPreferences implements SharedPreferences {

@@ -166,7 +166,7 @@ class KitBrandMark extends StatelessWidget {
 6. Under RTL, `AppIconography.back` is mirrored and `AppIconography.check` is not.
 7. A duotone glyph draws two layers, or one under `MediaQuery.highContrast`.
 8. Every tone colour has alpha 255.
-9. `AppGlyph` and `AppBrandMark` still build from `package:opencode_mobile/ui/app_iconography.dart` (re-export) with their old parameters.
+9. `AppGlyph` and `AppBrandMark` still build from `package:haizhucode/ui/app_iconography.dart` (re-export) with their old parameters.
 10. `app_iconography.dart` has G16 count zero. This is asserted by the ratchet test, which the integrator re-baselines (R05).
 11. Reduced motion: no ticker.
 

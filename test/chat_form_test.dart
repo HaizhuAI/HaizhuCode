@@ -5,17 +5,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
 import 'support/fake_event_channel.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart'
+import 'package:haizhucode/api2/gateway_mappers.dart'
     show api2ServerCapabilities;
-import 'package:opencode_mobile/domain/form_request.dart' show Api2FormInfo;
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/form_request.dart' show Api2FormInfo;
+import 'package:haizhucode/domain/server_gateway.dart'
     show ServerCapabilities;
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _FormChatApi extends FakeServerGateway with CompleteMessageHistory {

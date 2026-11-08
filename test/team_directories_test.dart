@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/team_directories.dart';
+import 'package:haizhucode/builtin/team/builtin_team.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/team_directories.dart';
 
 // Folders seen on the Android 15 emulator on 2026-09-24, after the in-app
 // AI Team ran one task in the project my-app.

@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'support/connection_v2_fixtures.dart';
 

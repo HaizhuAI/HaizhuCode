@@ -13,9 +13,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_icon.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_icon.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 
 import 'kit_gallery.dart';
 

@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/pairing.dart';
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/pairing.dart';
 
 /// A stand-in for the real serve password. Never the value of a live server:
 /// a test fixture that is also a working credential is a credential in git.

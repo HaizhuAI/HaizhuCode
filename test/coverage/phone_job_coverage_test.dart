@@ -8,10 +8,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/components.dart';
-import 'package:opencode_mobile/builtin/setup/setup_engine.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_progress_screen.dart';
+import 'package:haizhucode/builtin/setup/components.dart';
+import 'package:haizhucode/builtin/setup/setup_engine.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_progress_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

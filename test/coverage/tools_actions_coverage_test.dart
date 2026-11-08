@@ -14,8 +14,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart' show McpServerInfo;
-import 'package:opencode_mobile/ui/screens/capabilities_screen.dart';
+import 'package:haizhucode/domain/server_gateway.dart' show McpServerInfo;
+import 'package:haizhucode/ui/screens/capabilities_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

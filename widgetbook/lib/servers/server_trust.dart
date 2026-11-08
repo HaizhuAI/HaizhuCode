@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

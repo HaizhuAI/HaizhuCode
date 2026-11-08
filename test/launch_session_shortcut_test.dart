@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/launch_shortcut.dart';
+import 'package:haizhucode/platform/launch_shortcut.dart';
 
 /// The pinned-session half of the `oc/shortcut` channel: a cold-start
 /// `consumeSessionLaunch` drain and a live `launchedSession` push, both

@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 
 /// The Settings hub's door to [group] (vision 2026-10-20: a search and five
 /// one-word rows, each opening its group's page).

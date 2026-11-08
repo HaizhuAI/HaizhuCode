@@ -4,14 +4,14 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/command_receipt_transport.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/command_receipt_transport.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/domain/command_receipts.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/offline_queue.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/domain/command_receipts.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/offline_queue.dart';
 
 const _receipt = CommandReceipt(
   commandID: 'command_1',

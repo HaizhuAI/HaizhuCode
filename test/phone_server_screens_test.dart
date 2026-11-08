@@ -13,7 +13,7 @@
 // Each of these fails on the code before the cleanup (df81ce51).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 
 import 'support/phone_server_scenes.dart';
 

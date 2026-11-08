@@ -16,7 +16,7 @@ try:
   assert code==1 and '[E]' in log and 'Some tests failed.' in log,label
   print(label+': expected assertion failure',flush=True)
 finally:p.write_bytes(original)
-p=ROOT/'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupRunner.kt';original=p.read_text()
+p=ROOT/'android/app/src/main/kotlin/io/github/haizhu/code/SetupRunner.kt';original=p.read_text()
 before='val started = linux.startInstaller(script, NativeInstallerOwnership.targetsForComponent(spec.id),\n            InstallerOperation.INSTALL, agentUser = spec.agentUser)'
 assert original.count(before)==1
 try:

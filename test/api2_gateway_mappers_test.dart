@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/api2/transport.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/api2/transport.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 dynamic fixture(String name) =>
     jsonDecode(File('test/fixtures/api2/$name').readAsStringSync());

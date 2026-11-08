@@ -14,10 +14,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import 'first_run_path.dart';

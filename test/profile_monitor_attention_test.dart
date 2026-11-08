@@ -3,12 +3,12 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/attention_feed.dart';
-import 'package:opencode_mobile/domain/work_row_status.dart';
-import 'package:opencode_mobile/state/automation_policy.dart';
-import 'package:opencode_mobile/state/profile_monitor.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/attention_feed.dart';
+import 'package:haizhucode/domain/work_row_status.dart';
+import 'package:haizhucode/state/automation_policy.dart';
+import 'package:haizhucode/state/profile_monitor.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 import 'support/profile_monitor_fixture.dart';
 

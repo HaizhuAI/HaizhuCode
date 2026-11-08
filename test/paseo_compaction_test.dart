@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/paseo/mappers.dart';
 
 void main() {
   test('a compaction is a notice in the transcript, not a reply', () {

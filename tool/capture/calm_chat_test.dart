@@ -8,9 +8,9 @@
 //   flutter test --no-pub --concurrency=1 tool/capture/calm_chat_test.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 
 import '../../test/support/setup_capture_preferences.dart';
 

@@ -91,7 +91,7 @@ PYRELEASE
   python3 scripts/verify_github_release.py artifacts "$scratch" "$head" "$VERSION"
   gh release edit "$RELEASE_TAG" --repo "$repo" \
     --draft=false --prerelease=false --latest \
-    --title "OpenCode Mobile $VERSION" --notes-file "$scratch/ci/RELEASE_NOTES.md"
+    --title "HaizhuCode $VERSION" --notes-file "$scratch/ci/RELEASE_NOTES.md"
   fetch_candidate_release
   gh api "repos/$repo/releases/latest" > "$scratch/latest.json"
   python3 scripts/verify_github_release.py published "$scratch" "$head" "$VERSION"

@@ -2,12 +2,12 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/mcp_oauth.dart';
-import 'package:opencode_mobile/domain/mcp_catalog.dart';
-import 'package:opencode_mobile/domain/mcp_chat.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/setup_registry.dart';
-import 'package:opencode_mobile/state/mcp_chat_controller.dart';
+import 'package:haizhucode/domain/mcp_oauth.dart';
+import 'package:haizhucode/domain/mcp_catalog.dart';
+import 'package:haizhucode/domain/mcp_chat.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/setup_registry.dart';
+import 'package:haizhucode/state/mcp_chat_controller.dart';
 
 McpCatalogItem item({bool key = false}) => McpCatalogItem.from(
   RegistryEntry.fromJson({

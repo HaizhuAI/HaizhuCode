@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/termux_host_setup.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/termux/managed_server_recovery.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/termux_host_setup.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/termux/managed_server_recovery.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/termux_channel_fixture.dart';

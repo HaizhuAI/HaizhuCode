@@ -13,16 +13,16 @@
 // replaced by this rule (PROC-20 note in the unit's QA record).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_page_route.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_screen.dart';
-import 'package:opencode_mobile/ui/kit/kit_search_field.dart';
-import 'package:opencode_mobile/ui/kit/kit_state_view.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_page_route.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_screen.dart';
+import 'package:haizhucode/ui/kit/kit_search_field.dart';
+import 'package:haizhucode/ui/kit/kit_state_view.dart';
+import 'package:haizhucode/ui/kit/kit_status_line.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
 
 import 'kit_gallery.dart';
 

@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "managed": "hz",
+  "servers": {
+    "filesystem": {
+      "title": "Filesystem",
+      "transport": "stdio",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "{HOME}"
+      ],
+      "enabled": true,
+      "requires": [
+        "node"
+      ],
+      "note": "官方文件系统服务，根目录跟随目标 agent 的 HOME。"
+    },
+    "fetch": {
+      "title": "Fetch",
+      "transport": "stdio",
+      "command": [
+        "python3",
+        "-m",
+        "mcp_server_fetch"
+      ],
+      "enabled": false,
+      "requires": [
+        "pip:mcp-server-fetch"
+      ],
+      "install": "python3 -m pip install --user mcp-server-fetch && hz mcp enable fetch",
+      "note": "网页抓取为可读文本，侦察与文档检索用。"
+    },
+    "sequential-thinking": {
+      "title": "Sequential Thinking",
+      "transport": "stdio",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "enabled": true,
+      "requires": [
+        "node"
+      ],
+      "note": "长链推理辅助，漏洞链与逆向拆解用。"
+    },
+    "rea": {
+      "title": "rea 逆向工程",
+      "transport": "stdio",
+      "command": [
+        "hz",
+        "mcp",
+        "run",
+        "rea"
+      ],
+      "enabled": false,
+      "requires": [
+        "vendor:rea"
+      ],
+      "source": "https://github.com/morluto/rea",
+      "install": "hz mcp install rea",
+      "note": "逆向 agent 工具桥：二进制检查、伪 C、调用图、证据台账。"
+    },
+    "craft": {
+      "title": "Craft Anything",
+      "transport": "stdio",
+      "command": [
+        "craft",
+        "mcp"
+      ],
+      "enabled": false,
+      "requires": [
+        "vendor:craft"
+      ],
+      "source": "https://github.com/storytold/craft-anything",
+      "install": "hz mcp install craft",
+      "note": "Rust 净室/深度复刻引擎，314 工具 CLI+MCP 双模。"
+    },
+    "artex": {
+      "title": "CodeScan-Artex 代码审计",
+      "transport": "http",
+      "url": "{HZ_ARTEX_URL|http://127.0.0.1:7331/mcp}",
+      "enabled": false,
+      "requires": [
+        "remote"
+      ],
+      "source": "https://github.com/Ernket/CodeScan-Artex",
+      "note": "mcphttp 模块提供的 HTTP MCP；Java 依赖反编译审计。"
+    },
+    "argusai": {
+      "title": "Argusai 安全工作台",
+      "transport": "http",
+      "url": "{HZ_ARGUSAI_URL|http://127.0.0.1:8080/mcp}",
+      "enabled": false,
+      "requires": [
+        "remote"
+      ],
+      "source": "https://github.com/HG-ha/Argusai",
+      "note": "agent 原生安全工具台：流量、逆向、巡检。"
+    }
+  },
+  "deployables": {
+    "github-c2": {
+      "title": "GitHub C2（授权红队指挥）",
+      "source": "https://github.com/Kxiandaoyan/github-C2",
+      "guide": "hz red c2",
+      "note": "Worker+D1 主通道 / GitHub Issue 备用 / Rust agent / AES-256-GCM。"
+    },
+    "proxycat": {
+      "title": "ProxyCat 代理池",
+      "source": "https://github.com/honmashironeko/ProxyCat",
+      "guide": "hz red proxy",
+      "note": "静态代理 IP 转固定隧道入口。"
+    },
+    "hephaestus": {
+      "title": "Hephaestus Agent 扫描节点",
+      "source": "https://github.com/qiwentaidi/Hephaestus-Agent",
+      "guide": "hz red hephaestus",
+      "note": "分离式扫描/AI Worker 节点，接入主服务。"
+    }
+  }
+}

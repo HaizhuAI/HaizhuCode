@@ -10,18 +10,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show RenderParagraph;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_composer_status_strip.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_phrase_chips.dart';
-import 'package:opencode_mobile/ui/kit/kit_chip.dart';
-import 'package:opencode_mobile/ui/kit/kit_code_block.dart';
-import 'package:opencode_mobile/ui/kit/kit_filter_chips.dart';
-import 'package:opencode_mobile/ui/kit/kit_notice.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_row_parts.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_composer_status_strip.dart';
+import 'package:haizhucode/ui/kit/chat/kit_phrase_chips.dart';
+import 'package:haizhucode/ui/kit/kit_chip.dart';
+import 'package:haizhucode/ui/kit/kit_code_block.dart';
+import 'package:haizhucode/ui/kit/kit_filter_chips.dart';
+import 'package:haizhucode/ui/kit/kit_notice.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_row_parts.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
 
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;
 

@@ -5,10 +5,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/transport.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
-import 'package:opencode_mobile/ui/screens/perf_trace_section.dart';
+import 'package:haizhucode/api2/transport.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
+import 'package:haizhucode/ui/screens/perf_trace_section.dart';
 
 /// Answers every request with [status] and a JSON body of [bytes] length,
 /// declared in Content-Length the way a real server does.

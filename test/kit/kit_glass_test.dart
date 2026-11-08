@@ -3,11 +3,11 @@
 // Soft form (Settings › Appearance › Style). Nothing ever blurs.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/glass/kit_glass.dart';
-import 'package:opencode_mobile/ui/kit/kit_effects.dart';
-import 'package:opencode_mobile/ui/kit/kit_surface_look.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/glass/kit_glass.dart';
+import 'package:haizhucode/ui/kit/kit_effects.dart';
+import 'package:haizhucode/ui/kit/kit_surface_look.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 Future<void> _pump(WidgetTester tester, Widget child, {bool dark = false}) {
   tester.view.physicalSize = const Size(1200, 2400);

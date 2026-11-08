@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/paseo/chat_feed_source.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/paseo/chat_feed_source.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
 
 import 'paseo_gateway_test.dart' show FakeDaemon, agentJson;
 

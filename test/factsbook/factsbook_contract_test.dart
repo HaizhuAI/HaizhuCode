@@ -5,11 +5,11 @@ import 'dart:io';
 
 import 'package:crypto/crypto.dart' show sha256;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/factsbook/control_verifier.dart';
-import 'package:opencode_mobile/domain/factsbook/ed25519.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_capabilities.dart';
-import 'package:opencode_mobile/domain/factsbook/jcs.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_types.dart';
+import 'package:haizhucode/domain/factsbook/control_verifier.dart';
+import 'package:haizhucode/domain/factsbook/ed25519.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_capabilities.dart';
+import 'package:haizhucode/domain/factsbook/jcs.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_types.dart';
 
 Object? _fixture(String name) =>
     jsonDecode(File('test/fixtures/factsbook/$name.json').readAsStringSync());

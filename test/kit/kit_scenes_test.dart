@@ -15,20 +15,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../support/no_red.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/scenes/folders_open_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/servers_link_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/servers_welcome_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_phone_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_ready_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_steps_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_unplugged_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/states_scenes.dart';
-import 'package:opencode_mobile/ui/kit/scenes/states_working_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/team_discover_scenes.dart';
-import 'package:opencode_mobile/ui/kit/scenes/team_scenes.dart';
-import 'package:opencode_mobile/ui/theme_packs.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/scenes/folders_open_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/servers_link_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/servers_welcome_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_phone_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_ready_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_steps_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_unplugged_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/states_scenes.dart';
+import 'package:haizhucode/ui/kit/scenes/states_working_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/team_discover_scenes.dart';
+import 'package:haizhucode/ui/kit/scenes/team_scenes.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 /// The 24 public scenes (KitScenes.md's "UNCHANGED public scenes" list),
 /// one representative instance each.

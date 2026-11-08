@@ -3,15 +3,15 @@ import 'dart:convert';
 import 'support/complete_message_history.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/background/attention_tile_snapshot.dart';
-import 'package:opencode_mobile/background/pinned_session_shortcuts.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/background/attention_tile_snapshot.dart';
+import 'package:haizhucode/background/pinned_session_shortcuts.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// The controller keeps two launch surfaces in step with connection truth:

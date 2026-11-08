@@ -1,8 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart'
+import 'package:haizhucode/api2/gateway_mappers.dart'
     show api2ServerCapabilities;
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/dialect.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/dialect.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 class _Real extends HttpOverrides {}
 

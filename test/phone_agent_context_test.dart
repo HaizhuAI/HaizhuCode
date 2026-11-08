@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/domain/phone_agent_context.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/domain/phone_agent_context.dart';
+import 'package:haizhucode/termux/bridge.dart';
 
 /// Runs [script] with `sh` (dash on Ubuntu, as inside the phone's Ubuntu)
 /// with every path under [root].

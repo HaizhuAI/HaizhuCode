@@ -5,12 +5,12 @@
 // "Yesterday 21:42", else the date.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/domain/app_diagnostics_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/app_diagnostics_screen.dart';
-import 'package:opencode_mobile/ui/screens/exit_history_section.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/domain/app_diagnostics_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/app_diagnostics_screen.dart';
+import 'package:haizhucode/ui/screens/exit_history_section.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Gateway extends ChangeNotifier implements AppDiagnosticsGateway {

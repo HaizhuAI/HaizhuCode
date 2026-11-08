@@ -3,13 +3,13 @@
 // call does there (read, write, run) and the exact path it touches.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/l10n/app_localizations_ar.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/ui/kit/kit_request_card.dart';
-import 'package:opencode_mobile/ui/permission_presentation.dart';
-import 'package:opencode_mobile/ui/screens/chat/permission_sheet.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/l10n/app_localizations_ar.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/ui/kit/kit_request_card.dart';
+import 'package:haizhucode/ui/permission_presentation.dart';
+import 'package:haizhucode/ui/screens/chat/permission_sheet.dart';
 
 void main() {
   final en = AppLocalizationsEn();

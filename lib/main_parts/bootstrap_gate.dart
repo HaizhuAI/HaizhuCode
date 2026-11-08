@@ -205,7 +205,7 @@ class _AppBootstrapGateState extends State<AppBootstrapGate> {
       );
     }
     return MaterialApp(
-      title: 'OpenCode Mobile',
+      title: 'HaizhuCode',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),

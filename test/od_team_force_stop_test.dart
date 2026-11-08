@@ -5,9 +5,9 @@
 // the hard kill (AgentControlAction.kill).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
-import 'package:opencode_mobile/ui/screens/team/agent_screen.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
+import 'package:haizhucode/ui/screens/team/agent_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;

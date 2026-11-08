@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/codex/handoff_record.dart';
-import 'package:opencode_mobile/codex/transport.dart';
-import 'package:opencode_mobile/domain/agent_handoff_record.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/codex/handoff_record.dart';
+import 'package:haizhucode/codex/transport.dart';
+import 'package:haizhucode/domain/agent_handoff_record.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 Map<String, dynamic> _thread(List<Map<String, dynamic>> turns) => {
   'id': 'source',

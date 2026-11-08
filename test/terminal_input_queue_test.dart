@@ -4,8 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/ui/screens/terminal_screen.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/ui/screens/terminal_screen.dart';
 
 class _RecordingChannel implements TerminalChannel {
   final controller = StreamController<String>();

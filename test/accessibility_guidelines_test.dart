@@ -5,23 +5,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 import 'support/fake_event_channel.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/chat/permission_sheet.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/widgets/form_renderer.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/chat/permission_sheet.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/widgets/form_renderer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:opencode_mobile/ui/screens/project_hub_screen.dart';
+import 'package:haizhucode/ui/screens/project_hub_screen.dart';
 
 /// Audit rec UX-007: an automated gate for Android tap targets, labelled
 /// tap targets, and text contrast across the critical flows, so a shrinking
@@ -76,7 +76,7 @@ class _Repository implements ProductRepository {
 
 const _project = WorkspaceProject(
   id: 'project-1',
-  name: 'OpenCode Mobile',
+  name: 'HaizhuCode',
   directory: '/work/app',
   worktrees: [],
   updatedAt: 1,

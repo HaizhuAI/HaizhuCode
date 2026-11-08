@@ -4,8 +4,8 @@ library;
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/git_shell.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/git_shell.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
 
 import 'git_test_support.dart';
 

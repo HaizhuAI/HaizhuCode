@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart' show StreamStatus;
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/domain/server_gateway.dart' show StreamStatus;
 import '../../test/support/profile_monitor_fixture.dart';
 import 'fixtures.dart';
 

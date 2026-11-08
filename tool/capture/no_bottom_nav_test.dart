@@ -11,21 +11,21 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/desktop/shortcuts.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/desktop/shortcuts.dart';
 import 'package:clock/clock.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_host.dart'
+import 'package:haizhucode/ui/screens/chats/chats_host.dart'
     show chatsHostProvider;
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
 
 import '../../test/support/setup_capture_preferences.dart';
 import '../../test/support/chats_fakes.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/search/go_to_commands.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/search/go_to_commands.dart';
 import 'fixtures.dart';
 
 const _phase = String.fromEnvironment('NAV_PHASE', defaultValue: 'after');

@@ -10,12 +10,12 @@ import 'package:clock/clock.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart' show ChatStatus;
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_home_screen.dart';
-import 'package:opencode_mobile/ui/widgets/agent_card_view.dart';
+import 'package:haizhucode/domain/chat_feed.dart' show ChatStatus;
+import 'package:haizhucode/domain/genui/gen_ui.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/chats/chats_home_screen.dart';
+import 'package:haizhucode/ui/widgets/agent_card_view.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;
 import '../support/agent_card_fakes.dart';

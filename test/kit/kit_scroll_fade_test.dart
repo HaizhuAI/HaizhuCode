@@ -2,8 +2,8 @@
 // and the fade follows the scroll (impeccable audit 2026-10-28, #6).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_scroll_fade.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_scroll_fade.dart';
 
 import 'kit_motion_still.dart';
 

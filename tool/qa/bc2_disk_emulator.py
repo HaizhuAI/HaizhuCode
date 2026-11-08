@@ -34,7 +34,7 @@ def adb(*args):
 
 
 MAIN = r'''
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 
 import java.io.File
 
@@ -120,7 +120,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="oc-bc2-") as local:
         directory = pathlib.Path(local)
         kotlin = directory / "SetupDiskSpace.kt"
-        kotlin.write_text("package io.github.eslamasabry.opencode_mobile\n"
+        kotlin.write_text("package io.github.haizhu.code\n"
                           "import java.io.File\n" + policy + "\n")
         main_file = directory / "DiskProof.kt"
         main_file.write_text(MAIN)
@@ -136,7 +136,7 @@ def main():
         try:
             adb("push", str(dex_dir / "classes.dex"), scratch + "/classes.dex")
             command = ["dalvikvm", "-cp", scratch + "/classes.dex",
-                       "io.github.eslamasabry.opencode_mobile.DiskProofKt", scratch]
+                       "io.github.haizhu.code.DiskProofKt", scratch]
             result = adb("shell", shlex.join(command))
             metadata = ("Emulator: emulator-5554; Android dalvikvm production policy\n"
                         f"Production SetupDiskSpace SHA256: {hashlib.sha256(policy.encode()).hexdigest()}\n"

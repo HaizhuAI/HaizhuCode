@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/codex/transport.dart';
+import 'package:haizhucode/codex/transport.dart';
 
 class _Socket implements CodexSocket {
   final input = StreamController<Object?>.broadcast(sync: true);

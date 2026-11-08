@@ -1,8 +1,8 @@
 from pathlib import Path
 import subprocess, os, sys
 root = Path(__file__).resolve().parents[2] if '/tool/qa/' in str(Path(__file__).resolve()) else Path('/home/eslam/Storage/Code/oc_app-sol-bb')
-main = root/'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile'
-test = root/'android/app/src/test/kotlin/io/github/eslamasabry/opencode_mobile'
+main = root/'android/app/src/main/kotlin/io/github/haizhu/code'
+test = root/'android/app/src/test/kotlin/io/github/haizhu/code'
 junit='/home/eslam/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar'
 hamcrest='/home/eslam/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar'
 jar='/home/eslam/Storage/tmp/oc-bb3-pure-tests.jar'
@@ -10,7 +10,7 @@ runner=Path('/home/eslam/Storage/tmp/OcBb3PureRunner.kt')
 runner.write_text('''import org.junit.runner.JUnitCore
 import org.junit.runner.Request
 fun main(args: Array<String>) {
- val result = JUnitCore().run(Request.method(Class.forName("io.github.eslamasabry.opencode_mobile." + args[0]), args[1]))
+ val result = JUnitCore().run(Request.method(Class.forName("io.github.haizhu.code." + args[0]), args[1]))
  println("Exact test: " + args[1] + ": " + result.runCount + " run, " + result.failureCount + " failures")
  result.failures.forEach { println(it.toString()) }
  if (!result.wasSuccessful()) kotlin.system.exitProcess(1)
@@ -24,7 +24,7 @@ def compile():
  subprocess.run(compilecmd,cwd=root,check=True)
 def green():
  compile()
- result=subprocess.run(runcmd+['org.junit.runner.JUnitCore']+['io.github.eslamasabry.opencode_mobile.'+x+'Test' for x in ['NativeRuntimeOwnership','NativeServerRecipe','RestartBackoff']],cwd=root,capture_output=True,text=True)
+ result=subprocess.run(runcmd+['org.junit.runner.JUnitCore']+['io.github.haizhu.code.'+x+'Test' for x in ['NativeRuntimeOwnership','NativeServerRecipe','RestartBackoff']],cwd=root,capture_output=True,text=True)
  print(result.stdout,flush=True)
  with (root/'docs/qa/BB3-2026-10-07/jvm-green.txt').open('a') as log:
   log.write('Current pure helper checkpoint exit='+str(result.returncode)+'\n'+result.stdout)

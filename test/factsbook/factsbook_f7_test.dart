@@ -4,17 +4,17 @@
 // when it will fire above its detail rows.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_capabilities.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_types.dart';
-import 'package:opencode_mobile/domain/factsbook/fake_factsbook_gateway.dart';
-import 'package:opencode_mobile/domain/factsbook/reminder_guess.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_session.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/capture_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/phone_node_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/status_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/memory_care_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/thing_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/triggers_screen.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_capabilities.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_types.dart';
+import 'package:haizhucode/domain/factsbook/fake_factsbook_gateway.dart';
+import 'package:haizhucode/domain/factsbook/reminder_guess.dart';
+import 'package:haizhucode/state/factsbook/factsbook_session.dart';
+import 'package:haizhucode/ui/screens/factsbook/capture_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/phone_node_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/status_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/memory_care_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/thing_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/triggers_screen.dart';
 
 import 'factsbook_test_support.dart';
 

@@ -1,4 +1,4 @@
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 
 import io.flutter.plugin.common.MethodChannel
 import java.io.File
@@ -50,7 +50,7 @@ fun main(args: Array<String>) {
                 val store = NativeCrashStore(root)
                 val error = java.io.IOException("https://claude.com/login?code=SHORTCODE /home/oc/.claude/projects private prompt")
                 error.stackTrace = arrayOf(
-                    StackTraceElement("io.github.eslamasabry.opencode_mobile.PhoneAgentHost", "start", "PhoneAgentHost.kt", 42),
+                    StackTraceElement("io.github.haizhu.code.PhoneAgentHost", "start", "PhoneAgentHost.kt", 42),
                     StackTraceElement("private prompt", "https://evil?token=CODE", "/home/oc/private.txt", 3),
                     StackTraceElement("java.io.File", "read", "/home/oc/.claude/secret.java", 2),
                 )

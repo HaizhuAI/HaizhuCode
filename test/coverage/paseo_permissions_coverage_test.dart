@@ -5,9 +5,9 @@
 // question card; the real conversation screen draws it and Details is opened.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

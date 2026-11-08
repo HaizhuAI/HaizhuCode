@@ -2,10 +2,10 @@
 // the person saw and, under them, the technical cause (owner's phone,
 // 2026-10-17: nothing in the report said why a Claude Code chat failed).
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_host.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/chats/chats_host.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

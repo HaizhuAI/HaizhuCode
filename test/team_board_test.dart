@@ -7,12 +7,12 @@
 // says so; empty, loading and error each have their state.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/team_board.dart';
-import 'package:opencode_mobile/ui/kit/kit_board_lane.dart';
-import 'package:opencode_mobile/ui/screens/team/team_home_screen.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/team_board.dart';
+import 'package:haizhucode/ui/kit/kit_board_lane.dart';
+import 'package:haizhucode/ui/screens/team/team_home_screen.dart';
 
 import 'support/team_board_fixture.dart';
 

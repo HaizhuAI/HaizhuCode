@@ -7,11 +7,11 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../support/no_red.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_icon.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_mark.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_icon.dart';
+import 'package:haizhucode/ui/kit/kit_status_mark.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 import 'kit_motion_still.dart';
 

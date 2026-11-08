@@ -12,16 +12,16 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/crash_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/crash_report.dart';
-import 'package:opencode_mobile/diagnostics/failed_job_report.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
-import 'package:opencode_mobile/diagnostics/report_problem.dart';
-import 'package:opencode_mobile/feedback/problem_report.dart';
-import 'package:opencode_mobile/ui/kit/kit_notice.dart' show KitReport;
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/crash_diagnostics.dart';
+import 'package:haizhucode/diagnostics/crash_report.dart';
+import 'package:haizhucode/diagnostics/failed_job_report.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
+import 'package:haizhucode/diagnostics/report_problem.dart';
+import 'package:haizhucode/feedback/problem_report.dart';
+import 'package:haizhucode/ui/kit/kit_notice.dart' show KitReport;
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 /// Kind -> the part that must never come out.
 const _secrets = <String, String>{

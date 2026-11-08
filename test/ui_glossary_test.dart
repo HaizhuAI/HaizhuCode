@@ -1188,7 +1188,7 @@ const _properNouns = <String>{
 const _properPhrases = <String>[
   'AI Team',
   'Claude Code',
-  'OpenCode Mobile',
+  'HaizhuCode',
   'Gas City',
   'Gas Town',
 ];

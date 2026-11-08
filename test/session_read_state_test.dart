@@ -1,21 +1,21 @@
-import 'package:opencode_mobile/l10n/app_localizations.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/api2/events.dart';
-import 'package:opencode_mobile/api2/gateway_events.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/session_read_state.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/widgets/session_read_state.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/api2/events.dart';
+import 'package:haizhucode/api2/gateway_events.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/session_read_state.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/widgets/session_read_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

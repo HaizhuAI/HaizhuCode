@@ -12,7 +12,7 @@
 // and look at every changed image before committing it.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 
 import 'kit_gallery.dart';
 import 'kit_step_timeline_scenes.dart';

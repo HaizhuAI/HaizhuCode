@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 
 ManagedShell sampleShell({
   String id = 'sh_a',

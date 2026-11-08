@@ -49,7 +49,7 @@ export const Lockup: React.FC<{
             whiteSpace: "nowrap",
           }}
         >
-          OpenCode Mobile
+          HaizhuCode
         </div>
         <div
           style={{

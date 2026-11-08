@@ -5,14 +5,14 @@
 import 'dart:async';
 import 'dart:typed_data';
 
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/voice/audio.dart';
-import 'package:opencode_mobile/voice/controller.dart';
-import 'package:opencode_mobile/voice/model_download.dart';
-import 'package:opencode_mobile/voice/model_manager.dart';
-import 'package:opencode_mobile/voice/model_manifest.dart';
-import 'package:opencode_mobile/voice/recognizer.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/voice/audio.dart';
+import 'package:haizhucode/voice/controller.dart';
+import 'package:haizhucode/voice/model_download.dart';
+import 'package:haizhucode/voice/model_manager.dart';
+import 'package:haizhucode/voice/model_manifest.dart';
+import 'package:haizhucode/voice/recognizer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../fixtures.dart';

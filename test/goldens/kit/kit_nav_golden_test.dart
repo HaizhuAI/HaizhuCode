@@ -19,13 +19,13 @@
 // cut its own words at text 2.0).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_effects.dart';
-import 'package:opencode_mobile/ui/kit/kit_nav.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_effects.dart';
+import 'package:haizhucode/ui/kit/kit_nav.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
 
 import 'kit_gallery.dart';
 

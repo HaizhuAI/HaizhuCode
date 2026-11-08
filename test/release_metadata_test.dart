@@ -8,7 +8,7 @@ void main() {
   const version = '1.2.0+52';
   const pubspec = 'name: opencode_mobile\nversion: $version\n';
   const changelog = '# Changelog\n\n## $version — 2026-10-07\n\nNotes.\n';
-  const releaseNotes = '# OpenCode Mobile $version\n\nRelease notes.\n';
+  const releaseNotes = '# HaizhuCode $version\n\nRelease notes.\n';
 
   List<String> validate({
     String manifest = pubspec,
@@ -92,7 +92,7 @@ void main() {
     test('reports a build-number-only mismatch in the release header', () {
       expect(
         validate(notes: releaseNotes.replaceFirst(version, '1.2.0+51')),
-        contains(contains('must start with # OpenCode Mobile $version')),
+        contains(contains('must start with # HaizhuCode $version')),
       );
     });
 
@@ -101,8 +101,8 @@ void main() {
         '',
         '\n$releaseNotes',
         'Introduction\n$releaseNotes',
-        '# OpenCode Mobile $version - Preview\n',
-        '# OpenCode Mobile ${version}0\n',
+        '# HaizhuCode $version - Preview\n',
+        '# HaizhuCode ${version}0\n',
       ]) {
         expect(validate(notes: notes), isNotEmpty);
       }

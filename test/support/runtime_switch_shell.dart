@@ -3,18 +3,18 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 import 'fake_event_channel.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/domain/connection_status.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/ui/widgets/app_connection_status.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/domain/connection_status.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/widgets/app_connection_status.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Ubuntu whose server start never finishes on its own: the switch stays in

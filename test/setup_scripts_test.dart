@@ -1,4 +1,4 @@
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/termux/bridge.dart';
 // The setup prelude and component scripts, run in real shells on this
 // machine: oc_download against a local HTTP server (127.0.0.1 only) that
 // honours Range and sends slowly enough to watch, oc_apt_install against a
@@ -10,10 +10,10 @@ import 'dart:io';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/components.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/builtin/setup/setup_scripts.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
+import 'package:haizhucode/builtin/setup/components.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/setup/setup_scripts.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
 
 /// Serves one directory, honours `Range: bytes=N-` (206 / 416), logs each
 /// request's range to stdout, and sends [rate] bytes a second.

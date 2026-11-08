@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/host/byo_host_bundle_pins.dart';
+import 'package:haizhucode/host/byo_host_bundle_pins.dart';
 
 void main() {
   test('compiled artifacts match the exact app-version review ledger', () {

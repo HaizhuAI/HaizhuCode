@@ -8,16 +8,16 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/interaction_defaults.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/project_folder_actions.dart';
-import 'package:opencode_mobile/ui/screens/review_workspace.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/widgets/default_notices.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/interaction_defaults.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/project_folder_actions.dart';
+import 'package:haizhucode/ui/screens/review_workspace.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/widgets/default_notices.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart'

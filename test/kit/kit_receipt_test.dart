@@ -17,13 +17,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_receipt.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
-import 'package:opencode_mobile/ui/widgets/team_receipt.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_receipt.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/widgets/team_receipt.dart';
 
 /// Every `updateNode` the framework sent: the node id and its label.
 final List<(int, String)> _sent = [];

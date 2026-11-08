@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/setup/components.dart';
-import 'package:opencode_mobile/builtin/setup/phone_setup.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/voice/device.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/setup/components.dart';
+import 'package:haizhucode/builtin/setup/phone_setup.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/voice/device.dart';
 
 import 'fake_app.dart';
 

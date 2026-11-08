@@ -8,9 +8,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/usage_statistics.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/ui/screens/usage_screen.dart';
+import 'package:haizhucode/domain/usage_statistics.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/ui/screens/usage_screen.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'screen_usage_1_support.dart';

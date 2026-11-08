@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
 
 import 'paseo_gateway_test.dart' show FakeDaemon, agentJson, stream;
 

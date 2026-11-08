@@ -5,11 +5,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/keep_running_screen.dart';
-import 'package:opencode_mobile/ui/screens/perf_trace_section.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/keep_running_screen.dart';
+import 'package:haizhucode/ui/screens/perf_trace_section.dart';
 
 import 'screen_system_1_fixtures.dart';
 

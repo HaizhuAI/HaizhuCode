@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import re
 
-PACKAGE = "io.github.eslamasabry.opencode_mobile"
+PACKAGE = "io.github.haizhu.code"
 SHARED_SERIAL = "emulator-5554"
 LOCK = Path("/home/eslam/Storage/tmp/oc-emulator.lock")
 CANDIDATE_BUILD = 2202

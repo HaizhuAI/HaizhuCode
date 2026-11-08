@@ -6,12 +6,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/usage_signin_destination.dart';
-import 'package:opencode_mobile/state/usage_subscriptions_controller.dart';
-import 'package:opencode_mobile/ui/screens/usage/usage_actions.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/usage_signin_destination.dart';
+import 'package:haizhucode/state/usage_subscriptions_controller.dart';
+import 'package:haizhucode/ui/screens/usage/usage_actions.dart';
 
 import 'fake_app.dart';
 

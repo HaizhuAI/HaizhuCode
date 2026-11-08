@@ -11,8 +11,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'chat_3_support.dart';

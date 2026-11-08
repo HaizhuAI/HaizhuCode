@@ -2,7 +2,7 @@
 // a file with one change (no arrows, no count, no More button; the folded
 // lines are one line) and a file with two.
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

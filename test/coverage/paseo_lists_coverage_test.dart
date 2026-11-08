@@ -6,12 +6,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/paseo/chat_feed_source.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_home_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/paseo/chat_feed_source.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
+import 'package:haizhucode/ui/screens/chats/chats_home_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

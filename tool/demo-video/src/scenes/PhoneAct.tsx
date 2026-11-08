@@ -124,7 +124,7 @@ export const PhoneAct: React.FC<{ layout: Layout }> = ({ layout }) => {
           opacity: interpolate(frame, [8, 30], [0, 1], { extrapolateRight: "clamp" }) * (1 - cam.zoomAmt),
         }}
       >
-        Android · OpenCode Mobile
+        Android · HaizhuCode
       </div>
     </AbsoluteFill>
   );

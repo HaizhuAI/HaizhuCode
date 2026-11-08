@@ -17,12 +17,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_page_route.dart';
-import 'package:opencode_mobile/ui/kit/kit_scanner.dart';
-import 'package:opencode_mobile/ui/kit/kit_screen.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_page_route.dart';
+import 'package:haizhucode/ui/kit/kit_scanner.dart';
+import 'package:haizhucode/ui/kit/kit_screen.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
 
 import 'kit_gallery.dart';
 

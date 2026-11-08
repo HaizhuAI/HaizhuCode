@@ -29,7 +29,7 @@ void main() {
     jar = await cachedKotlinJar(
       compiler: compiler,
       sources: [
-        'android/app/src/androidTest/kotlin/io/github/eslamasabry/opencode_mobile/Bb8MainCallback.kt',
+        'android/app/src/androidTest/kotlin/io/github/haizhu/code/Bb8MainCallback.kt',
         'test/native/bb8_main_callback_harness.kt',
       ],
     );
@@ -40,7 +40,7 @@ void main() {
       final result = await Process.run(Platform.environment['JAVA'] ?? 'java', [
         '-cp',
         jar,
-        'io.github.eslamasabry.opencode_mobile.Bb8_main_callback_harnessKt',
+        'io.github.haizhu.code.Bb8_main_callback_harnessKt',
         scenario,
       ]);
       expect(result.exitCode, 0, reason: '${result.stdout}\n${result.stderr}');

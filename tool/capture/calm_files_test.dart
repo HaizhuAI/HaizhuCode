@@ -1,9 +1,9 @@
 // Synthetic file-browser evidence. No server, credentials or real file reads.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/screens/files_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/screens/files_screen.dart';
 
 import '../../test/support/setup_capture_preferences.dart';
 import 'fixtures.dart';

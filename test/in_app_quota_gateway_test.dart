@@ -4,11 +4,11 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/quota_collector_host.dart';
-import 'package:opencode_mobile/domain/provider_quota.dart';
-import 'package:opencode_mobile/quota/provider_quota_client.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/quota_collector_host.dart';
+import 'package:haizhucode/domain/provider_quota.dart';
+import 'package:haizhucode/quota/provider_quota_client.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 import 'provider_quota_test.dart' show providerQuotaFixture;
 

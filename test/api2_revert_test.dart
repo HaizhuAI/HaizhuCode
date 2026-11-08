@@ -3,8 +3,8 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
 
 /// Records what the gateway actually puts on the wire.
 class _RecordingAdapter implements HttpClientAdapter {

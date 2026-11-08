@@ -291,9 +291,9 @@ class SavedReportSession(DeviceSession):
         self.died(identity)
         try:
             close = self.ui.find("Close app")
-            title = self.ui.find("OpenCode Mobile keeps stopping")
+            title = self.ui.find("HaizhuCode keeps stopping")
             if title is None:
-                title = self.ui.find("OpenCode Mobile has stopped")
+                title = self.ui.find("HaizhuCode has stopped")
             if (
                 close is not None
                 and title is not None

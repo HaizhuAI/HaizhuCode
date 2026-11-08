@@ -13,10 +13,10 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/ui/screens/managed_workspaces_screen.dart';
-import 'package:opencode_mobile/ui/screens/project_folder_actions.dart';
-import 'package:opencode_mobile/ui/screens/project_health_screen.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/ui/screens/managed_workspaces_screen.dart';
+import 'package:haizhucode/ui/screens/project_folder_actions.dart';
+import 'package:haizhucode/ui/screens/project_health_screen.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;
 import 'screen_work_3_fixtures.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/static_svg.dart';
+import 'package:haizhucode/domain/static_svg.dart';
 
 void main() {
   test('local shapes, text and gradient paints retain their exact source', () {

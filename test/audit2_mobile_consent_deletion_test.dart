@@ -3,12 +3,12 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/consent_owners.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/mobile_download_consent.dart';
-import 'package:opencode_mobile/state/download_size.dart';
-import 'package:opencode_mobile/platform/network.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/consent_owners.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/mobile_download_consent.dart';
+import 'package:haizhucode/state/download_size.dart';
+import 'package:haizhucode/platform/network.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

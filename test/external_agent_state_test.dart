@@ -4,8 +4,8 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/external_agent.dart';
-import 'package:opencode_mobile/state/external_agents.dart';
+import 'package:haizhucode/domain/external_agent.dart';
+import 'package:haizhucode/state/external_agents.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const agentCard = ExternalAgentCard(

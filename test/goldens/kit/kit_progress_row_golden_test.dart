@@ -10,7 +10,7 @@
 // and look at every changed image before committing it.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_progress_row.dart';
+import 'package:haizhucode/ui/kit/kit_progress_row.dart';
 
 import 'kit_gallery.dart';
 

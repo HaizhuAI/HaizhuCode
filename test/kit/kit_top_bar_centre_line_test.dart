@@ -5,12 +5,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show RenderParagraph;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_context_ring.dart';
-import 'package:opencode_mobile/ui/kit/kit_menu.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_context_ring.dart';
+import 'package:haizhucode/ui/kit/kit_menu.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
 
 const _title = 'Continue the work from the previous conversation';
 

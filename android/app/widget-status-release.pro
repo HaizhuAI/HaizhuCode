@@ -6,6 +6,6 @@
 }
 # The default WorkerFactory restores persisted class names and invokes this
 # signature reflectively after process death. Keep that durable constructor ABI.
--keep class io.github.eslamasabry.opencode_mobile.WidgetStatusWorker {
+-keep class io.github.haizhu.code.WidgetStatusWorker {
     public <init>(android.content.Context, androidx.work.WorkerParameters);
 }

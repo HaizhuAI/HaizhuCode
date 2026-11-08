@@ -721,7 +721,7 @@ class _Wire extends Fq3Wire {
               'content': [
                 {
                   'type': 'text',
-                  'text': 'Card accepted for display in OpenCode Mobile.',
+                  'text': 'Card accepted for display in HaizhuCode.',
                 },
               ],
               'executed': !localCard,
@@ -1027,7 +1027,7 @@ class _Wire extends Fq3Wire {
                 'content': [
                   {
                     'type': 'text',
-                    'text': 'Card accepted for display in OpenCode Mobile.',
+                    'text': 'Card accepted for display in HaizhuCode.',
                   },
                 ],
             },
@@ -1061,7 +1061,7 @@ class _Wire extends Fq3Wire {
         'content': [
           {
             'type': 'text',
-            'text': 'Card accepted for display in OpenCode Mobile.',
+            'text': 'Card accepted for display in HaizhuCode.',
           },
         ],
         'executed': true,

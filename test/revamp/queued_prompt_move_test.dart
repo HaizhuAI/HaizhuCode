@@ -10,22 +10,22 @@
 // app's real fonts at DPR 1. Regenerate deliberately:
 //   flutter test --update-goldens test/revamp/queued_prompt_move_test.dart
 // and look at every changed image before committing it.
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import '../support/fake_server_gateway.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/offline_queue.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/queued_prompt_move.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
-import 'package:opencode_mobile/ui/kit/kit_undo.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/offline_queue.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/queued_prompt_move.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
+import 'package:haizhucode/ui/kit/kit_undo.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../support/complete_message_history.dart';

@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/session_address_handoff.dart';
-import 'package:opencode_mobile/domain/session_address_link.dart';
-import 'package:opencode_mobile/platform/session_address_transport.dart';
+import 'package:haizhucode/domain/session_address_handoff.dart';
+import 'package:haizhucode/domain/session_address_link.dart';
+import 'package:haizhucode/platform/session_address_transport.dart';
 
 const origin = 'https://device.tailnet.ts.net';
 const instance = '9e30af6d-422d-4d89-baad-006ac07cb9d1';

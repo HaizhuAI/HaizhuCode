@@ -5,21 +5,21 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_bottom_inset.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_layout.dart';
-import 'package:opencode_mobile/ui/kit/kit_nav.dart';
-import 'package:opencode_mobile/ui/kit/kit_page_route.dart';
-import 'package:opencode_mobile/ui/kit/kit_progress.dart';
-import 'package:opencode_mobile/ui/kit/kit_screen.dart';
-import 'package:opencode_mobile/ui/kit/kit_search_field.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_slot.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
-import 'package:opencode_mobile/ui/kit/motion/kit_motion_parts.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_bottom_inset.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_layout.dart';
+import 'package:haizhucode/ui/kit/kit_nav.dart';
+import 'package:haizhucode/ui/kit/kit_page_route.dart';
+import 'package:haizhucode/ui/kit/kit_progress.dart';
+import 'package:haizhucode/ui/kit/kit_screen.dart';
+import 'package:haizhucode/ui/kit/kit_search_field.dart';
+import 'package:haizhucode/ui/kit/kit_status_line.dart';
+import 'package:haizhucode/ui/kit/kit_status_slot.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/ui/kit/motion/kit_motion_parts.dart';
 
 KitStatus _status(KitStatusKind kind, String message) => KitStatus(
   kind: kind,

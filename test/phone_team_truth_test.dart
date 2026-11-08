@@ -4,11 +4,11 @@
 // 127.0.0.1" (B-20).
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/settings/plugins_screen.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/settings/plugins_screen.dart'
     show teamRowSubtitle;
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -8,11 +8,11 @@ library;
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/git/git_credentials.dart';
-import 'package:opencode_mobile/domain/git/git_models.dart';
-import 'package:opencode_mobile/domain/git/git_problem.dart';
-import 'package:opencode_mobile/domain/git/git_repository.dart';
-import 'package:opencode_mobile/domain/git/git_shell.dart';
+import 'package:haizhucode/domain/git/git_credentials.dart';
+import 'package:haizhucode/domain/git/git_models.dart';
+import 'package:haizhucode/domain/git/git_problem.dart';
+import 'package:haizhucode/domain/git/git_repository.dart';
+import 'package:haizhucode/domain/git/git_shell.dart';
 
 import 'git_test_support.dart';
 

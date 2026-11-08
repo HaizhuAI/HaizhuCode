@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/widgets/agent_blocks.dart';
-import 'package:opencode_mobile/ui/kit/kit_code_block.dart';
-import 'package:opencode_mobile/ui/widgets/markdown.dart';
+import 'package:haizhucode/ui/widgets/agent_blocks.dart';
+import 'package:haizhucode/ui/kit/kit_code_block.dart';
+import 'package:haizhucode/ui/widgets/markdown.dart';
 
 /// Captures Clipboard.setData payloads so tests can assert on copies.
 List<String> _captureClipboard(WidgetTester tester) {

@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:opencode_mobile/api2/dialect.dart';
+import 'package:haizhucode/api2/dialect.dart';
 
 const capabilityKeys = [
   'version',

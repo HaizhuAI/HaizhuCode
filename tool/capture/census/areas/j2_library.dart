@@ -4,14 +4,14 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/mcp_oauth.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/pending_auth.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/library_screen.dart';
-import 'package:opencode_mobile/ui/screens/mcp_setup_screen.dart';
-import 'package:opencode_mobile/ui/screens/tools_screen.dart';
+import 'package:haizhucode/domain/mcp_oauth.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/pending_auth.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/library_screen.dart';
+import 'package:haizhucode/ui/screens/mcp_setup_screen.dart';
+import 'package:haizhucode/ui/screens/tools_screen.dart';
 
 import '../../fixtures.dart';
 import '../census_core.dart';

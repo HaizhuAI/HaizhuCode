@@ -7,6 +7,6 @@
 
 # WorkManager's default WorkerFactory reflects this exact constructor. Keep its
 # descriptor as well as its persisted class name across future release builds.
--keep class io.github.eslamasabry.opencode_mobile.ScheduledPromptWorker {
+-keep class io.github.haizhu.code.ScheduledPromptWorker {
     public <init>(android.content.Context, androidx.work.WorkerParameters);
 }

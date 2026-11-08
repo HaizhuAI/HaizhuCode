@@ -10,10 +10,10 @@ import 'package:flutter/foundation.dart'
     show debugDefaultTargetPlatformOverride;
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/profiles.dart' show AppAppearance;
-import 'package:opencode_mobile/widgets_overlay/widget_overlay_api.dart';
-import 'package:opencode_mobile/widgets_overlay/widget_overlay_app.dart';
-import 'package:opencode_mobile/widgets_overlay/widget_overlay_launch.dart';
+import 'package:haizhucode/state/profiles.dart' show AppAppearance;
+import 'package:haizhucode/widgets_overlay/widget_overlay_api.dart';
+import 'package:haizhucode/widgets_overlay/widget_overlay_app.dart';
+import 'package:haizhucode/widgets_overlay/widget_overlay_launch.dart';
 
 import 'kit/kit_gallery.dart';
 

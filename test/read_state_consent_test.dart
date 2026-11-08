@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/settings_scope.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/read_state_consent.dart';
+import 'package:haizhucode/domain/settings_scope.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/read_state_consent.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

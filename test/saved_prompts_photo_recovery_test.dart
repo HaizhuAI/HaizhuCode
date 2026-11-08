@@ -4,11 +4,11 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:opencode_mobile/state/draft_attachments.dart';
-import 'package:opencode_mobile/state/draft_photo_recovery.dart';
-import 'package:opencode_mobile/state/prompt_photos.dart';
-import 'package:opencode_mobile/state/session_drafts.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/state/draft_attachments.dart';
+import 'package:haizhucode/state/draft_photo_recovery.dart';
+import 'package:haizhucode/state/prompt_photos.dart';
+import 'package:haizhucode/state/session_drafts.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

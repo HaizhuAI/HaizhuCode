@@ -4,10 +4,10 @@
 // question, and leave the conversation on success.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/ui/widgets/session_menu.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/ui/widgets/session_menu.dart';
 
 import 'revamp/chat_3_support.dart';
 

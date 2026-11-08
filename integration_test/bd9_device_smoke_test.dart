@@ -3,12 +3,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
-import 'package:opencode_mobile/main.dart' as app;
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit_motion.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
+import 'package:haizhucode/main.dart' as app;
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit_motion.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

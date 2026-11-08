@@ -7,10 +7,10 @@
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/ui/kit/kit_effects.dart';
-import 'package:opencode_mobile/ui/kit/kit_motion.dart';
-import 'package:opencode_mobile/ui/kit/kit_since.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/ui/kit/kit_effects.dart';
+import 'package:haizhucode/ui/kit/kit_motion.dart';
+import 'package:haizhucode/ui/kit/kit_since.dart';
 
 import 'kit_harness.dart';
 import 'kit_motion_still.dart';

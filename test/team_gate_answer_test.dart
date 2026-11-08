@@ -15,14 +15,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'support/no_red.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_control.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/team/agent_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/gate_sheet.dart';
-import 'package:opencode_mobile/ui/screens/team_conversation/team_conversation.dart'
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_control.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/team/agent_screen.dart';
+import 'package:haizhucode/ui/screens/team/gate_sheet.dart';
+import 'package:haizhucode/ui/screens/team_conversation/team_conversation.dart'
     show TeamWatchLiveScreen;
 import 'package:shared_preferences/shared_preferences.dart';
 

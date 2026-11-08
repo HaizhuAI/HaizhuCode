@@ -2,8 +2,8 @@
 // the app's own server, whose name ("On this phone") already starts with "On".
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/widgets/phone_server_card.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/widgets/phone_server_card.dart';
 
 void main() {
   phoneServerNoteTests();

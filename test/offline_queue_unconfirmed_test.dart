@@ -4,11 +4,11 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/offline_queue.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart' show KitUndo;
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/offline_queue.dart';
+import 'package:haizhucode/ui/kit/kit.dart' show KitUndo;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'support/offline_queue_fixtures.dart';
 

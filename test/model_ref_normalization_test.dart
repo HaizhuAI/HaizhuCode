@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/models.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/models.dart';
 
 void main() {
   test('bareModelID strips only this provider\'s prefix', () {

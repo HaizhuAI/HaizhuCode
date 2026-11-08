@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/draft_attachments.dart';
-import 'package:opencode_mobile/state/prompt_shelf.dart';
-import 'package:opencode_mobile/state/review_handoff.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/draft_attachments.dart';
+import 'package:haizhucode/state/prompt_shelf.dart';
+import 'package:haizhucode/state/review_handoff.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 import 'package:shared_preferences_platform_interface/types.dart';

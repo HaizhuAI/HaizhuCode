@@ -1,7 +1,7 @@
 import 'support/fake_server_capabilities.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 void main() {
   test('unqualified gateways do not promise chat connector actions', () {

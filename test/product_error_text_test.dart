@@ -4,17 +4,17 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show PlatformException;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/api2/transport.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/domain/product_failure.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart' show TermuxBridgeException;
-import 'package:opencode_mobile/ui/kit/kit.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/api2/transport.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/domain/product_failure.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart' show TermuxBridgeException;
+import 'package:haizhucode/ui/kit/kit.dart'
     show KitAction, KitErrorKind, KitStateView;
-import 'package:opencode_mobile/ui/widgets/product_states.dart';
+import 'package:haizhucode/ui/widgets/product_states.dart';
 
 void main() {
   group('productErrorText', () {

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/scheduling/models.dart';
-import 'package:opencode_mobile/scheduling/store.dart';
+import 'package:haizhucode/scheduling/models.dart';
+import 'package:haizhucode/scheduling/store.dart';
 
 class _Backend implements ScheduledPromptBackend {
   final values = <String, String>{};

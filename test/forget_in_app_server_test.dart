@@ -4,12 +4,12 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/widgets/phone_server_card.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/widgets/phone_server_card.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

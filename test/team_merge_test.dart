@@ -14,15 +14,15 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/team/merge_section.dart';
-import 'package:opencode_mobile/ui/screens/team_conversation/team_conversation.dart'
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/team/merge_section.dart';
+import 'package:haizhucode/ui/screens/team_conversation/team_conversation.dart'
     show TeamConversationScreen;
 import 'package:shared_preferences/shared_preferences.dart';
 

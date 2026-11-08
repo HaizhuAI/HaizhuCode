@@ -5,8 +5,8 @@ import 'dart:typed_data';
 import 'package:cross_file/cross_file.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/domain/prompt_attachment.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/prompt_attachment.dart';
 
 base class _TestPlatformFile extends PlatformFile {
   _TestPlatformFile({

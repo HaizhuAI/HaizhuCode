@@ -251,7 +251,7 @@ class BuiltinLinux {
     : _channel = channel ?? const MethodChannel(channelName);
 
   static const channelName =
-      'io.github.eslamasabry.opencode_mobile/builtin_linux';
+      'io.github.haizhu.code/builtin_linux';
 
   /// Not Termux's 4096. [TermuxBridge.managesServerUrl] treats
   /// 127.0.0.1:4096 as the Termux server and would try Termux restarts and

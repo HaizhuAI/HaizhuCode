@@ -12,19 +12,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart'
+import 'package:haizhucode/domain/agent_catalog.dart'
     show AgentSignInMethod;
-import 'package:opencode_mobile/domain/agent_run_failure.dart';
-import 'package:opencode_mobile/domain/agent_sign_in.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/review_handoff.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/agent_run_failure.dart';
+import 'package:haizhucode/domain/agent_sign_in.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/review_handoff.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'paseo_gateway_test.dart' show FakeDaemon, agentJson;

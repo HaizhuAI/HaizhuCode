@@ -17,11 +17,11 @@
 // tool/coverage/contact_sheet.py to put them on one sheet for review.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_tool_row.dart';
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/paseo/mappers.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_tool_row.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
 
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;
 import 'paseo_coverage_support.dart';

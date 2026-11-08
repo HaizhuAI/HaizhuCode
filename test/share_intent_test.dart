@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/share_intent.dart';
+import 'package:haizhucode/platform/share_intent.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

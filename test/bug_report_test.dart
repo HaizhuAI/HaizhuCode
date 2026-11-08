@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/feedback/bug_report.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
+import 'package:haizhucode/feedback/bug_report.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

@@ -11,7 +11,7 @@ from unittest import mock
 import xml.etree.ElementTree as ET
 
 SOURCE = Path(__file__).resolve().parents[2] / 'docs/qa/BB9-2026-10-07/service-normal-restore-session.py'
-PACKAGE = 'io.github.eslamasabry.opencode_mobile'
+PACKAGE = 'io.github.haizhu.code'
 FLUTTER = 'fixed-private-preferences'
 KEYS = ['flutter.oc.automation.owner', 'flutter.oc.builtinRecovery.owner']
 

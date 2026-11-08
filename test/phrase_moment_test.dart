@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/phrase_chips.dart';
-import 'package:opencode_mobile/state/phrase_moment.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/phrase_chips.dart';
+import 'package:haizhucode/state/phrase_moment.dart';
 
 MessageWithParts _user(String id) => MessageWithParts(
   info: MessageInfo(id: id, role: 'user', sessionID: 's'),

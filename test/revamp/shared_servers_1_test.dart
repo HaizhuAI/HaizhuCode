@@ -6,15 +6,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/profile_monitor.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/local_agent_runtime.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/widgets/local_agent_server_entry.dart';
-import 'package:opencode_mobile/ui/widgets/server_switcher_sheet.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/profile_monitor.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/local_agent_runtime.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/widgets/local_agent_server_entry.dart';
+import 'package:haizhucode/ui/widgets/server_switcher_sheet.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'shared_servers_1_fixtures.dart';

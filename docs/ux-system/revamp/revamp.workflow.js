@@ -85,7 +85,7 @@ Hard rules:
   stop and report it; never build a local substitute. A genuinely new part goes to the coordinator for the contract.
 - Additive only (R11): public class names and constructors gain optional parameters; old APIs stay as @Deprecated wrappers.
   A file a kit part replaces becomes a thin @Deprecated wrapper or is git mv-ed into lib/ui/kit with a re-export (R12).
-- Shared files you never stage: lib/ui/kit/kit.dart (import parts directly: package:opencode_mobile/ui/kit/<part>.dart; the
+- Shared files you never stage: lib/ui/kit/kit.dart (import parts directly: package:haizhucode/ui/kit/<part>.dart; the
   integrator adds exports, R06); test/kit_ratchet_baseline.json and the _baseline map in test/l10n_coverage_test.dart (both
   gates pass when counts drop; the integrator regenerates them, R05); test/design_standard_test.dart (R10);
   docs/design/ui-ledger/{ledger.json,pages.md,navigation.md} (append to docs/design/ui-ledger/parts/<area>.json only, R09);

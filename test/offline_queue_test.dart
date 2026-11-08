@@ -1,14 +1,14 @@
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/automation_policy.dart';
-import 'package:opencode_mobile/domain/while_away.dart';
-import 'package:opencode_mobile/state/offline_queue.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/automation_policy.dart';
+import 'package:haizhucode/domain/while_away.dart';
+import 'package:haizhucode/state/offline_queue.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 import 'support/offline_queue_fixtures.dart';

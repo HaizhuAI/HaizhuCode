@@ -4,7 +4,7 @@ import 'dart:io';
 import 'common.dart';
 import 'evidence.dart' show currentCertificationBuild;
 
-const package = 'io.github.eslamasabry.opencode_mobile';
+const package = 'io.github.haizhu.code';
 const serial = 'emulator-5554';
 const appFiles = '/data/user/0/$package/files';
 const rootfs = '$appFiles/linux/ubuntu';

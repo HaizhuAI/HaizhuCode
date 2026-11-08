@@ -19,7 +19,7 @@ import uuid
 
 REPO = pathlib.Path(__file__).resolve().parents[2]
 LOCK = "/home/eslam/Storage/tmp/oc-emulator.lock"
-PACKAGE = "io.github.eslamasabry.opencode_mobile"
+PACKAGE = "io.github.haizhu.code"
 
 
 def run(argv, *, timeout=60):

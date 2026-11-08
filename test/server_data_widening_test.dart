@@ -2,15 +2,15 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/api2/events.dart';
-import 'package:opencode_mobile/api2/gateway_events.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/api2/events.dart';
+import 'package:haizhucode/api2/gateway_events.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Covers the server fields the client used to drop: session usage, retry

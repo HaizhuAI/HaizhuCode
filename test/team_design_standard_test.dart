@@ -6,13 +6,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/team/task_details_sheet.dart';
-import 'package:opencode_mobile/ui/screens/team_conversation/team_conversation.dart'
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/team/task_details_sheet.dart';
+import 'package:haizhucode/ui/screens/team_conversation/team_conversation.dart'
     show TeamConversationScreen;
-import 'package:opencode_mobile/ui/screens/team/team_home_screen.dart';
+import 'package:haizhucode/ui/screens/team/team_home_screen.dart';
 
 import 'support/team_golden_fixture.dart';
 

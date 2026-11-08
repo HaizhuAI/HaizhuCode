@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/phone_setup.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/launch_shortcut.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_progress_screen.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_ready_screen.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_routes.dart';
+import 'package:haizhucode/builtin/setup/phone_setup.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/launch_shortcut.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_progress_screen.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_ready_screen.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_routes.dart';
 
 import 'support/fake_setup_engine.dart';
 
@@ -227,7 +227,7 @@ void main() {
 
   group('the native half', () {
     const kotlin =
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+        'android/app/src/main/kotlin/io/github/haizhu/code';
     final service = File('$kotlin/SetupService.kt').readAsStringSync();
     final runner = File('$kotlin/SetupRunner.kt').readAsStringSync();
 

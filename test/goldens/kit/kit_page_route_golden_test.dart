@@ -20,8 +20,8 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit_page_route.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit_page_route.dart';
 
 import '../../../tool/capture/fixtures.dart' show captureTheme;
 import 'kit_gallery.dart' show loadKitGalleryFonts;

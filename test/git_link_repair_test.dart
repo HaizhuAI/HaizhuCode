@@ -7,7 +7,7 @@ import 'dart:isolate';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/git_link_repair.dart';
+import 'package:haizhucode/builtin/git_link_repair.dart';
 
 const _store =
     '/data/data/com.termux/files/usr/var/lib/proot-distro/containers/'

@@ -57,7 +57,7 @@ returns combined output. Neither should carry this private auth session.
 
 - Domain: `lib/domain/agent_sign_in.dart`.
 - Native adapter: `lib/builtin/agents/agent_sign_in.dart`.
-- Private native controller: `android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/PhoneAgentSignIn.kt`.
+- Private native controller: `android/app/src/main/kotlin/io/github/haizhu/code/PhoneAgentSignIn.kt`.
 - Shared method enum: `AgentSignInMethod` from `lib/domain/agent_catalog.dart`.
 - States: signedOut, urlReady, awaitingCode, signedIn, limitReached, failed.
 - Each run binds profile, agent, random run ID and sign-in method. Late results
@@ -71,7 +71,7 @@ returns combined output. Neither should carry this private auth session.
 - Limits use a host-supplied UTC reset time; unknown stays null. No estimates.
 - Exceptions are enum-only; native exception messages/details are discarded.
 
-Frozen builtin method channel: `io.github.eslamasabry.opencode_mobile/builtin_linux`.
+Frozen builtin method channel: `io.github.haizhu.code/builtin_linux`.
 Methods are `startAgentSignIn`, `readAgentSignInChallenge`,
 `submitAgentSignInCode`, `agentSignInStatus`, `cancelAgentSignIn`.
 Inputs: `{profileId,agentId,runId,method}`; submit adds transient `code`.

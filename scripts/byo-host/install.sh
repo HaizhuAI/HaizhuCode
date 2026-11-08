@@ -234,7 +234,7 @@ def unit_text(home, directory, release, port):
         )
 
     return (
-        "[Unit]\nDescription=OpenCode Mobile private host\nAfter=network.target\n\n"
+        "[Unit]\nDescription=HaizhuCode private host\nAfter=network.target\n\n"
         "[Service]\nType=simple\nExecStart=/usr/bin/python3 "
         + quoted(release / "supervisor.py")
         + " serve --state-dir "

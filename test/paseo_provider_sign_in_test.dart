@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/host_agent_providers.dart';
-import 'package:opencode_mobile/paseo/host_agent_providers.dart';
+import 'package:haizhucode/domain/host_agent_providers.dart';
+import 'package:haizhucode/paseo/host_agent_providers.dart';
 
 Map<String, dynamic> _entry(String provider, String? error) => {
   'provider': provider,

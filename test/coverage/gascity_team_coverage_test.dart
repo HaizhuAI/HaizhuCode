@@ -5,16 +5,16 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_gateway.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart' show KitDetailsFold;
-import 'package:opencode_mobile/ui/screens/team/agent_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/gate_sheet.dart';
-import 'package:opencode_mobile/ui/screens/team/task_details_sheet.dart';
-import 'package:opencode_mobile/ui/screens/team/team_agents_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/team_home_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/team_settings_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/work_sheet.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_gateway.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/ui/kit/kit.dart' show KitDetailsFold;
+import 'package:haizhucode/ui/screens/team/agent_screen.dart';
+import 'package:haizhucode/ui/screens/team/gate_sheet.dart';
+import 'package:haizhucode/ui/screens/team/task_details_sheet.dart';
+import 'package:haizhucode/ui/screens/team/team_agents_screen.dart';
+import 'package:haizhucode/ui/screens/team/team_home_screen.dart';
+import 'package:haizhucode/ui/screens/team/team_settings_screen.dart';
+import 'package:haizhucode/ui/screens/team/work_sheet.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

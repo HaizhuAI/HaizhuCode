@@ -5,28 +5,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/background/attention_tile_snapshot.dart';
-import 'package:opencode_mobile/background/live_background.dart';
-import 'package:opencode_mobile/background/pinned_session_shortcuts.dart';
-import 'package:opencode_mobile/background/widget_snapshot.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/camera.dart';
-import 'package:opencode_mobile/platform/launch_shortcut.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/platform/share_intent.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/about_screen.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/guide_screen.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/voice/device.dart';
+import 'package:haizhucode/background/attention_tile_snapshot.dart';
+import 'package:haizhucode/background/live_background.dart';
+import 'package:haizhucode/background/pinned_session_shortcuts.dart';
+import 'package:haizhucode/background/widget_snapshot.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/camera.dart';
+import 'package:haizhucode/platform/launch_shortcut.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/platform/share_intent.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/about_screen.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/guide_screen.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/voice/device.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/complete_message_history.dart';
@@ -586,8 +586,8 @@ void main() {
         messenger.setMockMethodCallHandler(
           packageChannel,
           (_) async => {
-            'appName': 'OpenCode Mobile',
-            'packageName': 'io.github.eslamasabry.opencodeMobile',
+            'appName': 'HaizhuCode',
+            'packageName': 'io.github.haizhu.code',
             'version': '1.0.0',
             'buildNumber': '1',
           },

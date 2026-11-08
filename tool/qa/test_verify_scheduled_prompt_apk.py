@@ -71,7 +71,7 @@ class ScheduledPromptApkReflectionTest(unittest.TestCase):
             verify_dex_files([dex_fixture(REQUIRED, missing={database})])
 
     def test_worker_constructor_signature_must_match_reflection(self):
-        worker = 'Lio/github/eslamasabry/opencode_mobile/ScheduledPromptWorker;'
+        worker = 'Lio/github/haizhu/code/ScheduledPromptWorker;'
         with self.assertRaisesRegex(ValueError, 'ScheduledPromptWorker'):
             verify_dex_files([dex_fixture(REQUIRED, changed={worker})])
 

@@ -2,18 +2,18 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/app_exit_recovery.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/builtin/thermal_guard.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
-import 'package:opencode_mobile/diagnostics/report_problem.dart';
-import 'package:opencode_mobile/diagnostics/report_problem_startup.dart';
-import 'package:opencode_mobile/platform/app_exit.dart';
-import 'package:opencode_mobile/platform/thermal.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/builtin/app_exit_recovery.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/builtin/thermal_guard.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
+import 'package:haizhucode/diagnostics/report_problem.dart';
+import 'package:haizhucode/diagnostics/report_problem_startup.dart';
+import 'package:haizhucode/platform/app_exit.dart';
+import 'package:haizhucode/platform/thermal.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Fake credentials: a registered provider key and pattern-shaped values.

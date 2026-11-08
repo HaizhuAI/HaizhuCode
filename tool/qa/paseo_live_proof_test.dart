@@ -7,8 +7,8 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/paseo/gateway.dart';
 
 void main() {
   final url = Platform.environment['PASEO_LIVE_URL'];

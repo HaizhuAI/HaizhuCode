@@ -4,11 +4,11 @@
 // although this phone is that machine and the server updates with the app.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 
 import '../tool/capture/fixtures.dart';
 import 'coverage/servers_support.dart';

@@ -1,13 +1,13 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/agent_components.dart';
-import 'package:opencode_mobile/builtin/agents/paseo_scripts.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/builtin/setup/setup_engine.dart';
-import 'package:opencode_mobile/builtin/setup/setup_scripts.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
+import 'package:haizhucode/builtin/agents/agent_components.dart';
+import 'package:haizhucode/builtin/agents/paseo_scripts.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/setup/setup_engine.dart';
+import 'package:haizhucode/builtin/setup/setup_scripts.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
 
 import 'setup_engine_test.dart' show FakeLinux, en, spec;
 

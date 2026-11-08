@@ -6,15 +6,15 @@
 // two lines.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_arrival.dart';
-import 'package:opencode_mobile/ui/kit/kit_field.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_row_parts.dart';
-import 'package:opencode_mobile/ui/kit/kit_technical_value.dart';
-import 'package:opencode_mobile/ui/kit/kit_term.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_arrival.dart';
+import 'package:haizhucode/ui/kit/kit_field.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_row_parts.dart';
+import 'package:haizhucode/ui/kit/kit_technical_value.dart';
+import 'package:haizhucode/ui/kit/kit_term.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 KitRow _row(String title) => KitRow(
   leading: const KitRowIcon(AppIconography.agent),

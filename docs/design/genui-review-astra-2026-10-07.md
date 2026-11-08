@@ -96,10 +96,10 @@ file/voice deferral and registration ownership. No running backend was qualified
 
 8. **High — Claude and OpenCode do not share a config home or ownership boundary.**
    Native launch sets profile-specific HOME and CLAUDE_CONFIG_DIR
-   (`android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/BuiltinLinux.kt:386`).
+   (`android/app/src/main/kotlin/io/github/haizhu/code/BuiltinLinux.kt:386`).
    Generic setup uses base agent home (`lib/builtin/builtin_linux.dart:367`). OpenCode runs root;
    OC2 isolates its XDG config (`lib/builtin/builtin_linux.dart:885`). Native profile deletion removes
-   that profile's agent home (`android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/BuiltinLinux.kt:491`).
+   that profile's agent home (`android/app/src/main/kotlin/io/github/haizhu/code/BuiltinLinux.kt:491`).
    **Change:** register Claude using the exact profile environment; keep helper state within that
    deletion boundary. Track shared OpenCode ownership; deleting/disabling one profile must not erase
    another's working registration. **Applied C5/P5.**

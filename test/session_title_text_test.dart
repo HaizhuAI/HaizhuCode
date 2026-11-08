@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/session_title_text.dart';
-import 'package:opencode_mobile/ui/widgets/session_title.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/session_title_text.dart';
+import 'package:haizhucode/ui/widgets/session_title.dart';
 
 // The refinery session's title as the server stored it (Android 15
 // emulator, 2026-09-24).

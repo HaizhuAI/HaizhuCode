@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/crash_diagnostics.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/crash_diagnostics.dart';
 
 class _ManualStartupTiming implements CrashDiagnosticsStartupTiming {
   @override

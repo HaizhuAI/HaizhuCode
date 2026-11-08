@@ -13,8 +13,8 @@ import 'dart:async';
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_date_time_picker.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_date_time_picker.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
 
 import 'kit_gallery.dart';
 

@@ -21,7 +21,7 @@ Agent protocol harness: **112 checks passed**, JCA fake signer, public-key and
 DER/SSH signature verification, malformed/oversized frames and auth purposes.
 
 ```sh
-kotlinc android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/ByoHostAgentProtocol.kt \
+kotlinc android/app/src/main/kotlin/io/github/haizhu/code/ByoHostAgentProtocol.kt \
   tool/qa/byo_host_agent_protocol_test.kt -include-runtime -d /tmp/byo-host-agent-protocol.jar
 java -jar /tmp/byo-host-agent-protocol.jar
 tool/qa/machine_lock.sh build -- ./android/gradlew -p android :app:compileReleaseKotlin --no-daemon

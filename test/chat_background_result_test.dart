@@ -2,12 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart';
-import 'package:opencode_mobile/domain/background_agent_result.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart';
+import 'package:haizhucode/domain/background_agent_result.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 
 import '../tool/capture/fixtures.dart' show capturePng, loadCaptureFonts;
 

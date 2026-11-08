@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/local_terminal.dart';
-import 'package:opencode_mobile/domain/agent_sign_in_foreground.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
+import 'package:haizhucode/domain/agent_sign_in_foreground.dart';
 
 import 'support/fake_local_terminal.dart';
 

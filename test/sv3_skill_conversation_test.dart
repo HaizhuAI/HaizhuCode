@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/sv3_skill_capabilities.dart';
-import 'package:opencode_mobile/state/sv3_skill_conversation.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/sv3_skill_capabilities.dart';
+import 'package:haizhucode/state/sv3_skill_conversation.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 const _skill = SkillInfo(
   id: 'skill-review',

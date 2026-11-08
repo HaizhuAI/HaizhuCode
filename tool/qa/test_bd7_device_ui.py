@@ -204,7 +204,7 @@ class Bd7UiTest(unittest.TestCase):
     def test_anr_crop_uses_dialog_card_and_excludes_account_background(self):
         card = node('', '[200,400][600,800]')
         card.extend([
-            node("OpenCode Mobile isn't responding", '[220,430][580,500]'),
+            node("HaizhuCode isn't responding", '[220,430][580,500]'),
             node('Wait', '[220,600][350,660]'),
             node('Close app', '[360,600][580,660]'),
         ])
@@ -312,7 +312,7 @@ class Bd7UiTest(unittest.TestCase):
             "Preview crash report",
             "Only error categories and times, no messages or conversations. Nothing leaves this phone until you tap Share report.",
             "1 report · 221 B",
-            "OpenCode Mobile crash report",
+            "HaizhuCode crash report",
             "Captured error categories and times only.",
             "No messages, stacks or conversations are included.",
             "2026-10-09T12:30:15.123 | native | Native application error",

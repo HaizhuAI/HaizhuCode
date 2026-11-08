@@ -7,9 +7,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_folders.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/termux/termux_folders.dart';
+import 'package:haizhucode/builtin/builtin_folders.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/termux/termux_folders.dart';
 
 void main() {
   late Directory temp;

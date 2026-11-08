@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
 
 import '../../integration_test/bd9_device_smoke_fixture.dart';
 

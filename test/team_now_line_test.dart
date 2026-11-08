@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/mutation_store.dart';
-import 'package:opencode_mobile/state/team_now_line.dart';
-import 'package:opencode_mobile/state/team_planning.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/mutation_store.dart';
+import 'package:haizhucode/state/team_now_line.dart';
+import 'package:haizhucode/state/team_planning.dart';
 
 final epoch = DateTime.utc(2026, 9, 27);
 

@@ -3,13 +3,13 @@
 // to the words, the label on the same inset as KitRowGroup's.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_divider.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_row_parts.dart' show KitRowIcon;
-import 'package:opencode_mobile/ui/kit/kit_sliver_row_group.dart';
-import 'package:opencode_mobile/ui/kit/kit_surface_look.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_divider.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_row_parts.dart' show KitRowIcon;
+import 'package:haizhucode/ui/kit/kit_sliver_row_group.dart';
+import 'package:haizhucode/ui/kit/kit_surface_look.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 import 'kit_motion_still.dart';
 

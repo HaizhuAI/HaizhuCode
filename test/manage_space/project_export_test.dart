@@ -4,7 +4,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/project_export.dart';
+import 'package:haizhucode/builtin/project_export.dart';
 
 void main() {
   late Directory files;

@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/agent_removal_scripts.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
+import 'package:haizhucode/builtin/agents/agent_removal_scripts.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
 
 const _ids = [
   'codex',

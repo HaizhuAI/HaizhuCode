@@ -6,8 +6,8 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[2]
-GUARD = ROOT / 'android/app/src/androidTest/java/io/github/eslamasabry/opencode_mobile/RuntimeQaGuard.java'
-HARNESS = '''package io.github.eslamasabry.opencode_mobile;
+GUARD = ROOT / 'android/app/src/androidTest/java/io/github/haizhu/code/RuntimeQaGuard.java'
+HARNESS = '''package io.github.haizhu.code;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -153,7 +153,7 @@ class NativeGuardTest(unittest.TestCase):
     def run_case(self, case):
         with tempfile.TemporaryDirectory(prefix='bb5-case-') as folder:
             result = subprocess.run(['java', '-Xmx64m', '-cp', str(self.path),
-                                     'io.github.eslamasabry.opencode_mobile.GuardHost', case, folder],
+                                     'io.github.haizhu.code.GuardHost', case, folder],
                                     capture_output=True, text=True, timeout=5)
         self.assertEqual(0, result.returncode, result.stderr)
 
@@ -179,7 +179,7 @@ class NativeGuardTest(unittest.TestCase):
         self.run_case('helper')
 
     def test_runner_cannot_delete_or_rebind_personal_recovery_and_home(self):
-        source = (ROOT / 'android/app/src/androidTest/kotlin/io/github/eslamasabry/opencode_mobile/BuiltinIdleAcceptance.kt').read_text()
+        source = (ROOT / 'android/app/src/androidTest/kotlin/io/github/haizhu/code/BuiltinIdleAcceptance.kt').read_text()
         for forbidden in ['stageServerRecovery(', 'bindServerRecovery(', 'deleteServerRecovery(',
                           'deleteAgentHome(', 'QA_POLICY', 'putString(marker', 'putString(policy']:
             with self.subTest(forbidden=forbidden):

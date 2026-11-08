@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 
 import 'support/complete_message_history.dart';
 import 'support/fake_setup_engine.dart';
@@ -7,22 +7,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/builtin/setup/phone_setup.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/main.dart';
-import 'package:opencode_mobile/platform/launch_shortcut.dart';
-import 'package:opencode_mobile/platform/share_intent.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_progress_screen.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
-import 'package:opencode_mobile/ui/screens/usage_widget_screen.dart';
-import 'package:opencode_mobile/update/shorebird_update_notice.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/builtin/setup/phone_setup.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/main.dart';
+import 'package:haizhucode/platform/launch_shortcut.dart';
+import 'package:haizhucode/platform/share_intent.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_progress_screen.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
+import 'package:haizhucode/ui/screens/usage_widget_screen.dart';
+import 'package:haizhucode/update/shorebird_update_notice.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _MemoryProfileStore extends ProfileStore {

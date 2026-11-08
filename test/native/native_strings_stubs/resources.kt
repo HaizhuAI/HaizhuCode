@@ -4,7 +4,7 @@ import java.io.File
 import java.util.Locale
 import javax.xml.parsers.DocumentBuilderFactory
 import org.w3c.dom.Element
-import io.github.eslamasabry.opencode_mobile.ResourceNames
+import io.github.haizhu.code.ResourceNames
 
 class LocaleList(private val values: List<Locale>) {
     operator fun get(index: Int): Locale = values[index]

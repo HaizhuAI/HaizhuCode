@@ -4,11 +4,11 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/linux_manager/linux_reset_flow.dart';
-import 'package:opencode_mobile/builtin/reply_watch.dart'
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/linux_manager/linux_reset_flow.dart';
+import 'package:haizhucode/builtin/reply_watch.dart'
     show replySpeedPreferenceKey;
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Linux extends BuiltinLinux {

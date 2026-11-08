@@ -11,7 +11,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../support/settings_scenes.dart';

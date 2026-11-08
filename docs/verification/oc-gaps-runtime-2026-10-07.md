@@ -43,8 +43,8 @@ server restart. A configuration write is not direct-tool qualification.
 
    ```sh
    adb devices -l
-   adb -s "$DEVICE" shell pm path io.github.eslamasabry.opencode_mobile
-   adb -s "$DEVICE" shell dumpsys package io.github.eslamasabry.opencode_mobile
+   adb -s "$DEVICE" shell pm path io.github.haizhu.code
+   adb -s "$DEVICE" shell dumpsys package io.github.haizhu.code
    ```
 
    Record installed app version and actual Android application UID from the

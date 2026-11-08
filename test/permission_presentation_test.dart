@@ -16,9 +16,9 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/ui/permission_presentation.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/ui/permission_presentation.dart';
 
 const _baselinePath = 'test/permission_presentation_baseline.json';
 const _baselineKey = 'unknownIdNotGeneric';

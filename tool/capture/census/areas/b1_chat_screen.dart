@@ -2,11 +2,11 @@
 // (docs/design/ui-ledger/parts/b1-chat-screen.json). See tool/capture/census_test.dart.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/state/draft_attachments.dart';
-import 'package:opencode_mobile/state/offline_queue.dart';
-import 'package:opencode_mobile/state/session_drafts.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/state/draft_attachments.dart';
+import 'package:haizhucode/state/offline_queue.dart';
+import 'package:haizhucode/state/session_drafts.dart';
 
 import '../../fixtures.dart';
 import '../census_core.dart';

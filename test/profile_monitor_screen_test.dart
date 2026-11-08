@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/notification_preferences.dart';
-import 'package:opencode_mobile/state/profile_monitor.dart';
-import 'package:opencode_mobile/ui/screens/profile_monitor_screen.dart';
-import 'package:opencode_mobile/ui/kit/kit_row_parts.dart' show KitSwitchRow;
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/notification_preferences.dart';
+import 'package:haizhucode/state/profile_monitor.dart';
+import 'package:haizhucode/ui/screens/profile_monitor_screen.dart';
+import 'package:haizhucode/ui/kit/kit_row_parts.dart' show KitSwitchRow;
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 import 'support/profile_monitor_fixture.dart';
 
 Future<void> _reveal(WidgetTester tester, Finder target) async {

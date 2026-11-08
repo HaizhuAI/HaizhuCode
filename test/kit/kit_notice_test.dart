@@ -10,13 +10,13 @@ import 'package:flutter/semantics.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../support/no_red.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_icon_button.dart';
-import 'package:opencode_mobile/ui/kit/kit_notice.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_icon_button.dart';
+import 'package:haizhucode/ui/kit/kit_notice.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 import 'kit_motion_still.dart';
 

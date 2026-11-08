@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/git/github_device_flow.dart';
+import 'package:haizhucode/domain/git/github_device_flow.dart';
 
 import 'git_test_support.dart';
 

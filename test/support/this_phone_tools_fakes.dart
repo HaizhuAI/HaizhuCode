@@ -1,9 +1,9 @@
 // Fakes for This phone's per-tool removal (slice P1.4): a registry shaped
 // like the real one, and the phone's Linux answering the tools' scripts by
 // name.
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/team/builtin_team.dart';
 
 import '../revamp/screen_phone_1_fixtures.dart';
 

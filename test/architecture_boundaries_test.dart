@@ -8,7 +8,7 @@
 //
 // "ARCH-1" (ratchet): per lib/ui file, imports/exports of lib/api/,
 //   lib/api2/ and the generated package:opencode_sdk. The UI talks only to
-//   lib/domain. Relative and package:opencode_mobile/ URIs are resolved.
+//   lib/domain. Relative and package:haizhucode/ URIs are resolved.
 // "ARCH-2" (ratchet): per lib/ui file, flavour gating: `ServerFlavor.`, a
 //   `.flavor ==`/`!=` comparison, `switch (… flavor …)` (covers the
 //   `case .v2:` / `.v2 =>` dot shorthand), `flavor.name`/`flavor.index`,
@@ -57,7 +57,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 
 const _baselinePath = 'test/architecture_boundaries_baseline.json';
-const _packageName = 'opencode_mobile';
+const _packageName = 'haizhucode';
 
 const _arch1 = 'ARCH-1';
 const _arch2 = 'ARCH-2';
@@ -621,7 +621,7 @@ final url = 'http://example.com'; // ServerFlavor.v2
     test('resolves relative and package imports', () {
       const src = '''
 import '../../api/models.dart';
-import "package:opencode_mobile/api2/client.dart" show Client;
+import "package:haizhucode/api2/client.dart" show Client;
 export '../../domain/server_gateway.dart';
 import 'package:opencode_sdk/opencode_sdk.dart';
 import 'package:flutter/widgets.dart';

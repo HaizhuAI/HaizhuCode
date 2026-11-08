@@ -51,7 +51,7 @@ assistance level truthfully. I recommend not spending the owner's time on it.
 | Cleartext traffic avoided | `android:usesCleartextTraffic="false"` and a `networkSecurityConfig` in `AndroidManifest.xml` | pass |
 | Target end users | an app for developers; end users | pass |
 | No downloading of executable binaries without explicit opt-in consent ("it must not be harder to decline than to accept") | guided setup downloads an Ubuntu rootfs and installs packages; Shorebird patches (Dart code) are checked and downloaded from the About screen path | needs work |
-| Unique packageName | `io.github.eslamasabry.opencode_mobile` | pass |
+| Unique packageName | `io.github.haizhu.code` | pass |
 | Metadata in the repo in Fastlane structure | present: title, short and full description, six phone screenshots, Arabic copy | partial |
 | Release APK signed with a release key; not debuggable | signed release key; Shorebird release build | pass (unverified here; I did not run apksigner) |
 | Size: "usually reserves up to 30 megabytes per app" | 1.4.0 APK is about 100 MB | **blocker** |

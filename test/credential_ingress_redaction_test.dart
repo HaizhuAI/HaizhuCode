@@ -5,14 +5,14 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/api2/transport.dart';
-import 'package:opencode_mobile/diagnostics/report_problem.dart';
-import 'package:opencode_mobile/feedback/problem_report.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit_field.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/api2/transport.dart';
+import 'package:haizhucode/diagnostics/report_problem.dart';
+import 'package:haizhucode/feedback/problem_report.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit_field.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _secret =

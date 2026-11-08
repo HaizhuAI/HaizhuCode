@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart'
+import 'package:haizhucode/domain/models.dart'
     show ApiException, ModelRef, SessionSelection;
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/api2/gateway_events.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/api2/session_permission_policy.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/api2/gateway_events.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/api2/session_permission_policy.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 class _RealHttpOverrides extends HttpOverrides {}
 

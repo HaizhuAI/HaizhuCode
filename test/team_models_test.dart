@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/none.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/none.dart';
 
 /// Every source file TEAM-101 adds; each must stay free of OpenCode API
 /// imports so the plugin never grows into the server gateway.
@@ -572,7 +572,7 @@ void main() {
           multiLine: true,
         ).allMatches(file.readAsStringSync()).map((m) => m.group(2)!);
         for (final uri in imports) {
-          final normalized = uri.replaceAll('package:opencode_mobile/', 'lib/');
+          final normalized = uri.replaceAll('package:haizhucode/', 'lib/');
           if (RegExp(r'(^|/)api2?/').hasMatch(normalized) ||
               normalized.contains('opencode_sdk')) {
             offenders.add('$path -> $uri');

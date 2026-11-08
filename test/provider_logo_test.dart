@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:opencode_mobile/domain/provider_presentation.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/widgets/provider_logo.dart';
+import 'package:haizhucode/domain/provider_presentation.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/widgets/provider_logo.dart';
 
 const String _svg =
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">'

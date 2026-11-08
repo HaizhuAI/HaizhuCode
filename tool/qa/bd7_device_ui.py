@@ -22,7 +22,7 @@ _DEGRADED_COPY = {
 _FIXED = {
     'Report a problem', 'Crash reports', 'Recent app exits', 'Details', 'Close',
     'Dismiss', 'Hide details',
-    'Preview crash report', 'Share report', 'OpenCode Mobile crash report',
+    'Preview crash report', 'Share report', 'HaizhuCode crash report',
     'Captured error categories and times only.',
     'No messages, stacks or conversations are included.',
     'Only error categories and times, no messages or conversations. Nothing leaves this phone until you tap Share report.',
@@ -47,7 +47,7 @@ _FIXED = {
     'Turning this off deletes the saved crash reports and clears the saved error above.',
     'No unexpected closes recently.', 'Back', 'On', 'Off',
     'Android records each time the app closes. Nothing here is sent automatically.',
-    'OpenCode Mobile', "OpenCode Mobile isn't responding", 'OpenCode Mobile isn’t responding',
+    'HaizhuCode', "HaizhuCode isn't responding", 'HaizhuCode isn’t responding',
     'Close app', 'Wait', 'App info',
 } | _DEGRADED_COPY
 _GENERATED = re.compile(
@@ -256,9 +256,9 @@ class Bd7Ui:
                 ('The app closed unexpectedly', 'The app stopped responding'))]
             title = max(choices, key=lambda node: _rect(node)[1], default=None)
         elif section == 'anr':
-            title = self._find("OpenCode Mobile isn't responding", nodes)
+            title = self._find("HaizhuCode isn't responding", nodes)
             if title is None:
-                title = self._find('OpenCode Mobile isn’t responding', nodes)
+                title = self._find('HaizhuCode isn’t responding', nodes)
         else:
             raise Bd7UiFailure('unsafe_screenshot')
         if title is None:

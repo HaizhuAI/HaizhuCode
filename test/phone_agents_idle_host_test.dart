@@ -3,14 +3,14 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/phone_agents_host.dart';
-import 'package:opencode_mobile/domain/phone_agent_host.dart';
+import 'package:haizhucode/builtin/agents/phone_agents_host.dart';
+import 'package:haizhucode/domain/phone_agent_host.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'paseo_acp_pilot_test.dart' show FakePaseoSocket;
 
 const _native = MethodChannel(
-  'io.github.eslamasabry.opencode_mobile/builtin_linux',
+  'io.github.haizhu.code/builtin_linux',
 );
 const _storage = MethodChannel('plugins.it_nomads.com/flutter_secure_storage');
 const _testSecret =

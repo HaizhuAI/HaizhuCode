@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/attention_tile_snapshot.dart';
-import 'package:opencode_mobile/platform/launch_shortcut.dart';
+import 'package:haizhucode/background/attention_tile_snapshot.dart';
+import 'package:haizhucode/platform/launch_shortcut.dart';
 
 /// The Android half of the F6 launch surfaces cannot run under
 /// `flutter test`, so the contract Dart relies on is pinned from the sources:
@@ -11,7 +11,7 @@ import 'package:opencode_mobile/platform/launch_shortcut.dart';
 /// preference key the tile reads, and the whitelisted action its tap sends.
 void main() {
   const androidMain = 'android/app/src/main';
-  const kotlin = '$androidMain/kotlin/io/github/eslamasabry/opencode_mobile';
+  const kotlin = '$androidMain/kotlin/io/github/haizhu/code';
   final activity = File('$kotlin/MainActivity.kt').readAsStringSync();
   final channel = File('$kotlin/LaunchShortcutChannel.kt').readAsStringSync();
   final launches = File('$kotlin/LaunchActivityBridge.kt').readAsStringSync();

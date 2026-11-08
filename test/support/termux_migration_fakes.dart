@@ -6,11 +6,11 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:opencode_mobile/builtin/migration/migration_archive_store.dart';
-import 'package:opencode_mobile/builtin/migration/termux_migration_controller.dart';
-import 'package:opencode_mobile/builtin/migration/termux_migration_transport.dart';
-import 'package:opencode_mobile/domain/termux_migration.dart';
-import 'package:opencode_mobile/state/termux_migration_owner.dart';
+import 'package:haizhucode/builtin/migration/migration_archive_store.dart';
+import 'package:haizhucode/builtin/migration/termux_migration_controller.dart';
+import 'package:haizhucode/builtin/migration/termux_migration_transport.dart';
+import 'package:haizhucode/domain/termux_migration.dart';
+import 'package:haizhucode/state/termux_migration_owner.dart';
 
 const migrationJob = '0123456789abcdef0123456789abcdef';
 const migrationSource = 'termux';

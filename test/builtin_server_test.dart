@@ -1,11 +1,11 @@
 import 'package:clock/clock.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
 
 /// The Android side as the starter sees it: Ubuntu installed or not, one
 /// server that runs once started (or dies at once when [serverDies]).

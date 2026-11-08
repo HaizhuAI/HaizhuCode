@@ -137,12 +137,12 @@ jobs:
         run: |
           set -euo pipefail
           bundle=build/linux/x64/release/bundle
-          test -x "$bundle/opencode_mobile"
+          test -x "$bundle/haizhucode"
           test -s "$bundle/data/flutter_assets/version.json"
           # Nothing outside the bundle may be needed at runtime beyond system
           # libraries; a missing bundled plugin shows up here as "not found".
-          ldd "$bundle/opencode_mobile"
-          ! ldd "$bundle/opencode_mobile" | grep -q "not found"
+          ldd "$bundle/haizhucode"
+          ! ldd "$bundle/haizhucode" | grep -q "not found"
 
       - name: Package
         # Refuses to run if the bundle's version.json disagrees with

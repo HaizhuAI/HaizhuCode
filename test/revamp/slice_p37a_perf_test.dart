@@ -8,9 +8,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/review_workspace.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/review_workspace.dart';
 
 /// One file, 5,000 patch lines: 250 hunks of 10 kept, 5 removed, 5 added.
 FileDiff _bigDiff() {

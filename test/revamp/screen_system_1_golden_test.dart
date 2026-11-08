@@ -13,15 +13,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/codex/gateway.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/ui/kit/kit_notice.dart' show KitReport;
-import 'package:opencode_mobile/ui/screens/about_screen.dart';
-import 'package:opencode_mobile/ui/screens/app_diagnostics_screen.dart';
-import 'package:opencode_mobile/ui/screens/keep_running_screen.dart';
-import 'package:opencode_mobile/ui/screens/server_capabilities_screen.dart';
+import 'package:haizhucode/codex/gateway.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/ui/kit/kit_notice.dart' show KitReport;
+import 'package:haizhucode/ui/screens/about_screen.dart';
+import 'package:haizhucode/ui/screens/app_diagnostics_screen.dart';
+import 'package:haizhucode/ui/screens/keep_running_screen.dart';
+import 'package:haizhucode/ui/screens/server_capabilities_screen.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -138,7 +138,7 @@ void main() {
       ..evict('PRIVACY.md')
       ..evict('THIRD_PARTY_NOTICES.md');
     PackageInfo.setMockInitialValues(
-      appName: 'OpenCode Mobile',
+      appName: 'HaizhuCode',
       packageName: 'com.opencode.mobile',
       version: '1.0.44',
       buildNumber: '52',

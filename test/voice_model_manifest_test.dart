@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/voice/model_manifest.dart';
+import 'package:haizhucode/voice/model_manifest.dart';
 
 void main() {
   test('voice dependencies and Android permission are pinned', () {
@@ -10,10 +10,10 @@ void main() {
       'android/app/src/main/AndroidManifest.xml',
     ).readAsStringSync();
     final activity = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/MainActivity.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/MainActivity.kt',
     ).readAsStringSync();
     final media = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/MainActivityMedia.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/MainActivityMedia.kt',
     ).readAsStringSync();
     final audio = File('lib/voice/audio.dart').readAsStringSync();
 

@@ -3,8 +3,8 @@
 // Tree: <app area> -> screen -> state, built from lib/all_components.dart.
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import 'all_components.dart';

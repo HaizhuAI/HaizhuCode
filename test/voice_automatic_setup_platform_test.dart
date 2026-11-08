@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/voice/automatic_setup_platform.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/voice/automatic_setup_platform.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

@@ -10,15 +10,15 @@ import 'package:clock/clock.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/server_gateway.dart'
     show WorkspaceProject;
-import 'package:opencode_mobile/ui/screens/chats/chats_host.dart'
+import 'package:haizhucode/ui/screens/chats/chats_host.dart'
     show leftoverNoticeLine;
-import 'package:opencode_mobile/ui/widgets/work_status_line.dart'
+import 'package:haizhucode/ui/widgets/work_status_line.dart'
     show WorkRunawayNotice;
-import 'package:opencode_mobile/ui/screens/chats/chats_home_screen.dart';
-import 'package:opencode_mobile/ui/screens/chats/new_chat_screen.dart';
+import 'package:haizhucode/ui/screens/chats/chats_home_screen.dart';
+import 'package:haizhucode/ui/screens/chats/new_chat_screen.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../support/chats_fakes.dart';

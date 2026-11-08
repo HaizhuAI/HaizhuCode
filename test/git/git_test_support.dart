@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:opencode_mobile/domain/git/git_credentials.dart';
-import 'package:opencode_mobile/domain/git/git_shell.dart';
+import 'package:haizhucode/domain/git/git_credentials.dart';
+import 'package:haizhucode/domain/git/git_shell.dart';
 
 /// A fake token shaped like GitHub's; it must never show up in a script,
 /// argv, Details or test output.

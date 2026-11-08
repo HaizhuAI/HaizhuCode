@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/migration/migration_space.dart';
-import 'package:opencode_mobile/domain/termux_migration.dart';
+import 'package:haizhucode/builtin/migration/migration_space.dart';
+import 'package:haizhucode/domain/termux_migration.dart';
 
 void main() {
   const projects = TermuxMigrationItem.projects;

@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/agent_install_guard.dart';
-import 'package:opencode_mobile/builtin/setup/preflight.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
+import 'package:haizhucode/builtin/agents/agent_install_guard.dart';
+import 'package:haizhucode/builtin/setup/preflight.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
 
 void main() {
   test('normal and negative QA floor preserve every pinned estimate', () {

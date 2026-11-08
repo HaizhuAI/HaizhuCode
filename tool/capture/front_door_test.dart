@@ -11,7 +11,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
 
 import '../../test/support/phone_setup_scenes.dart';
 import 'fixtures.dart';

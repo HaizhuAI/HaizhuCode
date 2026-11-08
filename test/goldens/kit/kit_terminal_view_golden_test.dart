@@ -12,10 +12,10 @@
 // and no process (TEST-11).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/ui/kit/kit_sheet.dart';
-import 'package:opencode_mobile/ui/kit/kit_terminal_view.dart';
-import 'package:opencode_mobile/ui/kit/terminal_key_bar.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/ui/kit/kit_sheet.dart';
+import 'package:haizhucode/ui/kit/kit_terminal_view.dart';
+import 'package:haizhucode/ui/kit/terminal_key_bar.dart';
 import 'package:xterm/xterm.dart' as xterm;
 
 import 'kit_gallery.dart';

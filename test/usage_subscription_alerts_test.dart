@@ -2,10 +2,10 @@
 // account alert at the plan's level, once per crossing, and any plan can say
 // "it is back". A fake notification sink stands in for Android.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/state/notification_preferences.dart';
-import 'package:opencode_mobile/state/usage_subscription_alerts.dart';
-import 'package:opencode_mobile/state/usage_subscriptions_controller.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/state/notification_preferences.dart';
+import 'package:haizhucode/state/usage_subscription_alerts.dart';
+import 'package:haizhucode/state/usage_subscriptions_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _paseo = UsageConnection(

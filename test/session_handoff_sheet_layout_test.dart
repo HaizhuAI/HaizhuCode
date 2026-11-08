@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/session_handoff.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/widgets/session_handoff_sheets.dart';
+import 'package:haizhucode/domain/session_handoff.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/widgets/session_handoff_sheets.dart';
 
 /// The two handoff sheets (F4-S1 command, F4-S2 QR) at 320 dp, at 1x and at
 /// 2x text, the largest the kit sheet supports (owner decision 2026-09-27:

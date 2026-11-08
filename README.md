@@ -1,11 +1,19 @@
 <div align="center">
 
-<img src="docs/site/assets/logo.png" alt="OpenCode Mobile logo" width="88" height="88">
+<img src="docs/site/assets/logo.png" alt="HaizhuCode logo" width="88" height="88">
 
-# OpenCode Mobile
+# HaizhuCode
 
-**Coding agents on your Android phone.**
-Ten agents, including Claude Code, Codex, Gemini CLI, Qwen Code, Kilo, Cline, Goose and OpenCode, in a Linux the app installs itself.
+**A security-oriented AI agent workbench on your Android phone** — forked from
+[opencode-mobile-next](https://github.com/Eslamasabry/opencode-mobile-next).
+Reverse engineering, AI programming, CTF solving and authorized red/blue-team
+workflows, with the `universal-kernel` system prompt injected into every
+managed agent at kernel level. See [haizhu/README.md](haizhu/README.md) for the
+payload layout (kernel, skills, agent roles, MCP registry, `hz` CLI).
+
+Ten agents, including Claude Code, Codex, Gemini CLI, Qwen Code, Kilo, Cline,
+Goose and OpenCode, in a Linux the app installs itself — each seeded with the
+HaizhuCode kernel, skills and MCP wiring.
 No computer, no Termux. Or connect to the agent on your computer.
 
 [![Latest release](https://img.shields.io/github/v/release/Eslamasabry/opencode-mobile-next?label=release&color=55D187)](https://github.com/Eslamasabry/opencode-mobile-next/releases/latest)

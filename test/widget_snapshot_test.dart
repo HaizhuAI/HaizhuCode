@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart' show Locale;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/background/widget_snapshot.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/background/widget_snapshot.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 Session _session(String id, {String? title, int? updated}) => Session(
   id: id,

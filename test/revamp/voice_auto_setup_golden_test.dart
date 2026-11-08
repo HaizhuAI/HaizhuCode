@@ -11,10 +11,10 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/voice/automatic_setup_platform.dart';
-import 'package:opencode_mobile/voice/model_download.dart';
-import 'package:opencode_mobile/voice/model_manifest.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/voice/automatic_setup_platform.dart';
+import 'package:haizhucode/voice/model_download.dart';
+import 'package:haizhucode/voice/model_manifest.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'screen_voice_1_fixtures.dart';

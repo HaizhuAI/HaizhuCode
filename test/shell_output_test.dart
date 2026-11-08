@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/managed_shell.dart';
-import 'package:opencode_mobile/state/shell_output.dart';
+import 'package:haizhucode/domain/managed_shell.dart';
+import 'package:haizhucode/state/shell_output.dart';
 import 'support/managed_shell_fakes.dart';
 
 void main() {

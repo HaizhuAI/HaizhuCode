@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/profile_monitor.dart';
-import 'package:opencode_mobile/domain/work_row_status.dart';
-import 'package:opencode_mobile/state/attention_feed.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/domain/profile_monitor.dart';
+import 'package:haizhucode/domain/work_row_status.dart';
+import 'package:haizhucode/state/attention_feed.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 void main() {
   final now = DateTime.utc(2026, 9, 28, 12);

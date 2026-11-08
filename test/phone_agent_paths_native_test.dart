@@ -32,7 +32,7 @@ void main() {
     temporary = await Directory.systemTemp.createTemp('oc-agent-paths-native-');
     jar = '${temporary.path}/paths.jar';
     const sources =
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+        'android/app/src/main/kotlin/io/github/haizhu/code';
     final linux = await File('$sources/BuiltinLinux.kt').readAsString();
     final begin = linux.indexOf('val agentRoot = if (agentUser)');
     final end = linux.indexOf('val command = listOf(', begin);
@@ -41,7 +41,7 @@ void main() {
     final preparation = linux.substring(begin, end);
     final fixture = File('${temporary.path}/ProductionPaths.kt');
     await fixture.writeAsString('''
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 import java.io.File
 class FakeContext(val filesDir: File)
 fun productionAgentRoot(home: File): File {

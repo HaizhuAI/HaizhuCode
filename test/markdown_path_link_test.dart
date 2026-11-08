@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_markdown.dart';
-import 'package:opencode_mobile/ui/widgets/markdown.dart';
+import 'package:haizhucode/ui/kit/chat/kit_markdown.dart';
+import 'package:haizhucode/ui/widgets/markdown.dart';
 
 void main() {
   group('looksLikeFilePath', () {

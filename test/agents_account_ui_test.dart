@@ -9,14 +9,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show RenderParagraph;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/local_terminal.dart';
-import 'package:opencode_mobile/domain/agent_auth_probe.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_sign_in.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/agents/agent_sheet.dart';
-import 'package:opencode_mobile/ui/screens/agents/agents_section.dart';
-import 'package:opencode_mobile/ui/screens/agents/agents_text.dart'
+import 'package:haizhucode/builtin/local_terminal.dart';
+import 'package:haizhucode/domain/agent_auth_probe.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_sign_in.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/agents/agent_sheet.dart';
+import 'package:haizhucode/ui/screens/agents/agents_section.dart';
+import 'package:haizhucode/ui/screens/agents/agents_text.dart'
     show agentPayloadSize;
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;

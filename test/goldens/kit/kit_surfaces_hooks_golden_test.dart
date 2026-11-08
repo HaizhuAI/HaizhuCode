@@ -24,9 +24,9 @@
 // and look at every changed image before committing it.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style_theme.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/style/kit_style_theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'kit_gallery.dart';

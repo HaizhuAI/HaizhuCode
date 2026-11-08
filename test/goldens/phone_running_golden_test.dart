@@ -17,7 +17,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/phone_processes.dart';
+import 'package:haizhucode/builtin/phone_processes.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../support/running_on_phone_fakes.dart';

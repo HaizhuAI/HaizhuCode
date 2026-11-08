@@ -2,11 +2,11 @@
 // app, over a stood-in Linux. Nothing here starts a process.
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/phone_host.dart';
-import 'package:opencode_mobile/ui/screens/this_phone_screen.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/phone_host.dart';
+import 'package:haizhucode/ui/screens/this_phone_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

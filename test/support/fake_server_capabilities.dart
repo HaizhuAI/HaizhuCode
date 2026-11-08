@@ -1,4 +1,4 @@
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 /// Synthetic feature-rich backend for protocol-neutral widget fixtures.
 /// Production backend capabilities are tested through their real gateways.

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 
 void main() {
   test('a repository without message deletion stays a bounded error', () async {

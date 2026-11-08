@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/gen_ui_install.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/agents/gen_ui_install_scripts.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui_status.dart';
+import 'package:haizhucode/builtin/agents/gen_ui_install.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/agents/gen_ui_install_scripts.dart';
+import 'package:haizhucode/domain/genui/gen_ui_status.dart';
 
 final class _Runner implements GenUiSetupRunner {
   final calls = <GenUiAgent>[];

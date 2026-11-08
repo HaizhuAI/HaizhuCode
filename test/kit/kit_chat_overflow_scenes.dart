@@ -2,7 +2,7 @@
 // QA: docs/qa/kit-gates-manifest-2026-09-27/README.md deferred their shared
 // samples until integration. These exercise the actual public components.
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 import 'kit_overflow_scenes.dart';
 

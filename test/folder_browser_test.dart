@@ -3,17 +3,17 @@
 // ProjectFolderActions.openFolder, whose result the callers keep using.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/builtin/builtin_folders.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/domain/workspace_paths.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit_sheet.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/screens/project_folder_actions.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/builtin/builtin_folders.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/domain/workspace_paths.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit_sheet.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/screens/project_folder_actions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Store extends ProfileStore {

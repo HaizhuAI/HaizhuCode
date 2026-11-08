@@ -6,8 +6,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/connection_status.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
+import 'package:haizhucode/domain/connection_status.dart';
+import 'package:haizhucode/ui/app_theme.dart';
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'support/runtime_switch_shell.dart';

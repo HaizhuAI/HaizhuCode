@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/builtin/setup/components.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/network.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_progress_screen.dart';
-import 'package:opencode_mobile/ui/widgets/setup_progress_view.dart';
+import 'package:haizhucode/builtin/setup/components.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/network.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_progress_screen.dart';
+import 'package:haizhucode/ui/widgets/setup_progress_view.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

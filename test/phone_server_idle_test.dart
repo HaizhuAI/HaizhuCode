@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/phone_server_idle.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/phone_server_idle.dart';
 
 class _Linux extends BuiltinLinux {
   _Linux({bool helper = true}) : helperOriginallyLive = helper {

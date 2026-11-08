@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/terminal_command_gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/terminal_lifecycle.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/terminal_command_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/terminal_lifecycle.dart';
 
 class _RealHttpOverrides extends HttpOverrides {}
 

@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/ui/widgets/session_title.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/ui/widgets/session_title.dart';
 
 void main() {
   test('the server placeholder loses its ISO timestamp', () {

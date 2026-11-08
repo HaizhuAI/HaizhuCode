@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/team_project.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/team/projects/team_status_words.dart';
+import 'package:haizhucode/domain/team_project.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/team/projects/team_status_words.dart';
 
 void main() {
   final l = lookupAppLocalizations(const Locale('en'));

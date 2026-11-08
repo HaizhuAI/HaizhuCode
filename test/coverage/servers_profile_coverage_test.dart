@@ -4,7 +4,7 @@
 // the way it is stored; the app parses it with its own ServerProfile.fromJson.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

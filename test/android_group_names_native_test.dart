@@ -16,14 +16,14 @@ void main() {
       final jar = await cachedKotlinJar(
         compiler: compiler,
         sources: [
-          'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/AndroidGroupNames.kt',
+          'android/app/src/main/kotlin/io/github/haizhu/code/AndroidGroupNames.kt',
           'test/native/android_group_names_harness.kt',
         ],
       );
       final result = await Process.run('java', [
         '-cp',
         jar,
-        'io.github.eslamasabry.opencode_mobile.Android_group_names_harnessKt',
+        'io.github.haizhu.code.Android_group_names_harnessKt',
       ]);
       expect(result.exitCode, 0, reason: '${result.stdout}\n${result.stderr}');
       expect(result.stdout, contains('PASS android-group-names'));

@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/environment_projects.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/environment_projects.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 class _ProjectsGateway implements ServerOperationsGateway {
   _ProjectsGateway(this.projects, {this.failure});

@@ -27,7 +27,7 @@ void main() {
     };
     final stub = File('${generated!.path}/resource_ids.kt');
     stub.writeAsStringSync(
-      'package io.github.eslamasabry.opencode_mobile\n'
+      'package io.github.haizhu.code\n'
       'object R {\n'
       '${['string', 'plurals'].map((kind) => 'object $kind {\n${resources.where((entry) => entry.name.local == kind).map((entry) => 'const val ${entry.getAttribute('name')} = ${ids[entry.getAttribute('name')]}').join('\n')}\n}').join('\n')}\n}\n'
       'object ResourceNames {\nval names = mapOf(\n'
@@ -38,8 +38,8 @@ void main() {
     jar = await cachedKotlinJar(
       compiler: compiler,
       sources: [
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/NativeNotificationLocale.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/NativeStrings.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/NativeNotificationLocale.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/NativeStrings.kt',
         'test/native/native_locale_refresh_harness.kt',
         'test/native/native_strings_stubs/resources.kt',
         ...Directory(
@@ -59,7 +59,7 @@ void main() {
       final result = await Process.run('java', [
         '-cp',
         jar,
-        'io.github.eslamasabry.opencode_mobile.Native_locale_refresh_harnessKt',
+        'io.github.haizhu.code.Native_locale_refresh_harnessKt',
         scenario,
       ]);
       expect(result.exitCode, 0, reason: '${result.stdout}\n${result.stderr}');

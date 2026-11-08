@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/session_handoff.dart';
-import 'package:opencode_mobile/platform/session_link.dart';
+import 'package:haizhucode/domain/session_handoff.dart';
+import 'package:haizhucode/platform/session_link.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

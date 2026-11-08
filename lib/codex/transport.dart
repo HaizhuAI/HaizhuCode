@@ -240,7 +240,7 @@ class CodexTransport {
       final initialized = await _request(
         'initialize',
         {
-          'clientInfo': {'name': 'opencode_mobile', 'version': '1.0.0'},
+          'clientInfo': {'name': 'haizhucode', 'version': '1.0.0'},
           'capabilities': {'experimentalApi': false},
         },
         mutation: false,

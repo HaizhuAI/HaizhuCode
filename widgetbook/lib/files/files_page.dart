@@ -2,11 +2,11 @@
 // ProjectHub page over a fake OpenCode 2 server that lists a small project,
 // reports Git's uncommitted changes and reads one file.
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart'
+import 'package:haizhucode/api2/gateway_mappers.dart'
     show api2ServerCapabilities;
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/ui/screens/project_hub_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/ui/screens/project_hub_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

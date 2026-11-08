@@ -14,13 +14,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/app_diagnostics_screen.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/app_diagnostics_screen.dart';
 
 import '../../test/goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;
 import '../../test/support/setup_capture_preferences.dart';
@@ -125,8 +125,8 @@ AppDiagnosticsController _diagnostics(_From from) {
   diagnostics.record(
     StateError('Connection closed before full header was received'),
     StackTrace.fromString(
-      '#0      _EventStream._read (package:opencode_mobile/api2/sse.dart:142:7)\n'
-      '#1      _EventStream.listen (package:opencode_mobile/api2/sse.dart:88:5)',
+      '#0      _EventStream._read (package:haizhucode/api2/sse.dart:142:7)\n'
+      '#1      _EventStream.listen (package:haizhucode/api2/sse.dart:88:5)',
     ),
     source: 'sse',
     at: DateTime(2026, 10, 20, 9, 41),

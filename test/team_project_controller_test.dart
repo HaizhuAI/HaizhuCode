@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:opencode_mobile/state/team_project_controller.dart';
-import 'package:opencode_mobile/domain/phone_project_engine.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
-import 'package:opencode_mobile/orchestration/adapters/fixture/project_fixture_gateway.dart';
+import 'package:haizhucode/state/team_project_controller.dart';
+import 'package:haizhucode/domain/phone_project_engine.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
+import 'package:haizhucode/orchestration/adapters/fixture/project_fixture_gateway.dart';
 import 'team_project_fixture_test.dart' show MemoryPersistence;
 
 class ControlledProjectGateway implements OrchestrationProjectGateway {

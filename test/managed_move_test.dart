@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/managed_move.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/widgets/managed_move_view.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/managed_move.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/widgets/managed_move_view.dart';
 
 Widget _app(Widget home) => MaterialApp(
   localizationsDelegates: AppLocalizations.localizationsDelegates,

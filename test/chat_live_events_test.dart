@@ -8,7 +8,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart'
+import 'package:haizhucode/ui/kit/kit.dart'
     show
         KitBidi,
         KitCodeBlock,
@@ -21,28 +21,28 @@ import 'package:opencode_mobile/ui/kit/kit.dart'
         KitTurn,
         KitZoom,
         KitUndo;
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 import 'support/fake_event_channel.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/review_handoff.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/app_diagnostics_screen.dart';
-import 'package:opencode_mobile/ui/screens/capabilities_screen.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/global_sessions_screen.dart';
-import 'package:opencode_mobile/ui/screens/library_screen.dart';
-import 'package:opencode_mobile/ui/screens/project_health_screen.dart';
-import 'package:opencode_mobile/ui/screens/session_context_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/screens/tools_screen.dart';
-import 'package:opencode_mobile/ui/widgets/app_connection_status.dart';
-import 'package:opencode_mobile/ui/widgets/connection_status_banner.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/review_handoff.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/app_diagnostics_screen.dart';
+import 'package:haizhucode/ui/screens/capabilities_screen.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/global_sessions_screen.dart';
+import 'package:haizhucode/ui/screens/library_screen.dart';
+import 'package:haizhucode/ui/screens/project_health_screen.dart';
+import 'package:haizhucode/ui/screens/session_context_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/screens/tools_screen.dart';
+import 'package:haizhucode/ui/widgets/app_connection_status.dart';
+import 'package:haizhucode/ui/widgets/connection_status_banner.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:opencode_mobile/state/prompt_photos.dart';
+import 'package:haizhucode/state/prompt_photos.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'support/composer_tools.dart';
 

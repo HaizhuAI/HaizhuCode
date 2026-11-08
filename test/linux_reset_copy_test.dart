@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
 
 void main() {
   test('the reset leftover sentence does not double the phone', () {

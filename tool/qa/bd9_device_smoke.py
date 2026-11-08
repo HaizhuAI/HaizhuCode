@@ -15,7 +15,7 @@ import shutil
 import subprocess
 import sys
 
-PACKAGE = 'io.github.eslamasabry.opencode_mobile'
+PACKAGE = 'io.github.haizhu.code'
 RUNNER = f'{PACKAGE}.test/{PACKAGE}.Bd9DeviceSmoke'
 SERIAL = 'emulator-5554'
 CHECKS = (

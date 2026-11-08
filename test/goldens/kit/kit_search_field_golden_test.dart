@@ -17,12 +17,12 @@
 // title row standing in for the top bar.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_menu.dart';
-import 'package:opencode_mobile/ui/kit/kit_screen.dart';
-import 'package:opencode_mobile/ui/kit/kit_search_field.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_menu.dart';
+import 'package:haizhucode/ui/kit/kit_screen.dart';
+import 'package:haizhucode/ui/kit/kit_search_field.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 import 'kit_gallery.dart';
 

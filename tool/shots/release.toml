@@ -1,7 +1,7 @@
 # Paseo-only replay of historical release screenshots. OC1 setup and captures
 # were retired on 2026-10-15; this is not a complete current release checklist.
 env_file = "private.env"  # git-ignored; copy private.env.example
-# Before/after shots for the OpenCode Mobile release notes.
+# Before/after shots for the HaizhuCode release notes.
 #   export SHOTS_SCRATCH=<work dir>  SHOTS_CACHE=<apk cache>  SHOTS_AFTER_APK=<apk>
 #   tool/shots/download_before.sh
 #   python3 <shotlist>/shotlist.py run tool/shots/release.toml --out <dir>
@@ -136,7 +136,7 @@ steps = [
 ]
 
 [app]
-package = "io.github.eslamasabry.opencode_mobile"
+package = "io.github.haizhu.code"
 
 [device]
 system_image = "system-images;android-34;google_apis;x86_64"

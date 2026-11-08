@@ -14,14 +14,14 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_home_screen.dart';
-import 'package:opencode_mobile/ui/screens/global_sessions_screen.dart';
-import 'package:opencode_mobile/ui/screens/projects_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/ui/screens/chats/chats_home_screen.dart';
+import 'package:haizhucode/ui/screens/global_sessions_screen.dart';
+import 'package:haizhucode/ui/screens/projects_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

@@ -1,7 +1,7 @@
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
-export 'package:opencode_mobile/domain/server_gateway.dart'
+export 'package:haizhucode/domain/server_gateway.dart'
     show LiveEventChannel, StreamStatus;
 
 /// Controllable event channel for controller tests, with no wire transport.

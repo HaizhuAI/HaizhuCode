@@ -3,10 +3,10 @@ import 'dart:ui' show Tristate;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/ui/kit/terminal_key_bar.dart';
-import 'package:opencode_mobile/ui/screens/terminal_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/ui/kit/terminal_key_bar.dart';
+import 'package:haizhucode/ui/screens/terminal_screen.dart';
 
 class _MemoryTerminalChannel implements TerminalChannel {
   final outputController = StreamController<String>();

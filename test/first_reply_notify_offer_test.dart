@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/background/live_background.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/first_reply_notify_offer.dart';
-import 'package:opencode_mobile/state/first_run.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/background/live_background.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/first_reply_notify_offer.dart';
+import 'package:haizhucode/state/first_run.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Who is asked "Notify you when the agent needs you?" (UX plan 5.6 step 6;

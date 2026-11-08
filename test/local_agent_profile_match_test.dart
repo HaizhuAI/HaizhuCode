@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/local_agent_server.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/widgets/termux_running_server_entry.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/local_agent_server.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/widgets/termux_running_server_entry.dart';
 
 ServerProfile _paseo(String id, String url, {String name = 'This phone'}) =>
     ServerProfile(

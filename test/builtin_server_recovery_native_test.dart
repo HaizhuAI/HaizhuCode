@@ -2,12 +2,12 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/builtin/builtin_server_recovery.dart';
-import 'package:opencode_mobile/state/automation_policy.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/builtin/builtin_server_recovery.dart';
+import 'package:haizhucode/state/automation_policy.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Store extends ProfileStore {

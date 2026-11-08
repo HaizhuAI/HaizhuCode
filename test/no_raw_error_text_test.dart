@@ -16,8 +16,8 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'support/fake_server_gateway.dart' show ApiException;
-import 'package:opencode_mobile/api2/transport.dart';
-import 'package:opencode_mobile/domain/product_failure.dart';
+import 'package:haizhucode/api2/transport.dart';
+import 'package:haizhucode/domain/product_failure.dart';
 
 /// Names a caught failure usually has in lib/ui.
 const _errorNames = r'(?:e|err|error|failure|caught|exception|cause)';

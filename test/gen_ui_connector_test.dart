@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart' show ToolState;
-import 'package:opencode_mobile/builtin/agents/gen_ui_server.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui_validation_js.dart';
+import 'package:haizhucode/domain/models.dart' show ToolState;
+import 'package:haizhucode/builtin/agents/gen_ui_server.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart';
+import 'package:haizhucode/domain/genui/gen_ui_validation_js.dart';
 
 const _scope = GenUiScope(
   profileID: 'profile',

@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/thermal_guard.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/team_overview.dart';
+import 'package:haizhucode/builtin/thermal_guard.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/team_overview.dart';
 
 const host = OrchestrationHostIdentity(
   provider: 'gascity',

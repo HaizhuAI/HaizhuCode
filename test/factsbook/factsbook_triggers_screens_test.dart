@@ -5,18 +5,18 @@
 // capability gates. Arabic renders right to left.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_capabilities.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_trigger_types.dart';
-import 'package:opencode_mobile/domain/factsbook/fake_factsbook_gateway.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_session.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_host.dart'
+import 'package:haizhucode/domain/factsbook/factsbook_capabilities.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_trigger_types.dart';
+import 'package:haizhucode/domain/factsbook/fake_factsbook_gateway.dart';
+import 'package:haizhucode/state/factsbook/factsbook_session.dart';
+import 'package:haizhucode/ui/screens/chats/chats_host.dart'
     show chatsHostProvider;
-import 'package:opencode_mobile/ui/screens/factsbook/event_detail_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/memory_care_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/rule_editor_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/settings_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/about_you_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/triggers_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/event_detail_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/memory_care_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/rule_editor_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/settings_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/about_you_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/triggers_screen.dart';
 
 import '../support/chats_fakes.dart';
 import 'factsbook_test_support.dart';

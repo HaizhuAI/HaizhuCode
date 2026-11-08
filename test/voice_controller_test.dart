@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/voice/audio.dart';
-import 'package:opencode_mobile/voice/controller.dart';
-import 'package:opencode_mobile/voice/device.dart';
-import 'package:opencode_mobile/voice/model_download.dart';
-import 'package:opencode_mobile/voice/model_manager.dart';
-import 'package:opencode_mobile/voice/model_manifest.dart';
-import 'package:opencode_mobile/voice/recognizer.dart';
+import 'package:haizhucode/voice/audio.dart';
+import 'package:haizhucode/voice/controller.dart';
+import 'package:haizhucode/voice/device.dart';
+import 'package:haizhucode/voice/model_download.dart';
+import 'package:haizhucode/voice/model_manager.dart';
+import 'package:haizhucode/voice/model_manifest.dart';
+import 'package:haizhucode/voice/recognizer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _UnusedStore implements VoiceFileStore {

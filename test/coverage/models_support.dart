@@ -2,9 +2,9 @@
 // that hand the screens what the real gateways parsed from wire payloads.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/widgets/pickers.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/widgets/pickers.dart';
 
 import 'lists_support.dart';
 import 'paseo_coverage_support.dart' show screenText, writeCasePng;

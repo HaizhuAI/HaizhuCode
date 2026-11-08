@@ -2,14 +2,14 @@
 // hand the screens what the real gateways parsed from wire payloads.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/screens/files_screen.dart';
-import 'package:opencode_mobile/ui/screens/managed_workspaces_screen.dart';
-import 'package:opencode_mobile/ui/screens/project_health_screen.dart';
-import 'package:opencode_mobile/ui/screens/review_workspace.dart';
-import 'package:opencode_mobile/ui/screens/staged_revert_screen.dart';
-import 'package:opencode_mobile/ui/screens/worktrees_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/screens/files_screen.dart';
+import 'package:haizhucode/ui/screens/managed_workspaces_screen.dart';
+import 'package:haizhucode/ui/screens/project_health_screen.dart';
+import 'package:haizhucode/ui/screens/review_workspace.dart';
+import 'package:haizhucode/ui/screens/staged_revert_screen.dart';
+import 'package:haizhucode/ui/screens/worktrees_screen.dart';
 
 import 'lists_support.dart';
 import 'paseo_coverage_support.dart' show screenText, writeCasePng;

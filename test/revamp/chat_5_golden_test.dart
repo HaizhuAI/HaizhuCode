@@ -10,9 +10,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'chat_3_support.dart';

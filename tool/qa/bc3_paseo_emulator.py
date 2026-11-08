@@ -23,7 +23,7 @@ SDK = pathlib.Path.home() / "Android/Sdk"
 LOCK = "/home/eslam/Storage/tmp/oc-emulator.lock"
 DART = (pathlib.Path.home() / ".shorebird/bin/cache/flutter/"
         "91f8bd75076e9c740aa13cf67eb9ec1a093f68f5/bin/dart")
-PACKAGE = "io.github.eslamasabry.opencode_mobile"
+PACKAGE = "io.github.haizhu.code"
 
 
 def run(argv, *, timeout=180):
@@ -48,7 +48,7 @@ def android_tools():
 
 
 def native_probe(output):
-    native_dir = REPO / "android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile"
+    native_dir = REPO / "android/app/src/main/kotlin/io/github/haizhu/code"
     host_source = (native_dir / "PhoneAgentHost.kt").read_text()
     setup_source = (native_dir / "SetupRunner.kt").read_text()
     match = re.search(r"(?ms)^(?:internal )?object SetupDiskSpace\s*\{.*?^\}", setup_source)
@@ -60,7 +60,7 @@ def native_probe(output):
     with tempfile.TemporaryDirectory(prefix="oc-bc3-native-") as local:
         directory = pathlib.Path(local)
         kotlin = directory / "SetupDiskSpace.kt"
-        kotlin.write_text("package io.github.eslamasabry.opencode_mobile\n"
+        kotlin.write_text("package io.github.haizhu.code\n"
                           "import java.io.File\n" + policy + "\n")
         host = directory / "PhoneAgentHost.kt"
         host.write_text(host_source)
@@ -83,7 +83,7 @@ def native_probe(output):
             for scenario in ("exited-at-once", "healthy-launch", "low-space-launch", "concurrent-start"):
                 command = ["app_process", "-Djava.io.tmpdir=" + scratch + "/tmp",
                            "/system/bin",
-                           "io.github.eslamasabry.opencode_mobile.Phone_agent_host_harnessKt",
+                           "io.github.haizhu.code.Phone_agent_host_harnessKt",
                            scenario]
                 results.append(adb("shell", "CLASSPATH=" + shlex.quote(scratch + "/classes.dex") +
                                    " " + shlex.join(command)))

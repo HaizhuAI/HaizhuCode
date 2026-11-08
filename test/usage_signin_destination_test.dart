@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/usage_widget_snapshot.dart';
-import 'package:opencode_mobile/domain/provider_usage.dart';
-import 'package:opencode_mobile/platform/launch_shortcut.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/usage_signin_destination.dart';
+import 'package:haizhucode/background/usage_widget_snapshot.dart';
+import 'package:haizhucode/domain/provider_usage.dart';
+import 'package:haizhucode/platform/launch_shortcut.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/usage_signin_destination.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 ServerProfile _profile(

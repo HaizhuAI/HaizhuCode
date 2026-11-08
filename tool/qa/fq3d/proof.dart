@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:opencode_mobile/api2/gateway_mappers.dart';
-import 'package:opencode_mobile/api2/events.dart';
-import 'package:opencode_mobile/api2/models.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart';
+import 'package:haizhucode/api2/events.dart';
+import 'package:haizhucode/api2/models.dart';
 
 /// Accept only the complete password line emitted by pinned OC2 2.0.10.
 /// The caller owns stdout chunk framing and keeps this value in memory only.

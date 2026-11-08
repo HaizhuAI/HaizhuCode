@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:opencode_mobile/builtin/local_terminal.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
 
 /// LocalTerminal.kt as the Dart side sees it: shells that start at once,
 /// output pushed by the test, and every call recorded.

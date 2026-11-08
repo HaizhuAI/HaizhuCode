@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_trust.dart';
+import 'package:haizhucode/domain/server_trust.dart';
 
 void main() {
   test('trust origin includes the effective port and ignores the API path', () {

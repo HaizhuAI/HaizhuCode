@@ -5,11 +5,11 @@
 // prompt editor's discard question.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_composer.dart';
-import 'package:opencode_mobile/ui/kit/kit_search_field.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/chat/kit_composer.dart';
+import 'package:haizhucode/ui/kit/kit_search_field.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 
 import 'chat_3_support.dart';
 import '../support/composer_tools.dart';

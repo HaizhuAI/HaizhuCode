@@ -4,10 +4,10 @@
 // line. With no sentence the counts line stands alone.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/screens/review_workspace.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/screens/review_workspace.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 FileDiff _diff(String file) => FileDiff(

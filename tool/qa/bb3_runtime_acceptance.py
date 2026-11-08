@@ -36,7 +36,7 @@ except ModuleNotFoundError:
     from tool.qa.bb2_runtime_acceptance import connected_open_code_two
 
 SERIAL = "emulator-5554"
-PACKAGE = "io.github.eslamasabry.opencode_mobile"
+PACKAGE = "io.github.haizhu.code"
 PROFILE = "qa_bb3_reclaim"
 RUNNER = f"{PACKAGE}.test/{PACKAGE}.BuiltinRuntimeAcceptance"
 CERT = "1de5bf08146f269bcd9eb5c2ffc94469ce4617d37806285955f978a62494d60c"

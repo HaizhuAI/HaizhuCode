@@ -2,10 +2,10 @@
 // service that runs (at its own saved port) or a program listening inside
 // the project counts; a failed look keeps what was known.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/dev_preview.dart';
-import 'package:opencode_mobile/domain/managed_shell.dart';
-import 'package:opencode_mobile/state/detected_dev_servers.dart';
-import 'package:opencode_mobile/state/project_dev_server.dart';
+import 'package:haizhucode/domain/dev_preview.dart';
+import 'package:haizhucode/domain/managed_shell.dart';
+import 'package:haizhucode/state/detected_dev_servers.dart';
+import 'package:haizhucode/state/project_dev_server.dart';
 
 // The phone's listing (ListeningPorts' script output): vite on 5173 run
 // from /root/p, and a python server on 8080 run from /other.

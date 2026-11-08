@@ -5,9 +5,9 @@ import 'dart:typed_data';
 
 import 'package:clock/clock.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/factsbook/ed25519.dart';
-import 'package:opencode_mobile/domain/factsbook/jcs.dart';
-import 'package:opencode_mobile/domain/factsbook/owner_signer.dart';
+import 'package:haizhucode/domain/factsbook/ed25519.dart';
+import 'package:haizhucode/domain/factsbook/jcs.dart';
+import 'package:haizhucode/domain/factsbook/owner_signer.dart';
 
 void main() {
   group('Ed25519 (RFC 8032 section 7.1)', () {

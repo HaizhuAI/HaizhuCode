@@ -4,14 +4,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/phone_setup.dart';
-import 'package:opencode_mobile/state/termux_running_server.dart';
-import 'package:opencode_mobile/termux/bridge.dart' show TermuxRuntime;
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_field.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_customize_sheet.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_ready_screen.dart';
-import 'package:opencode_mobile/ui/screens/termux_storage_screen.dart';
+import 'package:haizhucode/builtin/setup/phone_setup.dart';
+import 'package:haizhucode/state/termux_running_server.dart';
+import 'package:haizhucode/termux/bridge.dart' show TermuxRuntime;
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_field.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_customize_sheet.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_ready_screen.dart';
+import 'package:haizhucode/ui/screens/termux_storage_screen.dart';
 
 import 'screen_phone_1_fixtures.dart';
 

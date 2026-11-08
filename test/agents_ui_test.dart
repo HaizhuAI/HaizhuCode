@@ -3,23 +3,23 @@ import 'dart:async';
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemChannels;
-import 'package:opencode_mobile/builtin/local_terminal.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_tools/agent_certification.dart';
-import 'package:opencode_mobile/domain/mark_catalog.dart';
-import 'package:opencode_mobile/ui/screens/agents/agent_sheet.dart';
-import 'package:opencode_mobile/domain/agent_sign_in.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/phone_agent_host.dart';
-import 'package:opencode_mobile/domain/phone_agents.dart';
-import 'package:opencode_mobile/domain/phone_agents_source.dart';
-import 'package:opencode_mobile/ui/screens/agents/agent_model_sheet.dart'
+import 'package:haizhucode/domain/agent_tools/agent_certification.dart';
+import 'package:haizhucode/domain/mark_catalog.dart';
+import 'package:haizhucode/ui/screens/agents/agent_sheet.dart';
+import 'package:haizhucode/domain/agent_sign_in.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/phone_agent_host.dart';
+import 'package:haizhucode/domain/phone_agents.dart';
+import 'package:haizhucode/domain/phone_agents_source.dart';
+import 'package:haizhucode/ui/screens/agents/agent_model_sheet.dart'
     show agentDefaultModelName;
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/agents/agents_section.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_home_screen.dart';
-import 'package:opencode_mobile/ui/screens/chats/new_chat_screen.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/agents/agents_section.dart';
+import 'package:haizhucode/ui/screens/chats/chats_home_screen.dart';
+import 'package:haizhucode/ui/screens/chats/new_chat_screen.dart';
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'support/agents_fakes.dart';

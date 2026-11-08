@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/events.dart';
-import 'package:opencode_mobile/api2/sse2.dart';
-import 'package:opencode_mobile/api2/transport.dart';
+import 'package:haizhucode/api2/events.dart';
+import 'package:haizhucode/api2/sse2.dart';
+import 'package:haizhucode/api2/transport.dart';
 
 class _RealHttpOverrides extends HttpOverrides {}
 

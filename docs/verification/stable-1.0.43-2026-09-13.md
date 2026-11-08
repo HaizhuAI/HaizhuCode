@@ -19,7 +19,7 @@ The Android release uses immutable tag `v1.0.43+49`, source
 
 ## APK identity and upgrade checks
 
-Both APKs identify `io.github.eslamasabry.opencode_mobile`, version name
+Both APKs identify `io.github.haizhu.code`, version name
 `1.0.43`, version code `49`, and size 201,170,228 bytes. They have separate
 signing lineages; they are not interchangeable updates.
 

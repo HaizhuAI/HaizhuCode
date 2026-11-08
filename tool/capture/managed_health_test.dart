@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
 
 import '../../test/support/setup_capture_preferences.dart';
 import 'fixtures.dart';

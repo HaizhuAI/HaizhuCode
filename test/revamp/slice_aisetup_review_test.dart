@@ -11,20 +11,20 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/setup_assistant.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/paseo/gateway.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/setup_assistant.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/paseo/gateway.dart'
     show paseoServerCapabilities;
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/setup_session.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
-import 'package:opencode_mobile/ui/screens/settings/ai_setup_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/setup_session.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
+import 'package:haizhucode/ui/screens/settings/ai_setup_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Answers OpenCode 2 setup inspection endpoints.

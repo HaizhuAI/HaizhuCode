@@ -1,0 +1,409 @@
+#!/bin/sh
+# hz — HaizhuCode 管理 CLI
+# 用法: hz <verb> [args]
+#   seed [HOME...]   把 HaizhuCode 负载注入指定 HOME（默认全部已知 home）
+#   status           显示负载与各 agent 配置接线状态
+#   kernel           打印内核文件路径（可接 > 或 |）
+#   agents|skills    列出角色/技能
+#   mcp <verb>       list|install <id>|sync|run <id>|doctor
+#   prompts          列出内置提示词库
+#   red <c2|proxy|hephaestus>  部署型红队组件引导
+set -eu
+
+HZ_ROOT="${HZ_ROOT:-/opt/haizhu}"
+OC_HOME="${OC_HOME:-/home/oc}"
+PROFILES="${OC_PROFILES:-$OC_HOME/.oc-profiles}"
+OC2_CFG="${OC2_CONFIG:-/root/.oc-opencode2/config/opencode}"
+VERSION=$(cat "$HZ_ROOT/VERSION" 2>/dev/null || echo unknown)
+
+die() { echo "hz: $*" >&2; exit 1; }
+
+# ---- helpers ---------------------------------------------------------------
+# seed 产物登记：每个目标根目录一份 .hz-manifest，remove 按单回收。
+HZ_MANIFEST=""
+hz_note() {
+  [ -n "$HZ_MANIFEST" ] || return 0
+  mkdir -p "$(dirname "$HZ_MANIFEST")"
+  grep -qxF "F	$1" "$HZ_MANIFEST" 2>/dev/null || printf 'F\t%s\n' "$1" >> "$HZ_MANIFEST"
+}
+hz_note_link() {
+  [ -n "$HZ_MANIFEST" ] || return 0
+  mkdir -p "$(dirname "$HZ_MANIFEST")"
+  grep -qxF "L	$1	$2" "$HZ_MANIFEST" 2>/dev/null || printf 'L\t%s\t%s\n' "$1" "$2" >> "$HZ_MANIFEST"
+}
+# 只在缺失或已是指向 HZ_ROOT 的链接时重建软链；外来真实文件/目录不动。
+hz_link() {
+  target="$1" link="$2"
+  if [ -L "$link" ]; then
+    case "$(readlink "$link")" in "$HZ_ROOT"/*) ;; *) return 0 ;; esac
+  elif [ -e "$link" ]; then
+    return 0
+  fi
+  mkdir -p "$(dirname "$link")"
+  ln -sfn "$target" "$link"
+  hz_note_link "$link" "$target"
+}
+# 目录版：缺失 → 软链；已是目录 → 逐文件 write-if-absent 合并；其他 → 不动。
+hz_dir() {
+  src="$1" link="$2"
+  if [ -L "$link" ]; then
+    case "$(readlink "$link")" in "$HZ_ROOT"/*) ln -sfn "$src" "$link"; hz_note_link "$link" "$src" ;; esac
+    return 0
+  fi
+  if [ -d "$link" ]; then
+    (cd "$src" && find . -type f | while read -r f; do
+      f="${f#./}"
+      [ -e "$link/$f" ] || { mkdir -p "$link/$(dirname "$f")"; cp "$src/$f" "$link/$f"; hz_note "$link/$f"; }
+    done)
+    return 0
+  fi
+  [ -e "$link" ] && return 0
+  mkdir -p "$(dirname "$link")"
+  ln -sfn "$src" "$link"
+  hz_note_link "$link" "$src"
+}
+# write-if-absent：仅当我们写出文件时登记。
+hz_write_if_absent() {
+  # $1 = 目标文件；stdin = 内容
+  [ -e "$1" ] && { cat >/dev/null; return 0; }
+  mkdir -p "$(dirname "$1")"
+  cat > "$1"
+  hz_note "$1"
+}
+
+# ---- seed ----------------------------------------------------------------
+# 把内核/技能/角色/MCP 写进一个 HOME。幂等：软链重建，JSON 只在缺失时写。
+seed_home() {
+  H="$1"
+  [ -d "$H" ] || mkdir -p "$H"
+  HZ_MANIFEST="$H/.hz-manifest"
+  # 通用标记文件（codex/agents.md 惯例 + claude CLAUDE.md）
+  hz_link "$HZ_ROOT/kernel/universal-kernel-v31.md" "$H/AGENTS.md"
+  hz_link "$HZ_ROOT/kernel/universal-kernel-v31.md" "$H/CLAUDE.md"
+  mkdir -p "$H/.agents" && hz_dir "$HZ_ROOT/skills" "$H/.agents/skills"
+
+  # Claude Code: CLAUDE_CONFIG_DIR=$H/claude
+  mkdir -p "$H/claude"
+  hz_link "$HZ_ROOT/kernel/universal-kernel-v31.md" "$H/claude/CLAUDE.md"
+  hz_dir "$HZ_ROOT/skills" "$H/claude/skills"
+  hz_dir "$HZ_ROOT/agents" "$H/claude/agents"
+  hz_write_if_absent "$H/claude/.claude.json" <<'JSON'
+{"mcpServers":{"filesystem":{"type":"stdio","command":"npx","args":["-y","@modelcontextprotocol/server-filesystem","{HOME}"],"env":{}},"sequential-thinking":{"type":"stdio","command":"npx","args":["-y","@modelcontextprotocol/server-sequential-thinking"],"env":{}}}}
+JSON
+
+  # Codex: CODEX_HOME=$H/codex
+  mkdir -p "$H/codex"
+  hz_link "$HZ_ROOT/kernel/universal-kernel-v31.md" "$H/codex/AGENTS.md"
+  hz_write_if_absent "$H/codex/config.toml" <<'TOML'
+model_instructions_file = "/opt/haizhu/kernel/universal-kernel-v31.md"
+
+[mcp_servers.sequential-thinking]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+
+[mcp_servers.filesystem]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-filesystem", "{HOME}"]
+TOML
+
+  # Gemini / Qwen
+  mkdir -p "$H/.gemini"
+  hz_link "$HZ_ROOT/kernel/universal-kernel-v31.md" "$H/.gemini/GEMINI.md"
+  mkdir -p "$H/.qwen"
+  hz_link "$HZ_ROOT/kernel/universal-kernel-v31.md" "$H/.qwen/QWEN.md"
+
+  # OpenCode（该 HOME 下手动跑 opencode 时）
+  mkdir -p "$H/.config/opencode"
+  hz_link "$HZ_ROOT/opencode/AGENTS.md" "$H/.config/opencode/AGENTS.md"
+  hz_dir "$HZ_ROOT/agents" "$H/.config/opencode/agent"
+  hz_dir "$HZ_ROOT/skills" "$H/.config/opencode/skill"
+  [ -f "$H/.config/opencode/opencode.json" ] ||
+    { sed 's|/root/projects|'"$H"'/projects|g' "$HZ_ROOT/opencode/opencode.json" \
+      > "$H/.config/opencode/opencode.json" &&
+      hz_note "$H/.config/opencode/opencode.json"; }
+
+  # {HOME} 占位符替换（claude.json / config.toml 里）
+  for f in "$H/claude/.claude.json" "$H/codex/config.toml" "$H/.config/opencode/opencode.json"; do
+    [ -f "$f" ] && grep -q '{HOME}' "$f" 2>/dev/null &&
+      sed -i "s|{HOME}|$H|g" "$f"
+  done
+  # root 身份跑 seed 时，把 oc 属下的产物交还 oc（agent 以 uid 1000 写配置）。
+  if [ "$(id -u)" = 0 ]; then
+    case "$H" in
+      "$OC_HOME"|"$OC_HOME"/*)
+        chown -R 1000:1000 "$H" 2>/dev/null || true ;;
+    esac
+  fi
+  echo "hz: seeded $H"
+}
+
+# OpenCode 2 服务器（root 跑，XDG 隔离）专属 seed
+seed_oc2() {
+  mkdir -p "$OC2_CFG"
+  HZ_MANIFEST="$OC2_CFG/.hz-manifest"
+  hz_link "$HZ_ROOT/opencode/AGENTS.md" "$OC2_CFG/AGENTS.md"
+  hz_dir "$HZ_ROOT/agents" "$OC2_CFG/agent"
+  hz_dir "$HZ_ROOT/skills" "$OC2_CFG/skill"
+  if [ ! -f "$OC2_CFG/opencode.json" ]; then
+    cp "$HZ_ROOT/opencode/opencode.json" "$OC2_CFG/opencode.json"
+    hz_note "$OC2_CFG/opencode.json"
+  elif command -v node >/dev/null 2>&1; then
+    OC2_CFG="$OC2_CFG" HZ_ROOT="$HZ_ROOT" node -e '
+      const fs = require("fs");
+      const p = process.env.OC2_CFG + "/opencode.json";
+      const tpl = JSON.parse(fs.readFileSync(process.env.HZ_ROOT + "/opencode/opencode.json", "utf8"));
+      let cur = {};
+      try { cur = JSON.parse(fs.readFileSync(p, "utf8")); } catch (e) {}
+      cur.instructions = [...new Set([...(cur.instructions || []), ...tpl.instructions])];
+      cur.mcp = cur.mcp || {};
+      cur.mcp.servers = { ...tpl.mcp.servers, ...(cur.mcp.servers || {}) };
+      cur.agent = { ...tpl.agent, ...(cur.agent || {}) };
+      fs.writeFileSync(p, JSON.stringify(cur, null, 2) + "\n");
+    '
+  fi
+  echo "hz: seeded $OC2_CFG"
+}
+
+seed_all() {
+  seed_oc2
+  seed_home /root
+  # oc 用户由 agent bootstrap 创建；未建时跳过，不抢先创建（root 属主会
+  # 让 oc 写不进自己的 home）。之后由 PhoneAgentHaizhu 在 profile 启动时补齐。
+  if [ -d "$OC_HOME" ]; then seed_home "$OC_HOME"; fi
+  for h in "$PROFILES"/*/; do
+    if [ -d "$h" ]; then seed_home "${h%/}"; fi
+  done
+}
+
+# ---- remove -----------------------------------------------------------------
+# 按 .hz-manifest 精确回收 seed 产物；用户自建/改过的路径不在单上。
+hz_unseed_dir() {
+  d="$1" m="$d/.hz-manifest"
+  [ -f "$m" ] || return 0
+  while IFS='	' read -r kind p target; do
+    case "$kind" in
+      F)
+        case "$p" in "$d"/*) [ -L "$p" ] || [ -f "$p" ] && rm -f "$p" ;; esac ;;
+      L)
+        case "$p" in "$d"/*) ;; *) continue ;; esac
+        if [ -L "$p" ] || [ -f "$p" ]; then
+          rm -f "$p"
+        elif [ -d "$p" ] && [ -d "$target" ]; then
+          # 链接被换成了真实目录：只回收与 payload 源逐字节相同的文件，
+          # 用户加进目录的东西原样保留。
+          (cd "$p" && find . -type f | while read -r f; do
+            f="${f#./}"
+            [ -f "$target/$f" ] && cmp -s "$p/$f" "$target/$f" && rm -f "$p/$f"
+          done)
+        fi ;;
+    esac
+  done < "$m"
+  rm -f "$m"
+  # 先深度清理由我们腾空的子目录，再 rmdir 顶层——rmdir 只删空目录，
+  # 残留用户文件的路径天然保留。
+  for c in "$d/agent" "$d/skill" \
+           "$d/.config/opencode/agent" "$d/.config/opencode/skill" \
+           "$d/claude/agents" "$d/claude/skills" "$d/.agents/skills"; do
+    [ -d "$c" ] && find "$c" -depth -type d -empty -delete 2>/dev/null || true
+  done
+  for c in "$d/agent" "$d/skill" "$d/commands" \
+           "$d/.config/opencode" "$d/.config" "$d/claude" \
+           "$d/codex" "$d/.gemini" "$d/.qwen" "$d/.agents"; do
+    rmdir "$c" 2>/dev/null || true
+  done
+}
+remove_all() {
+  hz_unseed_dir "$OC2_CFG"
+  hz_unseed_dir /root
+  [ -d "$OC_HOME" ] && hz_unseed_dir "$OC_HOME"
+  for h in "$PROFILES"/*/; do
+    [ -d "$h" ] && hz_unseed_dir "${h%/}"
+  done
+  rm -f /usr/local/bin/hz
+  # 只回收默认安装根；自定义 HZ_ROOT（开发树/测试根）绝不删。
+  if [ "$HZ_ROOT" = /opt/haizhu ]; then
+    rm -rf "$HZ_ROOT"
+  else
+    echo "hz: HZ_ROOT=$HZ_ROOT 非安装根，保留（unseed 已完成）" >&2
+  fi
+  echo "hz: removed"
+}
+
+# ---- status ---------------------------------------------------------------
+status() {
+  echo "haizhu $VERSION  root=$HZ_ROOT"
+  for t in "$OC2_CFG/AGENTS.md" "$OC2_CFG/opencode.json" \
+           "$OC_HOME/.agents/skills" "$OC_HOME/claude/CLAUDE.md" \
+           /usr/local/bin/hz; do
+    if [ -e "$t" ] || [ -L "$t" ]; then echo "  ok   $t"; else echo "  miss $t"; fi
+  done
+  n=$(find "$PROFILES" -maxdepth 1 -mindepth 1 -type d 2>/dev/null | wc -l | tr -d ' ')
+  echo "  profiles: $n"
+}
+
+# ---- mcp ------------------------------------------------------------------
+mcp_list() { cat "$HZ_ROOT/mcp/registry.json"; }
+mcp_run() {
+  id="$1"; shift || true
+  case "$id" in
+    rea) exec "$HZ_ROOT/vendor/rea/bridge/run.sh" "$@" ;;
+    craft) exec craft mcp "$@" ;;
+    *) die "mcp run: unknown server '$id'" ;;
+  esac
+}
+mcp_install() {
+  id="$1"
+  mkdir -p "$HZ_ROOT/vendor"
+  case "$id" in
+    rea)
+      [ -d "$HZ_ROOT/vendor/rea/.git" ] ||
+        git clone --depth 1 https://github.com/morluto/rea "$HZ_ROOT/vendor/rea"
+      printf '#!/bin/sh\nexec node "%s/bridge/mcp.js" "$@"\n' "$HZ_ROOT/vendor/rea" \
+        > "$HZ_ROOT/vendor/rea/bridge/run.sh" 2>/dev/null || true
+      chmod +x "$HZ_ROOT/vendor/rea/bridge/run.sh" 2>/dev/null || true
+      echo "hz: rea vendored — 完成其在 vendor/rea 内的安装步骤后，将 registry 中 rea.enabled 置 true 并 hz mcp sync"
+      ;;
+    craft)
+      [ -d "$HZ_ROOT/vendor/craft/.git" ] ||
+        git clone --depth 1 https://github.com/storytold/craft-anything "$HZ_ROOT/vendor/craft"
+      echo "hz: craft vendored — 按 README 构建（cargo build --release）后，将 craft.enabled 置 true 并 hz mcp sync"
+      ;;
+    *) die "mcp install: unknown id '$id'" ;;
+  esac
+}
+mcp_sync() {
+  # 以 node 合并 registry 中 enabled=true 的项进各已存在配置（幂等）
+  command -v node >/dev/null 2>&1 || die "mcp sync needs node"
+  HZ_ROOT="$HZ_ROOT" node -e '
+    const fs = require("fs"), path = require("path"), cp = require("child_process");
+    const reg = JSON.parse(fs.readFileSync(process.env.HZ_ROOT + "/mcp/registry.json", "utf8"));
+    const on = Object.entries(reg.servers).filter(([, s]) => s.enabled);
+    const expand = (s, home) => s.replace(/\{HOME\}/g, home)
+      .replace(/\{([A-Z_]+)\|([^}]*)\}/g, (_, k, d) => process.env[k] || d);
+    const arr = (c, home) => c.map(x => expand(x, home));
+    const localEntry = (s, home) => s.transport === "stdio"
+      ? { type: "local", command: arr(s.command, home), disabled: false }
+      : { type: "remote", url: expand(s.url || "", home), enabled: true };
+    const stdioEntry = (s, home) => s.transport === "stdio"
+      ? { type: "stdio", command: s.command[0], args: arr(s.command.slice(1), home), env: {} }
+      : { type: "http", url: expand(s.url || "", home) };
+    const targets = [];
+    const oc2 = process.env.OC2_CONFIG || "/root/.oc-opencode2/config/opencode";
+    if (fs.existsSync(oc2)) targets.push({ f: oc2 + "/opencode.json", k: "oc2", home: "/root" });
+    const ocHome = process.env.OC_HOME || "/home/oc";
+    const profDir = ocHome + "/.oc-profiles";
+    const profiles = fs.existsSync(profDir)
+      ? fs.readdirSync(profDir, { withFileTypes: true })
+          .filter(d => d.isDirectory()).map(d => profDir + "/" + d.name)
+      : [];
+    const homes = [ocHome, "/root", ...profiles];
+    for (const h of new Set(homes)) {
+      const cj = h + "/claude/.claude.json";
+      if (fs.existsSync(h + "/claude")) targets.push({ f: cj, k: "claude", home: h });
+      const oc = h + "/.config/opencode/opencode.json";
+      if (fs.existsSync(h + "/.config/opencode")) targets.push({ f: oc, k: "oc2", home: h });
+      const ct = h + "/codex/config.toml";
+      if (fs.existsSync(h + "/codex")) targets.push({ f: ct, k: "codex", home: h });
+      const gm = h + "/.gemini/settings.json";
+      if (fs.existsSync(h + "/.gemini")) targets.push({ f: gm, k: "gemini", home: h });
+    }
+    for (const t of targets) {
+      if (t.k === "codex") continue;
+      let j = {};
+      try { j = JSON.parse(fs.readFileSync(t.f, "utf8")); } catch (e) {}
+      if (t.k === "oc2") {
+        j.mcp = j.mcp || {}; j.mcp.servers = j.mcp.servers || {};
+        for (const [id, s] of on) j.mcp.servers[id] = localEntry(s, t.home);
+      } else if (t.k === "claude" || t.k === "gemini") {
+        j.mcpServers = j.mcpServers || {};
+        for (const [id, s] of on) j.mcpServers[id] = stdioEntry(s, t.home);
+      }
+      fs.writeFileSync(t.f, JSON.stringify(j, null, 2) + "\n");
+      console.log("hz: synced", t.f);
+    }
+    // codex TOML：追加缺失段（简单幂等：已存在同名段则跳过）
+    for (const t of targets.filter(x => x.k === "codex")) {
+      let toml = fs.existsSync(t.f) ? fs.readFileSync(t.f, "utf8") : "";
+      for (const [id, s] of on) {
+        if (s.transport !== "stdio" || toml.includes("[mcp_servers." + id + "]")) continue;
+        toml += `\n[mcp_servers.${id}]\ncommand = "${s.command[0]}"\nargs = [${s.command.slice(1).map(a => `"${expand(a, t.home)}"`).join(", ")}]\n`;
+      }
+      fs.writeFileSync(t.f, toml);
+      console.log("hz: synced", t.f);
+    }
+  '
+}
+mcp_doctor() {
+  for c in node npx python3 pip3 git; do
+    printf '%-6s %s\n' "$c" "$(command -v "$c" 2>/dev/null || echo MISSING)"
+  done
+  status
+}
+
+# ---- red -------------------------------------------------------------------
+red() {
+  case "${1:-}" in
+    c2) cat <<'TXT'
+[github-C2 部署引导] 授权实验室专用
+1) git clone --depth 1 https://github.com/Kxiandaoyan/github-C2 /opt/haizhu/vendor/github-c2
+2) 编辑 c2/worker 配置（Cloudflare 账号 + D1），bash deploy.sh 起 Worker 主通道
+3) 控制台：python3 c2/console/app.py（Flask，127.0.0.1）
+4) Agent：rust 编译 c2/agent 或用 release 包，载荷 AES-256-GCM 信封，
+   主通道断自动切 GitHub Issue 备用通道
+5) 接入 AI：控制台暴露 MCP 接口，将本工具加入 registry transport=http
+TXT
+      ;;
+    proxy) cat <<'TXT'
+[ProxyCat 部署引导]
+1) git clone --depth 1 https://github.com/honmashironeko/ProxyCat /opt/haizhu/vendor/proxycat
+2) config/config.ini 填静态代理列表（ip:port 每行一个）
+3) docker compose up -d  或  python3 ProxyCat.py -p 1080
+4) 固定入口 socks5://127.0.0.1:1080 自动轮转出口 IP；API 见 API.md
+TXT
+      ;;
+    hephaestus) cat <<'TXT'
+[Hephaestus-Agent 部署引导]
+1) curl -fsSL https://raw.githubusercontent.com/qiwentaidi/Hephaestus-Agent/main/scripts/install.sh -o install.sh
+2) bash install.sh --server 'https://<主服务>' —— 交互配置 PostgreSQL 与节点角色（扫描/AI Worker）
+3) 运行：bash ./hephaestus-agent/run.sh；平台侧「Agent 管理」做托管更新
+TXT
+      ;;
+    *) die "red: c2|proxy|hephaestus" ;;
+  esac
+}
+
+verb="${1:-help}"; shift || true
+case "$verb" in
+  seed) [ $# -gt 0 ] && { for h in "$@"; do seed_home "$h"; done; seed_oc2; } || seed_all ;;
+  seed-all) seed_all ;;
+  remove|unseed) remove_all ;;
+  status) status ;;
+  kernel) echo "$HZ_ROOT/kernel/universal-kernel-v31.md" ;;
+  agents) ls "$HZ_ROOT/agents" ;;
+  skills) ls "$HZ_ROOT/skills" ;;
+  prompts) ls "$HZ_ROOT/prompts/builtin" ;;
+  mcp)
+    case "${1:-list}" in
+      list) shift || true; mcp_list "$@" ;;
+      run) shift; mcp_run "$@" ;;
+      install) shift; mcp_install "$@" ;;
+      enable|disable)
+        id="$2"
+        want=$([ "$1" = enable ] && echo true || echo false)
+        command -v node >/dev/null 2>&1 || die "mcp $1 needs node"
+        HZ_ROOT="$HZ_ROOT" HZ_ID="$id" HZ_WANT="$want" node -e '
+          const fs = require("fs"), p = process.env.HZ_ROOT + "/mcp/registry.json";
+          const r = JSON.parse(fs.readFileSync(p, "utf8"));
+          if (!r.servers[process.env.HZ_ID]) { console.error("hz: no such server"); process.exit(1); }
+          r.servers[process.env.HZ_ID].enabled = process.env.HZ_WANT === "true";
+          fs.writeFileSync(p, JSON.stringify(r, null, 2) + "\n");
+          console.log("hz:", process.env.HZ_ID, "->", process.env.HZ_WANT);
+        '
+        mcp_sync ;;
+      sync) mcp_sync ;;
+      doctor) mcp_doctor ;;
+      *) die "mcp: list|run|install|enable|disable|sync|doctor" ;;
+    esac ;;
+  red) red "$@" ;;
+  version|*) echo "haizhu $VERSION — hz seed|status|kernel|agents|skills|prompts|mcp|red" ;;
+esac

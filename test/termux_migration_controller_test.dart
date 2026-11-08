@@ -4,10 +4,10 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:opencode_mobile/builtin/migration/migration_archive_store.dart';
-import 'package:opencode_mobile/builtin/migration/termux_migration_controller.dart';
-import 'package:opencode_mobile/builtin/migration/termux_migration_transport.dart';
-import 'package:opencode_mobile/domain/termux_migration.dart';
+import 'package:haizhucode/builtin/migration/migration_archive_store.dart';
+import 'package:haizhucode/builtin/migration/termux_migration_controller.dart';
+import 'package:haizhucode/builtin/migration/termux_migration_transport.dart';
+import 'package:haizhucode/domain/termux_migration.dart';
 
 const _job = '0123456789abcdef0123456789abcdef';
 const _selected = {TermuxMigrationItem.projects};

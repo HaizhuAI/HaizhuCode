@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
 
 /// Issue #95: Codex, Kilo and Cline never worked on the phone. The native
 /// side refused Kilo's and Cline's sign-in terminals (they were missing from
@@ -10,7 +10,7 @@ import 'package:opencode_mobile/domain/agent_catalog.dart';
 /// made.
 void main() {
   const native =
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+      'android/app/src/main/kotlin/io/github/haizhu/code';
   final linux = File('$native/BuiltinLinux.kt').readAsStringSync();
 
   String body(String signature) {

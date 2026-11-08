@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart' show ApiException;
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/widgets/form_renderer.dart';
+import 'package:haizhucode/domain/models.dart' show ApiException;
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/widgets/form_renderer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Api2FormInfo makeForm(

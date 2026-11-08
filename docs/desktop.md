@@ -165,13 +165,13 @@ regenerated afterwards.
 
 ## Desktop integration
 
-- `linux/packaging/io.github.eslamasabry.opencode_mobile.desktop` — named
+- `linux/packaging/io.github.haizhu.code.desktop` — named
   after the GApplication application id set in `linux/CMakeLists.txt`.
 - `linux/packaging/icons/` — the icon as an SVG plus committed hicolor PNGs
   at 16/24/32/48/64/128/256/512. They are committed so packaging and CI
   never need an SVG rasteriser; `linux/packaging/render-icons.sh`
   regenerates them (needs ImageMagick) when the SVG changes.
-- `linux/packaging/io.github.eslamasabry.opencode_mobile.metainfo.xml` —
+- `linux/packaging/io.github.haizhu.code.metainfo.xml` —
   AppStream, so GNOME Software and Discover describe the app instead of
   showing a bare package name. The packaging script stamps the version into
   its `<releases>` block.
@@ -181,7 +181,7 @@ regenerated afterwards.
 Through preview 10 the application id was `ai.opencode.opencode_mobile`,
 which sits under `opencode.ai` — the OpenCode project's reverse domain, not
 one this project controls. It is now
-`io.github.eslamasabry.opencode_mobile`. The display name is unchanged.
+`io.github.haizhu.code`. The display name is unchanged.
 
 If you installed a preview before this change, its desktop entry, AppStream
 file and icons are named after the *old* id, and the new installer writes
@@ -201,7 +201,7 @@ The binary is still `opencode`, and your settings still live in
 ### Why the window groups with its icon
 
 Two different mechanisms have to agree, and both are pinned to the single
-string `io.github.eslamasabry.opencode_mobile`:
+string `io.github.haizhu.code`:
 
 - **Wayland.** GTK reports `g_get_prgname()` as the xdg-shell `app_id`, and
   the compositor pairs that with the desktop file *of the same name*. The

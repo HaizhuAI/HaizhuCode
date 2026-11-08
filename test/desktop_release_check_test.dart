@@ -4,13 +4,13 @@ import 'dart:typed_data';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_screen.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
-import 'package:opencode_mobile/update/desktop_release_check.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_screen.dart';
+import 'package:haizhucode/ui/kit/kit_status_line.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/update/desktop_release_check.dart';
 
 class _FakeChecker extends DesktopReleaseChecker {
   _FakeChecker(this.release);

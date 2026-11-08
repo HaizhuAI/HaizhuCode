@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/return_brief.dart';
-import 'package:opencode_mobile/domain/while_away.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/return_brief.dart';
+import 'package:haizhucode/domain/while_away.dart';
 
 Session _session(
   String id,

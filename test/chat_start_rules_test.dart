@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 
 List<String> _labels(ChatStartFacts facts, [AppLocalizations? l10n]) => [
   for (final starter in chatStartSuggestions(facts, l10n: l10n)) starter.label,

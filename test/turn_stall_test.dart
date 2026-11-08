@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/turn_stall.dart';
+import 'package:haizhucode/domain/turn_stall.dart';
 
 void main() {
   test('changed liveness evidence rechecks without resetting silence', () {

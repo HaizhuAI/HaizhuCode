@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/state/phone_project_engine.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/state/phone_project_engine.dart';
 
 import 'api2_interaction_gateway_test.dart' as wire;
 

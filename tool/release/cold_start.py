@@ -16,7 +16,7 @@ import zipfile
 
 from apk_payload import payload_digest
 
-PACKAGE = 'io.github.eslamasabry.opencode_mobile'
+PACKAGE = 'io.github.haizhu.code'
 SERIAL = 'emulator-5554'
 
 

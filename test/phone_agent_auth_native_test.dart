@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/agent_scripts.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
+import 'package:haizhucode/builtin/agents/agent_scripts.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
 
 import 'native/kotlin_jar_cache.dart';
 
@@ -28,7 +28,7 @@ void main() {
   late String jar;
   late String jsonJar;
   const native =
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+      'android/app/src/main/kotlin/io/github/haizhu/code';
   const scenarios = [
     'request-admission',
     'request-rejection',
@@ -180,7 +180,7 @@ void main() {
       final result = await Process.run(Platform.environment['JAVA'] ?? 'java', [
         '-cp',
         '$jar:$jsonJar',
-        'io.github.eslamasabry.opencode_mobile.Phone_agent_auth_harnessKt',
+        'io.github.haizhu.code.Phone_agent_auth_harnessKt',
         scenario,
         temporary.path,
       ]);

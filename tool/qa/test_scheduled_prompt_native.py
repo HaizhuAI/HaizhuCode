@@ -9,8 +9,8 @@ ROOT = Path(__file__).resolve().parents[2]
 KOTLIN = Path('/home/eslam/.sdkman/candidates/kotlin/2.3.20')
 JDK = Path('/home/eslam/Storage/tmp/codex-audit3-temurin17/jdk-17.0.20.1+1')
 CACHE = Path('/home/eslam/.gradle/caches/modules-2/files-2.1')
-MAIN = ROOT / 'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile'
-TEST = ROOT / 'android/app/src/test/kotlin/io/github/eslamasabry/opencode_mobile'
+MAIN = ROOT / 'android/app/src/main/kotlin/io/github/haizhu/code'
+TEST = ROOT / 'android/app/src/test/kotlin/io/github/haizhu/code'
 
 
 def artifact(relative):
@@ -40,9 +40,9 @@ def main():
             str(JDK / 'bin/java'), '-Xmx128m', '-cp',
             os.pathsep.join((str(output), classpath, str(KOTLIN / 'lib/kotlin-stdlib.jar'))),
             'org.junit.runner.JUnitCore',
-            'io.github.eslamasabry.opencode_mobile.ScheduledPromptPolicyTest',
-            'io.github.eslamasabry.opencode_mobile.ScheduledPromptRecoveryTest',
-            'io.github.eslamasabry.opencode_mobile.ScheduledPromptStoreTest',
+            'io.github.haizhu.code.ScheduledPromptPolicyTest',
+            'io.github.haizhu.code.ScheduledPromptRecoveryTest',
+            'io.github.haizhu.code.ScheduledPromptStoreTest',
         ], cwd=ROOT, check=True)
 
 

@@ -8,17 +8,17 @@ import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profile_monitor.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/chat/permission_sheet.dart'
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profile_monitor.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/chat/permission_sheet.dart'
     show requestFirstSeen;
-import 'package:opencode_mobile/ui/screens/inbox/inbox_items.dart';
-import 'package:opencode_mobile/ui/screens/inbox/inbox_screen.dart';
+import 'package:haizhucode/ui/screens/inbox/inbox_items.dart';
+import 'package:haizhucode/ui/screens/inbox/inbox_screen.dart';
 
 import '../tool/capture/fixtures.dart';
 import 'support/setup_capture_preferences.dart';

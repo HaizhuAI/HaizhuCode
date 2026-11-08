@@ -8,15 +8,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../support/no_red.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_markdown.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_tool_row.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_work_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_mark.dart';
-import 'package:opencode_mobile/ui/kit/kit_task_mark.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
-import 'package:opencode_mobile/ui/kit/motion/kit_motion_parts.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_markdown.dart';
+import 'package:haizhucode/ui/kit/chat/kit_tool_row.dart';
+import 'package:haizhucode/ui/kit/chat/kit_work_line.dart';
+import 'package:haizhucode/ui/kit/kit_status_mark.dart';
+import 'package:haizhucode/ui/kit/kit_task_mark.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/kit/motion/kit_motion_parts.dart';
 
 import 'kit_motion_still.dart';
 

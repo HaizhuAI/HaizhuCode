@@ -9,17 +9,17 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/team/agent_screen.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart'
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/team/agent_screen.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart'
     show TeamConversationScreen;
-import 'package:opencode_mobile/ui/screens/team/task_details_sheet.dart';
-import 'package:opencode_mobile/ui/screens/team/team_agents_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/team_home_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/work_sheet.dart';
-import 'package:opencode_mobile/ui/screens/team_conversation/team_conversation.dart'
+import 'package:haizhucode/ui/screens/team/task_details_sheet.dart';
+import 'package:haizhucode/ui/screens/team/team_agents_screen.dart';
+import 'package:haizhucode/ui/screens/team/team_home_screen.dart';
+import 'package:haizhucode/ui/screens/team/work_sheet.dart';
+import 'package:haizhucode/ui/screens/team_conversation/team_conversation.dart'
     show TeamWatchLiveScreen;
 
 import '../census_core.dart';

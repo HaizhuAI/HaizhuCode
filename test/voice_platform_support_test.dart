@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/voice/device.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/voice/device.dart';
 
 void _installChannel(Future<Object?> Function(MethodCall call)? handler) {
   TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger

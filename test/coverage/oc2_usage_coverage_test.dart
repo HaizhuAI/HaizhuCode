@@ -5,11 +5,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/usage_overview.dart';
-import 'package:opencode_mobile/ui/screens/usage_screen.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/usage_overview.dart';
+import 'package:haizhucode/ui/screens/usage_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

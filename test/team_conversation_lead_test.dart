@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/team_conversation.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/team_conversation.dart';
 
 final t0 = DateTime.utc(2026, 9, 25, 19, 49, 3);
 DateTime at(int minutes) => t0.add(Duration(minutes: minutes));

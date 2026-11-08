@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart' show PermissionRequest;
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/form_request.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_request_card.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_host.dart';
-import 'package:opencode_mobile/ui/widgets/form_renderer.dart';
+import 'package:haizhucode/domain/models.dart' show PermissionRequest;
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/form_request.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_request_card.dart';
+import 'package:haizhucode/ui/screens/chats/chats_host.dart';
+import 'package:haizhucode/ui/widgets/form_renderer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _FormsConnection extends ConnectionController {

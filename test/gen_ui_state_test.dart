@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui_history.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/delayed_answers.dart';
-import 'package:opencode_mobile/state/gen_ui_journal.dart';
-import 'package:opencode_mobile/state/gen_ui_state.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart';
+import 'package:haizhucode/domain/genui/gen_ui_history.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/delayed_answers.dart';
+import 'package:haizhucode/state/gen_ui_journal.dart';
+import 'package:haizhucode/state/gen_ui_state.dart';
 
 const scope = GenUiScope(
   profileID: 'phone',

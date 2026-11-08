@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/local_terminal.dart';
-import 'package:opencode_mobile/domain/agent_sign_in_foreground.dart';
-import 'package:opencode_mobile/ui/screens/agents/agent_sign_in_terminal.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
+import 'package:haizhucode/domain/agent_sign_in_foreground.dart';
+import 'package:haizhucode/ui/screens/agents/agent_sign_in_terminal.dart';
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'support/agents_fakes.dart';

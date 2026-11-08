@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
 
 // Each test names the row of the 30-row table in
 // docs/design/usage-subscriptions-contract-2026-10-13.md it protects.

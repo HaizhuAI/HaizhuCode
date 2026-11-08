@@ -10,8 +10,8 @@
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_background_work_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/chat/kit_background_work_line.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 
 import 'kit_gallery.dart';
 

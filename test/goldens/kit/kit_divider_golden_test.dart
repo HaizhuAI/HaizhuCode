@@ -2,7 +2,7 @@
 // the one hairline separator, its three horizontal insets and its vertical
 // form. KitDivider is not exported from kit.dart yet (the integrator adds
 // that row, R06), so this file imports it directly rather than through
-// package:opencode_mobile/ui/kit/kit.dart. The rows and the toolbar around
+// package:haizhucode/ui/kit/kit.dart. The rows and the toolbar around
 // the lines are the kit's own parts (KitRow with its icon tile,
 // KitIconButton), so the gallery shows the real anatomy the insets line up
 // with.
@@ -17,11 +17,11 @@
 // and look at every changed image before committing it.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/kit/kit_divider.dart';
-import 'package:opencode_mobile/ui/kit/kit_icon_button.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/kit/kit_divider.dart';
+import 'package:haizhucode/ui/kit/kit_icon_button.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 import 'kit_gallery.dart';
 

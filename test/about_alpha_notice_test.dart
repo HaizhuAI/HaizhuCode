@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart' show KitSkeletonRows;
-import 'package:opencode_mobile/ui/screens/about_screen.dart'
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart' show KitSkeletonRows;
+import 'package:haizhucode/ui/screens/about_screen.dart'
     show AboutScreen, aboutNoticesForReaders, buildProvenanceBody;
-import 'package:opencode_mobile/update/shorebird_update_notice.dart';
+import 'package:haizhucode/update/shorebird_update_notice.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 /// A scripted updater: answers [state], counts the downloads.
@@ -58,8 +58,8 @@ void main() {
       ..evict('PRIVACY.md')
       ..evict('THIRD_PARTY_NOTICES.md');
     PackageInfo.setMockInitialValues(
-      appName: 'OpenCode Mobile',
-      packageName: 'com.example.opencode_mobile',
+      appName: 'HaizhuCode',
+      packageName: 'com.example.haizhucode',
       version: '1.0.44',
       buildNumber: '52',
       buildSignature: '',
@@ -78,7 +78,7 @@ void main() {
 
     // Retitled "About"; the version is shown once, above the tabs.
     expect(find.text('About'), findsOneWidget);
-    expect(find.text('OpenCode Mobile 1.0.44+52'), findsOneWidget);
+    expect(find.text('HaizhuCode 1.0.44+52'), findsOneWidget);
     // No report path here: Settings has the one "Report a problem" row.
     expect(find.byKey(const ValueKey('about-report-bug')), findsNothing);
     expect(find.byKey(const ValueKey('about-alpha-report-bug')), findsNothing);
@@ -92,10 +92,10 @@ void main() {
     );
     expect(find.byKey(const Key('about-non-affiliation')), findsOneWidget);
     // The package id sits under Details, folded.
-    expect(find.text('com.example.opencode_mobile'), findsNothing);
+    expect(find.text('com.example.haizhucode'), findsNothing);
     await tester.tap(find.byKey(const ValueKey('about-details')));
     await tester.pumpAndSettle();
-    expect(find.text('com.example.opencode_mobile'), findsOneWidget);
+    expect(find.text('com.example.haizhucode'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
@@ -117,7 +117,7 @@ void main() {
 
     await tester.tap(find.byKey(const ValueKey('about-copy-version')));
     await tester.pumpAndSettle();
-    expect(clipboard, 'OpenCode Mobile 1.0.44+52');
+    expect(clipboard, 'HaizhuCode 1.0.44+52');
   });
 
   testWidgets('check for updates: fetches an update and says to reopen', (
@@ -220,7 +220,7 @@ void main() {
       'regeneration steps', () {
     const file = '''# Third-Party Notices
 
-OpenCode Mobile is an independent community project.
+HaizhuCode is an independent community project.
 
 **How this file is verified.** Every version below is read from pubspec.lock.
 

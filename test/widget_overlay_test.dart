@@ -5,11 +5,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/widget_v2_contract.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/widgets_overlay/widget_overlay_api.dart';
-import 'package:opencode_mobile/widgets_overlay/widget_overlay_app.dart';
-import 'package:opencode_mobile/widgets_overlay/widget_overlay_launch.dart';
+import 'package:haizhucode/background/widget_v2_contract.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/widgets_overlay/widget_overlay_api.dart';
+import 'package:haizhucode/widgets_overlay/widget_overlay_app.dart';
+import 'package:haizhucode/widgets_overlay/widget_overlay_launch.dart';
 
 class _Api implements WidgetOverlayApi {
   final saved = <(String, String)>[];

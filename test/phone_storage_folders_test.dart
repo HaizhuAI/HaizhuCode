@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_folders.dart';
-import 'package:opencode_mobile/platform/phone_storage_folders.dart';
+import 'package:haizhucode/builtin/builtin_folders.dart';
+import 'package:haizhucode/platform/phone_storage_folders.dart';
 
 void main() {
   test('/sdcard reads as the internal storage; nothing outside it does', () {

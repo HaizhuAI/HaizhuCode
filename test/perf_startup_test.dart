@@ -4,9 +4,9 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/main.dart';
-import 'package:opencode_mobile/state/connection.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/main.dart';
+import 'package:haizhucode/state/connection.dart';
 
 /// Counts actual paint completion, rather than treating pump() as a device
 /// first-frame timestamp. The stalled fake keeps platform/storage out of it.

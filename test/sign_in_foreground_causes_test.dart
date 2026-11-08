@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/live_background.dart';
-import 'package:opencode_mobile/builtin/local_terminal.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
+import 'package:haizhucode/background/live_background.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/fake_local_terminal.dart';

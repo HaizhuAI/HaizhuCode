@@ -5,12 +5,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/agent_tools/agent_tool_adapter.dart';
-import 'package:opencode_mobile/domain/connector_search_result.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/agent_tools/agent_tool_adapter.dart';
+import 'package:haizhucode/domain/connector_search_result.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
 
 final _tool = AgentToolAdapter.claude.connectorSearchName!;
 

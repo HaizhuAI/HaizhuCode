@@ -5,12 +5,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/domain/terminal_lifecycle.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/state/computer_usage_source.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/domain/terminal_lifecycle.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/state/computer_usage_source.dart';
 
 class _RealHttpOverrides extends HttpOverrides {}
 

@@ -4,11 +4,11 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/builtin/setup/setup_engine.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/termux/bridge.dart' show TermuxRuntime;
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/setup/setup_engine.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/termux/bridge.dart' show TermuxRuntime;
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

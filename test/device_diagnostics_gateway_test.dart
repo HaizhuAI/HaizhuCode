@@ -3,14 +3,14 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/live_background.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/crash_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/crash_report.dart';
-import 'package:opencode_mobile/diagnostics/device_diagnostics_gateway.dart';
-import 'package:opencode_mobile/domain/app_diagnostics_gateway.dart';
-import 'package:opencode_mobile/platform/app_exit.dart';
+import 'package:haizhucode/background/live_background.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/crash_diagnostics.dart';
+import 'package:haizhucode/diagnostics/crash_report.dart';
+import 'package:haizhucode/diagnostics/device_diagnostics_gateway.dart';
+import 'package:haizhucode/domain/app_diagnostics_gateway.dart';
+import 'package:haizhucode/platform/app_exit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

@@ -9,13 +9,13 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/orchestration/models/work.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_image.dart' show KitZoomController;
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
-import 'package:opencode_mobile/ui/kit/kit_work_graph.dart';
-import 'package:opencode_mobile/ui/screens/team/work_graph.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/orchestration/models/work.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_image.dart' show KitZoomController;
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/kit/kit_work_graph.dart';
+import 'package:haizhucode/ui/screens/team/work_graph.dart';
 
 /// a ← b ← c(blocked) ← d, a ← e, f alone.
 const _six = [

@@ -10,10 +10,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/termux/processes.dart';
-import 'package:opencode_mobile/ui/screens/termux_processes_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/termux/processes.dart';
+import 'package:haizhucode/ui/screens/termux_processes_screen.dart';
 
 /// The owner's phone this week: the manager, `opencode serve` with an MCP
 /// child, an orphaned `minimax-coding-plan-mcp` at 100% CPU for an hour, a

@@ -4,13 +4,13 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/widgets/product_states.dart'
+import 'package:haizhucode/ui/widgets/product_states.dart'
     show productErrorDetails, productErrorText;
-import 'package:opencode_mobile/domain/product_failure.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/product_failure.dart';
+import 'package:haizhucode/domain/server_gateway.dart'
     show ProductException, VcsDiffMode, VersionControlSetupState;
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
 
 import 'paseo_gateway_test.dart' show FakeDaemon, agentJson;
 

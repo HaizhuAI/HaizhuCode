@@ -45,10 +45,10 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_probe.dart';
-import 'package:opencode_mobile/orchestration/client/http.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_probe.dart';
+import 'package:haizhucode/orchestration/client/http.dart';
 
 Future<void> main(List<String> args) async {
   var url = 'http://100.101.102.103:8373';

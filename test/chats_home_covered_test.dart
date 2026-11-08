@@ -6,10 +6,10 @@
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/ui/kit/kit_bidi.dart';
-import 'package:opencode_mobile/ui/kit/kit_page_route.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_home_screen.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/ui/kit/kit_bidi.dart';
+import 'package:haizhucode/ui/kit/kit_page_route.dart';
+import 'package:haizhucode/ui/screens/chats/chats_home_screen.dart';
 import 'support/chats_fakes.dart';
 
 final _now = DateTime(2026, 10, 27, 12);

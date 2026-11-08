@@ -5,9 +5,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/voice/model_manager.dart';
-import 'package:opencode_mobile/voice/model_manifest.dart';
-import 'package:opencode_mobile/voice/voice_ui.dart';
+import 'package:haizhucode/voice/model_manager.dart';
+import 'package:haizhucode/voice/model_manifest.dart';
+import 'package:haizhucode/voice/voice_ui.dart';
 
 import 'screen_voice_1_fixtures.dart';
 

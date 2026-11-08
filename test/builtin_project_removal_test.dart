@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
 
 // Finish line: the removal bridge keeps projects by default, requires an exact
 // destructive confirmation, and exposes trustworthy measured storage totals.

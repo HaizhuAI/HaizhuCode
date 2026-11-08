@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/builtin/builtin_folders.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/phone_project_scan.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/project_folder_actions.dart';
-import 'package:opencode_mobile/ui/screens/projects_screen.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/builtin/builtin_folders.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/phone_project_scan.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/project_folder_actions.dart';
+import 'package:haizhucode/ui/screens/projects_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _ProjectsRepository implements ProductRepository {
@@ -16,7 +16,7 @@ class _ProjectsRepository implements ProductRepository {
   List<WorkspaceProject> projects = const [
     WorkspaceProject(
       id: 'project-1',
-      name: 'OpenCode Mobile',
+      name: 'HaizhuCode',
       directory: '/work/app',
       worktrees: ['/work/app-proof'],
       updatedAt: 2,

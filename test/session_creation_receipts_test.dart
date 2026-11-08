@@ -3,13 +3,13 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/api2/transport.dart';
-import 'package:opencode_mobile/domain/command_receipts.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/session_creation_receipts.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/api2/transport.dart';
+import 'package:haizhucode/domain/command_receipts.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/session_creation_receipts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Client extends Api2Client {

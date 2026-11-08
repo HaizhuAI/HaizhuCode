@@ -4,7 +4,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/setup_assistant.dart';
+import 'package:haizhucode/domain/setup_assistant.dart';
 
 void main() {
   const markers = [

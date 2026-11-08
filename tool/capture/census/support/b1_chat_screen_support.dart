@@ -4,15 +4,15 @@
 // and draft storage can be faked per shot.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/draft_attachments.dart';
-import 'package:opencode_mobile/state/offline_queue.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/prompt_shelf.dart';
-import 'package:opencode_mobile/state/session_drafts.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/draft_attachments.dart';
+import 'package:haizhucode/state/offline_queue.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/prompt_shelf.dart';
+import 'package:haizhucode/state/session_drafts.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 
 import '../../../../test/support/fake_server_capabilities.dart';
 import '../../fixtures.dart';

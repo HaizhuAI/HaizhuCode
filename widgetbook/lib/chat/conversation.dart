@@ -6,12 +6,12 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart'
     show PendingQuestion, QuestionChoice, QuestionPrompt, StreamStatus;
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/offline_queue.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/offline_queue.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

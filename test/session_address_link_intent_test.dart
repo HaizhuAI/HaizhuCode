@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/session_address_link.dart';
-import 'package:opencode_mobile/platform/session_link.dart';
+import 'package:haizhucode/domain/session_address_link.dart';
+import 'package:haizhucode/platform/session_link.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/scheduling/models.dart';
-import 'package:opencode_mobile/scheduling/recurrence.dart';
+import 'package:haizhucode/scheduling/models.dart';
+import 'package:haizhucode/scheduling/recurrence.dart';
 
 ScheduledPrompt _schedule({MissedRunPolicy policy = MissedRunPolicy.catchUp}) =>
     ScheduledPrompt(

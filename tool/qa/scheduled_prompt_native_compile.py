@@ -15,7 +15,7 @@ with tempfile.TemporaryDirectory(prefix='schedule-android-') as d:
  flutter=Path('/home/eslam/.shorebird/bin/cache/flutter/91f8bd75076e9c740aa13cf67eb9ec1a093f68f5/bin/cache/artifacts/engine/android-arm64-release/flutter.jar')
  cp=[Path('/home/eslam/Android/Sdk/platforms/android-37.0/android.jar'),flutter,d/'work.jar',next((cache/'com.google.guava/listenablefuture/1.0').glob('*/*.jar'))]
  stub=d/'Boundaries.kt'
- stub.write_text('''package io.github.eslamasabry.opencode_mobile
+ stub.write_text('''package io.github.haizhu.code
 import android.content.Context
 class MainActivity : android.app.Activity()
 class BuiltinLinux {
@@ -30,6 +30,6 @@ const val native_schedule_channel=1; const val native_schedule_digest_title=2; c
 const val native_schedule_digest_body=4; const val native_schedule_ran=5; const val native_schedule_skipped=6; const val native_schedule_failed=7
 }}
 ''')
- files=list((root/'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile').glob('ScheduledPrompt*.kt'))
+ files=list((root/'android/app/src/main/kotlin/io/github/haizhu/code').glob('ScheduledPrompt*.kt'))
  subprocess.run(['/home/eslam/.sdkman/candidates/kotlin/2.3.20/bin/kotlinc','-J-Xmx256m','-J-XX:MaxMetaspaceSize=192m','-jvm-target','17','-cp',os.pathsep.join(map(str,cp)),'-d',str(d/'out.jar'),str(stub),*map(str,files)],check=True)
  print('Scheduled Android source compile passed (existing app boundaries stubbed).')

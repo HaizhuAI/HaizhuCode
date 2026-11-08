@@ -1,8 +1,8 @@
 // G6 fixtures for kit layout parts added by the September 27 revamp.
 // These render the real parts; their overflows remain gate failures.
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 import 'kit_overflow_scenes.dart';
 

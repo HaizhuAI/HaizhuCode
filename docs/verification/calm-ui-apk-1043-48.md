@@ -8,7 +8,7 @@ APK SHA-256: ca40ef2d4191e7d3b7a722c68a1581a3264d754025fbd34caf6e7a03bc031e32
 
 Signer SHA-256: 2D010C2103CB2F78ABAACA690EAD4D45F8003A6C0A02082CD2A2AE62FD18D0EC
 
-Package: io.github.eslamasabry.opencode_mobile; versionName 1.0.43; versionCode 48; size 201153840 bytes. Verified with Android build-tools 36.1.0 apksigner and aapt.
+Package: io.github.haizhu.code; versionName 1.0.43; versionCode 48; size 201153840 bytes. Verified with Android build-tools 36.1.0 apksigner and aapt.
 
 Installed with adb install -r on isolated emulator-5560 over maintainer-signed 1.0.42+47. The saved Stable test server profile reconnected to the isolated QA server; its saved project remained selected. Opening the existing New session restored the exact unsent draft, “Keep this draft after the calm UI upgrade.” No prompt/model invocation, credentials change, device data reset or cleanup was performed. Native screenshots are in docs/qa/calm-native-2026-09-13.
 

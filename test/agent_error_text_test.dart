@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_error_text.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/agent_error_words.dart';
+import 'package:haizhucode/domain/agent_error_text.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/agent_error_words.dart';
 
 void main() {
   final en = lookupAppLocalizations(const Locale('en'));

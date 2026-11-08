@@ -58,9 +58,9 @@ mv "\$tools_tmp" "\$TOOLS"
 $launch''';
 }
 
-/// OpenCode Mobile phone tools: storage and process views.
+/// HaizhuCode phone tools: storage and process views.
 const termuxToolsScript = r'''#!/data/data/com.termux/files/usr/bin/bash
-# OpenCode Mobile phone tools: storage and process views of the managed
+# HaizhuCode phone tools: storage and process views of the managed
 # Termux environment (TEAM-304/305). Installed to ~/.oc/tools.sh beside
 # manager.sh; every verb prints JSON on stdout and nothing else.
 set -uo pipefail

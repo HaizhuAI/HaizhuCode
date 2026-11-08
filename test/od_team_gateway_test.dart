@@ -2,7 +2,7 @@
 // routes in contracts/gascity-supervisor-openapi-v0-3648ca2d499a.json), and
 // that a bare supervisor (no host front) is refused instead of written to.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
 
 import 'coverage/lists_support.dart' show withRealHttp;
 import 'od_team_support.dart';

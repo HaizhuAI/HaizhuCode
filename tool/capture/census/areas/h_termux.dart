@@ -12,29 +12,29 @@
 // ignore_for_file: invalid_use_of_visible_for_testing_member
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/builtin/setup/phone_setup.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/development_service_store.dart';
-import 'package:opencode_mobile/state/phone_host.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/termux_host_setup.dart'
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/builtin/setup/phone_setup.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/development_service_store.dart';
+import 'package:haizhucode/state/phone_host.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/termux_host_setup.dart'
     show TermuxHostJob;
-import 'package:opencode_mobile/state/termux_running_server.dart';
-import 'package:opencode_mobile/termux/bridge.dart' show TermuxRuntime;
-import 'package:opencode_mobile/ui/screens/development_services_screen.dart';
-import 'package:opencode_mobile/ui/screens/local_agent_screen.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_customize_sheet.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_termux_screen.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
-import 'package:opencode_mobile/ui/screens/termux_processes_screen.dart';
-import 'package:opencode_mobile/ui/screens/termux_storage_screen.dart';
-import 'package:opencode_mobile/ui/screens/this_phone_screen.dart';
-import 'package:opencode_mobile/ui/widgets/setup_terminal.dart';
+import 'package:haizhucode/state/termux_running_server.dart';
+import 'package:haizhucode/termux/bridge.dart' show TermuxRuntime;
+import 'package:haizhucode/ui/screens/development_services_screen.dart';
+import 'package:haizhucode/ui/screens/local_agent_screen.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_customize_sheet.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_termux_screen.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
+import 'package:haizhucode/ui/screens/termux_processes_screen.dart';
+import 'package:haizhucode/ui/screens/termux_storage_screen.dart';
+import 'package:haizhucode/ui/screens/this_phone_screen.dart';
+import 'package:haizhucode/ui/widgets/setup_terminal.dart';
 
 import '../../../../test/support/development_service_fakes.dart';
 import '../../../../test/support/phone_setup_scenes.dart';

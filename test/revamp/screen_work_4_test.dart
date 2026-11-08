@@ -7,18 +7,18 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/isolated_task_sheet.dart';
-import 'package:opencode_mobile/ui/screens/projects_screen.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/isolated_task_sheet.dart';
+import 'package:haizhucode/ui/screens/projects_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _app = WorkspaceProject(
   id: 'project-1',
-  name: 'OpenCode Mobile',
+  name: 'HaizhuCode',
   directory: '/work/app',
   worktrees: ['/work/app-proof'],
   updatedAt: 2,
@@ -186,7 +186,7 @@ void main() {
       );
       expect(rich('1 worktree'), findsOneWidget);
       // No per-row pencil: rename lives in the row menu.
-      expect(find.byTooltip('Rename OpenCode Mobile'), findsNothing);
+      expect(find.byTooltip('Rename HaizhuCode'), findsNothing);
     });
 
     testWidgets('rename runs from the row menu and saves inside the dialog', (

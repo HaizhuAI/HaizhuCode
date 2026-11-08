@@ -2,8 +2,8 @@
 // shapes Paseo 0.9.1 sends (claude/agent.js buildToolOutput and
 // tool-call-detail-primitives.js).
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/paseo/mappers.dart';
 
 ToolState _tool(String name, Map<String, dynamic> detail) {
   final message = paseoItemMessage(

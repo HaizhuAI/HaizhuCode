@@ -29,7 +29,7 @@ and desktop builds are experimental. They remain in that workflow run.
 
 ## APK identity and upgrade checks
 
-Package `io.github.eslamasabry.opencode_mobile`, version name `1.0.44`,
+Package `io.github.haizhu.code`, version name `1.0.44`,
 version code `50`, size 203332920 bytes.
 
 | Artifact | Certificate SHA-256 | APK SHA-256 |

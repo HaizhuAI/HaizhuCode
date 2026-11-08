@@ -6,12 +6,12 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/termux/team_runtime.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/termux/team_runtime.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const phoneProfileId = 'phone';

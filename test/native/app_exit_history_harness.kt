@@ -1,4 +1,4 @@
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 
 private const val MAIN = "private.package"
 private const val SECRET = "private-token /private/path https://private.example"

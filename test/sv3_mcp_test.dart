@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/sv3_mcp_capabilities.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/sv3_mcp_capabilities.dart';
 
 class _McpGateway implements McpGateway {
   final disconnected = <String>[];

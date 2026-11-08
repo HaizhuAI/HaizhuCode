@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/local_terminal.dart';
-import 'package:opencode_mobile/ui/kit/terminal_key_bar.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
+import 'package:haizhucode/ui/kit/terminal_key_bar.dart';
 import 'package:xterm/xterm.dart' as xterm;
 
 import 'support/fake_local_terminal.dart';

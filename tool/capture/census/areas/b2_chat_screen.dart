@@ -2,7 +2,7 @@
 // (docs/design/ui-ledger/parts/b2-chat-screen.json). See tool/capture/census_test.dart.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 import '../../fixtures.dart';
 import '../census_core.dart';

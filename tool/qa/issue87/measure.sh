@@ -29,7 +29,7 @@ case "$SC" in
     ;;
 esac
 ADB="${ADB:-$HOME/Android/Sdk/platform-tools/adb} -s $DEV"
-PKG=io.github.eslamasabry.opencode_mobile
+PKG=io.github.haizhu.code
 HERE=$(cd "$(dirname "$0")" && pwd)
 UI="python3 $HERE/../aiteam_builtin/ui.py $DEV"
 mkdir -p "$OUT"

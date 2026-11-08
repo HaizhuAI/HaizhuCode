@@ -1,6 +1,6 @@
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart';
-import 'package:opencode_mobile/api2/models.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart';
+import 'package:haizhucode/api2/models.dart';
 
 // Wire-shaped beta18600 fixtures: plugin subagent Input, context.progress and
 // returned content/metadata. The output text is synthetic; shape is published.

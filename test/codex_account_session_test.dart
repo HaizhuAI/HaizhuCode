@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/codex/account.dart';
-import 'package:opencode_mobile/codex/transport.dart';
-import 'package:opencode_mobile/domain/agent_account.dart';
+import 'package:haizhucode/codex/account.dart';
+import 'package:haizhucode/codex/transport.dart';
+import 'package:haizhucode/domain/agent_account.dart';
 import 'support/account_fakes.dart';
 
 void main() {

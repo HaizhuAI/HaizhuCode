@@ -4,11 +4,11 @@
 // keeps only the problems under it.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/widgets/team_now_line_view.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/widgets/team_now_line_view.dart';
 
 final _now = DateTime.utc(2026, 10, 20, 12);
 final AppLocalizations _l10n = AppLocalizationsEn();

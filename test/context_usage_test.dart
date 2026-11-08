@@ -2,12 +2,12 @@
 // chats list read), the per-profile memory behind the list's rings, and the
 // Paseo agent usage mapping.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
-import 'package:opencode_mobile/state/context_usage.dart';
-import 'package:opencode_mobile/state/context_usage_memory.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/paseo/mappers.dart';
+import 'package:haizhucode/state/context_usage.dart';
+import 'package:haizhucode/state/context_usage_memory.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 CatalogModel _model(String id, int limit) => CatalogModel(

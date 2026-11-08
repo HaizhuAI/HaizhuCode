@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_sign_in_foreground.dart';
+import 'package:haizhucode/domain/agent_sign_in_foreground.dart';
 
 class _Lease implements AgentSignInForegroundLease {
   _Lease(this.log, [this.refusal]);

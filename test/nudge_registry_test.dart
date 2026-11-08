@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/conversation_nudges.dart';
-import 'package:opencode_mobile/state/nudges.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/conversation_nudges.dart';
+import 'package:haizhucode/state/nudges.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<NudgeRegistry> _registry({

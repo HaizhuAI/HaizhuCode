@@ -6,12 +6,12 @@ import 'dart:ui' show Tristate;
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/effects.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_row_parts.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_slot.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/effects.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_row_parts.dart';
+import 'package:haizhucode/ui/kit/kit_status_line.dart';
+import 'package:haizhucode/ui/kit/kit_status_slot.dart';
 import '../support/part_semantics.dart';
 
 Widget _app(Widget child, {double textScale = 1, double width = 412}) =>

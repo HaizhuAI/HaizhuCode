@@ -7,17 +7,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/desktop/shortcuts.dart';
-import 'package:opencode_mobile/ui/kit/kit_nav.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_search_field.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/ui/screens/project_hub_screen.dart'
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/desktop/shortcuts.dart';
+import 'package:haizhucode/ui/kit/kit_nav.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_search_field.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/screens/project_hub_screen.dart'
     show OpenProjectToolIntent, ProjectTool;
 
 import '../../tool/capture/fixtures.dart' show CaptureApi;

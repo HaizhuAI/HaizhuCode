@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/codex/gateway.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/codex/gateway.dart'
     show codexServerCapabilities;
-import 'package:opencode_mobile/codex/transport.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/codex/transport.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _FakeChannel implements LiveEventChannel {

@@ -11,8 +11,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_illustration.dart';
-import 'package:opencode_mobile/ui/kit/scenes/team_scenes.dart';
+import 'package:haizhucode/ui/kit/kit_illustration.dart';
+import 'package:haizhucode/ui/kit/scenes/team_scenes.dart';
 
 import 'fixtures.dart';
 

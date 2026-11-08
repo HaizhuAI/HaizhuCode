@@ -2,15 +2,15 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/setup/aiteam_scripts.dart';
-import 'package:opencode_mobile/builtin/setup/component_removal.dart';
-import 'package:opencode_mobile/builtin/setup/components.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/termux/team_runtime.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/setup/aiteam_scripts.dart';
+import 'package:haizhucode/builtin/setup/component_removal.dart';
+import 'package:haizhucode/builtin/setup/components.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/team/builtin_team.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/termux/team_runtime.dart';
 
 SetupComponent _component(
   String id, {

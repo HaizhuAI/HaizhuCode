@@ -39,7 +39,7 @@ OUT = 'docs/ux-system/revamp/work-units.json'
 MAX_LINES = 3200  # one agent's reading budget per screen unit
 MAX_RAW = 150     # raw framework widgets per unit (C35); a single-file bin may exceed it, flagged
 SLOTS = 6         # min(16, CPUs - 2) on the 8-CPU PC
-PKG = 'package:opencode_mobile/'
+PKG = 'package:haizhucode/'
 VL_TIP = '510f601d'  # feat/visual-language-v1: 76095bd3, f5370bd3, 510f601d
 VL_TOUCHED_FALLBACK = [
     'lib/ui/app_theme.dart', 'lib/ui/kit/glass/kit_glass.dart', 'lib/ui/kit/kit.dart',

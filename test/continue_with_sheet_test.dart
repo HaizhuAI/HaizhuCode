@@ -4,15 +4,15 @@
 // a result that is not confirmed never offers a second start.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_handoff.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/agent_handoff_links.dart';
-import 'package:opencode_mobile/state/continue_with.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/widgets/continue_with_sheet.dart';
-import 'package:opencode_mobile/ui/widgets/session_menu.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/agent_handoff.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/agent_handoff_links.dart';
+import 'package:haizhucode/state/continue_with.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/widgets/continue_with_sheet.dart';
+import 'package:haizhucode/ui/widgets/session_menu.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/continue_with_fakes.dart';

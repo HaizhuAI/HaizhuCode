@@ -13,7 +13,7 @@ Flutter layer presents. Reset and enable before a scenario, dump after:
   adb shell dumpsys SurfaceFlinger --timestats -dump > ts.txt
 
 For the layer whose name contains LAYER_SUBSTRING (default: the app's
-`SurfaceView[io.github.eslamasabry.opencode_mobile/...](BLAST)`), prints
+`SurfaceView[io.github.haizhu.code/...](BLAST)`), prints
 one CSV line:
   frames, avg_fps, dropped, p50_ms, p90_ms, p99_ms, over_17ms_pct, over_34ms_pct
 from the present-to-present histogram (the time between two frames the
@@ -49,7 +49,7 @@ def pct(h, q):
 
 def main():
     text = open(sys.argv[1]).read().splitlines()
-    want = sys.argv[2] if len(sys.argv) > 2 else 'SurfaceView[io.github.eslamasabry.opencode_mobile'
+    want = sys.argv[2] if len(sys.argv) > 2 else 'SurfaceView[io.github.haizhu.code'
     i = 0
     found = None
     while i < len(text):

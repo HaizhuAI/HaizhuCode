@@ -1,7 +1,7 @@
 import 'support/fake_server_capabilities.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/worktree_inspection.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/worktree_inspection.dart';
 
 class _Host extends Fake implements HostGateway {
   String? requestedDirectory;

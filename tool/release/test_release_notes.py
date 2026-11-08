@@ -13,7 +13,7 @@ from pathlib import Path
 
 import release_notes as notes
 
-GOOD = """# OpenCode Mobile 1.3.0+53
+GOOD = """# HaizhuCode 1.3.0+53
 
 Agents that need a sign-in say so.
 
@@ -55,7 +55,7 @@ class CheckTest(unittest.TestCase):
     def test_technical_first_fails(self) -> None:
         user = GOOD[GOOD.index("## What changed") : GOOD.index("## Technical")]
         tech = GOOD[GOOD.index("## Technical") :]
-        text = "# OpenCode Mobile 1.3.0+53\n\n" + tech + "\n" + user
+        text = "# HaizhuCode 1.3.0+53\n\n" + tech + "\n" + user
         problems = notes.check(self.write(text))
         self.assertTrue(any("must come before" in p for p in problems))
 
@@ -167,7 +167,7 @@ class DraftTest(unittest.TestCase):
             notes.TEMPLATE.read_text(encoding="utf-8"),
             {"Added": ["A thing"], "Changed": [], "Fixed": ["A bug"]},
         )
-        self.assertTrue(text.startswith("# OpenCode Mobile 1.3.0+53\n"))
+        self.assertTrue(text.startswith("# HaizhuCode 1.3.0+53\n"))
         self.assertIn("### Added\n- A thing", text)
         self.assertIn("### Fixed\n- A bug", text)
         # Empty groups keep the placeholder, so check fails until edited.

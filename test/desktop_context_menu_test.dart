@@ -1,4 +1,4 @@
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 import 'support/complete_message_history.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -6,17 +6,17 @@ import 'package:flutter/gestures.dart' show kSecondaryMouseButton;
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/desktop/context_menu.dart';
-import 'package:opencode_mobile/ui/kit/kit_viewer.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/files_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/desktop/context_menu.dart';
+import 'package:haizhucode/ui/kit/kit_viewer.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/files_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
 
 /// A widget test that runs with the platform reported as Linux desktop. The
 /// override must be cleared inside the body: flutter_test asserts no

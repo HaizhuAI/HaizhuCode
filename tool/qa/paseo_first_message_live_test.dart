@@ -5,11 +5,11 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/server_gateway.dart'
     show ProductException;
-import 'package:opencode_mobile/paseo/chat_feed_source.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
+import 'package:haizhucode/paseo/chat_feed_source.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
 
 void main() {
   final env = Platform.environment;

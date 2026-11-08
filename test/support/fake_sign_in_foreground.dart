@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:opencode_mobile/domain/agent_sign_in_foreground.dart';
+import 'package:haizhucode/domain/agent_sign_in_foreground.dart';
 
 /// Explicit admission for fake-only UI fixtures. Production requires an
 /// owner-bound platform service; a fake agent source does not install one.

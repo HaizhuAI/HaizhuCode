@@ -14,10 +14,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/ui/kit/kit_details_fold.dart';
-import 'package:opencode_mobile/ui/widgets/team_technical_details.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/ui/kit/kit_details_fold.dart';
+import 'package:haizhucode/ui/widgets/team_technical_details.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;
 import '../support/team_golden_fixture.dart';

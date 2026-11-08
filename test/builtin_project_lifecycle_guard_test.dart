@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 // installation, removal, or the two native lifecycle admission locks.
 void main() {
   const native =
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+      'android/app/src/main/kotlin/io/github/haizhu/code';
   final linux = File('$native/BuiltinLinux.kt').readAsStringSync();
   final activity = File('$native/MainActivity.kt').readAsStringSync();
   final setup = File('$native/SetupRunner.kt').readAsStringSync();

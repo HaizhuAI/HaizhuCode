@@ -2,11 +2,11 @@
 // B-16 (timeline noise, lane default), B-17 (gap under a flat card).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/orchestration/adapters/fixture/project_fixture_gateway.dart';
-import 'package:opencode_mobile/state/team_project_controller.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/team/projects/team_project_conversation.dart';
-import 'package:opencode_mobile/ui/screens/team/projects/team_projects_screen.dart';
+import 'package:haizhucode/orchestration/adapters/fixture/project_fixture_gateway.dart';
+import 'package:haizhucode/state/team_project_controller.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/team/projects/team_project_conversation.dart';
+import 'package:haizhucode/ui/screens/team/projects/team_projects_screen.dart';
 
 import 'kit/kit_harness.dart';
 

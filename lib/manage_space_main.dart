@@ -65,7 +65,7 @@ class ManageSpaceApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final pack = effectiveThemePack(themePack);
     return MaterialApp(
-      title: 'OpenCode Mobile',
+      title: 'HaizhuCode',
       debugShowCheckedModeBanner: false,
       themeMode: switch (appearance) {
         AppAppearance.system => ThemeMode.system,

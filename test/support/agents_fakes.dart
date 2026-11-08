@@ -2,15 +2,15 @@ import 'fake_server_capabilities.dart';
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:opencode_mobile/domain/agent_auth_probe.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_sign_in.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/merged_chat_feed.dart';
-import 'package:opencode_mobile/domain/phone_agent_host.dart';
-import 'package:opencode_mobile/domain/phone_agents.dart';
-import 'package:opencode_mobile/domain/phone_agents_source.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/agent_auth_probe.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_sign_in.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/merged_chat_feed.dart';
+import 'package:haizhucode/domain/phone_agent_host.dart';
+import 'package:haizhucode/domain/phone_agents.dart';
+import 'package:haizhucode/domain/phone_agents_source.dart';
+import 'package:haizhucode/domain/server_gateway.dart'
     show ProductException;
 
 /// How far an agent is, for [agentRowFor].

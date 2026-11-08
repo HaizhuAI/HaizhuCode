@@ -5,13 +5,13 @@ import 'package:flutter/services.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/domain/phone_project_engine.dart';
-import 'package:opencode_mobile/state/phone_project_engine.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_probe.dart'
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/domain/phone_project_engine.dart';
+import 'package:haizhucode/state/phone_project_engine.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_probe.dart'
     show ProbeFound;
-import 'package:opencode_mobile/orchestration/adapters/inapp/phone_engine_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/inapp/phone_engine_gateway.dart';
 
 import 'phone_project_engine_gateway_test.dart' as fake;
 

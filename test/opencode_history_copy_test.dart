@@ -3,17 +3,17 @@ import 'dart:io';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/dialect.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/domain/history_migration.dart';
-import 'package:opencode_mobile/domain/opencode_history_copy.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/termux/bridge.dart'
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/dialect.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/domain/history_migration.dart';
+import 'package:haizhucode/domain/opencode_history_copy.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/termux/bridge.dart'
     show TermuxRuntime, TermuxBridgeException;
-import 'package:opencode_mobile/termux/scripts/manager_script.dart';
-import 'package:opencode_mobile/ui/screens/this_phone_screen.dart';
+import 'package:haizhucode/termux/scripts/manager_script.dart';
+import 'package:haizhucode/ui/screens/this_phone_screen.dart';
 
 class _Real extends HttpOverrides {}
 

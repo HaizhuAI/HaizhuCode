@@ -2,10 +2,10 @@
 // AI Team that was on for the old one must follow, or "AI Team keeps
 // working" would be false.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team.dart';
-import 'package:opencode_mobile/state/move_to_opencode2.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/team/builtin_team.dart';
+import 'package:haizhucode/state/move_to_opencode2.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Store extends ProfileStore {

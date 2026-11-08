@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/domain/opencode_history_copy.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/state/phone_host.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/domain/opencode_history_copy.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/state/phone_host.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'revamp/screen_phone_1_fixtures.dart';

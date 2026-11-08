@@ -12,10 +12,10 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/widgets/external_link.dart';
-import 'package:opencode_mobile/ui/widgets/run_command_dialog.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/widgets/external_link.dart';
+import 'package:haizhucode/ui/widgets/run_command_dialog.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;
 import 'shared_system_1_fixtures.dart';

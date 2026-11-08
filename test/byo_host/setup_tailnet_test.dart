@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/byo_host.dart';
-import 'package:opencode_mobile/domain/byo_host_setup.dart';
-import 'package:opencode_mobile/host/byo_host_tailnet.dart';
+import 'package:haizhucode/domain/byo_host.dart';
+import 'package:haizhucode/domain/byo_host_setup.dart';
+import 'package:haizhucode/host/byo_host_tailnet.dart';
 
 void main() {
   final denied = throwsA(

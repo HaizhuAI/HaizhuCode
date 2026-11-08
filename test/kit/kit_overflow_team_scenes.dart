@@ -1,7 +1,7 @@
 // G6 fixtures for the AI Team kit parts (lib/ui/kit/team/). Each part is held
 // in realistic copy in two states, English and Arabic.
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 import 'kit_overflow_scenes.dart';
 

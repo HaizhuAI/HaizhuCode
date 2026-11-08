@@ -5,11 +5,11 @@
 // the chat's error text. A real failure still does.
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart' show StreamStatus;
-import 'package:opencode_mobile/state/attention_feed.dart';
-import 'package:opencode_mobile/state/automation_policy.dart';
-import 'package:opencode_mobile/state/connection.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart' show StreamStatus;
+import 'package:haizhucode/state/attention_feed.dart';
+import 'package:haizhucode/state/automation_policy.dart';
+import 'package:haizhucode/state/connection.dart';
 
 import 'support/profile_monitor_fixture.dart';
 import 'support/stash_memory_vault.dart';

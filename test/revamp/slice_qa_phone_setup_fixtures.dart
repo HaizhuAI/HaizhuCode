@@ -2,13 +2,13 @@
 // B6): the phone setup screens under the app-wide status scope, with a saved
 // server's "not answering" line, and a phone with a given total RAM.
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/builtin/setup/phone_setup.dart';
-import 'package:opencode_mobile/state/termux_running_server.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_progress_screen.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_start_screen.dart';
-import 'package:opencode_mobile/voice/device.dart';
+import 'package:haizhucode/builtin/setup/phone_setup.dart';
+import 'package:haizhucode/state/termux_running_server.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_progress_screen.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_start_screen.dart';
+import 'package:haizhucode/voice/device.dart';
 
 /// The app-wide line the QA saw on every setup step (screens 97–117): a
 /// saved server at 127.0.0.1 not answering, as `connectionKitStatus` builds

@@ -5,14 +5,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/platform/storage_access.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/shared_project_roots.dart';
-import 'package:opencode_mobile/state/shared_storage_gate.dart';
-import 'package:opencode_mobile/ui/screens/shared_storage_access_flow.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/platform/storage_access.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/shared_project_roots.dart';
+import 'package:haizhucode/state/shared_storage_gate.dart';
+import 'package:haizhucode/ui/screens/shared_storage_access_flow.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;

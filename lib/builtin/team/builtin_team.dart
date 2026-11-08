@@ -271,14 +271,14 @@ class BuiltinTeam {
   static const upkeepOrder =
       '[order]\n'
       'description = "Phone upkeep: the core sweeps one at a time '
-      '(written by OpenCode Mobile)"\n'
+      '(written by HaizhuCode)"\n'
       'trigger = "cooldown"\n'
       'interval = "2m"\n'
       'timeout = "10m"\n'
       'exec = "exec sh $cityDir/assets/phone-upkeep.sh"\n';
 
   static const upkeepScript = r'''#!/bin/sh
-# Phone upkeep (written by OpenCode Mobile on every AI Team start).
+# Phone upkeep (written by HaizhuCode on every AI Team start).
 cd /root/aiteam/city || exit 1
 state=/root/aiteam/city/.gc/runtime/packs/phone
 mkdir -p "$state"
@@ -353,7 +353,7 @@ exit "$rc"
   /// Dolt's author identity, which `gc init` needs; install sets it but
   /// silently, so set it here when missing and say so when Dolt cannot.
   static const _doltIdentity =
-      'for oc_kv in "user.name=OpenCode Mobile" '
+      'for oc_kv in "user.name=HaizhuCode" '
       '"user.email=aiteam@opencode-mobile.local"; do\n'
       '  oc_k=\${oc_kv%%=*}\n'
       '  dolt config --global --get "\$oc_k" >/dev/null 2>&1 || '
@@ -522,7 +522,7 @@ exit "$rc"
   /// and prints the line.
   static const originHook =
       '#!/bin/sh\n'
-      '# Written by OpenCode Mobile (AI Team) on every team start: brings\n'
+      '# Written by HaizhuCode (AI Team) on every team start: brings\n'
       '# the work merged here into the project folder.\n'
       'log=$pullLog\n'
       r'''project=${OC_PROJECT:-$(git config --get oc-mobile.project 2>/dev/null)}

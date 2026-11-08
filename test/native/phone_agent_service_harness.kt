@@ -1,4 +1,4 @@
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 import android.app.NotificationManager
 import android.app.Service
 import android.content.Context

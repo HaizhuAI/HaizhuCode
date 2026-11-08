@@ -27,7 +27,7 @@ Verify a download with `apksigner verify --print-certs app.apk` and compare
 the fingerprint and SHA-256 against the release notes.
 
 The Android application ID moved from `ai.opencode.opencode_mobile` to
-`io.github.eslamasabry.opencode_mobile` before the 1.0.31 line. The old one
+`io.github.haizhu.code` before the 1.0.31 line. The old one
 sat under the OpenCode project's own reverse domain, which this project does
 not control. To Android that makes it a different app: a build from the new
 line installs beside an old preview rather than replacing it. Uninstall the
@@ -111,7 +111,7 @@ on loopback: bind the server to `127.0.0.1` and bring the connection to
   `opencode2 serve` detached, health-polls until live, and connects. A "Live
   log in Termux" button streams install/server logs at any time. The native
   side is
-  [`MainActivity.kt`](../android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/MainActivity.kt)
+  [`MainActivity.kt`](../android/app/src/main/kotlin/io/github/haizhu/code/MainActivity.kt)
   + [`lib/termux/bridge.dart`](../lib/termux/bridge.dart). (Why the chroot:
   the managed installer uses the Linux binaries inside Ubuntu, whose glibc
   environment shares the phone’s network stack. The app reaches it at

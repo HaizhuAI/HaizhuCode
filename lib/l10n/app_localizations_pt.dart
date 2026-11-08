@@ -124,7 +124,7 @@ class AppLocalizationsPt extends AppLocalizations {
       'The server or project changed while this was open. Close it and start again from the project you want.';
 
   @override
-  String get appTitle => 'OpenCode Mobile';
+  String get appTitle => 'HaizhuCode';
 
   @override
   String get libraryModelsAgentsTitle => 'Models & agents';
@@ -146,7 +146,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String aboutBuildVersion(String version, String buildNumber) {
-    return 'OpenCode Mobile $version+$buildNumber';
+    return 'HaizhuCode $version+$buildNumber';
   }
 
   @override
@@ -4165,7 +4165,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get e7SettingsNonAffiliation =>
-      'OpenCode Mobile is an independent community project. It is not built, maintained, endorsed by, or affiliated with the official OpenCode team.';
+      'HaizhuCode is an independent community project. It is not built, maintained, endorsed by, or affiliated with the official OpenCode team.';
 
   @override
   String e7SettingsDiagnosticOccurrences(int count) {
@@ -8080,7 +8080,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get handoffUiPhoneIntro =>
-      'Scan with OpenCode Mobile on the other phone. The code holds only the server and conversation IDs.';
+      'Scan with HaizhuCode on the other phone. The code holds only the server and conversation IDs.';
 
   @override
   String get handoffUiPhoneQrLabel =>
@@ -12974,22 +12974,22 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String appExitForceStopped(String time) {
-    return 'OpenCode Mobile was closed $time';
+    return 'HaizhuCode was closed $time';
   }
 
   @override
   String appExitLowMemory(String time) {
-    return 'Android closed OpenCode Mobile $time to free memory';
+    return 'Android closed HaizhuCode $time to free memory';
   }
 
   @override
   String appExitCrashed(String time) {
-    return 'OpenCode Mobile stopped unexpectedly $time';
+    return 'HaizhuCode stopped unexpectedly $time';
   }
 
   @override
   String appExitKilled(String time) {
-    return 'Android stopped OpenCode Mobile $time';
+    return 'Android stopped HaizhuCode $time';
   }
 
   @override
@@ -13068,26 +13068,26 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get keepRunningLockNubia =>
-      'Open Recent apps and pull OpenCode Mobile\'s card down until the lock shows.';
+      'Open Recent apps and pull HaizhuCode\'s card down until the lock shows.';
 
   @override
   String get keepRunningLockSamsung =>
-      'Open Recent apps, tap OpenCode Mobile\'s icon above its card and choose Keep open.';
+      'Open Recent apps, tap HaizhuCode\'s icon above its card and choose Keep open.';
 
   @override
   String get keepRunningLockOther =>
-      'Open Recent apps, long-press OpenCode Mobile\'s card and tap the lock.';
+      'Open Recent apps, long-press HaizhuCode\'s card and tap the lock.';
 
   @override
   String get keepRunningAutostartTitle => 'Allow auto-start';
 
   @override
   String get keepRunningAutostartDetail =>
-      'Turn it on for OpenCode Mobile so the phone doesn\'t stop it in the background.';
+      'Turn it on for HaizhuCode so the phone doesn\'t stop it in the background.';
 
   @override
   String get keepRunningAutostartHuawei =>
-      'Under App launch, set OpenCode Mobile to Manage manually and turn on all three switches.';
+      'Under App launch, set HaizhuCode to Manage manually and turn on all three switches.';
 
   @override
   String get keepRunningBackgroundTitle => 'Allow background activity';
@@ -13117,7 +13117,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get keepRunningOpenFailed =>
-      'This phone has no such screen. Open Settings › Apps › OpenCode Mobile instead.';
+      'This phone has no such screen. Open Settings › Apps › HaizhuCode instead.';
 
   @override
   String get keepRunningFootnote =>
@@ -20990,7 +20990,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get sessionAddressIntro =>
-      'Scan with OpenCode Mobile on the other phone. The code holds this server’s address and the conversation ID.';
+      'Scan with HaizhuCode on the other phone. The code holds this server’s address and the conversation ID.';
 
   @override
   String get sessionAddressUnsupportedHost =>
@@ -22329,7 +22329,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get manageSpaceIntro =>
-      'Clearing deletes everything OpenCode Mobile keeps on this phone, and it cannot be undone. Export your projects first if you want to keep them.';
+      'Clearing deletes everything HaizhuCode keeps on this phone, and it cannot be undone. Export your projects first if you want to keep them.';
 
   @override
   String get manageSpaceExportFirst => 'Export projects first';
@@ -22369,7 +22369,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get manageSpaceDeleteBody =>
-      'OpenCode Mobile then starts again as if it were new. This cannot be undone.';
+      'HaizhuCode then starts again as if it were new. This cannot be undone.';
 
   @override
   String get manageSpaceLostServer => 'On this phone and its conversations';
@@ -22626,7 +22626,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get manageSpaceIntroNothingToExport =>
-      'Clearing deletes everything OpenCode Mobile keeps on this phone, and it cannot be undone.';
+      'Clearing deletes everything HaizhuCode keeps on this phone, and it cannot be undone.';
 
   @override
   String integrationsKeyOnlyHelper(String name) {

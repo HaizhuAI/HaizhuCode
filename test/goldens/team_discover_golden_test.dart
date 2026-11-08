@@ -9,16 +9,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/phone_setup.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/ui/kit/kit_motion.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/team_intro_screen.dart';
-import 'package:opencode_mobile/termux/team_runtime.dart';
-import 'package:opencode_mobile/ui/widgets/builtin_team_section.dart';
-import 'package:opencode_mobile/ui/widgets/team_host_form.dart';
-import 'package:opencode_mobile/ui/widgets/team_phone_onboarding.dart';
-import 'package:opencode_mobile/voice/device.dart';
+import 'package:haizhucode/builtin/setup/phone_setup.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/ui/kit/kit_motion.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/screens/team/team_intro_screen.dart';
+import 'package:haizhucode/termux/team_runtime.dart';
+import 'package:haizhucode/ui/widgets/builtin_team_section.dart';
+import 'package:haizhucode/ui/widgets/team_host_form.dart';
+import 'package:haizhucode/ui/widgets/team_phone_onboarding.dart';
+import 'package:haizhucode/voice/device.dart';
 
 import '../../tool/capture/fixtures.dart' show captureApp, loadCaptureFonts;
 import '../support/fake_setup_engine.dart';

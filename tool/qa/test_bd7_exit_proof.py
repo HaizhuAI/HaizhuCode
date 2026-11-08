@@ -4,7 +4,7 @@ import unittest
 
 from tool.qa.bd7_exit_proof import ProofFailure, parse_crash_ring, parse_exit_history
 
-PACKAGE = 'io.github.eslamasabry.opencode_mobile'
+PACKAGE = 'io.github.haizhu.code'
 PRIVATE = 'synthetic-private-value'
 
 

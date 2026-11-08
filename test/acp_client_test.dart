@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/acp/acp_client.dart';
+import 'package:haizhucode/acp/acp_client.dart';
 
 class _Agent {
   final input = StreamController<List<int>>();

@@ -18,11 +18,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/team_project_controller.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart' show pushKitPage;
-import 'package:opencode_mobile/ui/screens/team/projects/team_project_conversation.dart';
-import 'package:opencode_mobile/ui/screens/team/projects/team_project_editors.dart';
-import 'package:opencode_mobile/ui/screens/team/projects/team_projects_screen.dart';
+import 'package:haizhucode/state/team_project_controller.dart';
+import 'package:haizhucode/ui/kit/kit.dart' show pushKitPage;
+import 'package:haizhucode/ui/screens/team/projects/team_project_conversation.dart';
+import 'package:haizhucode/ui/screens/team/projects/team_project_editors.dart';
+import 'package:haizhucode/ui/screens/team/projects/team_projects_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart';

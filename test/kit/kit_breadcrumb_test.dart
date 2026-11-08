@@ -12,12 +12,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_bidi.dart';
-import 'package:opencode_mobile/ui/kit/kit_breadcrumb.dart';
-import 'package:opencode_mobile/ui/kit/kit_tappable.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_bidi.dart';
+import 'package:haizhucode/ui/kit/kit_breadcrumb.dart';
+import 'package:haizhucode/ui/kit/kit_tappable.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 const _root = 'oc';
 // 3 characters each: a 58 dp crumb. At 412 dp only root › … › api › cfg

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/dev_preview.dart';
+import 'package:haizhucode/domain/dev_preview.dart';
 
 void main() {
   group('DevPreviewLink.parse', () {

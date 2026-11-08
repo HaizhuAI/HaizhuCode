@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/migration_runner.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/prompt_shelf.dart';
-import 'package:opencode_mobile/state/session_drafts.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/migration_runner.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/prompt_shelf.dart';
+import 'package:haizhucode/state/session_drafts.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

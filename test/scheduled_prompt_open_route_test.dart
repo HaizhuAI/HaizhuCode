@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/scheduling/models.dart';
-import 'package:opencode_mobile/scheduling/open_route.dart';
+import 'package:haizhucode/scheduling/models.dart';
+import 'package:haizhucode/scheduling/open_route.dart';
 
 final _at = DateTime.utc(2026, 10, 17, 6, 15);
 

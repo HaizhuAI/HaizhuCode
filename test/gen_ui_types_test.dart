@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart';
 
 void main() {
   test('frontend can construct every public card variant', () {

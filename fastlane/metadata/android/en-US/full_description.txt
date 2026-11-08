@@ -1,4 +1,4 @@
-OpenCode Mobile is an unofficial, independent community app. It is not affiliated with or endorsed by the OpenCode team, Anthropic, OpenAI or Google. It is free, open source (MIT), and written by one developer with substantial AI assistance.
+HaizhuCode is an unofficial, independent community app. It is not affiliated with or endorsed by the OpenCode team, Anthropic, OpenAI or Google. It is free, open source (MIT), and written by one developer with substantial AI assistance.
 
 Run a coding agent on your Android phone, or follow the one on your computer. Ask for a change, watch it work, approve what it wants to do, and review the result.
 

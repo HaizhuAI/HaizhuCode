@@ -2,11 +2,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/platform/tailscale.dart';
-import 'package:opencode_mobile/state/tailscale_address.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/tailscale_setup_screen.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/platform/tailscale.dart';
+import 'package:haizhucode/state/tailscale_address.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/tailscale_setup_screen.dart';
 
 class _Bridge extends TailscaleBridge {
   TailscaleAppState state = TailscaleAppState.installed;

@@ -4,11 +4,11 @@
 // arrives, or until the agent's process is seen down. Shapes are Paseo
 // 0.11.2's (fetch_agent_timeline_response, agent_stream, agent_update).
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/background_tasks.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/paseo/chat_feed_source.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
+import 'package:haizhucode/domain/background_tasks.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/paseo/chat_feed_source.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
 
 import 'paseo_acp_pilot_test.dart' show FakePaseoSocket;
 

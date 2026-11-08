@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/settings_scope.dart';
-import 'package:opencode_mobile/domain/settings_scope_fixture.dart';
+import 'package:haizhucode/domain/settings_scope.dart';
+import 'package:haizhucode/domain/settings_scope_fixture.dart';
 
 const _device = SettingsTarget.device();
 const _phone = SettingsTarget.connection('phone');

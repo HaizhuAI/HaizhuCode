@@ -16,13 +16,13 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart'
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart'
     show BuiltinServerRestoreRecipe;
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/state/termux_running_server.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_ready_screen.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_start_screen.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/state/termux_running_server.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_ready_screen.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_start_screen.dart';
 
 import 'support/phone_setup_scenes.dart';
 

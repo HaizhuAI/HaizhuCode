@@ -8,17 +8,17 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import '../support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 import '../support/fake_event_channel.dart';
-import 'package:opencode_mobile/domain/plugin_inventory.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_probe.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/pending_auth.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/settings/server_plugins_section.dart';
-import 'package:opencode_mobile/ui/screens/team/team_page.dart';
+import 'package:haizhucode/domain/plugin_inventory.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_probe.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/pending_auth.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/settings/server_plugins_section.dart';
+import 'package:haizhucode/ui/screens/team/team_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Library3Repository

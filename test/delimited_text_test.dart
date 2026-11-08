@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/delimited_text.dart';
+import 'package:haizhucode/domain/delimited_text.dart';
 
 void main() {
   test(

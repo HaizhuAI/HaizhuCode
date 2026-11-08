@@ -3,13 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/termux/bridge.dart' show TermuxBridgeException;
-import 'package:opencode_mobile/termux/processes.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/widgets/termux_phone_tools.dart';
-import 'package:opencode_mobile/ui/widgets/work_status_line.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/termux/bridge.dart' show TermuxBridgeException;
+import 'package:haizhucode/termux/processes.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/widgets/termux_phone_tools.dart';
+import 'package:haizhucode/ui/widgets/work_status_line.dart';
 
 Widget _app(Widget home) => MaterialApp(
   debugShowCheckedModeBanner: false,

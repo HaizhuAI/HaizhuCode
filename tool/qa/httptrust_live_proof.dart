@@ -2,7 +2,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:opencode_mobile/domain/server_trust.dart';
+import 'package:haizhucode/domain/server_trust.dart';
 
 Future<void> main() async {
   final config =

@@ -5,14 +5,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/widgets/server_switcher_sheet.dart';
-import 'package:opencode_mobile/ui/widgets/termux_running_server_entry.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/widgets/server_switcher_sheet.dart';
+import 'package:haizhucode/ui/widgets/termux_running_server_entry.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'revamp/shared_servers_1_fixtures.dart';

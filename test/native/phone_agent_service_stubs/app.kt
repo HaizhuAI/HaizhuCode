@@ -2,7 +2,7 @@ package android.app
 import android.content.Context
 import android.content.Intent
 import android.os.IBinder
-import io.github.eslamasabry.opencode_mobile.ServiceEvents
+import io.github.haizhu.code.ServiceEvents
 open class Service : Context() {
     @Volatile var stopped = false
     @Volatile var foreground = false

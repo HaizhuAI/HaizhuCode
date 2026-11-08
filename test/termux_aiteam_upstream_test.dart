@@ -3,8 +3,8 @@
 // when a person taps Set up must name the upstream Linux builds the in-app
 // Ubuntu installs (AiTeamPins), with their pinned checksums.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/aiteam_scripts.dart';
-import 'package:opencode_mobile/termux/team_runtime.dart';
+import 'package:haizhucode/builtin/setup/aiteam_scripts.dart';
+import 'package:haizhucode/termux/team_runtime.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

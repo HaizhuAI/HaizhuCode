@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/git/git_script.dart';
-import 'package:opencode_mobile/domain/git/git_shell.dart';
+import 'package:haizhucode/domain/git/git_script.dart';
+import 'package:haizhucode/domain/git/git_shell.dart';
 
 import 'git_test_support.dart';
 

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/profile_monitor.dart';
-import 'package:opencode_mobile/state/notification_preferences.dart';
+import 'package:haizhucode/domain/profile_monitor.dart';
+import 'package:haizhucode/state/notification_preferences.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _hash =

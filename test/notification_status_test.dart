@@ -1,8 +1,8 @@
 import 'dart:ui' show Locale;
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/notification_status.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
+import 'package:haizhucode/background/notification_status.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
 
 final _en = lookupAppLocalizations(const Locale('en'));
 final _ar = lookupAppLocalizations(const Locale('ar'));

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "/opt/haizhu/kernel/universal-kernel-v31.md"
+  ],
+  "agent": {
+    "haizhu": { "mode": "primary" },
+    "haizhu-re": { "mode": "subagent" },
+    "haizhu-ctf": { "mode": "subagent" },
+    "haizhu-red": { "mode": "subagent" },
+    "haizhu-blue": { "mode": "subagent" },
+    "haizhu-audit": { "mode": "subagent" }
+  },
+  "mcp": {
+    "servers": {
+      "filesystem": {
+        "type": "local",
+        "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "/root/projects"],
+        "disabled": false
+      },
+      "fetch": {
+        "type": "local",
+        "command": ["python3", "-m", "mcp_server_fetch"],
+        "disabled": true
+      },
+      "sequential-thinking": {
+        "type": "local",
+        "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+        "disabled": false
+      }
+    }
+  }
+}

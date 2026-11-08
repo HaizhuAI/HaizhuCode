@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/dev_preview.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/dev_preview_screen.dart';
-import 'package:opencode_mobile/ui/widgets/session_menu.dart';
+import 'package:haizhucode/domain/dev_preview.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/dev_preview_screen.dart';
+import 'package:haizhucode/ui/widgets/session_menu.dart';
 import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
 
 import 'support/fake_webview_platform.dart';

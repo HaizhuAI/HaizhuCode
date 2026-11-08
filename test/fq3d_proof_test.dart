@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/api2/events.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/api2/events.dart';
 
 import '../tool/qa/fq3d/proof.dart';
 

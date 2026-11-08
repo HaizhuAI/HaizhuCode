@@ -4,11 +4,11 @@
 import 'dart:ui' show Locale;
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/setup_engine.dart';
-import 'package:opencode_mobile/builtin/setup/termux_setup_finish.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/builtin/setup/setup_engine.dart';
+import 'package:haizhucode/builtin/setup/termux_setup_finish.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/termux_channel_fixture.dart';

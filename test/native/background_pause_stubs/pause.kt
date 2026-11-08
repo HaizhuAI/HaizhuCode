@@ -1,4 +1,4 @@
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 
 object LivePauseReceiver {
     const val FLUTTER_PREFERENCES = "FlutterSharedPreferences"

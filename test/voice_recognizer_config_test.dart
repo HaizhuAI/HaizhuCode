@@ -1,8 +1,8 @@
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/voice/model_manifest.dart';
-import 'package:opencode_mobile/voice/recognizer.dart';
+import 'package:haizhucode/voice/model_manifest.dart';
+import 'package:haizhucode/voice/recognizer.dart';
 
 void main() {
   test(

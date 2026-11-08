@@ -13,7 +13,7 @@ import zipfile
 REQUIRED = {
     'Landroidx/work/impl/WorkDatabase_Impl;': (),
     'Landroidx/work/OverwritingInputMerger;': (),
-    'Lio/github/eslamasabry/opencode_mobile/ScheduledPromptWorker;': (
+    'Lio/github/haizhu/code/ScheduledPromptWorker;': (
         'Landroid/content/Context;', 'Landroidx/work/WorkerParameters;',
     ),
 }

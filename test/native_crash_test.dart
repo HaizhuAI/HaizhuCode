@@ -2,20 +2,20 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/app_exit_recovery.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
-import 'package:opencode_mobile/diagnostics/report_problem.dart';
-import 'package:opencode_mobile/diagnostics/report_problem_startup.dart';
-import 'package:opencode_mobile/platform/app_exit.dart';
-import 'package:opencode_mobile/platform/native_crash.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/builtin/app_exit_recovery.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
+import 'package:haizhucode/diagnostics/report_problem.dart';
+import 'package:haizhucode/diagnostics/report_problem_startup.dart';
+import 'package:haizhucode/platform/app_exit.dart';
+import 'package:haizhucode/platform/native_crash.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _frame =
-    'io.github.eslamasabry.opencode_mobile.PhoneAgentHost.start(PhoneAgentHost.kt:42)';
+    'io.github.haizhu.code.PhoneAgentHost.start(PhoneAgentHost.kt:42)';
 const _unsafeMessage =
     'https://login.example/?token=fake-secret-code /home/oc/.claude/credentials';
 final _at = DateTime(2026, 10, 4, 10, 3);

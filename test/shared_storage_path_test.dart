@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/shared_storage_path.dart';
+import 'package:haizhucode/domain/shared_storage_path.dart';
 
 void main() {
   sharedProjectBindTests();
@@ -46,7 +46,7 @@ void main() {
   test('the storage permission is declared and bound only outside the '
       'confined tier, with nothing stored for it', () {
     const native =
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+        'android/app/src/main/kotlin/io/github/haizhu/code';
     final manifest = File(
       'android/app/src/main/AndroidManifest.xml',
     ).readAsStringSync();

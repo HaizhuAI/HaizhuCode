@@ -6,13 +6,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart'
     show api2ServerCapabilities;
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

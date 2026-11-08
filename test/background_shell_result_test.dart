@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/background_shell_result.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/background_shell_result.dart';
 
 Part _notice(String text, {String? filename}) => Part(
   id: 'n',

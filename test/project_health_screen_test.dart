@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/project_health_screen.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/project_health_screen.dart';
 
 class _HealthRepository implements ProductRepository {
   VersionControlHealth versionControl = const VersionControlHealth(
@@ -51,7 +51,7 @@ class _HealthRepository implements ProductRepository {
   Future<List<WorkspaceProject>> listProjects() async => [
     const WorkspaceProject(
       id: 'project-1',
-      name: 'OpenCode Mobile',
+      name: 'HaizhuCode',
       directory: '/work/app',
       worktrees: [],
       updatedAt: 1,

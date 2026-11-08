@@ -4,13 +4,13 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/events.dart';
-import 'package:opencode_mobile/api2/gateway_events.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/api2/plugin_mapper.dart';
-import 'package:opencode_mobile/domain/plugin_inventory.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/events.dart';
+import 'package:haizhucode/api2/gateway_events.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/api2/plugin_mapper.dart';
+import 'package:haizhucode/domain/plugin_inventory.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 class _Adapter implements HttpClientAdapter {
   final requests = <RequestOptions>[];

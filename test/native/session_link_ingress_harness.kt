@@ -1,4 +1,4 @@
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 
 fun main() {
     check(SessionLinkIngress.accepts("a".repeat(1024)))

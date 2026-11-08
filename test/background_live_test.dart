@@ -4,8 +4,8 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/live_background.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
+import 'package:haizhucode/background/live_background.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _unpaused = <String, Object?>{
@@ -614,7 +614,7 @@ void main() {
     // rename on either side silently stops the event from arriving.
     expect(BackgroundLiveController.timeoutMethod, 'backgroundServiceTimeout');
     final kotlin = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/'
+      'android/app/src/main/kotlin/io/github/haizhu/code/'
       'BackgroundConnectionService.kt',
     ).readAsStringSync();
     expect(

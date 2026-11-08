@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/byo_host.dart';
-import 'package:opencode_mobile/state/byo_host_service.dart';
+import 'package:haizhucode/domain/byo_host.dart';
+import 'package:haizhucode/state/byo_host_service.dart';
 
 import 'controller_test.dart' show FakeRunner, MemoryStore;
 

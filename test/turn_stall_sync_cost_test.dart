@@ -1,10 +1,10 @@
 // The stall watch is brought up to date on a notify only while a turn is
 // open or tracked; an idle connection's many notifies skip it (2026-10-27).
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/turn_stall.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/turn_stall.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'support/connection_v2_fixtures.dart';
 
 void main() {

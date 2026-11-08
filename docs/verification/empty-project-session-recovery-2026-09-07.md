@@ -89,7 +89,7 @@ replacement APKs. This requirement is now recorded in AGENTS.md. A focused
 candidate was isolated from dev in `../ocmn-session-recovery-apk`; unrelated
 uncommitted features were preserved in the original worktree.
 
-- Version: **1.0.35+36**, package `io.github.eslamasabry.opencode_mobile`.
+- Version: **1.0.35+36**, package `io.github.haizhu.code`.
 - Source: `4cac3695ae71ea10cb12bdf3f5b28f0298727137` on
   `codex/session-recovery-apk`, [PR #77](https://github.com/Eslamasabry/opencode-mobile-next/pull/77)
   targeting dev. This candidate contains the empty-project UI fix, associated

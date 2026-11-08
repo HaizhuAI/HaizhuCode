@@ -6,7 +6,7 @@
 // folds opened.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
+import 'package:haizhucode/paseo/mappers.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

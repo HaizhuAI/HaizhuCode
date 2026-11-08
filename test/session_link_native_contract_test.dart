@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/session_handoff.dart';
-import 'package:opencode_mobile/domain/team_link.dart';
+import 'package:haizhucode/domain/session_handoff.dart';
+import 'package:haizhucode/domain/team_link.dart';
 
 /// The Android side of the session handoff link (F4-S2) cannot run under
 /// `flutter test`, so the contract Dart relies on is pinned here from the
@@ -12,14 +12,14 @@ import 'package:opencode_mobile/domain/team_link.dart';
 void main() {
   const androidMain = 'android/app/src/main';
   final links = File(
-    '$androidMain/kotlin/io/github/eslamasabry/opencode_mobile/'
+    '$androidMain/kotlin/io/github/haizhu/code/'
     'LaunchLinkChannel.kt',
   ).readAsStringSync();
   final activity = File(
-    '$androidMain/kotlin/io/github/eslamasabry/opencode_mobile/MainActivity.kt',
+    '$androidMain/kotlin/io/github/haizhu/code/MainActivity.kt',
   ).readAsStringSync();
   final launches = File(
-    '$androidMain/kotlin/io/github/eslamasabry/opencode_mobile/LaunchActivityBridge.kt',
+    '$androidMain/kotlin/io/github/haizhu/code/LaunchActivityBridge.kt',
   ).readAsStringSync();
   final manifest = File('$androidMain/AndroidManifest.xml').readAsStringSync();
 

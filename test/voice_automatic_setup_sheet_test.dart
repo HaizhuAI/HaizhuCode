@@ -7,14 +7,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/voice/automatic_setup_platform.dart';
-import 'package:opencode_mobile/voice/controller.dart';
-import 'package:opencode_mobile/voice/model_download.dart';
-import 'package:opencode_mobile/voice/model_manager.dart';
-import 'package:opencode_mobile/voice/model_manifest.dart';
-import 'package:opencode_mobile/voice/read_aloud.dart';
-import 'package:opencode_mobile/voice/voice_ui.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/voice/automatic_setup_platform.dart';
+import 'package:haizhucode/voice/controller.dart';
+import 'package:haizhucode/voice/model_download.dart';
+import 'package:haizhucode/voice/model_manager.dart';
+import 'package:haizhucode/voice/model_manifest.dart';
+import 'package:haizhucode/voice/read_aloud.dart';
+import 'package:haizhucode/voice/voice_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'revamp/screen_voice_1_fixtures.dart';

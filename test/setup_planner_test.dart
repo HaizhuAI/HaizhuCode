@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/setup_planner.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/domain/setup_planner.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 void main() {
   late SetupPlanner planner;

@@ -7,12 +7,12 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/voice/controller.dart';
-import 'package:opencode_mobile/voice/model_download.dart';
-import 'package:opencode_mobile/voice/model_manager.dart';
-import 'package:opencode_mobile/voice/model_manifest.dart';
-import 'package:opencode_mobile/voice/notices.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/voice/controller.dart';
+import 'package:haizhucode/voice/model_download.dart';
+import 'package:haizhucode/voice/model_manager.dart';
+import 'package:haizhucode/voice/model_manifest.dart';
+import 'package:haizhucode/voice/notices.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme;

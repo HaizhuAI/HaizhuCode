@@ -1,9 +1,9 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/platform/phone_storage.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/voice/device.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/platform/phone_storage.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/voice/device.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

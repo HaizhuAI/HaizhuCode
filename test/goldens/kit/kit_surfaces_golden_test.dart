@@ -37,16 +37,16 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/domain/agent_persona.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style_theme.dart';
-import 'package:opencode_mobile/ui/theme_packs.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/domain/agent_persona.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/style/kit_style_theme.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 import '../../../tool/capture/fixtures.dart' show captureTheme;
 import 'kit_gallery.dart';
-import 'package:opencode_mobile/ui/kit/team/team_parts.dart';
+import 'package:haizhucode/ui/kit/team/team_parts.dart';
 
 class _Parts extends StatelessWidget {
   const _Parts();

@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/termux/bridge.dart';
 
 /// Installs an `oc/termux` handler, exactly as the Android runner does, so
 /// the Android-side expectations are tested against a channel that answers.

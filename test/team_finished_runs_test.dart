@@ -6,10 +6,10 @@
 // (test/support/gascity_recorded_city.dart).
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/dto/dto.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_mappers.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/dto/dto.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_mappers.dart';
 
 import 'support/gascity_recorded_city.dart';
 

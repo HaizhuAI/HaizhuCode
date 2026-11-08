@@ -145,7 +145,7 @@
               />
         </activity>
         <!-- widgetOverlayMain (lib/widgets_overlay) and its three routes ship. -->
-        <meta-data android:name="io.github.eslamasabry.opencode_mobile.WIDGET_OVERLAY_READY"
+        <meta-data android:name="io.github.haizhu.code.WIDGET_OVERLAY_READY"
             android:value="true" />
         <activity android:name=".WidgetConfigureActivity" android:exported="true"
             android:excludeFromRecents="true" android:theme="@style/WidgetOverlayTheme">

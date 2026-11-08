@@ -4,15 +4,15 @@
 // KitMessage.thought). Reduced motion unless a test asks for the live mark.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_markdown.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_message.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_step_timeline.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_tool_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_code_block.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_mark.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_markdown.dart';
+import 'package:haizhucode/ui/kit/chat/kit_message.dart';
+import 'package:haizhucode/ui/kit/chat/kit_step_timeline.dart';
+import 'package:haizhucode/ui/kit/chat/kit_tool_row.dart';
+import 'package:haizhucode/ui/kit/kit_code_block.dart';
+import 'package:haizhucode/ui/kit/kit_status_mark.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 
 import 'kit_motion_still.dart';
 

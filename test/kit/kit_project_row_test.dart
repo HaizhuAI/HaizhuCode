@@ -1,4 +1,4 @@
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'kit_motion_still.dart';
 import 'team_kit_test_support.dart';

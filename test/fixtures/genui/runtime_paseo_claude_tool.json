@@ -25,7 +25,7 @@
             }
           },
           "output": {
-            "output": "Card accepted for display in OpenCode Mobile. If it asks a question, end your turn and wait for the person's next message tagged [oc-ui answer <id>]. This call does not return their answer."
+            "output": "Card accepted for display in HaizhuCode. If it asks a question, end your turn and wait for the person's next message tagged [oc-ui answer <id>]. This call does not return their answer."
           }
         },
         "status": "completed",

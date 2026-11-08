@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/byo_host.dart';
-import 'package:opencode_mobile/state/byo_host_store.dart';
+import 'package:haizhucode/domain/byo_host.dart';
+import 'package:haizhucode/state/byo_host_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

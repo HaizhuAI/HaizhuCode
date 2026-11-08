@@ -1,11 +1,11 @@
 // A turn whose ask the stream lost must not say "working" until the
 // server's 60-minute sweep (docs/qa/oc2-stuck-tools-2026-10-25).
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/turn_stall.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/turn_stall.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'support/connection_v2_fixtures.dart';
 
 PermissionRequest _ask(String id, String sessionID) => PermissionRequest(

@@ -145,7 +145,7 @@
     },
     "KitIconButton/default": {
       "value": 4,
-      "note": "280x640 text 1.0 ltr empty: 'package:opencode_mobile/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
+      "note": "280x640 text 1.0 ltr empty: 'package:haizhucode/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
     },
     "KitMessage/notice action": {
       "value": 14,
@@ -173,7 +173,7 @@
     },
     "KitPageHeading/default": {
       "value": 4,
-      "note": "280x640 text 1.0 ltr empty: 'package:opencode_mobile/ui/kit/kit_page_heading.dart': Failed assertion: line 43 pos 10: 'onLineTap == null || (lineTapLabel ?? '') != ''': KitPageHeading: a switcher line needs a lineTapLabel"
+      "note": "280x640 text 1.0 ltr empty: 'package:haizhucode/ui/kit/kit_page_heading.dart': Failed assertion: line 43 pos 10: 'onLineTap == null || (lineTapLabel ?? '') != ''': KitPageHeading: a switcher line needs a lineTapLabel"
     },
     "KitQueuedMessage/addToThisTurn": {
       "value": 4,
@@ -229,7 +229,7 @@
     },
     "KitRowMenu/default": {
       "value": 4,
-      "note": "280x640 text 1.0 ltr empty: 'package:opencode_mobile/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
+      "note": "280x640 text 1.0 ltr empty: 'package:haizhucode/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
     },
     "KitScreen/default": {
       "value": 6,
@@ -237,15 +237,15 @@
     },
     "KitSenseAsk/tests-d-default": {
       "value": 4,
-      "note": "280x640 text 1.0 ltr empty: 'package:opencode_mobile/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
+      "note": "280x640 text 1.0 ltr empty: 'package:haizhucode/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
     },
     "KitSenseAsk/tests-d-working": {
       "value": 4,
-      "note": "280x640 text 1.0 ltr empty: 'package:opencode_mobile/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
+      "note": "280x640 text 1.0 ltr empty: 'package:haizhucode/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
     },
     "KitStatusLine/default": {
       "value": 4,
-      "note": "280x640 text 1.0 ltr empty: 'package:opencode_mobile/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
+      "note": "280x640 text 1.0 ltr empty: 'package:haizhucode/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
     },
     "KitStepTimeline/expanded": {
       "value": 2,
@@ -253,7 +253,7 @@
     },
     "KitTaskCard/default": {
       "value": 4,
-      "note": "280x640 text 1.0 ltr empty: 'package:opencode_mobile/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
+      "note": "280x640 text 1.0 ltr empty: 'package:haizhucode/ui/kit/kit_icon_button.dart': Failed assertion: line 56 pos 10: '(tooltip ?? label ?? '').length > 0': KitIconButton needs a non-empty tooltip (KIT-22)"
     },
     "KitTip/shown": {
       "value": 7,
@@ -289,7 +289,7 @@
     },
     "KitTopBar/switcher": {
       "value": 4,
-      "note": "280x640 text 1.0 ltr empty: 'package:opencode_mobile/ui/kit/kit_top_bar.dart': Failed assertion: line 202 pos 10: 'onTitleTap == null || (titleTapLabel ?? '') != ''': KitTopBar: a switcher title (onTitleTap) needs a titleTapLabel"
+      "note": "280x640 text 1.0 ltr empty: 'package:haizhucode/ui/kit/kit_top_bar.dart': Failed assertion: line 202 pos 10: 'onTitleTap == null || (titleTapLabel ?? '') != ''': KitTopBar: a switcher title (onTitleTap) needs a titleTapLabel"
     },
     "KitTurn/failed": {
       "value": 4,

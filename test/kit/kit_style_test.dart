@@ -3,14 +3,14 @@
 // every style keeps across every knob combination.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/app_preferences.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/kit_surface_look.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style_brutal.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style_theme.dart';
-import 'package:opencode_mobile/ui/theme_packs.dart';
+import 'package:haizhucode/state/app_preferences.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/kit_surface_look.dart';
+import 'package:haizhucode/ui/kit/style/kit_style.dart';
+import 'package:haizhucode/ui/kit/style/kit_style_brutal.dart';
+import 'package:haizhucode/ui/kit/style/kit_style_theme.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 double _contrast(Color a, Color b) {

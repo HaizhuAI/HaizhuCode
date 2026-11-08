@@ -10,19 +10,19 @@ import 'package:dio/dio.dart' show CancelToken;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart'
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart'
     show api2ServerCapabilities;
-import 'package:opencode_mobile/domain/mcp_catalog.dart';
-import 'package:opencode_mobile/domain/setup_registry.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/phone_host.dart' show PhoneHostKind;
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/mcp_catalog_screen.dart';
-import 'package:opencode_mobile/ui/screens/mcp_setup_screen.dart';
+import 'package:haizhucode/domain/mcp_catalog.dart';
+import 'package:haizhucode/domain/setup_registry.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/phone_host.dart' show PhoneHostKind;
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/mcp_catalog_screen.dart';
+import 'package:haizhucode/ui/screens/mcp_setup_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // --- fixtures -----------------------------------------------------------------

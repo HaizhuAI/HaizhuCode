@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/usage_statistics.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/usage_budgets.dart';
-import 'package:opencode_mobile/state/usage_overview.dart';
+import 'package:haizhucode/domain/usage_statistics.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/usage_budgets.dart';
+import 'package:haizhucode/state/usage_overview.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

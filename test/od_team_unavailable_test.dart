@@ -5,11 +5,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_gateway.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart' show KitDetailsFold;
-import 'package:opencode_mobile/ui/widgets/team_agent_row.dart';
-import 'package:opencode_mobile/ui/screens/team/agent_screen.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_gateway.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/ui/kit/kit.dart' show KitDetailsFold;
+import 'package:haizhucode/ui/widgets/team_agent_row.dart';
+import 'package:haizhucode/ui/screens/team/agent_screen.dart';
 
 import 'coverage/lists_support.dart' show withRealHttp;
 import 'coverage/team_support.dart';

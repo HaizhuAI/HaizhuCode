@@ -1,9 +1,9 @@
 // Shared by the settings coverage ratchets.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/screens/saved_permissions_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/screens/saved_permissions_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 
 import 'lists_support.dart';
 

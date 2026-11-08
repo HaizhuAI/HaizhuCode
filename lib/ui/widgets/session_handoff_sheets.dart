@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_code_block.dart';
-import 'package:opencode_mobile/ui/kit/kit_copy.dart';
-import 'package:opencode_mobile/ui/kit/kit_details_fold.dart';
-import 'package:opencode_mobile/ui/kit/kit_notice.dart';
-import 'package:opencode_mobile/ui/kit/kit_qr.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_row_parts.dart';
-import 'package:opencode_mobile/ui/kit/kit_sheet.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_code_block.dart';
+import 'package:haizhucode/ui/kit/kit_copy.dart';
+import 'package:haizhucode/ui/kit/kit_details_fold.dart';
+import 'package:haizhucode/ui/kit/kit_notice.dart';
+import 'package:haizhucode/ui/kit/kit_qr.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_row_parts.dart';
+import 'package:haizhucode/ui/kit/kit_sheet.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 import '../../domain/server_gateway.dart' show ServerCapabilities;
 import '../../domain/session_handoff.dart';

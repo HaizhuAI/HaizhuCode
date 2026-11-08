@@ -3,11 +3,11 @@
 // pressed states, the right-to-left mirror and the fade to and from Solid.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/kit_surface_look.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style_brutal.dart';
-import 'package:opencode_mobile/ui/theme_packs.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/kit_surface_look.dart';
+import 'package:haizhucode/ui/kit/style/kit_style.dart';
+import 'package:haizhucode/ui/kit/style/kit_style_brutal.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 const _spec = KitStyleBrutal();
 const _panel = BorderRadius.all(Radius.circular(12));

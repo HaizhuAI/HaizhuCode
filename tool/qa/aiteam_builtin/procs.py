@@ -13,7 +13,7 @@ import time
 from collections import Counter
 
 ADB = os.environ.get('ADB', os.path.expanduser('~/Android/Sdk/platform-tools/adb'))
-PKG = 'io.github.eslamasabry.opencode_mobile'
+PKG = 'io.github.haizhu.code'
 
 
 def sample(dev):

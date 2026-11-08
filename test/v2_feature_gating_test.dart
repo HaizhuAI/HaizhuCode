@@ -19,22 +19,22 @@ import 'support/complete_message_history.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 import 'support/fake_event_channel.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart'
+import 'package:haizhucode/api2/gateway_mappers.dart'
     show api2ServerCapabilities;
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/app_diagnostics_screen.dart';
-import 'package:opencode_mobile/ui/screens/capabilities_screen.dart';
-import 'package:opencode_mobile/ui/screens/project_health_screen.dart';
-import 'package:opencode_mobile/ui/screens/project_hub_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/screens/tools_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/app_diagnostics_screen.dart';
+import 'package:haizhucode/ui/screens/capabilities_screen.dart';
+import 'package:haizhucode/ui/screens/project_health_screen.dart';
+import 'package:haizhucode/ui/screens/project_hub_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/screens/tools_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// A transport that speaks v1 and reports the v1 superset, like today's
@@ -61,7 +61,7 @@ class _Repository implements ProductRepository {
   List<WorkspaceProject> projects = const [
     WorkspaceProject(
       id: 'project-1',
-      name: 'OpenCode Mobile',
+      name: 'HaizhuCode',
       directory: '/work/app',
       worktrees: [],
       updatedAt: 1,

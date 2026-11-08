@@ -9,6 +9,8 @@ import '../../state/download_size.dart';
 import '../builtin_linux.dart';
 import 'aiteam_scripts.dart';
 import 'component_updates.dart';
+import 'haizhu_bundle.dart';
+import 'haizhu_component.dart';
 import 'setup_contract.dart';
 import 'voice_component.dart';
 
@@ -161,6 +163,29 @@ List<SetupComponent> setupComponents(
           '[ -L /usr/local/bin/bd ] || [ -e /usr/local/bin/bd ] || '
           '[ -L /usr/local/bin/dolt ] || [ -e /usr/local/bin/dolt ]',
     ),
+    // HaizhuCode payload: the security kernel, skills, agent roles, MCP
+    // registry and prompt library, plus per-home wiring for the OpenCode 2
+    // server and every agent profile. The app writes the embedded payload
+    // into Ubuntu itself — a script large enough to carry it could not be a
+    // process argument — so this is an app-side component. Runs after
+    // OpenCode: its `hz seed` writes into the OpenCode 2 config, which a
+    // later OpenCode install could otherwise overwrite. The app's own
+    // Ubuntu only: Termux's private files are out of its reach.
+    if (host == SetupHostKind.builtin)
+      SetupComponent(
+        id: SetupComponentIds.haizhu,
+        title: 'HaizhuCode',
+        shortTitle: 'HaizhuCode',
+        dependsOn: const [SetupComponentIds.openCode],
+        defaultOn: true,
+        estimatedSeconds: 15,
+        downloadBytes: 0,
+        installedBytes: HaizhuBundle.totalBytes,
+        downloadSize: const DownloadSize.exact(0),
+        checkScript: '',
+        installScript: '',
+        app: HaizhuSetupComponent.instance,
+      ),
     SetupComponent(
       id: SetupComponentIds.start,
       title: l10n.phoneSetupStartTitle,
@@ -219,6 +244,9 @@ abstract final class SetupComponentIds {
   static const node = 'node';
   static const openCode = 'opencode';
   static const aiTeam = 'aiteam';
+
+  /// The HaizhuCode security payload: kernel, skills, agents, MCP registry.
+  static const haizhu = 'haizhu';
 
   /// Voice typing's speech model, installed by the app itself.
   static const voice = 'voice';

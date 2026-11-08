@@ -2,14 +2,14 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/codex/gateway.dart';
-import 'package:opencode_mobile/codex/transport.dart';
-import 'package:opencode_mobile/domain/agent_handoff.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/agent_handoff_controller.dart';
-import 'package:opencode_mobile/state/agent_handoff_links.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/codex/gateway.dart';
+import 'package:haizhucode/codex/transport.dart';
+import 'package:haizhucode/domain/agent_handoff.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/agent_handoff_controller.dart';
+import 'package:haizhucode/state/agent_handoff_links.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Socket implements CodexSocket {

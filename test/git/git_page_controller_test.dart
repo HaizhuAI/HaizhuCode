@@ -1,15 +1,15 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/demo/demo_gateway.dart';
-import 'package:opencode_mobile/domain/git/git_problem.dart';
-import 'package:opencode_mobile/domain/git/git_repository.dart';
-import 'package:opencode_mobile/domain/git/github_device_flow.dart';
-import 'package:opencode_mobile/state/git_page_controller.dart';
-import 'package:opencode_mobile/state/git_workspace.dart';
-import 'package:opencode_mobile/state/github_account.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/demo/demo_gateway.dart';
+import 'package:haizhucode/domain/git/git_problem.dart';
+import 'package:haizhucode/domain/git/git_repository.dart';
+import 'package:haizhucode/domain/git/github_device_flow.dart';
+import 'package:haizhucode/state/git_page_controller.dart';
+import 'package:haizhucode/state/git_workspace.dart';
+import 'package:haizhucode/state/github_account.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 import 'git_fixtures.dart' as fx;
 import 'git_test_support.dart';

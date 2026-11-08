@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/api2/transport.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/api2/transport.dart';
 
 class _RealHttpOverrides extends HttpOverrides {}
 

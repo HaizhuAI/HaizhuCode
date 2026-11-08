@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/session_address_link.dart';
-import 'package:opencode_mobile/domain/session_handoff.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/domain/session_address_link.dart';
+import 'package:haizhucode/domain/session_handoff.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 void main() {
   const origin = 'https://workstation.example-tailnet.ts.net';

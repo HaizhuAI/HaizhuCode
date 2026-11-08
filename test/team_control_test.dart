@@ -8,10 +8,10 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_control.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_control.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'support/team_control_fixtures.dart';
 

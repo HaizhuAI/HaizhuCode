@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/phone_process_watch.dart';
-import 'package:opencode_mobile/builtin/phone_processes.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/widgets/running_on_phone_row.dart';
-import 'package:opencode_mobile/ui/widgets/running_on_phone_text.dart';
+import 'package:haizhucode/builtin/phone_process_watch.dart';
+import 'package:haizhucode/builtin/phone_processes.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/widgets/running_on_phone_row.dart';
+import 'package:haizhucode/ui/widgets/running_on_phone_text.dart';
 
 import 'support/running_on_phone_fakes.dart';
 

@@ -14,11 +14,11 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/inapp/phone_engine_gateway.dart';
-import 'package:opencode_mobile/domain/orchestration_work_edits.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_work_edits.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/inapp/phone_engine_gateway.dart';
+import 'package:haizhucode/domain/orchestration_work_edits.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_work_edits.dart';
 
 import 'lists_support.dart' show WireRequest, withRealHttp;
 import 'team_support.dart';

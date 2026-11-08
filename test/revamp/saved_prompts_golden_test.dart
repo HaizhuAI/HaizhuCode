@@ -9,22 +9,22 @@
 // Regenerate deliberately:
 //   flutter test --update-goldens test/revamp/saved_prompts_golden_test.dart
 // and look at every changed image before committing it.
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import '../support/fake_server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/prompt_shelf.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_composer.dart';
-import 'package:opencode_mobile/ui/kit/kit_undo.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/prompt_shelf.dart';
+import 'package:haizhucode/ui/kit/chat/kit_composer.dart';
+import 'package:haizhucode/ui/kit/kit_undo.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;

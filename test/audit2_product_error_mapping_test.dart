@@ -3,12 +3,12 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
-import 'package:opencode_mobile/api2/transport.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
-import 'package:opencode_mobile/ui/widgets/product_states.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/api2/transport.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
+import 'package:haizhucode/ui/widgets/product_states.dart';
 
 class _ResponseAdapter implements HttpClientAdapter {
   _ResponseAdapter(this.status, this.body);

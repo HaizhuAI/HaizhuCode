@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:crypto/crypto.dart';
-import 'package:opencode_mobile/domain/byo_host.dart';
-import 'package:opencode_mobile/host/byo_host_ssh_runner.dart';
-import 'package:opencode_mobile/host/byo_host_signer.dart';
-import 'package:opencode_mobile/host/byo_host_tailnet.dart';
+import 'package:haizhucode/domain/byo_host.dart';
+import 'package:haizhucode/host/byo_host_ssh_runner.dart';
+import 'package:haizhucode/host/byo_host_signer.dart';
+import 'package:haizhucode/host/byo_host_tailnet.dart';
 
 String publicKey() =>
     'ssh-ed25519 ${base64Encode([0, 0, 0, 11, ...ascii.encode('ssh-ed25519'), 0, 0, 0, 32, ...List.generate(32, (index) => index)])}';

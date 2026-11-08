@@ -11,14 +11,14 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/aiteam_scripts.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_gateway.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/termux/team_runtime.dart';
-import 'package:opencode_mobile/termux/team_scripts.dart';
+import 'package:haizhucode/builtin/setup/aiteam_scripts.dart';
+import 'package:haizhucode/builtin/team/builtin_team.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_gateway.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/termux/team_runtime.dart';
+import 'package:haizhucode/termux/team_scripts.dart';
 
 void main() {
   group('TeamRuntimeStatus', () {

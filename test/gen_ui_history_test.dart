@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/domain/agent_handoff_history.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui_history.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/domain/agent_handoff_history.dart';
+import 'package:haizhucode/domain/genui/gen_ui_history.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
 
 void main() {
   late HttpServer server;

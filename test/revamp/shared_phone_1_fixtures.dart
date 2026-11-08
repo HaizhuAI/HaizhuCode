@@ -1,13 +1,13 @@
 // Fakes shared by shared-phone-1's behaviour tests and goldens: a profile
 // store and connection that never touch secure storage, OpenCode inside the
 // app (BuiltinLinux), and the Termux AI team runtime.
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/termux/team_runtime.dart';
-import 'package:opencode_mobile/state/queued_prompt_removal.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/termux/team_runtime.dart';
+import 'package:haizhucode/state/queued_prompt_removal.dart';
 
 final l10n = AppLocalizationsEn();
 

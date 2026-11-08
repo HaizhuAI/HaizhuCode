@@ -11,12 +11,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/app_exit_recovery.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/platform/app_exit.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/ui/screens/keep_running_screen.dart';
+import 'package:haizhucode/builtin/app_exit_recovery.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/platform/app_exit.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/screens/keep_running_screen.dart';
 
 import '../../test/support/setup_capture_preferences.dart';
 import 'fixtures.dart';

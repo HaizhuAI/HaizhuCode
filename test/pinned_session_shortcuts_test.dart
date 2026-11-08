@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/background/pinned_session_shortcuts.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/background/pinned_session_shortcuts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Session _session(String id, {String? title}) =>

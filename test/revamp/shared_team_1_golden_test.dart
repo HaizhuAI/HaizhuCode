@@ -13,11 +13,11 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/team_board.dart';
-import 'package:opencode_mobile/ui/widgets/team_board_move_sheet.dart';
-import 'package:opencode_mobile/ui/widgets/team_host_form.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/team_board.dart';
+import 'package:haizhucode/ui/widgets/team_board_move_sheet.dart';
+import 'package:haizhucode/ui/widgets/team_host_form.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;
 

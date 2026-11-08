@@ -3,10 +3,10 @@
 // booted on one failed task with its worker fox.
 import 'dart:async';
 
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 class P41cCall {
   const P41cCall(this.verb, this.target, {this.arg});

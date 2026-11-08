@@ -7,7 +7,7 @@ Non-goals: force-stop/reboot auto-start, agent/engine resurrection, installer ro
 
 ## API frozen for frontend integration
 
-Existing channel `io.github.eslamasabry.opencode_mobile/builtin_linux`, method `startServer`, retains its script/port arguments. The manual authored `startBuiltinServer` path supplies an optional `restoreRecipe` map with exactly `version: 1`, `profileId`, `runtime: openCode1|openCode2`. Dart type: `BuiltinServerRestoreRecipe`. Legacy callers omit it and do not arm cold restoration. Automatic foreground/native retries reuse the already armed native recipe; they do not reset the budget.
+Existing channel `io.github.haizhu.code/builtin_linux`, method `startServer`, retains its script/port arguments. The manual authored `startBuiltinServer` path supplies an optional `restoreRecipe` map with exactly `version: 1`, `profileId`, `runtime: openCode1|openCode2`. Dart type: `BuiltinServerRestoreRecipe`. Legacy callers omit it and do not arm cold restoration. Automatic foreground/native retries reuse the already armed native recipe; they do not reset the budget.
 
 The shared healing owner now awaits native migration/binding before an explicit authored Start sends its recipe. Deletion or owner replacement during that wait prevents dispatch. This ordering is needed for the first Start as well as later owner transfers.
 

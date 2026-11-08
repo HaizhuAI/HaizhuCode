@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 SERIAL = "emulator-5554"
-PACKAGE = "io.github.eslamasabry.opencode_mobile"
+PACKAGE = "io.github.haizhu.code"
 RUNNER = f"{PACKAGE}.test/{PACKAGE}.BuiltinRuntimeAcceptance"
 CERT = "1de5bf08146f269bcd9eb5c2ffc94469ce4617d37806285955f978a62494d60c"
 SAFE_FIELDS = {

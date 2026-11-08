@@ -3,10 +3,10 @@
 // given to (or "Worker"); the role page edits, creates and deletes roles.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/team_roles.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/team/team_agents_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/team_roles.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/team/team_agents_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'revamp/screen_team_3_fixtures.dart';

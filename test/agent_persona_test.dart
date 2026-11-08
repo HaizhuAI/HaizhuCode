@@ -1,13 +1,13 @@
 // The agent persona registry: every agent id the app knows maps to a
 // persona, unknown ids map to `other`, and the words fit their places.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_persona.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/mark_catalog.dart';
-import 'package:opencode_mobile/l10n/app_localizations_ar.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/ui/agents/agent_persona_text.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_persona.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/mark_catalog.dart';
+import 'package:haizhucode/l10n/app_localizations_ar.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/ui/agents/agent_persona_text.dart';
 
 void main() {
   test('every catalog agent id and the OpenCode id map to a persona', () {

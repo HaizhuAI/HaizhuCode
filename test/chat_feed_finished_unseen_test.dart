@@ -1,14 +1,14 @@
 // The Conversations list's "Done" signal: an idle OpenCode 2 session whose
 // last run finished after this device last opened it.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/run_result.dart';
-import 'package:opencode_mobile/domain/work_row_status.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/run_result.dart';
+import 'package:haizhucode/domain/work_row_status.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Repository extends ProductRepository implements SessionReadStateGateway {

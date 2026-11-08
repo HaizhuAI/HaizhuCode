@@ -27,7 +27,7 @@
 #   -h, --help      this text
 set -euo pipefail
 
-readonly APP_ID="io.github.eslamasabry.opencode_mobile"
+readonly APP_ID="io.github.haizhu.code"
 readonly BINARY_NAME="opencode_mobile"
 readonly INSTALL_NAME="opencode-mobile"
 readonly DEB_PACKAGE="$INSTALL_NAME"
@@ -297,8 +297,8 @@ Maintainer: OpenCode <noreply@github.com>
 Installed-Size: $installed_kb
 Depends: $depends
 Homepage: https://github.com/Eslamasabry/opencode-mobile-next
-Description: Unofficial OpenCode Mobile client for OpenCode servers
- OpenCode Mobile connects to an OpenCode server you run and gives you its sessions,
+Description: Unofficial HaizhuCode client for OpenCode servers
+ HaizhuCode connects to an OpenCode server you run and gives you its sessions,
  chat transcript, file browser, diff review and terminal.
  .
  The Linux build is experimental. Android-only features (Termux hosting,

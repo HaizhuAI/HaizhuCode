@@ -5,13 +5,13 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/builtin/local_terminal.dart';
-import 'package:opencode_mobile/domain/dev_preview.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/state/project_dev_server.dart';
-import 'package:opencode_mobile/ui/screens/terminal_screen.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
+import 'package:haizhucode/domain/dev_preview.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/state/project_dev_server.dart';
+import 'package:haizhucode/ui/screens/terminal_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

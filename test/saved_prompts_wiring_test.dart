@@ -8,12 +8,12 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/draft_attachments.dart';
-import 'package:opencode_mobile/state/draft_photo_recovery.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/prompt_photos.dart';
-import 'package:opencode_mobile/state/prompt_shelf.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/draft_attachments.dart';
+import 'package:haizhucode/state/draft_photo_recovery.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/prompt_photos.dart';
+import 'package:haizhucode/state/prompt_shelf.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/stash_memory_vault.dart';

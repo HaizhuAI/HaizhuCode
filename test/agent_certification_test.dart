@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_tools/agent_certification.dart';
-import 'package:opencode_mobile/domain/agent_tools/agent_certification_snapshot.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_tools/agent_certification.dart';
+import 'package:haizhucode/domain/agent_tools/agent_certification_snapshot.dart';
 
 void main() {
   final claude = AgentCatalog.builtIn.byId('claude')!;

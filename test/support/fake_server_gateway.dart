@@ -1,12 +1,12 @@
-import 'package:opencode_mobile/domain/genui/gen_ui_history.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/genui/gen_ui_history.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 import 'fake_event_channel.dart';
 import 'fake_server_capabilities.dart';
 
-export 'package:opencode_mobile/domain/models.dart' show ApiException;
+export 'package:haizhucode/domain/models.dart' show ApiException;
 
 /// In-memory protocol-neutral fixture. It never constructs an HTTP client.
 /// Tests override the reads and actions needed by the behavior under test.

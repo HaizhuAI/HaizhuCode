@@ -6,9 +6,9 @@
 // stays is said as "busy", never as "Linux is not set up".
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/linux_manager/linux_manager.dart';
-import 'package:opencode_mobile/builtin/linux_manager/linux_processes.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/linux_manager/linux_manager.dart';
+import 'package:haizhucode/builtin/linux_manager/linux_processes.dart';
 
 const _ownership = BuiltinLinuxException(
   'Open app settings, force stop OpenCode, then open it again.',

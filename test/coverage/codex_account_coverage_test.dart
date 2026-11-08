@@ -7,10 +7,10 @@ import 'dart:io';
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/codex/account.dart';
-import 'package:opencode_mobile/codex/transport.dart';
-import 'package:opencode_mobile/state/agent_account.dart';
-import 'package:opencode_mobile/ui/screens/agent_account_screen.dart';
+import 'package:haizhucode/codex/account.dart';
+import 'package:haizhucode/codex/transport.dart';
+import 'package:haizhucode/state/agent_account.dart';
+import 'package:haizhucode/ui/screens/agent_account_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

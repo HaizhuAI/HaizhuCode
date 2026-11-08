@@ -12,12 +12,12 @@ import 'dart:io';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/components.dart';
-import 'package:opencode_mobile/builtin/setup/setup_engine.dart';
-import 'package:opencode_mobile/builtin/setup/setup_scripts.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/termux/bridge.dart' show TermuxRuntime;
-import 'package:opencode_mobile/termux/opencode_ubuntu_setup.dart';
+import 'package:haizhucode/builtin/setup/components.dart';
+import 'package:haizhucode/builtin/setup/setup_engine.dart';
+import 'package:haizhucode/builtin/setup/setup_scripts.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/termux/bridge.dart' show TermuxRuntime;
+import 'package:haizhucode/termux/opencode_ubuntu_setup.dart';
 
 const _server = r'''
 import http.server, os, sys

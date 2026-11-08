@@ -1,4 +1,4 @@
-# OpenCode Mobile — product demo video
+# HaizhuCode — product demo video
 
 Remotion 4 project that renders `public/opencode-mobile-demo.mp4` (1920x1080, 30 fps, ~51 s)
 and `public/opencode-mobile-demo-vertical.mp4` (1080x1920). No music; sparse sfx from `public/sfx`.

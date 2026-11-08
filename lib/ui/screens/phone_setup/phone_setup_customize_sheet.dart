@@ -215,13 +215,22 @@ class _SetupCustomizeSheetState extends State<SetupCustomizeSheet> {
     if (app == null || offer == null || _removing != null) return;
     setState(() => _removing = component.id);
     try {
+      final isVoice = component.id == SetupComponentIds.voice;
       final removed = await showKitConfirm(
         context,
-        title: l10n.voiceComponentRemoveTitle,
-        body: l10n.voiceComponentRemoveBody(
-          setupSizeText(l10n, offer.downloadBytes),
-        ),
-        confirmLabel: l10n.voiceComponentRemove,
+        title: isVoice
+            ? l10n.voiceComponentRemoveTitle
+            : l10n.thisPhoneRemoveToolTitle(component.shortTitle),
+        body: isVoice
+            ? l10n.voiceComponentRemoveBody(
+                setupSizeText(l10n, offer.downloadBytes),
+              )
+            : l10n.thisPhoneRemoveToolBody(
+                setupSizeText(l10n, offer.downloadBytes),
+              ),
+        confirmLabel: isVoice
+            ? l10n.voiceComponentRemove
+            : l10n.thisPhoneRemoveTool(component.shortTitle),
         kind: KitConfirmKind.destructive,
         icon: AppIconography.delete,
         confirmKey: ValueKey(

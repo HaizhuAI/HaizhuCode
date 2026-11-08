@@ -15,11 +15,11 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_step_timeline.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_work_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_step_timeline.dart';
+import 'package:haizhucode/ui/kit/chat/kit_work_line.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 
 import '../../test/goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;
 import '../../test/goldens/kit/kit_step_timeline_scenes.dart';

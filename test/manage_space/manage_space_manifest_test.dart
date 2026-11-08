@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   const kotlin =
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+      'android/app/src/main/kotlin/io/github/haizhu/code';
   final manifest = File(
     'android/app/src/main/AndroidManifest.xml',
   ).readAsStringSync();

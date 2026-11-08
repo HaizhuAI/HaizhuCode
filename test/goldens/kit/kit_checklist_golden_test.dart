@@ -14,14 +14,14 @@
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_checklist.dart';
-import 'package:opencode_mobile/ui/kit/kit_log_panel.dart';
-import 'package:opencode_mobile/ui/kit/kit_progress.dart';
-import 'package:opencode_mobile/ui/kit/kit_state_view.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_mark.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_steps_scene.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_checklist.dart';
+import 'package:haizhucode/ui/kit/kit_log_panel.dart';
+import 'package:haizhucode/ui/kit/kit_progress.dart';
+import 'package:haizhucode/ui/kit/kit_state_view.dart';
+import 'package:haizhucode/ui/kit/kit_status_mark.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_steps_scene.dart';
 
 import 'kit_gallery.dart';
 

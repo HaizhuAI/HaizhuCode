@@ -60,7 +60,9 @@ def verify_source(manifest_data, repo):
               *sorted((repo / "engine/phone/src").rglob("*.rs"))]
     digest = hashlib.sha256()
     for path in inputs:
-        digest.update(str(path.relative_to(repo)).encode() + b"\0" + path.read_bytes() + b"\0")
+        rel = path.relative_to(repo).as_posix()
+        data = path.read_bytes().replace(b"\r\n", b"\n")
+        digest.update(rel.encode() + b"\0" + data + b"\0")
     if read_json(manifest_data).get("sourceSha256") != digest.hexdigest():
         raise VerificationError("stale_engine_sources_rebuild_and_stage")
 

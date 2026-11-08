@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/domain/team_glance.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/domain/team_glance.dart';
 
 OrchestrationRun _run(String id, RunState state, {int? steps, int? done}) =>
     OrchestrationRun(

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/setup_assistant.dart';
-import 'package:opencode_mobile/state/setup_controller.dart';
+import 'package:haizhucode/domain/setup_assistant.dart';
+import 'package:haizhucode/state/setup_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

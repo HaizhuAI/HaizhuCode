@@ -4,9 +4,9 @@
 // confirmation the engine requires.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/team_project_controller.dart';
-import 'package:opencode_mobile/ui/screens/team/projects/team_projects_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/team_project_controller.dart';
+import 'package:haizhucode/ui/screens/team/projects/team_projects_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;

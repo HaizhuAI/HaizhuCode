@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/screens/server_capabilities_screen.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/screens/server_capabilities_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

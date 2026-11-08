@@ -20,9 +20,9 @@ import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/paseo/mappers.dart';
 
 const _warmup = 3;
 const _runs = 10;

@@ -60,7 +60,7 @@ jobs:
       - name: Verify the bundle
         shell: pwsh
         run: |
-          $exe = "build/windows/x64/runner/Release/opencode_mobile.exe"
+          $exe = "build/windows/x64/runner/Release/haizhucode.exe"
           if (-not (Test-Path $exe)) {
             Write-Error "Expected runner executable missing: $exe"
           }

@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/a2a/client.dart';
-import 'package:opencode_mobile/domain/external_agent.dart';
+import 'package:haizhucode/a2a/client.dart';
+import 'package:haizhucode/domain/external_agent.dart';
 
 void main() {
   late HttpServer server;

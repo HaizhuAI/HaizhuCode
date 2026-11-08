@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/widget_action_runner.dart';
-import 'package:opencode_mobile/background/widget_v2_contract.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/background/widget_action_runner.dart';
+import 'package:haizhucode/background/widget_v2_contract.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 class _RealHttpOverrides extends HttpOverrides {}
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_feed_item.dart';
-import 'package:opencode_mobile/ui/kit/kit_motion.dart';
-import 'package:opencode_mobile/ui/kit/motion/kit_refresh.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_feed_item.dart';
+import 'package:haizhucode/ui/kit/kit_motion.dart';
+import 'package:haizhucode/ui/kit/motion/kit_refresh.dart';
 
 import '../../integration_test/bd9_conversation_finder.dart';
 import '../../integration_test/bd9_device_smoke_fixture.dart';

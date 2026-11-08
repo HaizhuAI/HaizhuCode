@@ -1,6 +1,6 @@
-import 'package:opencode_mobile/domain/tool_label.dart';
+import 'package:haizhucode/domain/tool_label.dart';
 
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

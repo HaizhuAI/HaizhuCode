@@ -74,7 +74,7 @@ while read -r name bytes sha; do
 done < <(entries "${manifests[@]}")
 [ "$failed" = 0 ] || { echo 'Nothing uploaded.' >&2; exit 65; }
 
-notes="Pinned AI Team runtime binaries for OpenCode Mobile (Gas City gc, beads bd, Dolt, and the opencode wrapper) for Android arm64 and x86_64.
+notes="Pinned AI Team runtime binaries for HaizhuCode (Gas City gc, beads bd, Dolt, and the opencode wrapper) for Android arm64 and x86_64.
 
 The app downloads these files on the phone when you set up AI Team and refuses any file whose sha256 differs from the one pinned in assets/aiteam/manifest*.json. This is not an app release; install the app from the version releases."
 

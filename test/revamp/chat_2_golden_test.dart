@@ -12,14 +12,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/mobile_tool_view.dart';
-import 'package:opencode_mobile/domain/transcript_search.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_tool_row.dart';
-import 'package:opencode_mobile/ui/widgets/mobile_task_view.dart';
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
-import 'package:opencode_mobile/ui/widgets/transcript_highlight.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/mobile_tool_view.dart';
+import 'package:haizhucode/domain/transcript_search.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/chat/kit_tool_row.dart';
+import 'package:haizhucode/ui/widgets/mobile_task_view.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
+import 'package:haizhucode/ui/widgets/transcript_highlight.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;
 

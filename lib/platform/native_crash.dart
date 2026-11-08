@@ -27,7 +27,7 @@ class NativeCrashRecord {
     '[redacted]',
   };
   static final _symbol = RegExp(
-    r'^(?:java\.|javax\.|android\.|kotlin\.|kotlinx\.|io\.flutter\.|io\.github\.eslamasabry\.opencode_mobile\.)[A-Za-z_$][A-Za-z0-9_$.]*$',
+    r'^(?:java\.|javax\.|android\.|kotlin\.|kotlinx\.|io\.flutter\.|io.github.haizhu.code.)[A-Za-z_$][A-Za-z0-9_$.]*$',
   );
   static final _frame = RegExp(
     r'^([A-Za-z_$][A-Za-z0-9_$.]*)\.([A-Za-z_$][A-Za-z0-9_$]*|<init>|<clinit>)\(([A-Za-z_$][A-Za-z0-9_$]*\.(?:kt|java):[0-9]{1,7}|Native Method|Unknown Source)\)$',

@@ -5,11 +5,11 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/linux_manager/linux_manager.dart';
-import 'package:opencode_mobile/builtin/linux_manager/linux_packages.dart';
-import 'package:opencode_mobile/builtin/linux_manager/linux_ports.dart';
-import 'package:opencode_mobile/builtin/linux_manager/linux_processes.dart';
-import 'package:opencode_mobile/builtin/linux_manager/linux_storage.dart';
+import 'package:haizhucode/builtin/linux_manager/linux_manager.dart';
+import 'package:haizhucode/builtin/linux_manager/linux_packages.dart';
+import 'package:haizhucode/builtin/linux_manager/linux_ports.dart';
+import 'package:haizhucode/builtin/linux_manager/linux_processes.dart';
+import 'package:haizhucode/builtin/linux_manager/linux_storage.dart';
 
 String _stat(
   int pid,
@@ -41,9 +41,9 @@ final _fixture = [
   _p(10, 'proot', 1, '/data/app/x/lib/arm64/libproot.so --kill-on-exit'),
   _p(
     11,
-    'io.github.eslamasabry.opencode_mobile',
+    'io.github.haizhu.code',
     1,
-    'io.github.eslamasabry.opencode_mobile',
+    'io.github.haizhu.code',
   ),
   _p(
     20,

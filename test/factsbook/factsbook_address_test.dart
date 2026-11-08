@@ -1,7 +1,7 @@
 // A FactsBook node is reached only over a private path: the bearer token
 // travels in clear text.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_address.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_address.dart';
 
 void main() {
   test('private addresses parse, with the default port', () {

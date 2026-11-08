@@ -2,7 +2,7 @@
 // mini tutorial with "Show me", and "Show tips again". One state replays a
 // tip in place, as "Show me" does.
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/ui/screens/settings/tips_screen.dart';
+import 'package:haizhucode/ui/screens/settings/tips_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

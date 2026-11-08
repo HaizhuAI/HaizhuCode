@@ -13,10 +13,10 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/phone_agents.dart' show AgentRow;
-import 'package:opencode_mobile/domain/phone_agents_source.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/chats/new_chat_screen.dart';
+import 'package:haizhucode/domain/phone_agents.dart' show AgentRow;
+import 'package:haizhucode/domain/phone_agents_source.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/chats/new_chat_screen.dart';
 
 import '../../test/goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;
 import '../../test/support/agents_fakes.dart';

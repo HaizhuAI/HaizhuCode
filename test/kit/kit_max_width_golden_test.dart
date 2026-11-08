@@ -8,13 +8,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_composer.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_markdown.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_message.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_work_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_composer.dart';
+import 'package:haizhucode/ui/kit/chat/kit_markdown.dart';
+import 'package:haizhucode/ui/kit/chat/kit_message.dart';
+import 'package:haizhucode/ui/kit/chat/kit_work_line.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;
 

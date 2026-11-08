@@ -5,11 +5,11 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/factsbook/ed25519.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_types.dart';
-import 'package:opencode_mobile/domain/factsbook/http_factsbook_gateway.dart';
-import 'package:opencode_mobile/domain/factsbook/jcs.dart';
-import 'package:opencode_mobile/domain/factsbook/owner_signer.dart';
+import 'package:haizhucode/domain/factsbook/ed25519.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_types.dart';
+import 'package:haizhucode/domain/factsbook/http_factsbook_gateway.dart';
+import 'package:haizhucode/domain/factsbook/jcs.dart';
+import 'package:haizhucode/domain/factsbook/owner_signer.dart';
 
 import 'node_adapter.dart';
 
@@ -714,7 +714,7 @@ void main() {
         final result = await FactsBookPairing.pair(
           Uri.parse('http://127.0.0.1:8787'),
           code: ' ${'c' * 32} ',
-          clientName: 'OpenCode Mobile',
+          clientName: 'HaizhuCode',
           dio: dio,
         );
         expect(result.token, 'tok_abc');
@@ -723,7 +723,7 @@ void main() {
         expect(call.headers.containsKey('Authorization'), isFalse);
         expect(call.body, {
           'code': 'c' * 32,
-          'client_name': 'OpenCode Mobile',
+          'client_name': 'HaizhuCode',
           'scopes_requested': ['read', 'write'],
         });
       },
@@ -742,7 +742,7 @@ void main() {
         FactsBookPairing.pair(
           Uri.parse('http://127.0.0.1:8787'),
           code: 'x',
-          clientName: 'OpenCode Mobile',
+          clientName: 'HaizhuCode',
           dio: dio,
         ),
         throwsA(

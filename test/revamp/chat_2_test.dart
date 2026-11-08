@@ -4,12 +4,12 @@
 // colour (LOOK-14), and the plain text never changes (selection and copy).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/transcript_search.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_find_mark.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
-import 'package:opencode_mobile/ui/widgets/transcript_highlight.dart';
+import 'package:haizhucode/domain/transcript_search.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_find_mark.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/widgets/transcript_highlight.dart';
 
 Future<BuildContext> _host(WidgetTester tester, Widget child) async {
   late BuildContext captured;

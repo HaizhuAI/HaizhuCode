@@ -1,4 +1,4 @@
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
 
 // Test-only translation fixture for this slice; not a production Arabic catalog.
 class E7VoiceModelArabicFixture extends AppLocalizationsEn {

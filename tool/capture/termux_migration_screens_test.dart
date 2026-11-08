@@ -11,10 +11,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/termux_migration.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/ui/screens/termux_migration_screen.dart';
+import 'package:haizhucode/domain/termux_migration.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/ui/screens/termux_migration_screen.dart';
 
 import '../../test/revamp/screen_phone_1_fixtures.dart';
 import '../../test/support/termux_migration_fakes.dart';

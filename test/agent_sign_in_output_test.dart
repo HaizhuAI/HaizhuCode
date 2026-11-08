@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_sign_in_output.dart';
+import 'package:haizhucode/domain/agent_sign_in_output.dart';
 
 /// Rows as a program printed them: one per line, none wrapped by the
 /// terminal.

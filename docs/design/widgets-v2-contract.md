@@ -111,7 +111,7 @@ instruction. A transport failure after dispatch may be uncertain. Never retry
 it as a new turn or silently switch to another delivery mode.
 
 Temporary engine contract: entrypoint URI
-`package:opencode_mobile/background/widget_action_entrypoint.dart`, function
+`package:haizhucode/background/widget_action_entrypoint.dart`, function
 `@pragma('vm:entry-point') widgetActionMain`, exported by `lib/main.dart` for AOT.
 It installs `MethodChannel('oc/widget_action')`, then calls native `ready`.
 Native invokes `execute` with `{action: <above payload>, snapshot: <v2>,
@@ -151,7 +151,7 @@ normal app shell or an independent connection controller. It renders kit-only
 content and communicates with native over `MethodChannel('oc/widgets')`.
 
 The manifest metadata
-`io.github.eslamasabry.opencode_mobile.WIDGET_OVERLAY_READY` stays `false` until
+`io.github.haizhu.code.WIDGET_OVERLAY_READY` stays `false` until
 the entry point and all three routes exist. Set it `true` only in the builder's
 completed UI commit. Missing UI must not fall back to launching the full app.
 Widget configuration is optional during this handoff so placement can still

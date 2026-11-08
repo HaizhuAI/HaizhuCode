@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/phrase_chips.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/state/phrase_chips.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

@@ -17,9 +17,9 @@ SDK = Path(os.environ.get('ANDROID_HOME', HOME / 'Android/Sdk'))
 CACHE = HOME / '.gradle/caches/modules-2/files-2.1'
 JDK = Path(os.environ.get('WIDGET_CHECK_JDK', '/home/eslam/Storage/tmp/codex-audit3-temurin17/jdk-17.0.20.1+1'))
 KOTLIN = Path(os.environ.get('WIDGET_CHECK_KOTLIN', HOME / '.sdkman/candidates/kotlin/2.3.20'))
-MAIN = ROOT / 'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile'
-TEST = ROOT / 'android/app/src/test/kotlin/io/github/eslamasabry/opencode_mobile'
-PACKAGE = 'io.github.eslamasabry.opencode_mobile'
+MAIN = ROOT / 'android/app/src/main/kotlin/io/github/haizhu/code'
+TEST = ROOT / 'android/app/src/test/kotlin/io/github/haizhu/code'
+PACKAGE = 'io.github.haizhu.code'
 
 def jar(pattern):
     found = sorted(CACHE.glob(pattern))
@@ -54,7 +54,7 @@ with tempfile.TemporaryDirectory(prefix='widgets-v2-') as temporary:
     classes.mkdir()
     run([JDK / 'bin/javac', '-d', classes, *sorted((work / 'java').rglob('*.java'))])
     stubs = work / 'Boundaries.kt'
-    stubs.write_text('''package io.github.eslamasabry.opencode_mobile
+    stubs.write_text('''package io.github.haizhu.code
 import android.app.Activity
 import android.app.Notification
 import android.content.Context

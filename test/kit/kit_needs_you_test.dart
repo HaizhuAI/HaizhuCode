@@ -13,15 +13,15 @@ import 'package:flutter/rendering.dart' show RenderParagraph;
 import 'package:flutter/semantics.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_bidi.dart';
-import 'package:opencode_mobile/ui/kit/kit_menu.dart' show KitMenuPanel;
-import 'package:opencode_mobile/ui/kit/kit_needs_you.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_row_parts.dart';
-import 'package:opencode_mobile/ui/kit/kit_task_mark.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_bidi.dart';
+import 'package:haizhucode/ui/kit/kit_menu.dart' show KitMenuPanel;
+import 'package:haizhucode/ui/kit/kit_needs_you.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_row_parts.dart';
+import 'package:haizhucode/ui/kit/kit_task_mark.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 /// One theme instance for every pump in a test: a fresh [AppTheme.dark] on
 /// each rebuild would not compare equal and [MaterialApp]'s `AnimatedTheme`

@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/migration/migration_provider_names.dart';
+import 'package:haizhucode/builtin/migration/migration_provider_names.dart';
 
 void main() {
   const secret = 'synthetic-secret-never-render';

@@ -2,12 +2,12 @@
 // fake of the conversation-bound controller.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui.dart' show GenUiParsed;
-import 'package:opencode_mobile/domain/mcp_chat.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connector_card_host.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart' show KitBidi;
-import 'package:opencode_mobile/ui/widgets/agent_card_view.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart' show GenUiParsed;
+import 'package:haizhucode/domain/mcp_chat.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connector_card_host.dart';
+import 'package:haizhucode/ui/kit/kit.dart' show KitBidi;
+import 'package:haizhucode/ui/widgets/agent_card_view.dart';
 
 import '../tool/capture/fixtures.dart' show captureTheme;
 import 'support/agent_card_fakes.dart';

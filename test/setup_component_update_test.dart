@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/component_updates.dart';
+import 'package:haizhucode/builtin/setup/component_updates.dart';
 
 void main() {
   late Directory temp;

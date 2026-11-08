@@ -8,14 +8,14 @@ import 'dart:io';
 import 'package:clock/clock.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/factsbook/ed25519.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_capabilities.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_trigger_types.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_types.dart';
-import 'package:opencode_mobile/domain/factsbook/fake_factsbook_gateway.dart';
-import 'package:opencode_mobile/domain/factsbook/http_factsbook_gateway.dart';
-import 'package:opencode_mobile/domain/factsbook/owner_signer.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_triggers.dart';
+import 'package:haizhucode/domain/factsbook/ed25519.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_capabilities.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_trigger_types.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_types.dart';
+import 'package:haizhucode/domain/factsbook/fake_factsbook_gateway.dart';
+import 'package:haizhucode/domain/factsbook/http_factsbook_gateway.dart';
+import 'package:haizhucode/domain/factsbook/owner_signer.dart';
+import 'package:haizhucode/state/factsbook/factsbook_triggers.dart';
 
 import 'node_adapter.dart';
 

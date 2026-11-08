@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:opencode_mobile/codex/transport.dart';
-import 'package:opencode_mobile/domain/agent_account.dart';
+import 'package:haizhucode/codex/transport.dart';
+import 'package:haizhucode/domain/agent_account.dart';
 
 const fixtureSignedOut = AgentAccount(requiresSignIn: true);
 const fixtureSignedIn = AgentAccount(

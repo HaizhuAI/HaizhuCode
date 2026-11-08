@@ -8,10 +8,10 @@ import 'kit_motion_still.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_progress_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_progress_row.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 import '../support/part_semantics.dart';
 
 const _rowKey = ValueKey('row-under-test');

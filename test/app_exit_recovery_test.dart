@@ -4,25 +4,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/connection_status.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/builtin/app_exit_recovery.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/app_exit.dart';
-import 'package:opencode_mobile/platform/keep_alive_advice.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/automation_policy.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/keep_running_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/widgets/app_connection_status.dart';
-import 'package:opencode_mobile/ui/widgets/app_exit_notice.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
+import 'package:haizhucode/domain/connection_status.dart';
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/builtin/app_exit_recovery.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/builtin/team/builtin_team.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/app_exit.dart';
+import 'package:haizhucode/platform/keep_alive_advice.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/automation_policy.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/keep_running_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/widgets/app_connection_status.dart';
+import 'package:haizhucode/ui/widgets/app_exit_notice.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// The owner's phone (RedMagic NX721J, Android 15), `dumpsys activity
@@ -35,7 +35,7 @@ final _ownerRecord = <String, Object?>{
   'importance': 125,
   'timestamp': DateTime(2026, 9, 26, 0, 6, 33).millisecondsSinceEpoch,
   'description':
-      'stop io.github.eslamasabry.opencode_mobile due to from pid 2285',
+      'stop io.github.haizhu.code due to from pid 2285',
 };
 
 Map<String, Object?> _record(int reason, {int sub = -1}) => {
@@ -636,7 +636,7 @@ void main() {
         find.text(
           // No saved in-app server here, so nothing restarts it: the
           // notice must not promise that it is starting again.
-          'OpenCode Mobile was closed at 00:06. Your phone\'s OpenCode '
+          'HaizhuCode was closed at 00:06. Your phone\'s OpenCode '
           'and the AI Team stopped with it. Start them again when you\'re '
           'ready.',
         ),
@@ -686,7 +686,7 @@ void main() {
           teamStopped: team,
         );
         final starting = appExitMessage(l10n, notice, 'at 9:21 PM');
-        expect(starting, startsWith('OpenCode Mobile was closed at 9:21 PM'));
+        expect(starting, startsWith('HaizhuCode was closed at 9:21 PM'));
         expect(starting, isNot(contains('Android')));
         final back = appExitMessage(
           l10n,
@@ -812,7 +812,7 @@ void main() {
         ),
       );
       expect(
-        find.textContaining('OpenCode Mobile was closed on Sep 25 at 20:19'),
+        find.textContaining('HaizhuCode was closed on Sep 25 at 20:19'),
         findsOneWidget,
       );
     });
@@ -822,7 +822,7 @@ void main() {
     ) async {
       await mountNotice(tester, _report(_record(4), ['server']));
       expect(
-        find.textContaining('OpenCode Mobile stopped unexpectedly at 00:06'),
+        find.textContaining('HaizhuCode stopped unexpectedly at 00:06'),
         findsOneWidget,
       );
       expect(find.text('Keep it running'), findsNothing);

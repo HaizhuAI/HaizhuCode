@@ -9,32 +9,32 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/server_gateway.dart'
     show CommandInfo, StreamStatus;
-import 'package:opencode_mobile/domain/session_handoff.dart' show SessionLink;
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/main.dart';
-import 'package:opencode_mobile/platform/session_link.dart';
-import 'package:opencode_mobile/platform/share_intent.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/desktop/context_menu.dart';
-import 'package:opencode_mobile/ui/desktop/shortcuts.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart'
+import 'package:haizhucode/domain/session_handoff.dart' show SessionLink;
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/main.dart';
+import 'package:haizhucode/platform/session_link.dart';
+import 'package:haizhucode/platform/share_intent.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/desktop/context_menu.dart';
+import 'package:haizhucode/ui/desktop/shortcuts.dart';
+import 'package:haizhucode/ui/kit/kit.dart'
     show KitAction, KitConfirmKind, KitStateView, showKitConfirm;
-import 'package:opencode_mobile/ui/screens/capabilities_screen.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/demo_screen.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/ui/widgets/external_link.dart';
-import 'package:opencode_mobile/ui/widgets/saved_server_connection_card.dart';
-import 'package:opencode_mobile/ui/widgets/server_switcher_sheet.dart';
-import 'package:opencode_mobile/update/desktop_release_check.dart';
-import 'package:opencode_mobile/update/shorebird_update_notice.dart';
+import 'package:haizhucode/ui/screens/capabilities_screen.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/demo_screen.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/widgets/external_link.dart';
+import 'package:haizhucode/ui/widgets/saved_server_connection_card.dart';
+import 'package:haizhucode/ui/widgets/server_switcher_sheet.dart';
+import 'package:haizhucode/update/desktop_release_check.dart';
+import 'package:haizhucode/update/shorebird_update_notice.dart';
 
 import '../../fixtures.dart';
 import '../census_core.dart';

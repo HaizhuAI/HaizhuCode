@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/isolated_task_launch.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/isolated_task_launch.dart';
 
 const _project = WorkspaceProject(
   id: 'project-1',
-  name: 'OpenCode Mobile',
+  name: 'HaizhuCode',
   directory: '/work/app',
   worktrees: [],
   updatedAt: 1,

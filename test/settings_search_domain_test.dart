@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/settings_search.dart';
-import 'package:opencode_mobile/domain/settings_search_catalog.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/l10n/app_localizations_ar.dart';
+import 'package:haizhucode/domain/settings_search.dart';
+import 'package:haizhucode/domain/settings_search_catalog.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/l10n/app_localizations_ar.dart';
 
 void main() {
   List<SettingsSearchDocument> rows({

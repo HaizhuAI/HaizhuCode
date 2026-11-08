@@ -2,20 +2,20 @@ import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:opencode_mobile/orchestration/adapters/fixture/project_fixture_gateway.dart';
-import 'package:opencode_mobile/state/team_project_persistence.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/attention_feed.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/work_row_status.dart';
-import 'package:opencode_mobile/state/monitor_attention_reader.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/profile_monitor.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/orchestration/adapters/fixture/project_fixture_gateway.dart';
+import 'package:haizhucode/state/team_project_persistence.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/attention_feed.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/work_row_status.dart';
+import 'package:haizhucode/state/monitor_attention_reader.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/profile_monitor.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 import 'support/profile_monitor_fixture.dart';
-import 'package:opencode_mobile/orchestration/adapters/inapp/phone_engine_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/inapp/phone_engine_gateway.dart';
 import 'phone_project_engine_gateway_test.dart' as phone;
 
 final at = DateTime.utc(2026, 9, 28);

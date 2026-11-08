@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
 import '../../test/support/v2_subagent_fixture.dart';
 import 'fixtures.dart'
     show loadCaptureFonts, captureTheme, capturePng, writePng;

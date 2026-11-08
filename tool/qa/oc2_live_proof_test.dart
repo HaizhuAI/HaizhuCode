@@ -8,10 +8,10 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
 
 void main() {
   final url = Platform.environment['OC2_LIVE_URL'];

@@ -29,7 +29,7 @@ class Context(
     val manager: ActivityManager = ActivityManager(),
 ) {
     val applicationContext get() = this
-    val packageName = "io.github.eslamasabry.opencode_mobile"
+    val packageName = "io.github.haizhu.code"
     fun getSharedPreferences(name: String, mode: Int): SharedPreferences =
         stores.getOrPut(name) { SharedPreferences() }
     fun <T> getSystemService(type: Class<T>): T? =

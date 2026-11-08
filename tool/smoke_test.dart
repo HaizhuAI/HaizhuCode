@@ -4,8 +4,8 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 Future<void> main(List<String> args) async {
   final baseUrl = args.isNotEmpty ? args[0] : 'http://127.0.0.1:4097';

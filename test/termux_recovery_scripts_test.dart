@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/termux/bridge.dart';
 
 void main() {
   test(

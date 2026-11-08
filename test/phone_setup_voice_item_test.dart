@@ -6,9 +6,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_customize_sheet.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_customize_sheet.dart';
 
 import 'support/fake_setup_engine.dart';
 import 'support/voice_setup_fakes.dart';

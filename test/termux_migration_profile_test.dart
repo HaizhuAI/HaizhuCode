@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/migration/migration_profile.dart';
-import 'package:opencode_mobile/domain/termux_migration.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/migration/migration_profile.dart';
+import 'package:haizhucode/domain/termux_migration.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/termux_channel_fixture.dart';

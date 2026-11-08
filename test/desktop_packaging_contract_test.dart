@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/update/desktop_release_check.dart';
+import 'package:haizhucode/update/desktop_release_check.dart';
 
 /// Locks the couplings between the desktop packaging pipeline and the code
 /// that consumes its output. Each of these can be broken by an edit in a
@@ -139,7 +139,7 @@ void main() {
         _read('scripts/package-linux.sh'),
         _read('linux/packaging/install.sh'),
         _read('linux/packaging/uninstall.sh'),
-        _read('linux/packaging/io.github.eslamasabry.opencode_mobile.desktop'),
+        _read('linux/packaging/io.github.haizhu.code.desktop'),
       ].join('\n');
       expect(packaging, isNot(contains('/bin/opencode\n')));
       expect(packaging, isNot(contains('/lib/opencode/')));
@@ -149,7 +149,7 @@ void main() {
 
     test('public package metadata points at this repository', () {
       final metainfo = _read(
-        'linux/packaging/io.github.eslamasabry.opencode_mobile.metainfo.xml',
+        'linux/packaging/io.github.haizhu.code.metainfo.xml',
       );
       expect(metainfo, contains('Eslamasabry/opencode-mobile-next'));
       expect(metainfo, isNot(contains('Eslamasabry/opencode-mobile/issues')));
@@ -164,14 +164,14 @@ void main() {
       for (final size in sizes) {
         final icon = File(
           'linux/packaging/icons/hicolor/${size}x$size/apps/'
-          'io.github.eslamasabry.opencode_mobile.png',
+          'io.github.haizhu.code.png',
         );
         expect(icon.existsSync(), isTrue, reason: 'missing ${size}px icon');
       }
       expect(
         File(
           'linux/packaging/icons/hicolor/scalable/apps/'
-          'io.github.eslamasabry.opencode_mobile.svg',
+          'io.github.haizhu.code.svg',
         ).existsSync(),
         isTrue,
       );

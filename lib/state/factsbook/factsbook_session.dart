@@ -189,7 +189,7 @@ class FactsBookSession extends ChangeNotifier {
     final result = await FactsBookPairing.pair(
       base,
       code: code,
-      clientName: 'OpenCode Mobile',
+      clientName: 'HaizhuCode',
       scopes: [
         'read',
         'write',

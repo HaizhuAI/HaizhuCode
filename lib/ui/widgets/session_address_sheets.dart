@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_notice.dart';
-import 'package:opencode_mobile/ui/kit/kit_progress.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_row_parts.dart';
-import 'package:opencode_mobile/ui/kit/kit_sheet.dart';
-import 'package:opencode_mobile/ui/kit/kit_technical_value.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_notice.dart';
+import 'package:haizhucode/ui/kit/kit_progress.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_row_parts.dart';
+import 'package:haizhucode/ui/kit/kit_sheet.dart';
+import 'package:haizhucode/ui/kit/kit_technical_value.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 import '../../l10n/app_localizations.dart';
 import '../../state/profiles.dart';

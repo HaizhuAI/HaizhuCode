@@ -1,8 +1,8 @@
 // G6 scenes for KitChoiceCards and KitHeroQuestion (the first-run welcome's
 // question and answers). The matrix supplies compact and expanded windows,
 // large text and both directions.
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 import 'kit_overflow_scenes.dart';
 

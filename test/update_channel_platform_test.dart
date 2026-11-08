@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/update/desktop_release_check.dart';
-import 'package:opencode_mobile/update/shorebird_update_notice.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/update/desktop_release_check.dart';
+import 'package:haizhucode/update/shorebird_update_notice.dart';
 
 /// Records whether the GitHub release check was reached at all.
 class _CountingChecker extends DesktopReleaseChecker {

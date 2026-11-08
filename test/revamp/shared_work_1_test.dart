@@ -7,10 +7,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_folders.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit_icon_button.dart';
-import 'package:opencode_mobile/ui/widgets/folder_browser.dart';
+import 'package:haizhucode/builtin/builtin_folders.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit_icon_button.dart';
+import 'package:haizhucode/ui/widgets/folder_browser.dart';
 
 final _en = lookupAppLocalizations(const Locale('en'));
 

@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/mcp_catalog.dart';
-import 'package:opencode_mobile/domain/mcp_connector_search.dart';
-import 'package:opencode_mobile/domain/setup_registry.dart';
+import 'package:haizhucode/domain/mcp_catalog.dart';
+import 'package:haizhucode/domain/mcp_connector_search.dart';
+import 'package:haizhucode/domain/setup_registry.dart';
 
 RegistryEntry _entry(
   String id, {

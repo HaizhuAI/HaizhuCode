@@ -1,5 +1,5 @@
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/termux_running_server.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/termux_running_server.dart';
 
 // Test seams for the capture tools in tool/capture/: those files live outside
 // test/, so they set the app's @visibleForTesting hooks through here rather

@@ -1,10 +1,10 @@
 // G6 scenes for the Chats home parts: the feed item, its status tag, the
 // filter chips and the floating action. The matrix supplies compact and
 // expanded windows, large text and both directions.
-import 'package:opencode_mobile/domain/agent_persona.dart';
+import 'package:haizhucode/domain/agent_persona.dart';
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 import 'kit_overflow_scenes.dart';
 

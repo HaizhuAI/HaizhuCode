@@ -12,7 +12,7 @@ void main() {
       'android/app/src/main/AndroidManifest.xml',
     ).readAsStringSync();
     final renderer = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/StatusNotificationRenderer.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/StatusNotificationRenderer.kt',
     ).readAsStringSync();
     expect(renderer, contains('setRequestPromotedOngoing'));
     expect(

@@ -2,15 +2,15 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart' show StreamStatus;
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart' show StreamStatus;
+import 'package:haizhucode/domain/server_gateway.dart'
     show ProductException;
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
-import 'package:opencode_mobile/state/paseo_connection_probe.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/mappers.dart';
+import 'package:haizhucode/paseo/transport.dart';
+import 'package:haizhucode/state/paseo_connection_probe.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 const _dir = '/work/app';
 

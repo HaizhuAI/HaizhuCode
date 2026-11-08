@@ -3,7 +3,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:opencode_mobile/acp/acp_client.dart';
+import 'package:haizhucode/acp/acp_client.dart';
 
 Future<void> main(List<String> args) async {
   if (args.length < 2 || args.first != '--') {

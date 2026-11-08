@@ -7,8 +7,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
 
 import '../support/phone_setup_scenes.dart' show sceneJob, sceneNodeDownloading;
 import 'screen_phone_1_fixtures.dart';

@@ -17,7 +17,7 @@ if [[ -z "$auth_json_jar" || ! -f "$auth_json_jar" ]]; then
   exit 66
 fi
 cat > "$auth_build/Harness.kt" <<'KOTLIN'
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
@@ -352,7 +352,7 @@ fun main() {
 }
 KOTLIN
 kotlinc -J-Xmx512m -jvm-target 17 -cp "$auth_json_jar" \
-  "$auth_repo/android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/PhoneAgentSignIn.kt" \
+  "$auth_repo/android/app/src/main/kotlin/io/github/haizhu/code/PhoneAgentSignIn.kt" \
   "$auth_build/Harness.kt" -include-runtime -d "$auth_build/auth-harness.jar"
 timeout 60s java -Xmx256m -cp "$auth_build/auth-harness.jar:$auth_json_jar" \
-  io.github.eslamasabry.opencode_mobile.HarnessKt
+  io.github.haizhu.code.HarnessKt

@@ -3,14 +3,14 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/api2/shell_runner.dart';
-import 'package:opencode_mobile/api2/transport.dart';
-import 'package:opencode_mobile/domain/git/git_shell.dart';
-import 'package:opencode_mobile/domain/remote_shell.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/git_workspace.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/api2/shell_runner.dart';
+import 'package:haizhucode/api2/transport.dart';
+import 'package:haizhucode/domain/git/git_shell.dart';
+import 'package:haizhucode/domain/remote_shell.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/git_workspace.dart';
 
 /// `/api/shell` as protocol notes §10 describe it.
 class _Server implements HttpClientAdapter {

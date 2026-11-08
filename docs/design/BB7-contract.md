@@ -172,7 +172,7 @@ applies to the current BB7 implementation and its remaining verification.
 | Verification owner, after production owners release files | Native contracts and existing test harnesses | Pure event/recipe/ownership tests, service/receiver harness and BB7 instrumentation/host runner; evidence under `docs/qa/BB7-2026-10-09/` |
 
 Kotlin sources above are under
-`android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/`; JVM tests
+`android/app/src/main/kotlin/io/github/haizhu/code/`; JVM tests
 belong under the matching `src/test/kotlin/` package. No `lib/ui/`, connection
 library, generated SDK, credentials or localization edits belong to this slice.
 No worker runs compilers while another owns the machine check slot.

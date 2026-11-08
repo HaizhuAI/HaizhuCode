@@ -6,8 +6,8 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/builtin/setup/setup_engine.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/setup/setup_engine.dart';
 
 import '../setup_engine_test.dart' show FakeLinux, en;
 

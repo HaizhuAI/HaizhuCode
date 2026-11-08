@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('the Activity wires share capture, delivery, and cleanup', () {
     const native =
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+        'android/app/src/main/kotlin/io/github/haizhu/code';
     final activity = File('$native/MainActivity.kt').readAsStringSync();
     final launches = File('$native/LaunchActivityBridge.kt').readAsStringSync();
     expect(activity, contains('launches.configure(messenger, intent)'));
@@ -19,7 +19,7 @@ void main() {
 
   test('native share delivery waits for Dart readiness acknowledgment', () {
     final source = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/'
+      'android/app/src/main/kotlin/io/github/haizhu/code/'
       'LaunchShareChannel.kt',
     ).readAsStringSync();
 
@@ -50,7 +50,7 @@ void main() {
 
   test('native share-out opens the chooser without this app as a target', () {
     final source = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/'
+      'android/app/src/main/kotlin/io/github/haizhu/code/'
       'LaunchShareChannel.kt',
     ).readAsStringSync();
     final method = source.indexOf('"shareText" ->');

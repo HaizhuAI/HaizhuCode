@@ -5,7 +5,7 @@
     android:targetCellWidth="4"
     android:targetCellHeight="2"
     android:updatePeriodMillis="0"
-    android:configure="io.github.eslamasabry.opencode_mobile.WidgetConfigureActivity"
+    android:configure="io.github.haizhu.code.WidgetConfigureActivity"
     android:widgetFeatures="reconfigurable|hide_from_picker"
     android:resizeMode="horizontal|vertical"
     android:minResizeWidth="340dp"

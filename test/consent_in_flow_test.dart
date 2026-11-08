@@ -1,4 +1,4 @@
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 // P6.7 Consent once, in flow: each consent is asked at the moment it
 // matters, at most once per server, remembered, and a declined one explains
 // itself on its row on What runs by itself (automation-settings).
@@ -9,26 +9,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
 import 'support/fake_event_channel.dart';
-import 'package:opencode_mobile/background/live_background.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/automation_policy.dart';
-import 'package:opencode_mobile/state/consent_owners.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/first_reply_notify_offer.dart';
-import 'package:opencode_mobile/state/first_run.dart';
-import 'package:opencode_mobile/state/in_flow_consent.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/repeated_permission_consent.dart';
-import 'package:opencode_mobile/platform/app_exit.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_bidi.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/widgets/always_allow_invitation.dart';
-import 'package:opencode_mobile/ui/widgets/phone_server_consents.dart';
+import 'package:haizhucode/background/live_background.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/automation_policy.dart';
+import 'package:haizhucode/state/consent_owners.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/first_reply_notify_offer.dart';
+import 'package:haizhucode/state/first_run.dart';
+import 'package:haizhucode/state/in_flow_consent.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/repeated_permission_consent.dart';
+import 'package:haizhucode/platform/app_exit.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_bidi.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/widgets/always_allow_invitation.dart';
+import 'package:haizhucode/ui/widgets/phone_server_consents.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/complete_message_history.dart';

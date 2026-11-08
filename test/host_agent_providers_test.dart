@@ -2,13 +2,13 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_auth_probe.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_sign_in.dart';
-import 'package:opencode_mobile/domain/host_agent_providers.dart';
-import 'package:opencode_mobile/domain/phone_agents.dart';
-import 'package:opencode_mobile/domain/server_gateway/capabilities.dart';
-import 'package:opencode_mobile/paseo/host_agent_providers.dart';
+import 'package:haizhucode/domain/agent_auth_probe.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_sign_in.dart';
+import 'package:haizhucode/domain/host_agent_providers.dart';
+import 'package:haizhucode/domain/phone_agents.dart';
+import 'package:haizhucode/domain/server_gateway/capabilities.dart';
+import 'package:haizhucode/paseo/host_agent_providers.dart';
 
 void main() {
   Map<String, dynamic> fixture(String name) =>

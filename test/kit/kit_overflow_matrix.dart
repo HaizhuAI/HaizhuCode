@@ -12,9 +12,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show RenderShiftedBox;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit_choice_list.dart' show KitChoiceRow;
-import 'package:opencode_mobile/ui/kit/kit_segmented.dart' show KitSegmented;
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit_choice_list.dart' show KitChoiceRow;
+import 'package:haizhucode/ui/kit/kit_segmented.dart' show KitSegmented;
 
 import '../../tool/capture/fixtures.dart' show captureTheme;
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

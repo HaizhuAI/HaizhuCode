@@ -11,7 +11,7 @@ void main() {
   final available = File(compiler).existsSync();
   late String jar;
   const native =
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+      'android/app/src/main/kotlin/io/github/haizhu/code';
   setUpAll(() async {
     if (!available) return;
     jar = await cachedKotlinJar(
@@ -39,7 +39,7 @@ void main() {
             await Process.run(Platform.environment['JAVA'] ?? 'java', [
               '-cp',
               jar,
-              'io.github.eslamasabry.opencode_mobile.Phone_crash_harnessKt',
+              'io.github.haizhu.code.Phone_crash_harnessKt',
               scenario,
             ]);
         expect(

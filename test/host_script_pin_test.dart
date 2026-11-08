@@ -9,8 +9,8 @@ import 'dart:io';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/ui/setup_commands.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/ui/setup_commands.dart';
 
 const _scripts = {'front': HostScripts.front};
 

@@ -3,10 +3,10 @@
 // a server with no terminals, and a controller wired to them.
 import 'dart:async';
 
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const runningShell = TerminalProcess(

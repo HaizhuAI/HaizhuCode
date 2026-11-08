@@ -6,17 +6,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart' show PromptDelivery;
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/voice/controller.dart';
-import 'package:opencode_mobile/voice/model_manager.dart';
-import 'package:opencode_mobile/voice/notices.dart';
-import 'package:opencode_mobile/voice/voice_ui.dart'
+import 'package:haizhucode/domain/server_gateway.dart' show PromptDelivery;
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/voice/controller.dart';
+import 'package:haizhucode/voice/model_manager.dart';
+import 'package:haizhucode/voice/notices.dart';
+import 'package:haizhucode/voice/voice_ui.dart'
     show showVoiceModelSetupSheet;
 import 'package:shared_preferences/shared_preferences.dart';
 

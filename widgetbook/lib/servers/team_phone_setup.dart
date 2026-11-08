@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/domain/phone_project_engine.dart';
-import 'package:opencode_mobile/state/phone_team_setup.dart';
-import 'package:opencode_mobile/ui/screens/team/team_phone_setup_screen.dart';
+import 'package:haizhucode/domain/phone_project_engine.dart';
+import 'package:haizhucode/state/phone_team_setup.dart';
+import 'package:haizhucode/ui/screens/team/team_phone_setup_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

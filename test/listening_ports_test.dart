@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/ansi_text.dart';
-import 'package:opencode_mobile/domain/listening_ports.dart';
-import 'package:opencode_mobile/state/detected_dev_servers.dart';
+import 'package:haizhucode/domain/ansi_text.dart';
+import 'package:haizhucode/domain/listening_ports.dart';
+import 'package:haizhucode/state/detected_dev_servers.dart';
 
 // A LISTEN row of /proc/net/tcp: port 5173 (0x1435) on 127.0.0.1, inode 5001.
 const _vite =

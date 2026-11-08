@@ -13,7 +13,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../support/phone_setup_scenes.dart' show sceneJob, sceneNodeDownloading;

@@ -33,7 +33,7 @@ void main() {
     jar = await cachedKotlinJar(
       compiler: compiler,
       sources: [
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/TermuxSetupShell.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/TermuxSetupShell.kt',
         'test/native/termux_setup_harness.kt',
       ],
     );

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 
 PromptAttachment _file(String path) =>
     PromptAttachment.projectFile(directory: '/srv/app', relativePath: path);

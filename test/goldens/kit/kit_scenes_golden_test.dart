@@ -11,22 +11,22 @@
 // and look at every changed image before committing it.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_illustration.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
-import 'package:opencode_mobile/ui/kit/scenes/folders_open_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/portal_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/servers_link_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/servers_welcome_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_phone_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_ready_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_steps_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_unplugged_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/states_scenes.dart';
-import 'package:opencode_mobile/ui/kit/scenes/states_working_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/team_discover_scenes.dart';
-import 'package:opencode_mobile/ui/kit/scenes/team_scenes.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_illustration.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/kit/scenes/folders_open_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/portal_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/servers_link_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/servers_welcome_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_phone_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_ready_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_steps_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_unplugged_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/states_scenes.dart';
+import 'package:haizhucode/ui/kit/scenes/states_working_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/team_discover_scenes.dart';
+import 'package:haizhucode/ui/kit/scenes/team_scenes.dart';
 
 import 'kit_gallery.dart';
 

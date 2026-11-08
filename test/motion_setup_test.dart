@@ -11,13 +11,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_phone_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_ready_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_steps_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_unplugged_scene.dart';
-import 'package:opencode_mobile/ui/widgets/saved_server_connection_card.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_phone_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_ready_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_steps_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_unplugged_scene.dart';
+import 'package:haizhucode/ui/widgets/saved_server_connection_card.dart';
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'support/phone_setup_scenes.dart';

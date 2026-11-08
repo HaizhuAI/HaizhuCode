@@ -4,9 +4,9 @@ import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/mark_catalog.dart';
-import 'package:opencode_mobile/domain/provider_logo_store.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/mark_catalog.dart';
+import 'package:haizhucode/domain/provider_logo_store.dart';
 
 const String _svg =
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">'

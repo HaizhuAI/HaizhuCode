@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/live_background.dart';
-import 'package:opencode_mobile/demo/demo_store.dart';
-import 'package:opencode_mobile/domain/provider_quota.dart';
-import 'package:opencode_mobile/state/notification_preferences.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/provider_quota_monitor.dart';
+import 'package:haizhucode/background/live_background.dart';
+import 'package:haizhucode/demo/demo_store.dart';
+import 'package:haizhucode/domain/provider_quota.dart';
+import 'package:haizhucode/state/notification_preferences.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/provider_quota_monitor.dart';
 
 import 'provider_quota_test.dart' show providerQuotaFixture;
 

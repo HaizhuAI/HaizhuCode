@@ -2,7 +2,7 @@
 // cleanup-2026-09-24.md §3): the server reports only an id, so Settings ›
 // Plugins shows a readable form of its last part.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/screens/settings/server_plugins_section.dart';
+import 'package:haizhucode/ui/screens/settings/server_plugins_section.dart';
 
 void main() {
   test('a plugin id reads as a plain name', () {

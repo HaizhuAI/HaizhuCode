@@ -7,7 +7,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:opencode_mobile/ui/kit/kit_layout.dart';
+import 'package:haizhucode/ui/kit/kit_layout.dart';
 
 const kitCapacityContractPath = 'test/kit/kit_capacity.json';
 const kitCapacityAllowlistPath = 'test/kit/kit_capacity_allowlist.json';

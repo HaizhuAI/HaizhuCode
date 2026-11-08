@@ -147,7 +147,7 @@ title). To continue converting a surface:
   Output is committed at `lib/l10n/app_localizations*.dart` — it is not
   gitignored on this Flutter (3.47) since synthetic packages are gone.
 - **Pattern in widgets:** import
-  `package:opencode_mobile/l10n/app_localizations.dart` (or the relative
+  `package:haizhucode/l10n/app_localizations.dart` (or the relative
   path), then `final l10n = AppLocalizations.of(context);` and replace the
   literal with `l10n.yourKey`. The getter is non-nullable
   (`nullable-getter: false`), so any widget test that pumps the converted

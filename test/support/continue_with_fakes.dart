@@ -3,13 +3,13 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/agent_handoff.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui_history.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/agent_handoff_controller.dart';
-import 'package:opencode_mobile/state/agent_handoff_links.dart';
-import 'package:opencode_mobile/state/continue_with.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/agent_handoff.dart';
+import 'package:haizhucode/domain/genui/gen_ui_history.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/agent_handoff_controller.dart';
+import 'package:haizhucode/state/agent_handoff_links.dart';
+import 'package:haizhucode/state/continue_with.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

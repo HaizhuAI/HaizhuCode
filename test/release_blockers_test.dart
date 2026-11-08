@@ -9,23 +9,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 import 'support/fake_event_channel.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart' show KitButton, KitTappable;
-import 'package:opencode_mobile/ui/screens/about_screen.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/screens/session_destination_sheet.dart';
-import 'package:opencode_mobile/ui/widgets/app_connection_status.dart';
-import 'package:opencode_mobile/ui/widgets/connection_status_banner.dart';
-import 'package:opencode_mobile/ui/widgets/external_link.dart';
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit.dart' show KitButton, KitTappable;
+import 'package:haizhucode/ui/screens/about_screen.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/screens/session_destination_sheet.dart';
+import 'package:haizhucode/ui/widgets/app_connection_status.dart';
+import 'package:haizhucode/ui/widgets/connection_status_banner.dart';
+import 'package:haizhucode/ui/widgets/external_link.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _ReleaseApi extends FakeServerGateway with CompleteMessageHistory {
@@ -334,16 +334,16 @@ void main() {
 
   test('Android background coding alerts are private and actionable', () {
     final activity = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/MainActivity.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/MainActivity.kt',
     ).readAsStringSync();
     final channel = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/MainActivityBackgroundChannel.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/MainActivityBackgroundChannel.kt',
     ).readAsStringSync();
     final launches = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/LaunchActivityBridge.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/LaunchActivityBridge.kt',
     ).readAsStringSync();
     final service = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/'
+      'android/app/src/main/kotlin/io/github/haizhu/code/'
       'BackgroundConnectionService.kt',
     ).readAsStringSync();
 
@@ -448,18 +448,18 @@ void main() {
 
   test('Android exposes build identity and authenticates shell approval', () {
     final activity = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/'
-      'opencode_mobile/MainActivity.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/'
+      'code/MainActivity.kt',
     ).readAsStringSync();
     final termux = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/TermuxActivityBridge.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/TermuxActivityBridge.kt',
     ).readAsStringSync();
     final environment = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/TermuxActivityEnvironment.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/TermuxActivityEnvironment.kt',
     ).readAsStringSync();
     final background = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/'
-      'opencode_mobile/BackgroundConnectionService.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/'
+      'code/BackgroundConnectionService.kt',
     ).readAsStringSync();
     final about = File('lib/ui/screens/about_screen.dart').readAsStringSync();
 

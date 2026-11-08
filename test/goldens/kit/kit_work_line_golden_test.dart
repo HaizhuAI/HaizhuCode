@@ -9,8 +9,8 @@
 // and look at every changed image before committing it.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_work_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/chat/kit_work_line.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 
 import 'kit_gallery.dart';
 

@@ -3,9 +3,9 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/state/computer_usage_source.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/state/computer_usage_source.dart';
 
 final computerNow = DateTime.utc(2026, 10, 13, 12);
 final computerRef = 'a' * 64;

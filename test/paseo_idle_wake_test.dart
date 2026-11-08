@@ -6,9 +6,9 @@
 // re-stamps its `updatedAt`; background gen-UI recovery read the history of
 // the 20 most recent chats after every reconnect.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/mappers.dart' show paseoSessionStatus;
-import 'package:opencode_mobile/paseo/transport.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/mappers.dart' show paseoSessionStatus;
+import 'package:haizhucode/paseo/transport.dart';
 
 import 'paseo_acp_pilot_test.dart' show FakePaseoSocket;
 

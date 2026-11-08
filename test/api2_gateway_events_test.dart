@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/events.dart';
-import 'package:opencode_mobile/api2/gateway_events.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/events.dart';
+import 'package:haizhucode/api2/gateway_events.dart';
 
 List<Api2EventEnvelope> capturedEnvelopes() {
   final lines = File('test/fixtures/api2/events.sse').readAsLinesSync();

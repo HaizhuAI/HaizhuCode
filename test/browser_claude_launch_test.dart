@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_tools/browser_claude_launch.dart';
+import 'package:haizhucode/domain/agent_tools/browser_claude_launch.dart';
 
 BrowserEnrollmentTarget target({
   String profile = 'profile',

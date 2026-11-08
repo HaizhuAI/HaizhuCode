@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart';
+import 'package:haizhucode/paseo/mappers.dart';
 
 const _scope = GenUiScope(
   profileID: 'fixture-profile',

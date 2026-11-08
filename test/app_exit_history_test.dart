@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/app_exit_history.dart';
-import 'package:opencode_mobile/domain/diagnostics_error.dart';
-import 'package:opencode_mobile/platform/app_exit.dart';
+import 'package:haizhucode/domain/app_exit_history.dart';
+import 'package:haizhucode/domain/diagnostics_error.dart';
+import 'package:haizhucode/platform/app_exit.dart';
 
 import 'native/kotlin_jar_cache.dart';
 
@@ -279,7 +279,7 @@ void main() {
       jar = await cachedKotlinJar(
         compiler: compiler,
         sources: [
-          'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/AppExitHistoryPolicy.kt',
+          'android/app/src/main/kotlin/io/github/haizhu/code/AppExitHistoryPolicy.kt',
           'test/native/app_exit_history_harness.kt',
         ],
       );
@@ -299,7 +299,7 @@ void main() {
             [
               '-cp',
               jar,
-              'io.github.eslamasabry.opencode_mobile.App_exit_history_harnessKt',
+              'io.github.haizhu.code.App_exit_history_harnessKt',
               scenario,
             ],
           );

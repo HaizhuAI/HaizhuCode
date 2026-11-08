@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/phone_process_watch.dart';
-import 'package:opencode_mobile/builtin/phone_processes.dart';
-import 'package:opencode_mobile/state/phone_host.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/running_on_phone_screen.dart';
-import 'package:opencode_mobile/ui/screens/this_phone_screen.dart';
-import 'package:opencode_mobile/ui/widgets/running_on_phone_text.dart';
+import 'package:haizhucode/builtin/phone_process_watch.dart';
+import 'package:haizhucode/builtin/phone_processes.dart';
+import 'package:haizhucode/state/phone_host.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/running_on_phone_screen.dart';
+import 'package:haizhucode/ui/screens/this_phone_screen.dart';
+import 'package:haizhucode/ui/widgets/running_on_phone_text.dart';
 
 import 'revamp/screen_phone_1_fixtures.dart';
 import 'support/running_on_phone_fakes.dart';

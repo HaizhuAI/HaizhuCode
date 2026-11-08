@@ -4,12 +4,12 @@
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_step_timeline.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_tool_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_motion.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_mark.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_step_timeline.dart';
+import 'package:haizhucode/ui/kit/chat/kit_tool_row.dart';
+import 'package:haizhucode/ui/kit/kit_motion.dart';
+import 'package:haizhucode/ui/kit/kit_status_mark.dart';
 
 Widget _app(Widget child, {bool reduce = false}) => MaterialApp(
   theme: AppTheme.dark(),

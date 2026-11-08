@@ -15,8 +15,8 @@ import tempfile
 import bb4_native_regression as J
 
 ROOT = Path(__file__).resolve().parents[2]
-MAIN = ROOT / 'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile'
-TEST = ROOT / 'android/app/src/test/kotlin/io/github/eslamasabry/opencode_mobile'
+MAIN = ROOT / 'android/app/src/main/kotlin/io/github/haizhu/code'
+TEST = ROOT / 'android/app/src/test/kotlin/io/github/haizhu/code'
 OUT = ROOT / 'docs/qa/BB5-integration-2026-10-08'
 CLASSES = ('IdleStopPolicyTest', 'NativeIdleStateTest', 'NativeIdleHeartbeatTest',
            'NativeIdleTimerTest', 'NativeIdleReceiverDispatchTest', 'NativeAgentHostAdmissionTest',

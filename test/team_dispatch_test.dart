@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/fixture/fixture_gateway.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/team_dispatch.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/fixture/fixture_gateway.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/team_dispatch.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Gateway extends FixtureOrchestrationGateway {

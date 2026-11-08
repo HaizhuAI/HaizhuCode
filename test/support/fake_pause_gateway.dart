@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:opencode_mobile/domain/app_diagnostics_gateway.dart';
+import 'package:haizhucode/domain/app_diagnostics_gateway.dart';
 
 /// The device diagnostics gateway as the notice sees it: the pause state and
 /// a Resume that answers when the test says so.

@@ -121,9 +121,9 @@ class ChannelLocalTerminalBackend implements LocalTerminalBackend {
       _eventChannel = events ?? const EventChannel(eventChannelName);
 
   static const methodChannelName =
-      'io.github.eslamasabry.opencode_mobile/local_terminal';
+      'io.github.haizhu.code/local_terminal';
   static const eventChannelName =
-      'io.github.eslamasabry.opencode_mobile/local_terminal/events';
+      'io.github.haizhu.code/local_terminal/events';
 
   final MethodChannel _methods;
   final EventChannel _eventChannel;

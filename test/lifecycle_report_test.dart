@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team.dart';
-import 'package:opencode_mobile/platform/app_exit.dart';
-import 'package:opencode_mobile/state/lifecycle_report.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/team/builtin_team.dart';
+import 'package:haizhucode/platform/app_exit.dart';
+import 'package:haizhucode/state/lifecycle_report.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 class _Linux extends BuiltinLinux {
   bool installed = true;

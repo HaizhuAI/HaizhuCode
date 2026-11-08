@@ -14,21 +14,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/termux_migration.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/phone_host.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/termux_migration_owner.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_progress_screen.dart';
-import 'package:opencode_mobile/ui/screens/termux_migration_screen.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart' show KitBidi;
-import 'package:opencode_mobile/ui/screens/this_phone_screen.dart';
-import 'package:opencode_mobile/ui/widgets/phone_server_card.dart'
+import 'package:haizhucode/domain/termux_migration.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/phone_host.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/termux_migration_owner.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_progress_screen.dart';
+import 'package:haizhucode/ui/screens/termux_migration_screen.dart';
+import 'package:haizhucode/ui/kit/kit.dart' show KitBidi;
+import 'package:haizhucode/ui/screens/this_phone_screen.dart';
+import 'package:haizhucode/ui/widgets/phone_server_card.dart'
     show formatPhoneStorage;
-import 'package:opencode_mobile/ui/widgets/termux_migration_entry.dart';
+import 'package:haizhucode/ui/widgets/termux_migration_entry.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../tool/capture/fixtures.dart' show captureTheme;

@@ -25,7 +25,7 @@ void main() {
     };
     final stub = File('${generated.path}/resource_ids.kt');
     stub.writeAsStringSync(
-      'package io.github.eslamasabry.opencode_mobile\n'
+      'package io.github.haizhu.code\n'
       'object R {\n'
       'object string {\n'
       '${resources.where((m) => m[1] == 'string').map((m) => 'const val ${m[2]} = ${ids[m[2]]}').join('\n')}\n'
@@ -42,7 +42,7 @@ void main() {
     jar = await cachedKotlinJar(
       compiler: compiler,
       sources: [
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/NativeStrings.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/NativeStrings.kt',
         'test/native/native_strings_harness.kt',
         'test/native/native_strings_stubs/context.kt',
         'test/native/native_strings_stubs/resources.kt',
@@ -69,7 +69,7 @@ void main() {
       final result = await Process.run('java', [
         '-cp',
         jar,
-        'io.github.eslamasabry.opencode_mobile.Native_strings_harnessKt',
+        'io.github.haizhu.code.Native_strings_harnessKt',
         scenario,
       ]);
       expect(result.exitCode, 0, reason: '${result.stdout}\n${result.stderr}');

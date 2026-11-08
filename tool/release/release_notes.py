@@ -123,7 +123,7 @@ def check(path: Path) -> list[str]:
     notes = parse(path.read_text(encoding="utf-8"))
     match = re.fullmatch(r"v(.+)\.md", path.name)
     if match and VERSION_RE.match(match.group(1)):
-        expected = f"# OpenCode Mobile {match.group(1)}"
+        expected = f"# HaizhuCode {match.group(1)}"
         if notes.title != expected:
             problems.append(f"the first line must be '{expected}'")
     if notes.user_index < 0:

@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui_validation_js.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart';
+import 'package:haizhucode/domain/genui/gen_ui_validation_js.dart';
+import 'package:haizhucode/domain/server_gateway.dart'
     show ProductException;
 
 const _scope = GenUiScope(

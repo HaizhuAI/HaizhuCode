@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/dialect.dart';
-import 'package:opencode_mobile/api2/plugin_mapper.dart';
-import 'package:opencode_mobile/domain/plugin_inventory.dart';
+import 'package:haizhucode/api2/dialect.dart';
+import 'package:haizhucode/api2/plugin_mapper.dart';
+import 'package:haizhucode/domain/plugin_inventory.dart';
 
 /// The mapping was derived from the two servers' own `/openapi.json`
 /// (`0.0.0-beta-18600` and `2.0.10`; 2.1.1 changed no route) and proven live by

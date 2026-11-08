@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/widgets/model_shortcuts.dart';
+import 'package:haizhucode/ui/widgets/model_shortcuts.dart';
 
 void main() {
   testWidgets(

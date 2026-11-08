@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/domain/development_service.dart';
-import 'package:opencode_mobile/state/connection.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/domain/development_service.dart';
+import 'package:haizhucode/state/connection.dart';
 
 const sampleService = DevelopmentService(
   id: 'vite',

@@ -2,7 +2,7 @@
 // their order inside Arabic copy.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_bidi.dart';
+import 'package:haizhucode/ui/kit/kit_bidi.dart';
 
 void main() {
   test('ltr wraps in LRI … PDI', () {

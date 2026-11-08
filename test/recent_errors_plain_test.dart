@@ -4,13 +4,13 @@
 // id appear only under the row's Details. The report payload is unchanged.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/report_problem.dart';
-import 'package:opencode_mobile/feedback/problem_report.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/app_diagnostics_screen.dart';
-import 'package:opencode_mobile/ui/screens/recent_error_words.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/report_problem.dart';
+import 'package:haizhucode/feedback/problem_report.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/app_diagnostics_screen.dart';
+import 'package:haizhucode/ui/screens/recent_error_words.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Finder _key(String key) => find.byKey(ValueKey(key));

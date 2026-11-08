@@ -13,12 +13,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../support/fake_server_gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profile_monitor.dart'
+import 'package:haizhucode/paseo/transport.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profile_monitor.dart'
     show MonitorGatewayFactory;
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart';

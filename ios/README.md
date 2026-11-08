@@ -12,7 +12,7 @@ pairing. Background suspension requires refetch on return, not continuous SSE.
 - Generated with Flutter **3.47.2**, revision
   `d3b14c876900e553bc736ca19295fc09e3853e8e`, after inspecting a disposable
   scaffold. The existing Dart app, pubspec and dependency lockfile were retained.
-- Runner identifier: `io.github.eslamasabry.opencodeMobile`; test target appends
+- Runner identifier: `io.github.haizhu.code`; test target appends
   `.RunnerTests`. This is source configuration, not App Store registration.
 - Template deployment target: **iOS 15.0**, with Flutter's generated Swift
   Package Manager integration and AppDelegate/SceneDelegate lifecycle.

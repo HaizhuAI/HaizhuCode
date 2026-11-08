@@ -4,19 +4,19 @@
 // folders opened before as tappable rows above the path field.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_folders.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/phone_project_scan.dart';
-import 'package:opencode_mobile/platform/phone_storage_folders.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/platform/storage_access.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/shared_project_roots.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
-import 'package:opencode_mobile/ui/screens/project_folder_actions.dart';
-import 'package:opencode_mobile/ui/screens/shared_storage_access_flow.dart';
+import 'package:haizhucode/builtin/builtin_folders.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/phone_project_scan.dart';
+import 'package:haizhucode/platform/phone_storage_folders.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/platform/storage_access.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/shared_project_roots.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/screens/project_folder_actions.dart';
+import 'package:haizhucode/ui/screens/shared_storage_access_flow.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Store extends ProfileStore {

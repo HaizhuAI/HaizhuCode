@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/provider_quota.dart';
+import 'package:haizhucode/domain/provider_quota.dart';
 
 /// Handwritten normalized extension data. Never copied from an auth store or a
 /// provider response. Shared by the adapter/controller tests, not stored on disk.

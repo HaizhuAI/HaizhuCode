@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/domain/provider_quota.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/in_app_quota_enroller.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/domain/provider_quota.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/in_app_quota_enroller.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'provider_quota_test.dart' show providerQuotaFixture;

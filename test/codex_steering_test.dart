@@ -3,10 +3,10 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/codex/gateway.dart';
-import 'package:opencode_mobile/codex/transport.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/codex/gateway.dart';
+import 'package:haizhucode/codex/transport.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 class _Socket implements CodexSocket {
   final input = StreamController<Object?>.broadcast(sync: true);

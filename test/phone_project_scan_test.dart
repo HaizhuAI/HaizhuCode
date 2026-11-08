@@ -3,7 +3,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/platform/phone_project_scan.dart';
+import 'package:haizhucode/platform/phone_project_scan.dart';
 
 void main() {
   late Directory root;

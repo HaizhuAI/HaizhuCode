@@ -15,12 +15,12 @@ import 'dart:async';
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_motion.dart';
-import 'package:opencode_mobile/ui/kit/kit_notice.dart';
-import 'package:opencode_mobile/ui/kit/kit_progress.dart';
-import 'package:opencode_mobile/ui/kit/kit_state_view.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_motion.dart';
+import 'package:haizhucode/ui/kit/kit_notice.dart';
+import 'package:haizhucode/ui/kit/kit_progress.dart';
+import 'package:haizhucode/ui/kit/kit_state_view.dart';
 
 import 'kit_gallery.dart';
 

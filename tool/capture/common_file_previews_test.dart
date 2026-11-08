@@ -4,9 +4,9 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/local_pdf.dart';
-import 'package:opencode_mobile/ui/widgets/file_preview.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/local_pdf.dart';
+import 'package:haizhucode/ui/widgets/file_preview.dart';
 import 'fixtures.dart';
 
 void main() {

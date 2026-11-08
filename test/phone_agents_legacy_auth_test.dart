@@ -3,14 +3,14 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_auth_probe.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_sign_in.dart';
-import 'package:opencode_mobile/domain/phone_agent_host.dart';
-import 'package:opencode_mobile/domain/phone_agents.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/phone_agent_host_port.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/agent_auth_probe.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_sign_in.dart';
+import 'package:haizhucode/domain/phone_agent_host.dart';
+import 'package:haizhucode/domain/phone_agents.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/phone_agent_host_port.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _LegacyHost implements PhoneAgentHostPort {

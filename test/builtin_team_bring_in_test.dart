@@ -7,9 +7,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/ui/widgets/builtin_team_section.dart'
+import 'package:haizhucode/builtin/team/builtin_team.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/ui/widgets/builtin_team_section.dart'
     show builtinTeamBringInText;
 
 bool get _hasGit =>

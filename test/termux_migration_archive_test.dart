@@ -4,8 +4,8 @@ import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/migration/migration_archive_store.dart';
-import 'package:opencode_mobile/domain/termux_migration.dart';
+import 'package:haizhucode/builtin/migration/migration_archive_store.dart';
+import 'package:haizhucode/domain/termux_migration.dart';
 
 void main() {
   late Directory support;

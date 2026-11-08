@@ -1,6 +1,6 @@
 // The team engine's workspace with every field set to a value of its own, so
 // the coverage gate can look for each one on the screens.
-import 'package:opencode_mobile/domain/team_project_gateway.dart';
+import 'package:haizhucode/domain/team_project_gateway.dart';
 
 // The pages say how long ago these happened, measured from the real clock, so
 // the sample dates them from now: the ledger reads "10h ago" on any day.

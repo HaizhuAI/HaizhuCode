@@ -16,16 +16,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_bidi.dart';
-import 'package:opencode_mobile/ui/kit/kit_icon_button.dart';
-import 'package:opencode_mobile/ui/kit/kit_image.dart';
-import 'package:opencode_mobile/ui/kit/kit_layout.dart';
-import 'package:opencode_mobile/ui/kit/kit_task_mark.dart';
-import 'package:opencode_mobile/ui/kit/kit_tokens.dart';
-import 'package:opencode_mobile/ui/kit/kit_work_graph.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_bidi.dart';
+import 'package:haizhucode/ui/kit/kit_icon_button.dart';
+import 'package:haizhucode/ui/kit/kit_image.dart';
+import 'package:haizhucode/ui/kit/kit_layout.dart';
+import 'package:haizhucode/ui/kit/kit_task_mark.dart';
+import 'package:haizhucode/ui/kit/kit_tokens.dart';
+import 'package:haizhucode/ui/kit/kit_work_graph.dart';
 
 import 'kit_motion_still.dart';
 

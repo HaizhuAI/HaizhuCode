@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/profile_monitor.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/profile_monitor.dart';
 
 import 'support/profile_monitor_fixture.dart';
 

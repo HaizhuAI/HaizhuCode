@@ -4,7 +4,7 @@ Status: implementation contract for approved slices A/B/D. Initial freeze preced
 
 ## Public domain API
 
-Import `package:opencode_mobile/domain/settings_scope.dart`. These types contain no Flutter, storage or protocol dependencies. IDs are opaque, non-secret identity; UI supplies localized owner names separately. Never put credentials, raw provider configuration or user-entered secret values in these objects.
+Import `package:haizhucode/domain/settings_scope.dart`. These types contain no Flutter, storage or protocol dependencies. IDs are opaque, non-secret identity; UI supplies localized owner names separately. Never put credentials, raw provider configuration or user-entered secret values in these objects.
 
 ```dart
 enum SettingOwnerKind { device, connection, host, providerAccount, project, chat }

@@ -4,9 +4,9 @@
 // the agent isn't signed in yet and offers to start again.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/local_terminal.dart';
-import 'package:opencode_mobile/ui/screens/agents/agent_sign_in_terminal.dart';
-import 'package:opencode_mobile/ui/screens/agents/agents_section.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
+import 'package:haizhucode/ui/screens/agents/agent_sign_in_terminal.dart';
+import 'package:haizhucode/ui/screens/agents/agents_section.dart';
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'support/agents_fakes.dart';

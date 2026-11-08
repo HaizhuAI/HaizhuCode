@@ -4,19 +4,19 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/agent_install_guard.dart';
-import 'package:opencode_mobile/builtin/agents/paseo_scripts.dart';
-import 'package:opencode_mobile/builtin/agents/phone_agents_host.dart';
-import 'package:opencode_mobile/domain/phone_agent_host.dart';
-import 'package:opencode_mobile/domain/agent_auth_probe.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/agents/agent_install_guard.dart';
+import 'package:haizhucode/builtin/agents/paseo_scripts.dart';
+import 'package:haizhucode/builtin/agents/phone_agents_host.dart';
+import 'package:haizhucode/domain/phone_agent_host.dart';
+import 'package:haizhucode/domain/agent_auth_probe.dart';
+import 'package:haizhucode/paseo/transport.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'support/fake_setup_engine.dart';
 import 'paseo_gateway_test.dart' show FakeDaemon;
 
 const channel = MethodChannel(
-  'io.github.eslamasabry.opencode_mobile/builtin_linux',
+  'io.github.haizhu.code/builtin_linux',
 );
 const storage = MethodChannel('plugins.it_nomads.com/flutter_secure_storage');
 

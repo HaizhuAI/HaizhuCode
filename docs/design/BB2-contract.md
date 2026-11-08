@@ -48,7 +48,7 @@ for a bounded admitted retry window and its children; no new wake lock is used.
 
 ## Callable MethodChannel contract
 
-All methods use `io.github.eslamasabry.opencode_mobile/builtin_linux`. IDs are profile scoped; scripts/passwords
+All methods use `io.github.haizhu.code/builtin_linux`. IDs are profile scoped; scripts/passwords
 never appear in recovery snapshots.
 
 | Method | Arguments | Result / responsibility |

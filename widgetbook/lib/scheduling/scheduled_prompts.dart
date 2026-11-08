@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/scheduling/controller.dart';
-import 'package:opencode_mobile/scheduling/models.dart';
-import 'package:opencode_mobile/scheduling/platform.dart';
-import 'package:opencode_mobile/scheduling/store.dart';
-import 'package:opencode_mobile/ui/screens/scheduling/schedule_sheet.dart';
-import 'package:opencode_mobile/ui/screens/scheduling/scheduled_prompts_screen.dart';
+import 'package:haizhucode/scheduling/controller.dart';
+import 'package:haizhucode/scheduling/models.dart';
+import 'package:haizhucode/scheduling/platform.dart';
+import 'package:haizhucode/scheduling/store.dart';
+import 'package:haizhucode/ui/screens/scheduling/schedule_sheet.dart';
+import 'package:haizhucode/ui/screens/scheduling/scheduled_prompts_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/quota_answers.dart';
-import 'package:opencode_mobile/domain/usage_statistics.dart';
+import 'package:haizhucode/domain/quota_answers.dart';
+import 'package:haizhucode/domain/usage_statistics.dart';
 
 UsageStatistics _statistics(DateTime from, DateTime to) => UsageStatistics(
   from: from.millisecondsSinceEpoch,

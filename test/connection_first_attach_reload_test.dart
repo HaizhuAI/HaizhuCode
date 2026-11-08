@@ -1,8 +1,8 @@
 // The transcript reload must follow the stream going live, so events
 // between the first reload and the attach are not lost (2026-10-27).
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'support/connection_v2_fixtures.dart';
 import 'support/fake_event_channel.dart';
 

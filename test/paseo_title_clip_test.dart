@@ -1,7 +1,7 @@
 // Paseo cuts a new agent's title from the first prompt at 60 characters with
 // no sign of it; the header must show that cut as an ellipsis.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
+import 'package:haizhucode/paseo/mappers.dart';
 
 String _title(String title) => paseoSession({
   'id': 'a1',

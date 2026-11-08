@@ -367,8 +367,8 @@ String _normalize(String path) {
 }
 
 String _resolve(String from, String uri) {
-  if (uri.startsWith('package:opencode_mobile/')) {
-    return 'lib/${uri.substring('package:opencode_mobile/'.length)}';
+  if (uri.startsWith('package:haizhucode/')) {
+    return 'lib/${uri.substring('package:haizhucode/'.length)}';
   }
   final dir = from.substring(0, from.lastIndexOf('/'));
   return _normalize('$dir/$uri');

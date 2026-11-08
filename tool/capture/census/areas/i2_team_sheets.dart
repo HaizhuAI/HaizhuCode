@@ -10,21 +10,21 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
-import 'package:opencode_mobile/termux/team_runtime.dart';
-import 'package:opencode_mobile/ui/screens/team/team_page.dart';
-import 'package:opencode_mobile/ui/screens/team/agent_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/gate_sheet.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart'
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
+import 'package:haizhucode/termux/team_runtime.dart';
+import 'package:haizhucode/ui/screens/team/team_page.dart';
+import 'package:haizhucode/ui/screens/team/agent_screen.dart';
+import 'package:haizhucode/ui/screens/team/gate_sheet.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart'
     show TeamConversationScreen;
-import 'package:opencode_mobile/ui/screens/team/task_details_sheet.dart';
-import 'package:opencode_mobile/ui/screens/team/team_home_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/work_sheet.dart';
-import 'package:opencode_mobile/state/phone_host.dart' show PhoneHostKind;
-import 'package:opencode_mobile/ui/screens/this_phone_screen.dart';
-import 'package:opencode_mobile/ui/widgets/team_phone_onboarding.dart';
+import 'package:haizhucode/ui/screens/team/task_details_sheet.dart';
+import 'package:haizhucode/ui/screens/team/team_home_screen.dart';
+import 'package:haizhucode/ui/screens/team/work_sheet.dart';
+import 'package:haizhucode/state/phone_host.dart' show PhoneHostKind;
+import 'package:haizhucode/ui/screens/this_phone_screen.dart';
+import 'package:haizhucode/ui/widgets/team_phone_onboarding.dart';
 
 import '../census_core.dart';
 import '../support/i1_team_core_world.dart';

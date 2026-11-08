@@ -25,7 +25,7 @@ if (keystorePropertiesFile.isFile) {
 }
 
 android {
-    namespace = "io.github.eslamasabry.opencode_mobile"
+    namespace = "io.github.haizhu.code"
     buildFeatures {
         buildConfig = true
     }
@@ -41,7 +41,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "io.github.eslamasabry.opencode_mobile"
+        applicationId = "io.github.haizhu.code"
         // The built-in Linux and AI Team engine use process APIs from Android 8.
         minSdk = maxOf(flutter.minSdkVersion, 26)
         targetSdk = flutter.targetSdkVersion
@@ -49,7 +49,7 @@ android {
         versionName = flutter.versionName
         // Native acceptance checkpoint hooks are inactive in normal releases.
         buildConfigField("boolean", "BUILTIN_RUNTIME_QA", ocBuiltinRuntimeQa.toString())
-        testInstrumentationRunner = "io.github.eslamasabry.opencode_mobile." +
+        testInstrumentationRunner = "io.github.haizhu.code." +
             when {
                 ocBuiltinRuntimeQa -> "BuiltinRuntimeAcceptance"
                 ocBb8Smoke -> "Bb8DeviceSmoke"
@@ -63,7 +63,7 @@ android {
         // Projects in Termux are shared by both, since neither owns them.
         if (ocPreview) applicationIdSuffix = ".preview"
         manifestPlaceholders["appLabel"] =
-            if (ocPreview) "OpenCode Preview" else "OpenCode Mobile"
+            if (ocPreview) "HaizhuCode Preview" else "HaizhuCode"
         manifestPlaceholders["appShortcuts"] =
             if (ocPreview) "@xml/shortcuts_preview" else "@xml/shortcuts"
     }

@@ -20,9 +20,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_probe.dart';
-import 'package:opencode_mobile/orchestration/events/cursor.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_probe.dart';
+import 'package:haizhucode/orchestration/events/cursor.dart';
 
 Future<void> main(List<String> args) async {
   var url = 'http://127.0.0.1:8372';

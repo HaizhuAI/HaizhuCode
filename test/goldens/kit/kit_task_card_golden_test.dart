@@ -12,11 +12,11 @@
 // and look at every changed image before committing it.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_receipt.dart';
-import 'package:opencode_mobile/ui/kit/kit_task_card.dart';
-import 'package:opencode_mobile/ui/kit/kit_task_mark.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_receipt.dart';
+import 'package:haizhucode/ui/kit/kit_task_card.dart';
+import 'package:haizhucode/ui/kit/kit_task_mark.dart';
 
 import 'kit_gallery.dart';
 

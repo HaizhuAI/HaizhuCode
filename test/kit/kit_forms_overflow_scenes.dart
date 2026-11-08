@@ -1,8 +1,8 @@
 // G6 scenes for the form, disclosure and viewer parts exported on Sept 27.
 // The matrix supplies compact/expanded windows, large text and both directions.
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/widgets/request_routes.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/widgets/request_routes.dart';
 
 import 'kit_overflow_scenes.dart';
 

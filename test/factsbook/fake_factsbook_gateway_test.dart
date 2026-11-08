@@ -2,8 +2,8 @@
 // the shapes of the contract with synthetic data only.
 import 'package:clock/clock.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_types.dart';
-import 'package:opencode_mobile/domain/factsbook/fake_factsbook_gateway.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_types.dart';
+import 'package:haizhucode/domain/factsbook/fake_factsbook_gateway.dart';
 
 import 'factsbook_test_support.dart';
 

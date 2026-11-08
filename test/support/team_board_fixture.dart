@@ -9,15 +9,15 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/domain/orchestration_work_edits.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/orchestration/adapters/fixture/fixture_gateway.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/team_board.dart';
-import 'package:opencode_mobile/ui/screens/team/team_board_screen.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/domain/orchestration_work_edits.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/orchestration/adapters/fixture/fixture_gateway.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/team_board.dart';
+import 'package:haizhucode/ui/screens/team/team_board_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// The board's clock.

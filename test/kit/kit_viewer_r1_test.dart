@@ -8,10 +8,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_buttons.dart';
-import 'package:opencode_mobile/ui/kit/kit_code_block.dart';
-import 'package:opencode_mobile/ui/kit/kit_menu.dart';
-import 'package:opencode_mobile/ui/kit/kit_viewer.dart';
+import 'package:haizhucode/ui/kit/kit_buttons.dart';
+import 'package:haizhucode/ui/kit/kit_code_block.dart';
+import 'package:haizhucode/ui/kit/kit_menu.dart';
+import 'package:haizhucode/ui/kit/kit_viewer.dart';
 
 import '../goldens/kit/kit_gallery.dart';
 import 'kit_harness.dart';

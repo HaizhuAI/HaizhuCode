@@ -46,9 +46,9 @@ void main() {
     jar = await cachedKotlinJar(
       compiler: compiler,
       sources: [
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupService.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/BuiltinServerService.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/BuiltinRestoreReceiver.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/SetupService.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/BuiltinServerService.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/BuiltinRestoreReceiver.kt',
         'test/native/phone_agent_service_harness.kt',
         ...(Directory(
             'test/native/phone_agent_service_stubs',
@@ -67,7 +67,7 @@ void main() {
           '-Xmx64m',
           '-cp',
           jar!,
-          'io.github.eslamasabry.opencode_mobile.Phone_agent_service_harnessKt',
+          'io.github.haizhu.code.Phone_agent_service_harnessKt',
           scenario,
         ]);
         expect(

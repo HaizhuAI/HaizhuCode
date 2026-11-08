@@ -2,14 +2,14 @@
 // nothing when the screen asks it to open or start something. Adapted from
 // test/support/chats_fakes.dart (the app never imports test/ from lib/).
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/builtin/git_link_repair.dart'
+import 'package:haizhucode/builtin/git_link_repair.dart'
     show GitRepairActions;
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/phone_agents_source.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/phone_agents_source.dart';
+import 'package:haizhucode/domain/server_gateway.dart'
     show ProviderConversationImportGateway, WorkspaceProject;
-import 'package:opencode_mobile/ui/kit/kit_feed_item.dart' show KitFeedRunning;
-import 'package:opencode_mobile/ui/screens/chats/chats_host.dart';
+import 'package:haizhucode/ui/kit/kit_feed_item.dart' show KitFeedRunning;
+import 'package:haizhucode/ui/screens/chats/chats_host.dart';
 
 /// A [ChatFeedSource] over fixed rows, filtered as the contract says.
 class FakeFeed implements ChatFeedSource {

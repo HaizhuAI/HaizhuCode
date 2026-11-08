@@ -94,7 +94,7 @@ parser.add_argument("--model", required=True, help="Authenticated provider/model
 parser.add_argument("--isolated-qa", action="store_true")
 parser.add_argument("--stable-app-qa", action="store_true", help="Explicit existing stable-app QA; restarts its process, preserves data")
 parser.add_argument("--allow-model-spend", action="store_true")
-parser.add_argument("--package", default="io.github.eslamasabry.opencode_mobile.preview")
+parser.add_argument("--package", default="io.github.haizhu.code.preview")
 parser.add_argument("--timeout-seconds", type=int, default=900)
 parser.add_argument("--adb", help="Path to adb; otherwise PATH or Android SDK")
 args = parser.parse_args()
@@ -108,7 +108,7 @@ if not re.fullmatch(r"[A-Za-z0-9_.:-]{1,128}", args.serial):
 # adb shell rejoins argv on the device: allow only literal, shell-safe identifiers.
 if len(args.model) > 256 or not re.fullmatch(r"[A-Za-z0-9_.:-]+/[A-Za-z0-9_./:-]+", args.model):
     fail("preflight", "invalid_model_identifier", 64)
-expected_package = "io.github.eslamasabry.opencode_mobile" + ("" if args.stable_app_qa else ".preview")
+expected_package = "io.github.haizhu.code" + ("" if args.stable_app_qa else ".preview")
 if args.package != expected_package:
     fail("preflight", "explicit_target_package_required", 64)
 if not 30 <= args.timeout_seconds <= 3600:
@@ -138,7 +138,7 @@ abi = preflight("shell", "getprop", "ro.product.cpu.abi")
 if abi not in ("arm64-v8a", "x86_64"):
     fail("preflight", "unsupported_device_abi")
 test_package = args.package + ".test"
-runner = "io.github.eslamasabry.opencode_mobile.PhoneEngineAcceptance"
+runner = "io.github.haizhu.code.PhoneEngineAcceptance"
 component = test_package + "/" + runner
 for package in (args.package, test_package):
     paths = preflight("shell", "pm", "path", package).splitlines()

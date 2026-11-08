@@ -4,11 +4,11 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/rendering.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
+import 'package:haizhucode/ui/app_theme.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
-import 'package:opencode_mobile/ui/screens/review_workspace.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/ui/screens/review_workspace.dart';
 
 // DiffPage (screens/review_workspace.dart, which replaced
 // widgets/diff_view.dart in slice-P3.7a) is the read-only diff page over

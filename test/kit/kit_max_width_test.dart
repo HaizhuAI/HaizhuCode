@@ -4,16 +4,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_composer.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_markdown.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_message.dart';
-import 'package:opencode_mobile/ui/kit/kit_layout.dart';
-import 'package:opencode_mobile/ui/kit/kit_chip.dart';
-import 'package:opencode_mobile/ui/kit/kit_max_width.dart';
-import 'package:opencode_mobile/ui/kit/kit_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_line.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_composer.dart';
+import 'package:haizhucode/ui/kit/chat/kit_markdown.dart';
+import 'package:haizhucode/ui/kit/chat/kit_message.dart';
+import 'package:haizhucode/ui/kit/kit_layout.dart';
+import 'package:haizhucode/ui/kit/kit_chip.dart';
+import 'package:haizhucode/ui/kit/kit_max_width.dart';
+import 'package:haizhucode/ui/kit/kit_row.dart';
+import 'package:haizhucode/ui/kit/kit_status_line.dart';
 
 final _prose = List.filled(60, 'A long sentence in the agent reply.').join(' ');
 

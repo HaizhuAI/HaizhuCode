@@ -7,11 +7,11 @@
 // wrapped it, and the wrapped cause's own details (the host's refusal, the
 // daemon's sentence) were dropped on the way to Details.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_failure.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/paseo/chat_feed_source.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
+import 'package:haizhucode/domain/product_failure.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/paseo/chat_feed_source.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
 
 import 'paseo_acp_pilot_test.dart' show FakePaseoSocket;
 

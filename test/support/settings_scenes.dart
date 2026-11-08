@@ -9,18 +9,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart' show KitPageRoute;
-import 'package:opencode_mobile/ui/theme_packs.dart';
-import 'package:opencode_mobile/ui/screens/about_screen.dart';
-import 'package:opencode_mobile/ui/screens/app_diagnostics_screen.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_probe.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart' show KitPageRoute;
+import 'package:haizhucode/ui/theme_packs.dart';
+import 'package:haizhucode/ui/screens/about_screen.dart';
+import 'package:haizhucode/ui/screens/app_diagnostics_screen.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 // AUDIT TOOLING (audit/style-coherence): no-op unless AUDIT_STYLE is set.
@@ -100,7 +100,7 @@ void _mockPlatform(WidgetTester tester) {
   messenger.setMockMethodCallHandler(
     info,
     (call) async => <String, dynamic>{
-      'appName': 'OpenCode Mobile',
+      'appName': 'HaizhuCode',
       'packageName': 'com.opencode.mobile',
       'version': '1.0.44',
       'buildNumber': '52',

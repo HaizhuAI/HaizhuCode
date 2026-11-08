@@ -8,11 +8,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/codex/gateway.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/codex/gateway.dart'
     show codexServerCapabilities;
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
 
 import 'chat_3_support.dart';
 import '../support/composer_tools.dart';

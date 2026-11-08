@@ -10,11 +10,11 @@
 // renders the old code and the new.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/phone_host.dart';
-import 'package:opencode_mobile/ui/screens/about_screen.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
-import 'package:opencode_mobile/ui/screens/this_phone_screen.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/phone_host.dart';
+import 'package:haizhucode/ui/screens/about_screen.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
+import 'package:haizhucode/ui/screens/this_phone_screen.dart';
 
 import '../../test/revamp/screen_phone_1_fixtures.dart' show pumpPhone;
 import '../../test/support/setup_capture_preferences.dart';

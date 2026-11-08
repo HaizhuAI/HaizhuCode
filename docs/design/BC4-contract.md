@@ -35,8 +35,8 @@ Backups are shared installed programs, not per-profile account data. Profile del
 Extract this single `diff` block to a temporary `.patch` and run `git apply --check <patch>` from the repository root before coordinator application. This proposal modifies only coordinator/BB-owned `BuiltinLinux.kt` and coordinator-owned `agent_scripts.dart`; BC did not edit either source. Other catalog agents retain their prior installation branch. After application, the coordinator must format/analyze, run focused native/catalog regressions, then prove interrupted Claude/Paseo/OpenCode updates through an actual cold app start on `emulator-5554` under its shared lock. Include orphan-installer and SIGKILL stale-lock cases; do not mark BC4 done from helper-only proof.
 
 ```diff
---- a/android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/BuiltinLinux.kt
-+++ b/android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/BuiltinLinux.kt
+--- a/android/app/src/main/kotlin/io/github/haizhu/code/BuiltinLinux.kt
++++ b/android/app/src/main/kotlin/io/github/haizhu/code/BuiltinLinux.kt
 @@ -269,6 +269,161 @@
              .start().also { processes.add(it); processConfinement[it] = prootIsConfined }
      }

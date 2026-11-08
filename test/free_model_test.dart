@@ -2,8 +2,8 @@
 // provider signed in answers with OpenCode's own free model, which is slower.
 // The rule the chat, the model chip and This phone share.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/free_model.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/free_model.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 CatalogModel _model(String provider, String id, ModelCost? cost) =>
     CatalogModel(

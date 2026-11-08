@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/claude_scripts.dart';
-import 'package:opencode_mobile/builtin/setup/setup_scripts.dart';
+import 'package:haizhucode/builtin/setup/claude_scripts.dart';
+import 'package:haizhucode/builtin/setup/setup_scripts.dart';
 
 void main() {
   late Directory temp;

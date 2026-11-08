@@ -8,10 +8,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/ui/kit/kit_diff_view.dart';
-import 'package:opencode_mobile/ui/kit/kit_request_card.dart';
-import 'package:opencode_mobile/ui/screens/chat/permission_sheet.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/ui/kit/kit_diff_view.dart';
+import 'package:haizhucode/ui/kit/kit_request_card.dart';
+import 'package:haizhucode/ui/screens/chat/permission_sheet.dart';
 import 'support/plain_text_finder.dart';
 
 PermissionRequest _permission({

@@ -2,13 +2,13 @@
 // GitHub. The redaction cases use fake keys only; none is a real credential.
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/report_problem.dart';
-import 'package:opencode_mobile/feedback/problem_report.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/ui/kit/kit_notice.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
-import 'package:opencode_mobile/ui/widgets/external_link.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/report_problem.dart';
+import 'package:haizhucode/feedback/problem_report.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/ui/kit/kit_notice.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
+import 'package:haizhucode/ui/widgets/external_link.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 // Fake credentials, split so no scanner mistakes this file for a leak.
@@ -242,7 +242,7 @@ void main() {
         await problemReportAppVersion(
           info: PackageInfo(
             appName: 'opencode_mobile',
-            packageName: 'io.github.eslamasabry.opencode_mobile',
+            packageName: 'io.github.haizhu.code',
             version: '1.0.31',
             buildNumber: '32',
           ),

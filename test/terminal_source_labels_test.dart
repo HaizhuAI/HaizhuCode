@@ -3,8 +3,8 @@
 // (lib/ui/screens/terminal_screen.dart, owner screenshot of APK 2099).
 import 'package:flutter/widgets.dart' show Locale;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/terminal_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/terminal_screen.dart';
 
 void main() {
   final l10n = lookupAppLocalizations(const Locale('en'));

@@ -1,5 +1,5 @@
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 /// Explicit supported-server fixture; no protocol client or network is created.
 const ServerCapabilities catalogServerCapabilities = ServerCapabilities(

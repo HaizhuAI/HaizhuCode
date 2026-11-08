@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/session_slice_capabilities.dart';
-import 'package:opencode_mobile/domain/staged_revert_message_count.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/session_slice_capabilities.dart';
+import 'package:haizhucode/domain/staged_revert_message_count.dart';
 
 class _Operations implements StagedRevertGateway {
   _Operations([this.prompt = '']);

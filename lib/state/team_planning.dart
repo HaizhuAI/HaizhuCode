@@ -58,7 +58,7 @@ String teamWorkerPoolId(String projectId) => '$projectId/$teamWorkerPoolName';
 
 /// First line of every Start-a-run message; how a record is recognised
 /// as a planning request after a restart.
-const teamPlanningMarker = '[OpenCode Mobile · Start a run]';
+const teamPlanningMarker = '[HaizhuCode · Start a run]';
 
 /// Characters of the objective a run title must carry to count as the
 /// run the request produced.

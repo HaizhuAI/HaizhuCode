@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/dto/usage.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_mappers.dart';
-import 'package:opencode_mobile/orchestration/models/usage.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/dto/usage.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_mappers.dart';
+import 'package:haizhucode/orchestration/models/usage.dart';
 
 void main() {
   test('today retains partial and unpriced estimate evidence', () {

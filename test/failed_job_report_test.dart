@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team.dart';
-import 'package:opencode_mobile/builtin/team/builtin_team_job.dart';
-import 'package:opencode_mobile/diagnostics/failed_job_report.dart';
-import 'package:opencode_mobile/domain/development_service.dart';
-import 'package:opencode_mobile/domain/managed_shell.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/team/builtin_team.dart';
+import 'package:haizhucode/builtin/team/builtin_team_job.dart';
+import 'package:haizhucode/diagnostics/failed_job_report.dart';
+import 'package:haizhucode/domain/development_service.dart';
+import 'package:haizhucode/domain/managed_shell.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 SetupProgress setup({
   SetupState state = SetupState.failed,

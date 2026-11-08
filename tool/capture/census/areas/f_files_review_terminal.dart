@@ -4,16 +4,16 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/review_handoff.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/ui/screens/review_workspace.dart';
-import 'package:opencode_mobile/ui/screens/staged_revert_screen.dart';
-import 'package:opencode_mobile/ui/screens/terminal_screen.dart';
-import 'package:opencode_mobile/ui/widgets/file_preview.dart';
-import 'package:opencode_mobile/ui/widgets/run_command_dialog.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/review_handoff.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/screens/review_workspace.dart';
+import 'package:haizhucode/ui/screens/staged_revert_screen.dart';
+import 'package:haizhucode/ui/screens/terminal_screen.dart';
+import 'package:haizhucode/ui/widgets/file_preview.dart';
+import 'package:haizhucode/ui/widgets/run_command_dialog.dart';
 
 import '../../fixtures.dart';
 import '../census_core.dart';

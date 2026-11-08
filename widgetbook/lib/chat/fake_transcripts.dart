@@ -1,7 +1,7 @@
 // Sample conversations for the chat use-cases: invented, about a fictional
 // "shopfront" project. Nothing private.
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 import '../fakes/fake_gateway.dart';
 

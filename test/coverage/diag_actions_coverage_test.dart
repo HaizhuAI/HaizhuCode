@@ -18,12 +18,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/app_exit_history.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/ui/screens/demo_screen.dart';
-import 'package:opencode_mobile/ui/screens/exit_history_section.dart';
-import 'package:opencode_mobile/ui/screens/session_export_screen.dart';
+import 'package:haizhucode/domain/app_exit_history.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/ui/screens/demo_screen.dart';
+import 'package:haizhucode/ui/screens/exit_history_section.dart';
+import 'package:haizhucode/ui/screens/session_export_screen.dart';
 
 import '../../tool/capture/fixtures.dart';
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

@@ -18,14 +18,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style_theme.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/style/kit_style_theme.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 
 import '../../test/support/composer_tools.dart';
 import '../../test/support/setup_capture_preferences.dart';
@@ -63,7 +63,7 @@ void _mockPlatform(WidgetTester tester) {
   messenger.setMockMethodCallHandler(
     info,
     (call) async => <String, dynamic>{
-      'appName': 'OpenCode Mobile',
+      'appName': 'HaizhuCode',
       'packageName': 'com.opencode.mobile',
       'version': '1.0.44',
       'buildNumber': '52',

@@ -1,4 +1,4 @@
-// OpenCode Mobile one-shot usage reader. Read-only. Runs once, prints ONE line
+// HaizhuCode one-shot usage reader. Read-only. Runs once, prints ONE line
 //   OCMN_USAGE_V1 <base64 of JSON>
 // and exits. It opens no port, installs nothing, writes no file, and never
 // prints a token, key, email, path or provider error text. The app passes this

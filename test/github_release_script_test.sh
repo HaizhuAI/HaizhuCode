@@ -11,7 +11,7 @@ cp "$repo_root/scripts/"{release.sh,release_github.sh,verify_github_release.py} 
 mkdir -p "$task_root/.github/workflows"
 cp "$repo_root/.github/workflows/android-quality.yml" "$task_root/.github/workflows/"
 printf 'version: 1.0.43+49\n' > "$task_root/pubspec.yaml"
-printf '# OpenCode Mobile 1.0.43+49\n\nFixture release notes.\n' > "$task_root/docs/releases/v1.0.43+49.md"
+printf '# HaizhuCode 1.0.43+49\n\nFixture release notes.\n' > "$task_root/docs/releases/v1.0.43+49.md"
 printf 'fixture signed APK bytes\n' > "$task_root/artifact/opencode-mobile-1.0.43+49.apk"
 printf 'fixture arm64 APK bytes\n' > "$task_root/artifact/opencode-mobile-1.0.43+49-arm64-v8a.apk"
 printf 'fixture armv7 APK bytes\n' > "$task_root/artifact/opencode-mobile-1.0.43+49-armeabi-v7a.apk"
@@ -55,7 +55,7 @@ MOCK
 cat > "$task_root/mock-bin/aapt" <<'MOCK'
 #!/usr/bin/env bash
 set -euo pipefail
-echo "package: name='${MOCK_PACKAGE:-io.github.eslamasabry.opencode_mobile}' versionCode='${MOCK_CODE:-49}' versionName='1.0.43'"
+echo "package: name='${MOCK_PACKAGE:-io.github.haizhu.code}' versionCode='${MOCK_CODE:-49}' versionName='1.0.43'"
 MOCK
 cat > "$task_root/mock-bin/gh" <<'MOCK'
 #!/usr/bin/env bash

@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/motion/kit_reveal.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/motion/kit_reveal.dart';
 
 Widget _host(bool on) => MaterialApp(
   theme: AppTheme.dark(),

@@ -4,7 +4,7 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_probe.dart';
+import 'package:haizhucode/domain/server_probe.dart';
 
 /// Serves canned HTTP answers per path so every probe branch is exercised
 /// without a network.

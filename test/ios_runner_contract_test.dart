@@ -17,7 +17,7 @@ void main() {
       expect(app, contains('FlutterImplicitEngineDelegate'));
       expect(app, contains('GeneratedPluginRegistrant.register'));
       expect(scene, contains('FlutterSceneDelegate'));
-      expect(project, contains('io.github.eslamasabry.opencodeMobile'));
+      expect(project, contains('io.github.haizhu.code'));
       expect(project, contains('IPHONEOS_DEPLOYMENT_TARGET = 15.0;'));
       expect(project, isNot(contains('DEVELOPMENT_TEAM =')));
       expect(project, contains('Runner/DebugProfile.entitlements'));
@@ -35,7 +35,7 @@ void main() {
 
   test('iOS configuration does not claim unsupported native capabilities', () {
     final info = File('ios/Runner/Info.plist').readAsStringSync();
-    expect(info, contains('<string>OpenCode Mobile</string>'));
+    expect(info, contains('<string>HaizhuCode</string>'));
     expect(info, contains('NSLocalNetworkUsageDescription'));
     for (final key in [
       'NSAllowsArbitraryLoads',

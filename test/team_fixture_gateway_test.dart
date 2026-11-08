@@ -4,9 +4,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/fixture/fixture_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/gascity/gascity_mappers.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/fixture/fixture_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/gascity_mappers.dart';
 
 Directory _findFixtureRoot() {
   var dir = Directory.current;

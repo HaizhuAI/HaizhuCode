@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/draft_attachments.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/draft_attachments.dart';
 
 void main() {
   late Directory directory;

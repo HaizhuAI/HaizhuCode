@@ -94,7 +94,7 @@ Historical assets **`opencode-mobile-1.0.34+35.apk`** and **`SHA256SUMS`**
 remain on the broken release for provenance. They are not the replacement APK.
 
 **Check the signing identity before replacing an existing installation.**
-The package is `io.github.eslamasabry.opencode_mobile`. This release uses the
+The package is `io.github.haizhu.code`. This release uses the
 permanent public signer:
 
 ```text

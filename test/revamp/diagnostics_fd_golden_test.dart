@@ -14,12 +14,12 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/crash_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/crash_report.dart';
-import 'package:opencode_mobile/domain/app_diagnostics_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/app_diagnostics_screen.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/crash_diagnostics.dart';
+import 'package:haizhucode/diagnostics/crash_report.dart';
+import 'package:haizhucode/domain/app_diagnostics_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/app_diagnostics_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;

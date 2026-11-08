@@ -3,8 +3,8 @@
 // after Android stopped the phone's team, and so turning the plugin off or
 // deleting the profile removes it with the rest.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

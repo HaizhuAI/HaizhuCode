@@ -3,11 +3,11 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/app_diagnostics.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
-import 'package:opencode_mobile/diagnostics/report_problem.dart';
-import 'package:opencode_mobile/diagnostics/report_problem_capture.dart';
-import 'package:opencode_mobile/ui/kit/kit_log_panel.dart';
+import 'package:haizhucode/diagnostics/app_diagnostics.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
+import 'package:haizhucode/diagnostics/report_problem.dart';
+import 'package:haizhucode/diagnostics/report_problem_capture.dart';
+import 'package:haizhucode/ui/kit/kit_log_panel.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

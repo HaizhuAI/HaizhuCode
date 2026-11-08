@@ -3,14 +3,14 @@
 // the work runs, an edit in progress. Shared so every picture shows the same
 // work. Not a test file.
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_markdown.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_message.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_step_timeline.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_tool_row.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_work_line.dart';
-import 'package:opencode_mobile/ui/kit/kit_code_block.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_mark.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/chat/kit_markdown.dart';
+import 'package:haizhucode/ui/kit/chat/kit_message.dart';
+import 'package:haizhucode/ui/kit/chat/kit_step_timeline.dart';
+import 'package:haizhucode/ui/kit/chat/kit_tool_row.dart';
+import 'package:haizhucode/ui/kit/chat/kit_work_line.dart';
+import 'package:haizhucode/ui/kit/kit_code_block.dart';
+import 'package:haizhucode/ui/kit/kit_status_mark.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 
 /// English first, Arabic second.
 typedef StepWords = String Function(String en, String ar);

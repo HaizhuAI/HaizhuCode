@@ -1,22 +1,22 @@
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/builtin/builtin_folders.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/builtin_server.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/scenes/setup_ready_scene.dart';
-import 'package:opencode_mobile/ui/navigation/chat_route.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_ready_screen.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_routes.dart';
-import 'package:opencode_mobile/ui/screens/project_folder_actions.dart';
+import 'package:haizhucode/builtin/builtin_folders.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_server.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/scenes/setup_ready_scene.dart';
+import 'package:haizhucode/ui/navigation/chat_route.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_ready_screen.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_routes.dart';
+import 'package:haizhucode/ui/screens/project_folder_actions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Screen C (docs/design/phone-setup-v2-2026-09-24.md): one name makes the

@@ -5,9 +5,9 @@
 // hours. Payload shapes are Paseo 0.11.2's (claude/task-notification-tool-
 // call.js and tool-call-detail-primitives.js; 0.9.2 is the same).
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/background_tasks.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
+import 'package:haizhucode/domain/background_tasks.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/paseo/mappers.dart';
 
 const _callId = 'toolu_01BuildOwner';
 const _command =

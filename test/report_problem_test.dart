@@ -2,11 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
-import 'package:opencode_mobile/diagnostics/report_problem.dart';
-import 'package:opencode_mobile/platform/app_exit.dart';
-import 'package:opencode_mobile/platform/thermal.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
+import 'package:haizhucode/diagnostics/report_problem.dart';
+import 'package:haizhucode/platform/app_exit.dart';
+import 'package:haizhucode/platform/thermal.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 void main() {
   late Directory directory;

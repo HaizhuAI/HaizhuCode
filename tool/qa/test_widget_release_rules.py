@@ -23,7 +23,7 @@ class WidgetReleaseRulesTest(unittest.TestCase):
             verify_mapping(mapping)
 
     def test_worker_constructor_or_class_rename_fails(self):
-        name = 'io.github.eslamasabry.opencode_mobile.WidgetStatusWorker'
+        name = 'io.github.haizhu.code.WidgetStatusWorker'
         for mapping in (
             retained_mapping().replace('void <init>(android.content.Context,androidx.work.WorkerParameters)',
                                        'void <init>()'),

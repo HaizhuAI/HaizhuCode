@@ -3,10 +3,10 @@
 // connection's own sign-in.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/usage_signin_destination.dart';
-import 'package:opencode_mobile/ui/screens/usage/usage_actions.dart';
-import 'package:opencode_mobile/ui/screens/usage_hub_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/usage_signin_destination.dart';
+import 'package:haizhucode/ui/screens/usage/usage_actions.dart';
+import 'package:haizhucode/ui/screens/usage_hub_screen.dart';
 
 import 'support/usage_ui_harness.dart';
 

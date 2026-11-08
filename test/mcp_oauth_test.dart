@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/mcp_oauth.dart';
+import 'package:haizhucode/domain/mcp_oauth.dart';
 
 class _RealHttpOverrides extends HttpOverrides {}
 

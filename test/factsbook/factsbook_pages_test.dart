@@ -8,26 +8,26 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_capabilities.dart';
-import 'package:opencode_mobile/domain/factsbook/factsbook_types.dart';
-import 'package:opencode_mobile/domain/factsbook/fake_factsbook_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_flag.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_session.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_store.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/screens/about_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/about_you_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/not_saved_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/settings_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/thing_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/areas_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/connect_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/memory_care_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/memory_section.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/reminders_screen.dart';
-import 'package:opencode_mobile/ui/screens/factsbook/status_screen.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_capabilities.dart';
+import 'package:haizhucode/domain/factsbook/factsbook_types.dart';
+import 'package:haizhucode/domain/factsbook/fake_factsbook_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/factsbook/factsbook_flag.dart';
+import 'package:haizhucode/state/factsbook/factsbook_session.dart';
+import 'package:haizhucode/state/factsbook/factsbook_store.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/screens/about_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/about_you_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/not_saved_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/settings_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/thing_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/areas_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/connect_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/memory_care_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/memory_section.dart';
+import 'package:haizhucode/ui/screens/factsbook/reminders_screen.dart';
+import 'package:haizhucode/ui/screens/factsbook/status_screen.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -1204,7 +1204,7 @@ void main() {
   group('the developer switch in About', () {
     setUp(() {
       PackageInfo.setMockInitialValues(
-        appName: 'OpenCode Mobile',
+        appName: 'HaizhuCode',
         packageName: 'io.example.app',
         version: '1.0.0',
         buildNumber: '1',

@@ -1,13 +1,13 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart'
+import 'package:haizhucode/domain/models.dart'
     show ProviderInfo, ProvidersResponse;
-import 'package:opencode_mobile/domain/agent_account.dart';
-import 'package:opencode_mobile/domain/provider_usage.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/state/paseo_usage_monitor.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/usage_subscription_sources.dart';
-import 'package:opencode_mobile/state/usage_subscriptions_controller.dart';
+import 'package:haizhucode/domain/agent_account.dart';
+import 'package:haizhucode/domain/provider_usage.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/state/paseo_usage_monitor.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/usage_subscription_sources.dart';
+import 'package:haizhucode/state/usage_subscriptions_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final _now = DateTime.utc(2026, 10, 13, 12);

@@ -10,14 +10,14 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   const androidMain = 'android/app/src/main';
   final activity = File(
-    '$androidMain/kotlin/io/github/eslamasabry/opencode_mobile/'
+    '$androidMain/kotlin/io/github/haizhu/code/'
     'MainActivity.kt',
   ).readAsStringSync();
   final channel = File(
-    '$androidMain/kotlin/io/github/eslamasabry/opencode_mobile/LaunchShortcutChannel.kt',
+    '$androidMain/kotlin/io/github/haizhu/code/LaunchShortcutChannel.kt',
   ).readAsStringSync();
   final launches = File(
-    '$androidMain/kotlin/io/github/eslamasabry/opencode_mobile/LaunchActivityBridge.kt',
+    '$androidMain/kotlin/io/github/haizhu/code/LaunchActivityBridge.kt',
   ).readAsStringSync();
   final shortcuts = File(
     '$androidMain/res/xml/shortcuts.xml',
@@ -51,7 +51,7 @@ void main() {
     expect(
       preview,
       contains(
-        'android:targetPackage="io.github.eslamasabry.opencode_mobile.preview"',
+        'android:targetPackage="io.github.haizhu.code.preview"',
       ),
     );
     expect(
@@ -75,7 +75,7 @@ void main() {
           intent,
           contains(
             'android:targetClass='
-            '"io.github.eslamasabry.opencode_mobile.MainActivity"',
+            '"io.github.haizhu.code.MainActivity"',
           ),
         );
       }

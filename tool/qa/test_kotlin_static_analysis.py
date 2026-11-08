@@ -125,7 +125,7 @@ class KotlinStaticAnalysisTest(unittest.TestCase):
     )
     def test_established_namespace_is_valid_but_other_underscores_fail(self):
         self.fixture.unlink()
-        package = "io.github.eslamasabry.opencode_mobile"
+        package = "io.github.haizhu.code"
         folder = self.source.joinpath(*package.split("."))
         folder.mkdir(parents=True)
         source = folder / "KotlinGateFixture.kt"

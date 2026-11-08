@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/live_background.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
+import 'package:haizhucode/background/live_background.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _unpaused = <String, dynamic>{

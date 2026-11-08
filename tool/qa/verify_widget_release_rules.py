@@ -7,7 +7,7 @@ import re
 
 REQUIRED = {
     'androidx.work.impl.WorkDatabase_Impl': '',
-    'io.github.eslamasabry.opencode_mobile.WidgetStatusWorker':
+    'io.github.haizhu.code.WidgetStatusWorker':
         'android.content.Context,androidx.work.WorkerParameters',
 }
 

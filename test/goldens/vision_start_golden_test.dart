@@ -14,8 +14,8 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/chats/new_chat_screen.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/chats/new_chat_screen.dart';
 
 import 'kit/kit_gallery.dart' show loadKitGalleryFonts;
 import '../support/agents_fakes.dart';

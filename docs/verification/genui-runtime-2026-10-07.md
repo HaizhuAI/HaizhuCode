@@ -1,7 +1,7 @@
 # Agent cards runtime qualification — 2026-10-07
 
 Scope: dev emulator **emulator-5554** only, package
-`io.github.eslamasabry.opencode_mobile`, existing in-app Ubuntu. No physical-phone
+`io.github.haizhu.code`, existing in-app Ubuntu. No physical-phone
 command, APK build/copy, dependency install, daemon restart, commit, push or release.
 The finish line was a real completed MCP input plus an idle-only message answer
 receipt, and finite Paseo history reads. App UI/device-restart qualification was

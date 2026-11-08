@@ -9,12 +9,12 @@
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/chats/chats_home_screen.dart';
-import 'package:opencode_mobile/ui/widgets/app_connection_status.dart';
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/chats/chats_home_screen.dart';
+import 'package:haizhucode/ui/widgets/app_connection_status.dart';
 
 import '../../test/support/chats_fakes.dart';
 import 'fixtures.dart';
@@ -58,7 +58,7 @@ void main() {
       id: 'app-stopped',
       icon: AppIconography.restart,
       message: before
-          ? "OpenCode Mobile was closed at 4:54 PM. Your phone's OpenCode "
+          ? "HaizhuCode was closed at 4:54 PM. Your phone's OpenCode "
                 'stopped with it and is running again.'
           : 'Restarted after the app closed',
       action: KitAction(label: 'Keep it running', onPressed: () {}),

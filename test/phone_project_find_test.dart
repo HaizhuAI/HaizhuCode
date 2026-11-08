@@ -3,11 +3,11 @@
 // (lib/ui/widgets/folder_browser.dart).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_folders.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/phone_project_scan.dart';
-import 'package:opencode_mobile/platform/phone_storage_folders.dart';
-import 'package:opencode_mobile/ui/widgets/folder_browser.dart';
+import 'package:haizhucode/builtin/builtin_folders.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/phone_project_scan.dart';
+import 'package:haizhucode/platform/phone_storage_folders.dart';
+import 'package:haizhucode/ui/widgets/folder_browser.dart';
 
 const _root = PhoneStorageFolders.root;
 

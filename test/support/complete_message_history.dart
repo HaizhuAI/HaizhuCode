@@ -1,6 +1,6 @@
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 /// Existing non-pagination fixtures expose their transcript as one complete
 /// chronological page. Pagination-specific fakes override messagePage directly.

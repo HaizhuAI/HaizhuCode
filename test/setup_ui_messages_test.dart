@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/state/pairing.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/widgets/setup_ui_messages.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/state/pairing.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/widgets/setup_ui_messages.dart';
 
 void main() {
   test('English error presentation preserves actionable validation detail', () {

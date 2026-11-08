@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/api2/events.dart';
-import 'package:opencode_mobile/api2/gateway_events.dart';
-import 'package:opencode_mobile/api2/gateway_mappers.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/state/session_read_state.dart';
+import 'package:haizhucode/api2/events.dart';
+import 'package:haizhucode/api2/gateway_events.dart';
+import 'package:haizhucode/api2/gateway_mappers.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/state/session_read_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'support/complete_message_history.dart';
 

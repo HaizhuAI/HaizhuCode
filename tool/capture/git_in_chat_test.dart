@@ -9,14 +9,14 @@
 //   flutter test --no-pub --concurrency=1 tool/capture/git_in_chat_test.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/remote_shell.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/git_page_controller.dart';
-import 'package:opencode_mobile/state/git_workspace.dart';
-import 'package:opencode_mobile/state/github_account.dart';
-import 'package:opencode_mobile/ui/git/git_sheet.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/remote_shell.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/git_page_controller.dart';
+import 'package:haizhucode/state/git_workspace.dart';
+import 'package:haizhucode/state/github_account.dart';
+import 'package:haizhucode/ui/git/git_sheet.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 
 import '../../test/git/git_fixtures.dart' as fx;
 import '../../test/git/git_test_support.dart';

@@ -2,7 +2,7 @@
 // "DELETE /pty/… failed (HTTP 404): PTY session not found" as a red error
 // (2026-09-24). A 404 on close means it is already gone: done, not an error.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/gateway_operations.dart';
+import 'package:haizhucode/api2/gateway_operations.dart';
 
 import 'api2_interaction_gateway_test.dart'
     show withServer, gatewayFor, writeJson;

@@ -124,7 +124,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'تغيّر الخادم أو المشروع أثناء فتح هذا العرض. أغلقه وابدأ مجددًا من المشروع المطلوب.';
 
   @override
-  String get appTitle => 'OpenCode Mobile';
+  String get appTitle => 'HaizhuCode';
 
   @override
   String get libraryModelsAgentsTitle => 'النماذج والوكلاء';
@@ -146,7 +146,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String aboutBuildVersion(String version, String buildNumber) {
-    return 'OpenCode Mobile $version+$buildNumber';
+    return 'HaizhuCode $version+$buildNumber';
   }
 
   @override
@@ -4190,7 +4190,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get e7SettingsNonAffiliation =>
-      'OpenCode Mobile مشروع مجتمعي مستقل. لم يُنشئه فريق OpenCode الرسمي ولا يتولّى صيانته أو يؤيّده، وليس مرتبطًا به.';
+      'HaizhuCode مشروع مجتمعي مستقل. لم يُنشئه فريق OpenCode الرسمي ولا يتولّى صيانته أو يؤيّده، وليس مرتبطًا به.';
 
   @override
   String e7SettingsDiagnosticOccurrences(int count) {
@@ -8151,7 +8151,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get handoffUiPhoneIntro =>
-      'امسح هذا الرمز بتطبيق OpenCode Mobile على الهاتف الآخر. لا يحمل الرمز سوى معرّف هذا الخادم المحفوظ ومعرّف المحادثة: لا رسائل ولا عنوان ولا كلمة مرور. يجب أن يكون هذا الخادم محفوظًا مسبقًا على الهاتف الآخر.';
+      'امسح هذا الرمز بتطبيق HaizhuCode على الهاتف الآخر. لا يحمل الرمز سوى معرّف هذا الخادم المحفوظ ومعرّف المحادثة: لا رسائل ولا عنوان ولا كلمة مرور. يجب أن يكون هذا الخادم محفوظًا مسبقًا على الهاتف الآخر.';
 
   @override
   String get handoffUiPhoneQrLabel => 'رمز QR يفتح هذه المحادثة على هاتف آخر';
@@ -13042,22 +13042,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String appExitForceStopped(String time) {
-    return 'أغلق أندرويد OpenCode Mobile $time';
+    return 'أغلق أندرويد HaizhuCode $time';
   }
 
   @override
   String appExitLowMemory(String time) {
-    return 'أغلق أندرويد OpenCode Mobile $time لتحرير الذاكرة';
+    return 'أغلق أندرويد HaizhuCode $time لتحرير الذاكرة';
   }
 
   @override
   String appExitCrashed(String time) {
-    return 'توقّف OpenCode Mobile على نحو غير متوقع $time';
+    return 'توقّف HaizhuCode على نحو غير متوقع $time';
   }
 
   @override
   String appExitKilled(String time) {
-    return 'أوقف أندرويد OpenCode Mobile $time';
+    return 'أوقف أندرويد HaizhuCode $time';
   }
 
   @override
@@ -13136,26 +13136,26 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get keepRunningLockNubia =>
-      'افتح التطبيقات الحديثة واسحب بطاقة OpenCode Mobile للأسفل حتى يظهر القفل.';
+      'افتح التطبيقات الحديثة واسحب بطاقة HaizhuCode للأسفل حتى يظهر القفل.';
 
   @override
   String get keepRunningLockSamsung =>
-      'افتح التطبيقات الحديثة، واضغط أيقونة OpenCode Mobile فوق بطاقته واختر إبقاء مفتوحًا.';
+      'افتح التطبيقات الحديثة، واضغط أيقونة HaizhuCode فوق بطاقته واختر إبقاء مفتوحًا.';
 
   @override
   String get keepRunningLockOther =>
-      'افتح التطبيقات الحديثة، واضغط مطولًا على بطاقة OpenCode Mobile ثم اضغط القفل.';
+      'افتح التطبيقات الحديثة، واضغط مطولًا على بطاقة HaizhuCode ثم اضغط القفل.';
 
   @override
   String get keepRunningAutostartTitle => 'السماح بالتشغيل التلقائي';
 
   @override
   String get keepRunningAutostartDetail =>
-      'فعّله لتطبيق OpenCode Mobile كي لا يوقفه الهاتف في الخلفية.';
+      'فعّله لتطبيق HaizhuCode كي لا يوقفه الهاتف في الخلفية.';
 
   @override
   String get keepRunningAutostartHuawei =>
-      'في تشغيل التطبيقات، اضبط OpenCode Mobile على الإدارة يدويًا وفعّل المفاتيح الثلاثة.';
+      'في تشغيل التطبيقات، اضبط HaizhuCode على الإدارة يدويًا وفعّل المفاتيح الثلاثة.';
 
   @override
   String get keepRunningBackgroundTitle => 'السماح بالنشاط في الخلفية';
@@ -13185,7 +13185,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get keepRunningOpenFailed =>
-      'لا توجد هذه الشاشة على هذا الهاتف. افتح الإعدادات › التطبيقات › OpenCode Mobile بدلًا من ذلك.';
+      'لا توجد هذه الشاشة على هذا الهاتف. افتح الإعدادات › التطبيقات › HaizhuCode بدلًا من ذلك.';
 
   @override
   String get keepRunningFootnote =>
@@ -21032,7 +21032,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get sessionAddressIntro =>
-      'امسح الرمز باستخدام OpenCode Mobile على الهاتف الآخر. يتضمّن الرمز عنوان هذا الخادم ومعرّف المحادثة.';
+      'امسح الرمز باستخدام HaizhuCode على الهاتف الآخر. يتضمّن الرمز عنوان هذا الخادم ومعرّف المحادثة.';
 
   @override
   String get sessionAddressUnsupportedHost =>
@@ -22357,7 +22357,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get manageSpaceIntro =>
-      'يحذف المسح كل ما يحتفظ به OpenCode Mobile على هذا الهاتف، ولا يمكن التراجع عنه. صدّر مشاريعك أولًا إذا أردت الاحتفاظ بها.';
+      'يحذف المسح كل ما يحتفظ به HaizhuCode على هذا الهاتف، ولا يمكن التراجع عنه. صدّر مشاريعك أولًا إذا أردت الاحتفاظ بها.';
 
   @override
   String get manageSpaceExportFirst => 'تصدير المشاريع أولًا';
@@ -22397,7 +22397,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get manageSpaceDeleteBody =>
-      'يبدأ OpenCode Mobile مجددًا كأنه جديد. لا يمكن التراجع عن ذلك.';
+      'يبدأ HaizhuCode مجددًا كأنه جديد. لا يمكن التراجع عن ذلك.';
 
   @override
   String get manageSpaceLostServer => '«على هذا الهاتف» ومحادثاته';
@@ -22652,7 +22652,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get manageSpaceIntroNothingToExport =>
-      'يحذف المسح كل ما يحتفظ به OpenCode Mobile على هذا الهاتف، ولا يمكن التراجع عنه.';
+      'يحذف المسح كل ما يحتفظ به HaizhuCode على هذا الهاتف، ولا يمكن التراجع عنه.';
 
   @override
   String integrationsKeyOnlyHelper(String name) {

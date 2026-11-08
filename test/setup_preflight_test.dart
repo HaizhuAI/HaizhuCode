@@ -5,10 +5,10 @@
 // thresholds drive.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/preflight.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/state/download_size.dart';
-import 'package:opencode_mobile/voice/device.dart';
+import 'package:haizhucode/builtin/setup/preflight.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/state/download_size.dart';
+import 'package:haizhucode/voice/device.dart';
 
 const _download = 165000000; // 165 MB, the default registry's total.
 

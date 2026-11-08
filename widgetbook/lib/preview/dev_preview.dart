@@ -1,5 +1,5 @@
-import 'package:opencode_mobile/domain/dev_preview.dart';
-import 'package:opencode_mobile/ui/screens/dev_preview_screen.dart';
+import 'package:haizhucode/domain/dev_preview.dart';
+import 'package:haizhucode/ui/screens/dev_preview_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

@@ -2,7 +2,7 @@ import subprocess,time,xml.etree.ElementTree as E,re,json,sys
 from pathlib import Path
 from io import BytesIO
 from PIL import Image
-PKG='io.github.eslamasabry.opencode_mobile'
+PKG='io.github.haizhu.code'
 OUT = None
 _SESSION = False
 
@@ -77,7 +77,7 @@ def launch_agents():
   builtins=[n for n in ns if 'In-app Ubuntu' in text(n) and 'Connected' in text(n) and n.get('clickable')=='true']
   if builtins and 'OpenCode' in ts and 'Add server' in ts:
    tap_node(builtins[0]);time.sleep(2);continue
-  if 'OpenCode Mobile' in ts:
+  if 'HaizhuCode' in ts:
    adb('shell','am','start','-n',PKG+'/.MainActivity');time.sleep(2)
   time.sleep(1)
  shot('navigation-not-ready')

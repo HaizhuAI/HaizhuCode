@@ -5,10 +5,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/team/team_rig_screen.dart';
-import 'package:opencode_mobile/ui/widgets/team_job_words.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/team/team_rig_screen.dart';
+import 'package:haizhucode/ui/widgets/team_job_words.dart';
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'coverage/lists_support.dart' show withRealHttp;

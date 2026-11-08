@@ -1,7 +1,7 @@
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/widgets/connect_methods.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/widgets/connect_methods.dart';
 
 void main() {
   const browser = IntegrationMethodInfo(

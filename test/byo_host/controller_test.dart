@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/byo_host.dart';
-import 'package:opencode_mobile/state/byo_host_controller.dart';
-import 'package:opencode_mobile/state/profiles.dart' show ServerFlavor;
+import 'package:haizhucode/domain/byo_host.dart';
+import 'package:haizhucode/state/byo_host_controller.dart';
+import 'package:haizhucode/state/profiles.dart' show ServerFlavor;
 
 ByoHostKey key([int value = 1]) {
   final bytes = <int>[

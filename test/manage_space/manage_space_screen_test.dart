@@ -6,13 +6,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/project_export.dart';
-import 'package:opencode_mobile/builtin/project_export_controller.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/manage_space_main.dart';
-import 'package:opencode_mobile/state/profiles.dart' show AppAppearance;
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/screens/manage_space_screen.dart';
+import 'package:haizhucode/builtin/project_export.dart';
+import 'package:haizhucode/builtin/project_export_controller.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/manage_space_main.dart';
+import 'package:haizhucode/state/profiles.dart' show AppAppearance;
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/screens/manage_space_screen.dart';
 
 class FakeExportPlatform implements ProjectExportPlatform {
   String? destination = 'content://downloads/1';

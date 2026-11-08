@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/team_project.dart';
+import 'package:haizhucode/domain/team_project.dart';
 
 void main() {
   test('server diagnostic reason is additive and does not change online', () {

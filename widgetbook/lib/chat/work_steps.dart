@@ -2,9 +2,9 @@
 // ToolCard rows): one line per step on one rail, the running step's spinner,
 // an opened command as one box, and an edit's inline diff.
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

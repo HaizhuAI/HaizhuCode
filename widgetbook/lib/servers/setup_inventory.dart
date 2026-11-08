@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_customize_sheet.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_selection.dart';
-import 'package:opencode_mobile/ui/screens/team/team_intro_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_customize_sheet.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_selection.dart';
+import 'package:haizhucode/ui/screens/team/team_intro_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

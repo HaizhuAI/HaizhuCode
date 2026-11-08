@@ -65,7 +65,7 @@ allowlist is empty; the supervisor does not answer `GET /health`.
 
 ```ini
 [Unit]
-Description=OpenCode Mobile control-plane front (AI Team · Gas City)
+Description=HaizhuCode control-plane front (AI Team · Gas City)
 After=network-online.target tailscaled.service
 
 [Service]

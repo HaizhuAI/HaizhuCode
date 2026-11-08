@@ -178,7 +178,7 @@ def attach(pins, manifest, directory, tag, repository, run=subprocess.run):
     if release is None:
         created = run(["gh", "release", "create", tag, "--repo", repository,
                        "--verify-tag", "--draft", "--prerelease=false",
-                       "--title", f"OpenCode Mobile {tag[1:]}",
+                       "--title", f"HaizhuCode {tag[1:]}",
                        "--notes", "Host bundle draft. Review all release artifacts before publication."],
                       capture_output=True, text=True)
         if created.returncode != 0:

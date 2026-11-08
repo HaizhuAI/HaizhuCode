@@ -8,13 +8,13 @@
 //     tool/capture/vision_diff_git_test.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/git_page_controller.dart';
-import 'package:opencode_mobile/state/git_workspace.dart';
-import 'package:opencode_mobile/ui/git/git_sheet.dart';
-import 'package:opencode_mobile/ui/screens/chat/permission_sheet.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/git_page_controller.dart';
+import 'package:haizhucode/state/git_workspace.dart';
+import 'package:haizhucode/ui/git/git_sheet.dart';
+import 'package:haizhucode/ui/screens/chat/permission_sheet.dart'
     show permissionRequestCard;
-import 'package:opencode_mobile/ui/screens/review_workspace.dart';
+import 'package:haizhucode/ui/screens/review_workspace.dart';
 
 import '../../test/git/git_fixtures.dart' as fx;
 import '../../test/git/git_test_support.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
-import 'package:opencode_mobile/ui/widgets/agent_card_photos.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart';
+import 'package:haizhucode/ui/widgets/agent_card_photos.dart';
 
 /// A GenUiController the tests drive: states and deliveries are set by the
 /// test, answers and undos are recorded.

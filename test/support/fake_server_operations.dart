@@ -1,4 +1,4 @@
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 
 /// In-memory operations fixture paired with a synthetic server gateway.
 class FakeServerOperations extends ProductRepository {

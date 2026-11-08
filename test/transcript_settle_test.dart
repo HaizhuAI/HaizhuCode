@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/transcript_settle.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/transcript_settle.dart';
+import 'package:haizhucode/paseo/mappers.dart';
 
 Map<String, dynamic> _entry(int seq, Map<String, dynamic> item) => {
   'seqStart': seq,

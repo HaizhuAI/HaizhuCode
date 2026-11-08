@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/paseo_scripts.dart';
+import 'package:haizhucode/builtin/agents/paseo_scripts.dart';
 
 void main() {
   final lock = File(PaseoPhoneScripts.packageLockAsset).readAsStringSync();

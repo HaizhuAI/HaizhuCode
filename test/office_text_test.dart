@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/office_text.dart';
+import 'package:haizhucode/domain/office_text.dart';
 
 Uint8List _fixture(String name) =>
     File('test/fixtures/office/$name').readAsBytesSync();

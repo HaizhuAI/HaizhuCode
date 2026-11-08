@@ -2,15 +2,15 @@ import 'dart:async';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/voice_component.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/voice/automatic_setup.dart';
-import 'package:opencode_mobile/voice/automatic_setup_platform.dart';
-import 'package:opencode_mobile/voice/controller.dart';
-import 'package:opencode_mobile/voice/device.dart';
-import 'package:opencode_mobile/voice/model_download.dart';
-import 'package:opencode_mobile/voice/model_manager.dart';
-import 'package:opencode_mobile/voice/model_manifest.dart';
+import 'package:haizhucode/builtin/setup/voice_component.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/voice/automatic_setup.dart';
+import 'package:haizhucode/voice/automatic_setup_platform.dart';
+import 'package:haizhucode/voice/controller.dart';
+import 'package:haizhucode/voice/device.dart';
+import 'package:haizhucode/voice/model_download.dart';
+import 'package:haizhucode/voice/model_manager.dart';
+import 'package:haizhucode/voice/model_manifest.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'voice_controller_test.dart' show FakeVoiceRecorder, FakeVoiceRecognizer;

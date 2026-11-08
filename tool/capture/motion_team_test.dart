@@ -13,10 +13,10 @@
 // Output: docs/qa/motion-team-2026-09-25/<before|after>-N-<shot>-<mode>.png
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart'
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart'
     show TeamConversationScreen;
-import 'package:opencode_mobile/ui/screens/team/team_home_screen.dart';
+import 'package:haizhucode/ui/screens/team/team_home_screen.dart';
 
 import '../../test/support/team_golden_fixture.dart';
 import 'fixtures.dart';

@@ -4,18 +4,18 @@
 // ignore_for_file: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart' show find;
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart'
     show PendingQuestion, QuestionChoice, QuestionPrompt, StreamStatus;
-import 'package:opencode_mobile/state/session_auto_approval.dart';
-import 'package:opencode_mobile/ui/screens/chat/permission_sheet.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
-import 'package:opencode_mobile/voice/controller.dart';
-import 'package:opencode_mobile/voice/model_download.dart';
-import 'package:opencode_mobile/voice/model_manager.dart';
-import 'package:opencode_mobile/voice/voice_ui.dart';
+import 'package:haizhucode/state/session_auto_approval.dart';
+import 'package:haizhucode/ui/screens/chat/permission_sheet.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
+import 'package:haizhucode/voice/controller.dart';
+import 'package:haizhucode/voice/model_download.dart';
+import 'package:haizhucode/voice/model_manager.dart';
+import 'package:haizhucode/voice/voice_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../test/support/v2_subagent_fixture.dart';

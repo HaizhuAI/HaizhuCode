@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/ui/widgets/relative_time.dart';
-import 'package:opencode_mobile/ui/widgets/session_title.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/ui/widgets/relative_time.dart';
+import 'package:haizhucode/ui/widgets/session_title.dart';
 
 // The full Arabic corpus is integrated centrally. This small delegate proves
 // helper output follows the supplied locale without translating server content.

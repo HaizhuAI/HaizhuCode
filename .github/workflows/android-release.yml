@@ -315,7 +315,7 @@ jobs:
           badging="$("$tools/aapt" dump badging "$apk" | sed -n '1p')"
           version="$VERSION"
           name="${version%%+*}"; code="${version#*+}"
-          grep -q "^package: name='io.github.eslamasabry.opencode_mobile' " <<<"$badging" || { echo "::error::Package ID mismatch: $badging"; exit 1; }
+          grep -q "^package: name='io.github.haizhu.code' " <<<"$badging" || { echo "::error::Package ID mismatch: $badging"; exit 1; }
           grep -q "versionCode='$code'" <<<"$badging" || { echo "::error::versionCode mismatch: $badging"; exit 1; }
           grep -q "versionName='$name'" <<<"$badging" || { echo "::error::versionName mismatch: $badging"; exit 1; }
           mkdir -p dist
@@ -405,7 +405,7 @@ jobs:
             echo
             echo "- Source commit: \`$GITHUB_SHA\`"
             echo "- Build: Shorebird release $version, Flutter $SHOREBIRD_FLUTTER_VERSION (Shorebird engine)"
-            echo '- Package ID: `io.github.eslamasabry.opencode_mobile`'
+            echo '- Package ID: `io.github.haizhu.code`'
             echo "- Signer SHA-256: \`$SIDELOAD_CERT_SHA256\`"
             echo '- APK SHA-256:'
             echo '```text'

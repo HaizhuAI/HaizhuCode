@@ -1,13 +1,13 @@
 // Synthetic production Usage/Remaining captures; no provider or server calls.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/demo/demo_store.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/usage_overview.dart';
-import 'package:opencode_mobile/ui/screens/usage_screen.dart';
+import 'package:haizhucode/demo/demo_store.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/usage_overview.dart';
+import 'package:haizhucode/ui/screens/usage_screen.dart';
 
 import '../../test/usage_statistics_test.dart' show stats;
 import 'fixtures.dart'

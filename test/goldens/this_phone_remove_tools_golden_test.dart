@@ -11,9 +11,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/component_removal.dart';
-import 'package:opencode_mobile/state/phone_host.dart';
-import 'package:opencode_mobile/ui/screens/this_phone_screen.dart';
+import 'package:haizhucode/builtin/setup/component_removal.dart';
+import 'package:haizhucode/state/phone_host.dart';
+import 'package:haizhucode/ui/screens/this_phone_screen.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../revamp/screen_phone_1_fixtures.dart';

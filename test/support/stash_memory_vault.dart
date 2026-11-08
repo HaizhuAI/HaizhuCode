@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/state/draft_attachments.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/state/draft_attachments.dart';
 
 /// Deterministic widget-test storage. Each instance is an isolated vault root;
 /// retain the instance across controller reconstruction to simulate a restart.

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
 
 void main() {
   testWidgets(

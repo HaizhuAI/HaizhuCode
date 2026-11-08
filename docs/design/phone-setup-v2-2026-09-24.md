@@ -148,7 +148,7 @@ Helpers the scripts use (a shell prelude the engine prepends):
 Setup must survive the app going to the background, so it runs in native code under a
 foreground service, not from a Dart isolate.
 
-New channel methods on `io.github.eslamasabry.opencode_mobile/builtin_linux`:
+New channel methods on `io.github.haizhu.code/builtin_linux`:
 - `startSetup {components: [{id, script, weight}], jobId}`
   - Runs the components in order, inside Ubuntu, each script with the prelude.
   - `linux` is handled natively.

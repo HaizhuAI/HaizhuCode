@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
 
 /// A scriptable [SetupEngine] for screen tests: tests push progress states
 /// with [emit] and read back what the screen asked for.

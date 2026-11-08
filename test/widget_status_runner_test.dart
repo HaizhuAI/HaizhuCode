@@ -2,11 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/background/widget_action_runner.dart';
-import 'package:opencode_mobile/background/widget_status_runner.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/background/widget_action_runner.dart';
+import 'package:haizhucode/background/widget_status_runner.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _Gateway implements ServerGateway {

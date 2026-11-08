@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:opencode_mobile/platform/local_pdf.dart';
+import 'package:haizhucode/platform/local_pdf.dart';
 
 import 'capture/pdf_proof_fixture.dart';
 

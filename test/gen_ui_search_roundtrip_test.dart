@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/gen_ui_server.dart';
-import 'package:opencode_mobile/domain/mcp_connector_search.dart';
-import 'package:opencode_mobile/domain/setup_registry.dart';
-import 'package:opencode_mobile/state/mcp_connector_search_bridge.dart';
+import 'package:haizhucode/builtin/agents/gen_ui_server.dart';
+import 'package:haizhucode/domain/mcp_connector_search.dart';
+import 'package:haizhucode/domain/setup_registry.dart';
+import 'package:haizhucode/state/mcp_connector_search_bridge.dart';
 
 void main() {
   test(

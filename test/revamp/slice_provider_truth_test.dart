@@ -3,9 +3,9 @@
 // API key), and shows no model count. Manage accounts is enabled or absent.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/library_screen.dart';
-import 'package:opencode_mobile/ui/widgets/provider_logo.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/library_screen.dart';
+import 'package:haizhucode/ui/widgets/provider_logo.dart';
 
 import 'screen_library_3_fixtures.dart';
 

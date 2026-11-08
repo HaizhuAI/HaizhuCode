@@ -3,13 +3,13 @@
 // is signed in and the folded details.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/usage_signin_destination.dart';
-import 'package:opencode_mobile/state/usage_subscriptions_controller.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/usage/usage_subscription_screen.dart';
-import 'package:opencode_mobile/ui/screens/usage/usage_text.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/usage_signin_destination.dart';
+import 'package:haizhucode/state/usage_subscriptions_controller.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/usage/usage_subscription_screen.dart';
+import 'package:haizhucode/ui/screens/usage/usage_text.dart';
 
 import 'support/usage_ui_harness.dart';
 

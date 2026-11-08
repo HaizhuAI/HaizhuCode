@@ -2,12 +2,12 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/background/usage_widget_snapshot.dart';
-import 'package:opencode_mobile/domain/provider_usage.dart';
-import 'package:opencode_mobile/paseo/provider_usage_gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
-import 'package:opencode_mobile/state/paseo_usage_monitor.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/background/usage_widget_snapshot.dart';
+import 'package:haizhucode/domain/provider_usage.dart';
+import 'package:haizhucode/paseo/provider_usage_gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
+import 'package:haizhucode/state/paseo_usage_monitor.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final _bidi = String.fromCharCode(0x202e);

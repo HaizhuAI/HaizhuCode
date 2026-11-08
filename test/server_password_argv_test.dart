@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/termux/bridge.dart';
 
 /// The local server password must never be a process argument: every process
 /// of the same Android user (the agents the server runs among them) can read

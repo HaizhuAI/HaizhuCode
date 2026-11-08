@@ -4,11 +4,11 @@
 // that never touches Termux.
 import 'dart:async';
 
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profile_monitor.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/termux/local_agent_runtime.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profile_monitor.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/termux/local_agent_runtime.dart';
 
 /// Work (current), Laptop, Lab box and a server whose password is needed
 /// again. Nothing is read from secure storage.

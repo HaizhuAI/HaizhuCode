@@ -27,7 +27,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 OUT = os.environ.get('OUT', os.path.join(ROOT, 'docs', 'qa', 'local-terminal-2026-09-24'))
 ADB = os.environ.get('ADB', os.path.expanduser('~/Android/Sdk/platform-tools/adb'))
-PKG = 'io.github.eslamasabry.opencode_mobile'
+PKG = 'io.github.haizhu.code'
 
 
 def adb(dev, *args, text=True):

@@ -3,8 +3,8 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 
 Future<void> main(List<String> args) async {
   final password = Platform.environment['OC2_LIVE_PASSWORD'];

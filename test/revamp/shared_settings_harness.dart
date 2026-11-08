@@ -3,10 +3,10 @@
 // traps), a scripted team probe and a connection controller on a tailnet
 // server with no AI team yet.
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/widgets/team_host_form.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/widgets/team_host_form.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MemorySecureStorage extends FlutterSecureStorage {

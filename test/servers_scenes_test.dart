@@ -4,10 +4,10 @@
 // frame is a golden in dark and light; the link loops only while linking.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/scenes/servers_link_scene.dart';
-import 'package:opencode_mobile/ui/kit/scenes/servers_welcome_scene.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/scenes/servers_link_scene.dart';
+import 'package:haizhucode/ui/kit/scenes/servers_welcome_scene.dart';
 
 Widget _frame(ThemeData theme, Widget child) => MaterialApp(
   theme: theme,

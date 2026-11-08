@@ -4,20 +4,20 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/agent_components.dart';
-import 'package:opencode_mobile/builtin/agents/paseo_scripts.dart';
-import 'package:opencode_mobile/builtin/agents/phone_agents_host.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/builtin/setup/preflight.dart';
-import 'package:opencode_mobile/builtin/setup/setup_engine.dart'
+import 'package:haizhucode/builtin/agents/agent_components.dart';
+import 'package:haizhucode/builtin/agents/paseo_scripts.dart';
+import 'package:haizhucode/builtin/agents/phone_agents_host.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/builtin/setup/preflight.dart';
+import 'package:haizhucode/builtin/setup/setup_engine.dart'
     show ChannelSetupEngine, expandSelection;
-import 'package:opencode_mobile/builtin/setup/claude_scripts.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_auth_probe.dart';
-import 'package:opencode_mobile/domain/phone_agent_host.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/builtin/setup/claude_scripts.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_auth_probe.dart';
+import 'package:haizhucode/domain/phone_agent_host.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/state/profiles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'paseo_acp_pilot_test.dart' show FakePaseoSocket;
@@ -25,7 +25,7 @@ import 'paseo_gateway_test.dart' show agentJson;
 import 'support/fake_setup_engine.dart';
 
 const _native = MethodChannel(
-  'io.github.eslamasabry.opencode_mobile/builtin_linux',
+  'io.github.haizhu.code/builtin_linux',
 );
 const _storage = MethodChannel('plugins.it_nomads.com/flutter_secure_storage');
 void main() {
@@ -409,7 +409,7 @@ void main() {
     // Emulator 2026-10-04: `paseo start --foreground --listen ...` exits at
     // once with "--listen was removed", so the check's hello never connected.
     final source = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/PhoneAgentHost.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/PhoneAgentHost.kt',
     ).readAsStringSync();
     final launch = RegExp(
       r'exec /home/oc/\.local/bin/paseo [^\n]*',

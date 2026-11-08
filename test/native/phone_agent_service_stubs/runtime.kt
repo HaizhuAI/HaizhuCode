@@ -1,4 +1,4 @@
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 
 import android.content.Context
 import java.util.concurrent.CopyOnWriteArrayList

@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/agent_sign_in.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_sign_in.dart';
+import 'package:haizhucode/builtin/agents/agent_sign_in.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_sign_in.dart';
 
 const _url =
     'https://claude.com/cai/oauth/authorize?state=synthetic-challenge-state';

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/development_service_store.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/kit/kit_undo.dart';
-import 'package:opencode_mobile/ui/screens/development_services_screen.dart';
-import 'package:opencode_mobile/ui/screens/project_hub_screen.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/development_service_store.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/kit/kit_undo.dart';
+import 'package:haizhucode/ui/screens/development_services_screen.dart';
+import 'package:haizhucode/ui/screens/project_hub_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/development_service_fakes.dart';

@@ -1,7 +1,7 @@
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 
-import io.github.eslamasabry.opencode_mobile.InstallerInterruptedException
-import io.github.eslamasabry.opencode_mobile.NativeProcRace
+import io.github.haizhu.code.InstallerInterruptedException
+import io.github.haizhu.code.NativeProcRace
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.util.concurrent.CountDownLatch

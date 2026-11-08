@@ -3,13 +3,13 @@
 // the screen shows what was found or why not.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/quota_collector_host.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/computer_usage_source.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/usage_subscriptions_controller.dart';
-import 'package:opencode_mobile/ui/screens/usage/usage_read_from_screen.dart';
+import 'package:haizhucode/builtin/quota_collector_host.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/computer_usage_source.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/usage_subscriptions_controller.dart';
+import 'package:haizhucode/ui/screens/usage/usage_read_from_screen.dart';
 
 import 'support/computer_usage_fakes.dart';
 import 'support/usage_ui_harness.dart';

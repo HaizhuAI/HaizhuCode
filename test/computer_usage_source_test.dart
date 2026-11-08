@@ -3,12 +3,12 @@
 // server; nothing here touches a network, a process or a real sign-in.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/provider_quota.dart';
-import 'package:opencode_mobile/domain/terminal_lifecycle.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/state/computer_usage_source.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/usage_subscriptions_controller.dart';
+import 'package:haizhucode/domain/provider_quota.dart';
+import 'package:haizhucode/domain/terminal_lifecycle.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/state/computer_usage_source.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/usage_subscriptions_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/computer_usage_fakes.dart';

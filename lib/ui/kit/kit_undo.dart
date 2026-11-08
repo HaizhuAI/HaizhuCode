@@ -376,7 +376,7 @@ class _KitUndoHost {
         FlutterErrorDetails(
           exception: error,
           stack: stack,
-          library: 'opencode_mobile kit',
+          library: 'haizhucode kit',
           context: ErrorDescription('while committing a KitUndo bar'),
         ),
       );

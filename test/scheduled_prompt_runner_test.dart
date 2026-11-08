@@ -1,14 +1,14 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/gateway.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/domain/server_trust.dart';
-import 'package:opencode_mobile/scheduling/agent_connection.dart';
-import 'package:opencode_mobile/scheduling/models.dart';
-import 'package:opencode_mobile/scheduling/runner.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/api2/gateway.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_trust.dart';
+import 'package:haizhucode/scheduling/agent_connection.dart';
+import 'package:haizhucode/scheduling/models.dart';
+import 'package:haizhucode/scheduling/runner.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 /// Refuses every request the way the pinned transport does when the
 /// server presents a different certificate (or an expired one).

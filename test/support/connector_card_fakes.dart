@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
-import 'package:opencode_mobile/domain/genui/gen_ui.dart';
-import 'package:opencode_mobile/domain/mcp_catalog.dart';
-import 'package:opencode_mobile/domain/mcp_chat.dart';
-import 'package:opencode_mobile/domain/setup_registry.dart';
-import 'package:opencode_mobile/state/connector_card_host.dart';
+import 'package:haizhucode/domain/genui/gen_ui.dart';
+import 'package:haizhucode/domain/mcp_catalog.dart';
+import 'package:haizhucode/domain/mcp_chat.dart';
+import 'package:haizhucode/domain/setup_registry.dart';
+import 'package:haizhucode/state/connector_card_host.dart';
 
 const connectorScope = GenUiScope(
   profileID: 'p1',

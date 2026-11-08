@@ -10,11 +10,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/screens/active_context_screen.dart';
-import 'package:opencode_mobile/ui/screens/session_note_screen.dart';
-import 'package:opencode_mobile/ui/screens/session_relations_screen.dart';
-import 'package:opencode_mobile/ui/screens/web_sources_screen.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/screens/active_context_screen.dart';
+import 'package:haizhucode/ui/screens/session_note_screen.dart';
+import 'package:haizhucode/ui/screens/session_relations_screen.dart';
+import 'package:haizhucode/ui/screens/web_sources_screen.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;
 import 'screen_chat_2_fixtures.dart';

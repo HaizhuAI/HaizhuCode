@@ -4,7 +4,7 @@ set -euo pipefail
 readonly REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 readonly SOURCE_SCRIPT="$REPO_ROOT/scripts/release.sh"
 readonly CUT_SCRIPT="$REPO_ROOT/scripts/cut-alpha.sh"
-readonly NOTES_ANCHOR="# OpenCode Mobile - Alpha 1.0.12+13"
+readonly NOTES_ANCHOR="# HaizhuCode - Alpha 1.0.12+13"
 readonly LEGACY_SIDELOAD_FINGERPRINT="842284B27AA297FB74CF831779FD16498517E1BC2104451459FEC2EA7AC11D1C"
 TEST_ROOT="$(mktemp -d)"
 readonly TEST_ROOT
@@ -48,7 +48,7 @@ if "--require" in sys.argv and proposed != "hotfix":
     print("classify_change: required hotfix but the range is " + proposed, file=sys.stderr)
     sys.exit(1)
 STUB
-  printf '# OpenCode Mobile 1.0.12+13\n\nA fixture release.\n\n## What changed for you\n\n- **Chats** open faster after a restart.\n- **Photos** you send show as pictures.\n\n## Technical changes\n\n### Fixed\n- Fixture change.\n' \
+  printf '# HaizhuCode 1.0.12+13\n\nA fixture release.\n\n## What changed for you\n\n- **Chats** open faster after a restart.\n- **Photos** you send show as pictures.\n\n## Technical changes\n\n### Fixed\n- Fixture change.\n' \
     >"$FIXTURE/docs/releases/v1.0.12+13.md"
   printf 'void main() {}\n' >"$FIXTURE/test/nested/release_gate_test.dart"
   chmod +x "$FIXTURE/scripts/release.sh" "$FIXTURE/scripts/cut-alpha.sh"
@@ -251,7 +251,7 @@ EOF
 set -euo pipefail
 printf 'aapt %s\n' "$*" >>"$MOCK_COMMAND_LOG"
 printf "package: name='%s' versionCode='%s' versionName='%s'\n" \
-  "${MOCK_APK_PACKAGE:-io.github.eslamasabry.opencode_mobile}" \
+  "${MOCK_APK_PACKAGE:-io.github.haizhu.code}" \
   "${MOCK_APK_VERSION_CODE:-13}" \
   "${MOCK_APK_VERSION_NAME:-1.0.12}"
 EOF
@@ -290,7 +290,7 @@ run_release() {
       MOCK_KEYSTORE_FINGERPRINT="${MOCK_KEYSTORE_FINGERPRINT:-AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA}" \
       MOCK_AAB_FINGERPRINT="${MOCK_AAB_FINGERPRINT:-AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA:AA}" \
       MOCK_APK_FINGERPRINT="${MOCK_APK_FINGERPRINT:-$LEGACY_SIDELOAD_FINGERPRINT}" \
-      MOCK_APK_PACKAGE="${MOCK_APK_PACKAGE:-io.github.eslamasabry.opencode_mobile}" \
+      MOCK_APK_PACKAGE="${MOCK_APK_PACKAGE:-io.github.haizhu.code}" \
       MOCK_APK_VERSION_CODE="${MOCK_APK_VERSION_CODE:-13}" \
       MOCK_APK_VERSION_NAME="${MOCK_APK_VERSION_NAME:-1.0.12}" \
       RELEASE_CERT_SHA256="${RELEASE_CERT_SHA256:-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA}" \

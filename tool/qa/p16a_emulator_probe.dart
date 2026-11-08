@@ -8,7 +8,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
 
 const _physical = bool.fromEnvironment('P16A_PHYSICAL');
 const _token = String.fromEnvironment('P16A_TOKEN');
@@ -34,7 +34,7 @@ Future<void> main() async {
   }
   // Creation succeeds only inside the separate preview package's sandbox.
   final dir = Directory(
-    '/data/user/0/io.github.eslamasabry.opencode_mobile.preview/files/p16a',
+    '/data/user/0/io.github.haizhu.code.preview/files/p16a',
   );
   await dir.create(recursive: true);
   final linux = BuiltinLinux();
@@ -91,7 +91,7 @@ Future<Map<String, Object?>> _execute(BuiltinLinux linux, Map input) async {
         // Only this preview sandbox and this process; no other app data.
         final size = await Process.run('/system/bin/du', [
           '-sk',
-          '/data/user/0/io.github.eslamasabry.opencode_mobile.preview/files/linux/ubuntu',
+          '/data/user/0/io.github.haizhu.code.preview/files/linux/ubuntu',
         ]);
         response['rootfsDu'] = size.stdout.toString().trim();
         response['rootfsDuExit'] = size.exitCode;

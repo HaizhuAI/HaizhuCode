@@ -5,8 +5,8 @@
 // proven in od_team_gateway_test.dart).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/ui/screens/team/team_home_screen.dart';
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/ui/screens/team/team_home_screen.dart';
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'coverage/team_support.dart';

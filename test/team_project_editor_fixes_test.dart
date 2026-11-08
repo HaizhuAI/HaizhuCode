@@ -4,13 +4,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/model_name_order.dart';
-import 'package:opencode_mobile/domain/provider_presentation.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart' show CatalogModel;
-import 'package:opencode_mobile/state/team_project_controller.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/team/projects/team_project_editors.dart';
-import 'package:opencode_mobile/ui/screens/team/team_model_sheet.dart';
+import 'package:haizhucode/domain/model_name_order.dart';
+import 'package:haizhucode/domain/provider_presentation.dart';
+import 'package:haizhucode/domain/server_gateway.dart' show CatalogModel;
+import 'package:haizhucode/state/team_project_controller.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/team/projects/team_project_editors.dart';
+import 'package:haizhucode/ui/screens/team/team_model_sheet.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'kit/kit_harness.dart';

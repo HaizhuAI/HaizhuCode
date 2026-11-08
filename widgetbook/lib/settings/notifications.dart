@@ -4,8 +4,8 @@
 // docs/qa/vision-notifications-2026-10-20/README.md.
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';

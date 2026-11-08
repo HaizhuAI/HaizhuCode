@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/paseo/chat_feed_source.dart';
-import 'package:opencode_mobile/paseo/gateway.dart';
-import 'package:opencode_mobile/paseo/transport.dart';
-import 'package:opencode_mobile/state/conversation_title_memory.dart';
+import 'package:haizhucode/paseo/chat_feed_source.dart';
+import 'package:haizhucode/paseo/gateway.dart';
+import 'package:haizhucode/paseo/transport.dart';
+import 'package:haizhucode/state/conversation_title_memory.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'paseo_acp_pilot_test.dart' show FakePaseoSocket;

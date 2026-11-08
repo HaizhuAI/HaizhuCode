@@ -13,8 +13,8 @@
         android:shortcutLongLabel="@string/shortcut_connect_long">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="io.github.eslamasabry.opencode_mobile"
-            android:targetClass="io.github.eslamasabry.opencode_mobile.MainActivity">
+            android:targetPackage="io.github.haizhu.code"
+            android:targetClass="io.github.haizhu.code.MainActivity">
             <extra android:name="oc.shortcut" android:value="connect" />
         </intent>
     </shortcut>
@@ -26,8 +26,8 @@
         android:shortcutLongLabel="@string/shortcut_new_task_long">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="io.github.eslamasabry.opencode_mobile"
-            android:targetClass="io.github.eslamasabry.opencode_mobile.MainActivity">
+            android:targetPackage="io.github.haizhu.code"
+            android:targetClass="io.github.haizhu.code.MainActivity">
             <extra android:name="oc.shortcut" android:value="new_task" />
         </intent>
     </shortcut>

@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/listening_ports.dart';
-import 'package:opencode_mobile/domain/managed_shell.dart';
-import 'package:opencode_mobile/state/detected_dev_servers.dart';
-import 'package:opencode_mobile/state/dev_server_scan.dart';
-import 'package:opencode_mobile/state/profiles.dart';
+import 'package:haizhucode/domain/listening_ports.dart';
+import 'package:haizhucode/domain/managed_shell.dart';
+import 'package:haizhucode/state/detected_dev_servers.dart';
+import 'package:haizhucode/state/dev_server_scan.dart';
+import 'package:haizhucode/state/profiles.dart';
 
 import 'support/development_service_fakes.dart';
 

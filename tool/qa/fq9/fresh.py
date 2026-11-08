@@ -7,7 +7,7 @@ existing device. Root verifies the serial/boot identity and approved artifact.
 
 Private runtime anchors use context.filesDir (BuiltinLinux.kt:42 and
 PhoneAgentPaths.kt:11), but this is not whole-runtime user isolation:
-android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/
+android/app/src/main/kotlin/io/github/haizhu/code/
   BuiltinLinux.kt:2115 binds the primary /storage/emulated/0 alias;
   MainActivity.kt:1478 and TermuxSetupRunner.kt:160 use /data/data/com.termux.
 lib/builtin/builtin_linux.dart:316 and agents/phone_agents_host.dart:535 use

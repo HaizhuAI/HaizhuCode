@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:opencode_mobile/orchestration/adapters/gascity/dto/dto.dart';
+import 'package:haizhucode/orchestration/adapters/gascity/dto/dto.dart';
 
 /// Repo-relative fixture root; `flutter test` runs from the package root.
 final Directory fixtureRoot = findFixtureRoot();

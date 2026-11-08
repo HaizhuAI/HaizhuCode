@@ -17,13 +17,13 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/ui/app_iconography.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/ui/app_iconography.dart';
 // kit_row_parts.dart's pre-v2 KitMenuItem is superseded by kit_menu.dart's
 // (KitMenu.md); hide the older one so the v2 type below is unambiguous.
-import 'package:opencode_mobile/ui/kit/kit.dart' hide KitMenuItem;
-import 'package:opencode_mobile/ui/kit/kit_menu.dart';
+import 'package:haizhucode/ui/kit/kit.dart' hide KitMenuItem;
+import 'package:haizhucode/ui/kit/kit_menu.dart';
 
 import '../../../tool/capture/fixtures.dart' show captureTheme;
 import 'kit_gallery.dart';

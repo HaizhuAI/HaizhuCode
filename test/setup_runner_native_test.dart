@@ -64,19 +64,19 @@ void main() {
     jar = await cachedKotlinJar(
       compiler: compiler,
       sources: [
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupRunner.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupScriptCompletion.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupWorkScopes.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupJob.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/NativeRuntimeOwnership.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/NativeInstallerOwnership.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/NativeInstallerVisibility.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/NativeProcRace.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupStepRetry.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/SetupRunner.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/SetupScriptCompletion.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/SetupWorkScopes.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/SetupJob.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/NativeRuntimeOwnership.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/NativeInstallerOwnership.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/NativeInstallerVisibility.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/NativeProcRace.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/SetupStepRetry.kt',
         if (File(
-          'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupPersistence.kt',
+          'android/app/src/main/kotlin/io/github/haizhu/code/SetupPersistence.kt',
         ).existsSync())
-          'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupPersistence.kt',
+          'android/app/src/main/kotlin/io/github/haizhu/code/SetupPersistence.kt',
         'test/native/setup_runner_harness.kt',
         ...(Directory(
             'test/native/setup_runner_stubs',
@@ -89,7 +89,7 @@ void main() {
       runs[scenario] = Process.run(Platform.environment['JAVA'] ?? 'java', [
         '-cp',
         '$jar:$jsonJar',
-        'io.github.eslamasabry.opencode_mobile.Setup_runner_harnessKt',
+        'io.github.haizhu.code.Setup_runner_harnessKt',
         scenario,
       ]);
     }

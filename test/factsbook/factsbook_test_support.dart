@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/factsbook_node_host.dart';
-import 'package:opencode_mobile/domain/factsbook/fake_factsbook_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_controller.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_outbox.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_phone_node.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_session.dart';
-import 'package:opencode_mobile/state/factsbook/factsbook_flag.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
+import 'package:haizhucode/builtin/factsbook_node_host.dart';
+import 'package:haizhucode/domain/factsbook/fake_factsbook_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/factsbook/factsbook_controller.dart';
+import 'package:haizhucode/state/factsbook/factsbook_outbox.dart';
+import 'package:haizhucode/state/factsbook/factsbook_phone_node.dart';
+import 'package:haizhucode/state/factsbook/factsbook_session.dart';
+import 'package:haizhucode/state/factsbook/factsbook_flag.dart';
+import 'package:haizhucode/ui/app_theme.dart';
 
 /// A runner without the built-in Linux: the default in widget tests, which
 /// would otherwise count as an Android phone and reach for the native bridge.

@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/ui/screens/usage_hub_screen.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/ui/screens/usage_hub_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
-import 'package:opencode_mobile/state/usage_subscriptions_controller.dart';
+import 'package:haizhucode/state/usage_subscriptions_controller.dart';
 
 import '../fakes/usage_harness.dart';
 import '../catalog.dart';

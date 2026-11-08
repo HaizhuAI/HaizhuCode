@@ -6,15 +6,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/chat/kit_tool_row.dart';
-import 'package:opencode_mobile/ui/kit/kit_details_fold.dart';
-import 'package:opencode_mobile/ui/kit/kit_diff_view.dart';
-import 'package:opencode_mobile/ui/kit/kit_key_value.dart';
-import 'package:opencode_mobile/ui/kit/kit_status_mark.dart';
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/chat/kit_tool_row.dart';
+import 'package:haizhucode/ui/kit/kit_details_fold.dart';
+import 'package:haizhucode/ui/kit/kit_diff_view.dart';
+import 'package:haizhucode/ui/kit/kit_key_value.dart';
+import 'package:haizhucode/ui/kit/kit_status_mark.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
 
 import 'support/v2_subagent_fixture.dart';
 
@@ -365,7 +365,7 @@ void _shellTests() {
             ],
           },
           'output': status == 'completed'
-              ? 'Card accepted for display in OpenCode Mobile. If it asks a '
+              ? 'Card accepted for display in HaizhuCode. If it asks a '
                     'question, end your turn and wait for the person\'s next '
                     'message tagged [oc-ui answer <id>]. This call does not '
                     'return their answer.'

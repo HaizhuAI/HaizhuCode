@@ -17,7 +17,7 @@ void main() {
     if (skip != null) return;
     temporary = Directory.systemTemp.createTempSync('host-native-test-');
     final runner = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/SetupRunner.kt',
+      'android/app/src/main/kotlin/io/github/haizhu/code/SetupRunner.kt',
     ).readAsStringSync();
     final guard = runner
         .substring(
@@ -27,15 +27,15 @@ void main() {
         .trim();
     final helper = File('${temporary.path}/disk.kt')
       ..writeAsStringSync(
-        'package io.github.eslamasabry.opencode_mobile\nimport java.io.File\n$guard\n',
+        'package io.github.haizhu.code\nimport java.io.File\n$guard\n',
       );
     jar = await cachedKotlinJar(
       compiler: compiler,
       sources: [
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/PhoneAgentHost.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/PhoneAgentInventory.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/PhoneAgentChecks.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/PaseoStaleLock.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/PhoneAgentHost.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/PhoneAgentInventory.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/PhoneAgentChecks.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/PaseoStaleLock.kt',
         helper.path,
         'test/native/phone_agent_host_harness.kt',
         'test/native/phone_agent_host_stubs/os.kt',
@@ -66,7 +66,7 @@ void main() {
       final result = await Process.run('java', [
         '-cp',
         jar,
-        'io.github.eslamasabry.opencode_mobile.Phone_agent_host_harnessKt',
+        'io.github.haizhu.code.Phone_agent_host_harnessKt',
         scenario,
       ]);
       expect(result.exitCode, 0, reason: '${result.stdout}\n${result.stderr}');

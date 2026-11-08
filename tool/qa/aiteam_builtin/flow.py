@@ -22,7 +22,7 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ADB = os.environ.get('ADB', os.path.expanduser('~/Android/Sdk/platform-tools/adb'))
-PKG = 'io.github.eslamasabry.opencode_mobile'
+PKG = 'io.github.haizhu.code'
 
 
 def ui(dev, *args):

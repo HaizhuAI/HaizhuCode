@@ -12,8 +12,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/ui/widgets/saved_server_connection_card.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/ui/widgets/saved_server_connection_card.dart';
 
 import '../../test/support/phone_server_scenes.dart';
 import '../../test/support/phone_setup_scenes.dart';

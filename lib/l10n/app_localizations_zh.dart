@@ -114,7 +114,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get isolatedTaskScopeChanged => '打开期间服务器或项目已变更。请关闭它，并从你需要的项目重新开始。';
 
   @override
-  String get appTitle => 'OpenCode Mobile';
+  String get appTitle => 'HaizhuCode';
 
   @override
   String get libraryModelsAgentsTitle => '模型与智能体';
@@ -136,7 +136,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String aboutBuildVersion(String version, String buildNumber) {
-    return 'OpenCode Mobile $version+$buildNumber';
+    return 'HaizhuCode $version+$buildNumber';
   }
 
   @override
@@ -3840,7 +3840,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get e7SettingsNonAffiliation =>
-      'OpenCode Mobile 是独立的社区项目，并非由 OpenCode 官方团队开发、维护、认可或与之关联。';
+      'HaizhuCode 是独立的社区项目，并非由 OpenCode 官方团队开发、维护、认可或与之关联。';
 
   @override
   String e7SettingsDiagnosticOccurrences(int count) {
@@ -7514,8 +7514,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get handoffUiPhoneTitle => '在另一部手机上打开';
 
   @override
-  String get handoffUiPhoneIntro =>
-      '在另一部手机上用 OpenCode Mobile 扫描。该码只包含服务器和对话 ID。';
+  String get handoffUiPhoneIntro => '在另一部手机上用 HaizhuCode 扫描。该码只包含服务器和对话 ID。';
 
   @override
   String get handoffUiPhoneQrLabel => '可在另一部手机上打开此对话的二维码';
@@ -12152,22 +12151,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String appExitForceStopped(String time) {
-    return 'OpenCode Mobile 已关闭 $time';
+    return 'HaizhuCode 已关闭 $time';
   }
 
   @override
   String appExitLowMemory(String time) {
-    return 'Android 为释放内存关闭了 OpenCode Mobile $time';
+    return 'Android 为释放内存关闭了 HaizhuCode $time';
   }
 
   @override
   String appExitCrashed(String time) {
-    return 'OpenCode Mobile 意外停止 $time';
+    return 'HaizhuCode 意外停止 $time';
   }
 
   @override
   String appExitKilled(String time) {
-    return 'Android 已停止 OpenCode Mobile $time';
+    return 'Android 已停止 HaizhuCode $time';
   }
 
   @override
@@ -12243,25 +12242,24 @@ class AppLocalizationsZh extends AppLocalizations {
   String get keepRunningLockTitle => '在最近任务中锁定';
 
   @override
-  String get keepRunningLockNubia =>
-      '打开“最近任务”，将 OpenCode Mobile 的卡片向下拉，直到出现锁图标。';
+  String get keepRunningLockNubia => '打开“最近任务”，将 HaizhuCode 的卡片向下拉，直到出现锁图标。';
 
   @override
   String get keepRunningLockSamsung =>
-      '打开“最近任务”，点按卡片上方的 OpenCode Mobile 图标，然后选择“保持打开”。';
+      '打开“最近任务”，点按卡片上方的 HaizhuCode 图标，然后选择“保持打开”。';
 
   @override
-  String get keepRunningLockOther => '打开“最近任务”，长按 OpenCode Mobile 的卡片，然后点按锁图标。';
+  String get keepRunningLockOther => '打开“最近任务”，长按 HaizhuCode 的卡片，然后点按锁图标。';
 
   @override
   String get keepRunningAutostartTitle => '允许自启动';
 
   @override
-  String get keepRunningAutostartDetail => '为 OpenCode Mobile 开启，避免手机在后台将其停止。';
+  String get keepRunningAutostartDetail => '为 HaizhuCode 开启，避免手机在后台将其停止。';
 
   @override
   String get keepRunningAutostartHuawei =>
-      '在“应用启动管理”中，将 OpenCode Mobile 设为“手动管理”，并开启全部三个开关。';
+      '在“应用启动管理”中，将 HaizhuCode 设为“手动管理”，并开启全部三个开关。';
 
   @override
   String get keepRunningBackgroundTitle => '允许后台活动';
@@ -12286,8 +12284,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get keepRunningOpen => '打开';
 
   @override
-  String get keepRunningOpenFailed =>
-      '这部手机没有该界面。请改为打开“设置 › 应用 › OpenCode Mobile”。';
+  String get keepRunningOpenFailed => '这部手机没有该界面。请改为打开“设置 › 应用 › HaizhuCode”。';
 
   @override
   String get keepRunningFootnote =>
@@ -19766,7 +19763,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get sessionAddressIntro =>
-      '用另一台手机上的 OpenCode Mobile 扫描。二维码包含此服务器的地址和对话 ID。';
+      '用另一台手机上的 HaizhuCode 扫描。二维码包含此服务器的地址和对话 ID。';
 
   @override
   String get sessionAddressUnsupportedHost =>
@@ -20996,7 +20993,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get manageSpaceIntro =>
-      '清除会删除 OpenCode Mobile 在此手机上保存的所有内容，且无法撤销。如需保留项目，请先导出。';
+      '清除会删除 HaizhuCode 在此手机上保存的所有内容，且无法撤销。如需保留项目，请先导出。';
 
   @override
   String get manageSpaceExportFirst => '先导出项目';
@@ -21033,7 +21030,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get manageSpaceDeleteTitle => '删除全部内容？';
 
   @override
-  String get manageSpaceDeleteBody => 'OpenCode Mobile 之后会像全新安装一样重新启动。此操作无法撤销。';
+  String get manageSpaceDeleteBody => 'HaizhuCode 之后会像全新安装一样重新启动。此操作无法撤销。';
 
   @override
   String get manageSpaceLostServer => 'On this phone and its conversations';
@@ -21278,7 +21275,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get manageSpaceIntroNothingToExport =>
-      '清除会删除 OpenCode Mobile 在此手机上保存的所有内容，且无法撤销。';
+      '清除会删除 HaizhuCode 在此手机上保存的所有内容，且无法撤销。';
 
   @override
   String integrationsKeyOnlyHelper(String name) {

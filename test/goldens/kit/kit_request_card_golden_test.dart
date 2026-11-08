@@ -16,12 +16,12 @@
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit_choice_list.dart';
-import 'package:opencode_mobile/ui/kit/kit_needs_you.dart';
-import 'package:opencode_mobile/ui/kit/kit_receipt.dart';
-import 'package:opencode_mobile/ui/kit/kit_request_card.dart';
-import 'package:opencode_mobile/ui/kit/kit_sheet.dart';
-import 'package:opencode_mobile/ui/kit/kit_text.dart';
+import 'package:haizhucode/ui/kit/kit_choice_list.dart';
+import 'package:haizhucode/ui/kit/kit_needs_you.dart';
+import 'package:haizhucode/ui/kit/kit_receipt.dart';
+import 'package:haizhucode/ui/kit/kit_request_card.dart';
+import 'package:haizhucode/ui/kit/kit_sheet.dart';
+import 'package:haizhucode/ui/kit/kit_text.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'kit_gallery.dart';

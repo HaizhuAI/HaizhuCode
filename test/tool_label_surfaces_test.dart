@@ -9,23 +9,23 @@ import 'support/complete_message_history.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart'
+import 'package:haizhucode/domain/orchestration_gateway.dart'
     show AgentStep, AgentStepKind;
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/server_gateway.dart'
     show PromptDelivery, StreamStatus;
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/l10n/app_localizations_en.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/review_handoff.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/permission_presentation.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/agent_screen.dart'
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/l10n/app_localizations_en.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/review_handoff.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/permission_presentation.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/team/agent_screen.dart'
     show agentStepWords;
-import 'package:opencode_mobile/ui/widgets/tool_card.dart';
+import 'package:haizhucode/ui/widgets/tool_card.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Ids agents really send that the app must never show as they are.

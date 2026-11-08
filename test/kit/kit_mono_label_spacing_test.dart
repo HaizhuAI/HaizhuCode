@@ -4,9 +4,9 @@
 // phone. The words stay mono; the spaces between them take the sans width.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style_theme.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/style/kit_style_theme.dart';
 
 Future<void> _pump(WidgetTester tester, KitSurfaceStyle style, Widget child) =>
     tester.pumpWidget(

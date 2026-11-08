@@ -6,10 +6,10 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart' show EventEnvelope;
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/reply_watch.dart';
-import 'package:opencode_mobile/diagnostics/perf_trace.dart';
+import 'package:haizhucode/domain/models.dart' show EventEnvelope;
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/reply_watch.dart';
+import 'package:haizhucode/diagnostics/perf_trace.dart';
 
 class _Source extends ChangeNotifier implements ReplySource {
   final _events = StreamController<EventEnvelope>.broadcast(sync: true);

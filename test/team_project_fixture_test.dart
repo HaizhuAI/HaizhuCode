@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/team_project_gateway.dart';
-import 'package:opencode_mobile/orchestration/adapters/fixture/project_fixture_gateway.dart';
+import 'package:haizhucode/domain/team_project_gateway.dart';
+import 'package:haizhucode/orchestration/adapters/fixture/project_fixture_gateway.dart';
 
 class MemoryPersistence implements TeamProjectPersistence {
   String? value;

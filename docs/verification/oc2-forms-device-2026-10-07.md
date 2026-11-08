@@ -14,7 +14,7 @@ reason to mutate the server database or use an internal endpoint.
 1. Record the installed candidate APK version and revision. From the workstation:
 
    ```sh
-   adb -s emulator-5554 shell dumpsys package io.github.eslamasabry.opencode_mobile
+   adb -s emulator-5554 shell dumpsys package io.github.haizhu.code
    ```
 
    No install, restart, or tap automation is required by this procedure. Use the

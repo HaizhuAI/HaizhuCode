@@ -29,7 +29,7 @@ void main() {
     temporary = await Directory.systemTemp.createTemp('oc-agent-run-native-');
     jar = '${temporary.path}/run.jar';
     const sources =
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+        'android/app/src/main/kotlin/io/github/haizhu/code';
     final linux = await File('$sources/BuiltinLinux.kt').readAsString();
     final begin = linux.indexOf('    fun run(script: String,');
     final end = linux.indexOf('    /**\n     * Starts [script]', begin);
@@ -42,7 +42,7 @@ void main() {
     expect(runConstants.split('\n'), hasLength(2));
     final fixture = File('${temporary.path}/ProductionRun.kt');
     await fixture.writeAsString('''
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 import android.os.SystemClock
 import android.util.Log
 import java.io.File

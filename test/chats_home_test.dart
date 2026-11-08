@@ -4,23 +4,23 @@ import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show RenderParagraph;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/phone_agents_source.dart';
-import 'package:opencode_mobile/ui/kit/kit_bidi.dart';
-import 'package:opencode_mobile/ui/kit/kit_context_ring.dart';
-import 'package:opencode_mobile/ui/kit/kit_feed_item.dart' show KitFeedItem;
-import 'package:opencode_mobile/ui/kit/kit_icon_button.dart' show KitIconButton;
-import 'package:opencode_mobile/ui/kit/motion/kit_reveal.dart' show KitEntrance;
-import 'package:opencode_mobile/ui/screens/chats/chats_host.dart'
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/phone_agents_source.dart';
+import 'package:haizhucode/ui/kit/kit_bidi.dart';
+import 'package:haizhucode/ui/kit/kit_context_ring.dart';
+import 'package:haizhucode/ui/kit/kit_feed_item.dart' show KitFeedItem;
+import 'package:haizhucode/ui/kit/kit_icon_button.dart' show KitIconButton;
+import 'package:haizhucode/ui/kit/motion/kit_reveal.dart' show KitEntrance;
+import 'package:haizhucode/ui/screens/chats/chats_host.dart'
     show leftoverNoticeLine;
-import 'package:opencode_mobile/ui/widgets/work_status_line.dart'
+import 'package:haizhucode/ui/widgets/work_status_line.dart'
     show WorkRunawayNotice;
-import 'package:opencode_mobile/ui/screens/chats/chats_home_screen.dart';
-import 'package:opencode_mobile/ui/screens/home_opening.dart';
-import 'package:opencode_mobile/state/session_inventory_cache.dart'
+import 'package:haizhucode/ui/screens/chats/chats_home_screen.dart';
+import 'package:haizhucode/ui/screens/home_opening.dart';
+import 'package:haizhucode/state/session_inventory_cache.dart'
     show SessionPreview;
-import 'package:opencode_mobile/ui/app_theme.dart' show AppStatusTone;
-import 'package:opencode_mobile/ui/kit/kit_tappable.dart' show KitTappable;
+import 'package:haizhucode/ui/app_theme.dart' show AppStatusTone;
+import 'package:haizhucode/ui/kit/kit_tappable.dart' show KitTappable;
 
 import '../tool/capture/fixtures.dart' show loadCaptureFonts;
 import 'support/agents_fakes.dart' show FakePhoneAgentsSource;

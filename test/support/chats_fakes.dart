@@ -1,17 +1,17 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/builtin/git_link_repair.dart'
+import 'package:haizhucode/builtin/git_link_repair.dart'
     show GitRepairActions;
-import 'package:opencode_mobile/builtin/local_terminal.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:opencode_mobile/domain/chat_feed.dart';
-import 'package:opencode_mobile/domain/phone_agents_source.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart'
+import 'package:haizhucode/domain/chat_feed.dart';
+import 'package:haizhucode/domain/phone_agents_source.dart';
+import 'package:haizhucode/domain/server_gateway.dart'
     show ProviderConversationImportGateway, WorkspaceProject;
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_feed_item.dart' show KitFeedRunning;
-import 'package:opencode_mobile/ui/screens/chats/chats_host.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_feed_item.dart' show KitFeedRunning;
+import 'package:haizhucode/ui/screens/chats/chats_host.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme;
 // AUDIT TOOLING (audit/style-coherence): no-op unless AUDIT_STYLE is set.

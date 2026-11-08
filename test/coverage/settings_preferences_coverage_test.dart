@@ -5,11 +5,11 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/automation_policy.dart';
-import 'package:opencode_mobile/state/notification_preferences.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/reader_preferences.dart';
-import 'package:opencode_mobile/ui/kit/kit_effects.dart';
+import 'package:haizhucode/state/automation_policy.dart';
+import 'package:haizhucode/state/notification_preferences.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/reader_preferences.dart';
+import 'package:haizhucode/ui/kit/kit_effects.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Map<String, dynamic> _ledger() =>

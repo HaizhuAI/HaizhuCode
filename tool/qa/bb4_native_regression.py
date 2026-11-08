@@ -19,10 +19,10 @@ import tempfile
 
 
 ROOT = Path(__file__).resolve().parents[2]
-MAIN = ROOT / 'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile'
-TEST = ROOT / 'android/app/src/test/kotlin/io/github/eslamasabry/opencode_mobile'
+MAIN = ROOT / 'android/app/src/main/kotlin/io/github/haizhu/code'
+TEST = ROOT / 'android/app/src/test/kotlin/io/github/haizhu/code'
 EVIDENCE = ROOT / 'docs/qa/BB4-agent-work-2026-10-08'
-PACKAGE = 'io.github.eslamasabry.opencode_mobile.'
+PACKAGE = 'io.github.haizhu.code.'
 JDK = Path('/home/eslam/Storage/tmp/codex-audit3-temurin17/jdk-17.0.20.1+1')
 KOTLIN = Path('/home/eslam/.sdkman/candidates/kotlin/2.3.20')
 ANDROID = Path('/home/eslam/Android/Sdk/platforms/android-37.0/android.jar')

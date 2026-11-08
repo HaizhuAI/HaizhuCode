@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/kit/kit_surface_look.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style.dart';
-import 'package:opencode_mobile/ui/kit/style/kit_style_paper.dart';
-import 'package:opencode_mobile/ui/theme_roles.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/kit/kit_surface_look.dart';
+import 'package:haizhucode/ui/kit/style/kit_style.dart';
+import 'package:haizhucode/ui/kit/style/kit_style_paper.dart';
+import 'package:haizhucode/ui/theme_roles.dart';
 
 double _contrast(Color a, Color b) {
   final la = a.computeLuminance();

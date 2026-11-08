@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/agents/gen_ui_server.dart';
+import 'package:haizhucode/builtin/agents/gen_ui_server.dart';
 
 const _card = {'v': 1, 'id': 'sample', 'title': 'Sample', 'body': <Object>[]};
 

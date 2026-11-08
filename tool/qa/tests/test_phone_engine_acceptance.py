@@ -19,7 +19,7 @@ assert args[:2] == ["-s", "emulator-5554"], args
 cmd = args[2:]
 Path(os.environ["MOCK_CALLED"]).write_text("called")
 stable = os.environ.get("MOCK_STABLE") == "1"
-package = "io.github.eslamasabry.opencode_mobile" + ("" if stable else ".preview")
+package = "io.github.haizhu.code" + ("" if stable else ".preview")
 if cmd == ["get-state"]:
     print(os.environ.get("MOCK_STATE", "device"))
 elif cmd == ["shell", "getprop", "ro.product.cpu.abi"]:
@@ -29,14 +29,14 @@ elif cmd[:3] == ["shell", "pm", "path"]:
         print("package:/data/app/isolated/base.apk")
 elif cmd == ["shell", "pm", "list", "instrumentation"]:
     if not os.environ.get("MOCK_MISSING_RUNNER"):
-        print("instrumentation:" + package + ".test/io.github.eslamasabry.opencode_mobile.PhoneEngineAcceptance (target=" + package + ")")
+        print("instrumentation:" + package + ".test/io.github.haizhu.code.PhoneEngineAcceptance (target=" + package + ")")
 elif cmd[:3] == ["shell", "am", "instrument"]:
     assert cmd == ["shell", "am", "instrument", "-w", "-r",
         "-e", "server", "http://127.0.0.1:4097", "-e", "model", "example/test-model",
         "-e", "timeoutSeconds", "30", "-e", "isolatedQa", "false" if stable else "true",
         "-e", "stableAppQa", "true" if stable else "false",
         "-e", "allowModelSpend", "true",
-        package + ".test/io.github.eslamasabry.opencode_mobile.PhoneEngineAcceptance"], cmd
+        package + ".test/io.github.haizhu.code.PhoneEngineAcceptance"], cmd
     sys.stdout.write(Path(os.environ["MOCK_TRANSCRIPT"]).read_text())
     sys.exit(int(os.environ.get("MOCK_EXIT", "0")))
 else:
@@ -143,7 +143,7 @@ class PhoneEngineAcceptanceTest(unittest.TestCase):
 
     def test_unsafe_or_nonisolated_arguments_fail_before_adb(self):
         cases = [("--server", "http://localhost:4097"), ("--server", "http://example.test"),
-                 ("--package", "io.github.eslamasabry.opencode_mobile"),
+                 ("--package", "io.github.haizhu.code"),
                  ("--model", "example/test;touch injected"), ("--model", "example/$(id)"),
                  ("--serial", "emulator-5554;id"), ("--timeout-seconds", "0")]
         for extra in cases:
@@ -158,7 +158,7 @@ class PhoneEngineAcceptanceTest(unittest.TestCase):
         self.assertFalse(self.called.exists())
 
     def test_stable_requires_exact_package_explicit_optin_and_stage_cleanup_evidence(self):
-        stable_args = ("--package", "io.github.eslamasabry.opencode_mobile", "--stable-app-qa", "--allow-model-spend")
+        stable_args = ("--package", "io.github.haizhu.code", "--stable-app-qa", "--allow-model-spend")
         evidence = ["INSTRUMENTATION_STATUS: phoneEngineStage=PASS " + stage for stage in
                     ("project_created", "planner_completed", "plan_approved", "worker_completed", "checker_completed", "dev_merged")]
         evidence.append("INSTRUMENTATION_STATUS: phoneEngineCleanup=PASS stable_server_restored")
@@ -188,7 +188,7 @@ class PhoneEngineAcceptanceTest(unittest.TestCase):
         self.assertNotIn("private-token", result.stdout + result.stderr)
 
     def test_paid_stable_failure_only_relays_compiled_public_refusal_codes(self):
-        stable_args = ("--package", "io.github.eslamasabry.opencode_mobile", "--stable-app-qa", "--allow-model-spend")
+        stable_args = ("--package", "io.github.haizhu.code", "--stable-app-qa", "--allow-model-spend")
         for code in ("symlink_refused", "repository_git", "sessionFailed", "qa_job_interrupted"):
             with self.subTest(code=code):
                 self.output.write_text(transcript().replace("PASS scratch_repo", "FAIL scratch_repo " + code))

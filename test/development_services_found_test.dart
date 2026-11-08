@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/managed_shell.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/kit/kit_undo.dart';
-import 'package:opencode_mobile/ui/screens/development_services_screen.dart';
+import 'package:haizhucode/domain/managed_shell.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/kit/kit_undo.dart';
+import 'package:haizhucode/ui/screens/development_services_screen.dart';
 
 import 'development_services_screen_test.dart' show connectionFor, seed;
 import 'support/development_service_fakes.dart';

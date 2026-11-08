@@ -7,7 +7,7 @@
 // Regenerate deliberately:
 //   flutter test --update-goldens test/revamp/p67_consent_golden_test.dart
 // and look at every changed image before committing it.
-import 'package:opencode_mobile/domain/server_gateway.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
@@ -15,17 +15,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import '../support/fake_server_gateway.dart';
 import '../support/fake_event_channel.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/in_flow_consent.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/repeated_permission_consent.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/widgets/always_allow_invitation.dart';
-import 'package:opencode_mobile/ui/widgets/phone_server_consents.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/in_flow_consent.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/repeated_permission_consent.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/widgets/always_allow_invitation.dart';
+import 'package:haizhucode/ui/widgets/phone_server_consents.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;

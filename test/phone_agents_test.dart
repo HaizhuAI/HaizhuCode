@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_sign_in.dart';
-import 'package:opencode_mobile/domain/phone_agents.dart';
-import 'package:opencode_mobile/domain/server_gateway/capabilities.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_sign_in.dart';
+import 'package:haizhucode/domain/phone_agents.dart';
+import 'package:haizhucode/domain/server_gateway/capabilities.dart';
 
 void main() {
   final claude = AgentCatalog.builtIn.byId('claude')!;

@@ -17,15 +17,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_termux_job_screen.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_termux_screen.dart'
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_termux_job_screen.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_termux_screen.dart'
     show termuxDownloadUrl;
-import 'package:opencode_mobile/ui/setup_commands.dart';
-import 'package:opencode_mobile/ui/widgets/setup_progress_view.dart';
+import 'package:haizhucode/ui/setup_commands.dart';
+import 'package:haizhucode/ui/widgets/setup_progress_view.dart';
 
 import 'support/fake_setup_engine.dart';
 import 'support/termux_channel_fixture.dart';

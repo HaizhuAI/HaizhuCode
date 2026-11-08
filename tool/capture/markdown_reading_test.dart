@@ -1,8 +1,8 @@
 // Actual renderer with local fixture content. No file/network actions.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/widgets/markdown.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/widgets/markdown.dart';
 import 'fixtures.dart';
 
 const _sample =

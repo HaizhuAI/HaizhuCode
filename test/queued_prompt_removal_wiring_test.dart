@@ -8,14 +8,14 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/while_away.dart';
-import 'package:opencode_mobile/state/automatic_activity.dart';
-import 'package:opencode_mobile/state/automation_policy.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/draft_attachments.dart';
-import 'package:opencode_mobile/state/offline_queue.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/queued_prompt_removal.dart';
+import 'package:haizhucode/domain/while_away.dart';
+import 'package:haizhucode/state/automatic_activity.dart';
+import 'package:haizhucode/state/automation_policy.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/draft_attachments.dart';
+import 'package:haizhucode/state/offline_queue.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/queued_prompt_removal.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 

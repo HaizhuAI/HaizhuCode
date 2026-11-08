@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/paseo/mappers.dart';
+import 'package:haizhucode/paseo/mappers.dart';
 
 void main() {
   test('Claude\'s sub-agent tool is the app\'s sub-agent card', () {

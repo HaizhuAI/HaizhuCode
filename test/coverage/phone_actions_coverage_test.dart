@@ -16,9 +16,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_auth_probe.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/agents/agents_section.dart';
+import 'package:haizhucode/domain/agent_auth_probe.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/agents/agents_section.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

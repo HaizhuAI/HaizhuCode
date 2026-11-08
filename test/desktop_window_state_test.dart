@@ -1,7 +1,7 @@
 import 'dart:ui' show Rect, Size;
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/desktop/window_state.dart';
+import 'package:haizhucode/desktop/window_state.dart';
 
 /// A laptop panel at the origin with a 32px top bar.
 const laptop = Rect.fromLTWH(0, 32, 1920, 1048);

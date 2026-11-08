@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/desktop/window_icon.dart';
+import 'package:haizhucode/desktop/window_icon.dart';
 
 void main() {
   // window_manager.setIcon fails silently by design — gtk_window_set_icon_from

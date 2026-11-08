@@ -9,7 +9,7 @@
 # those by hand if you want a clean slate.
 set -euo pipefail
 
-readonly APP_ID="io.github.eslamasabry.opencode_mobile"
+readonly APP_ID="io.github.haizhu.code"
 readonly BINARY_NAME="opencode_mobile"
 readonly INSTALL_NAME="opencode-mobile"
 

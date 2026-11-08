@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/events.dart';
-import 'package:opencode_mobile/api2/models.dart';
+import 'package:haizhucode/api2/events.dart';
+import 'package:haizhucode/api2/models.dart';
 
 List<Api2EventEnvelope> capturedEnvelopes() {
   final lines = File('test/fixtures/api2/events.sse').readAsLinesSync();

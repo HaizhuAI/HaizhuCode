@@ -1,4 +1,4 @@
-package io.github.eslamasabry.opencode_mobile
+package io.github.haizhu.code
 
 import java.io.File
 
@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
     val store = NativeCrashStore(directory)
     val privateValue = "oak-cloud"
     val error = IllegalStateException(privateValue).apply {
-        stackTrace = arrayOf(StackTraceElement("io.github.eslamasabry.opencode_mobile.$privateValue", privateValue, "$privateValue.kt", 7))
+        stackTrace = arrayOf(StackTraceElement("io.github.haizhu.code.$privateValue", privateValue, "$privateValue.kt", 7))
     }
     store.write(error)
     check(store.read() == null) { "Default-off store captured an error" }

@@ -12,17 +12,17 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/local_terminal.dart';
-import 'package:opencode_mobile/domain/agent_auth_probe.dart';
-import 'package:opencode_mobile/domain/agent_catalog.dart';
-import 'package:opencode_mobile/domain/agent_sign_in.dart';
-import 'package:opencode_mobile/domain/phone_agent_host.dart';
-import 'package:opencode_mobile/domain/phone_agents.dart';
-import 'package:opencode_mobile/ui/kit/kit.dart';
-import 'package:opencode_mobile/ui/screens/agents/agent_sheet.dart';
-import 'package:opencode_mobile/ui/screens/agents/agent_sign_in_terminal.dart';
-import 'package:opencode_mobile/ui/screens/agents/agents_section.dart';
-import 'package:opencode_mobile/ui/screens/agents/phone_check_view.dart';
+import 'package:haizhucode/builtin/local_terminal.dart';
+import 'package:haizhucode/domain/agent_auth_probe.dart';
+import 'package:haizhucode/domain/agent_catalog.dart';
+import 'package:haizhucode/domain/agent_sign_in.dart';
+import 'package:haizhucode/domain/phone_agent_host.dart';
+import 'package:haizhucode/domain/phone_agents.dart';
+import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/screens/agents/agent_sheet.dart';
+import 'package:haizhucode/ui/screens/agents/agent_sign_in_terminal.dart';
+import 'package:haizhucode/ui/screens/agents/agents_section.dart';
+import 'package:haizhucode/ui/screens/agents/phone_check_view.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

@@ -2,10 +2,10 @@
 // overflow share the first row; the server and project lines sit below.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_menu.dart';
-import 'package:opencode_mobile/ui/kit/kit_top_bar.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_menu.dart';
+import 'package:haizhucode/ui/kit/kit_top_bar.dart';
 
 /// The bar on a 390 dp phone with a project, its server and a branch.
 /// (The test font is wide: one server-less line holds the three at 1.0.)

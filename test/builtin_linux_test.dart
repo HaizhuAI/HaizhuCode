@@ -4,11 +4,11 @@ import 'dart:io';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/server_probe.dart' show ServerFlavor;
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/termux/bridge.dart';
-import 'package:opencode_mobile/termux/opencode_ubuntu_setup.dart';
+import 'package:haizhucode/domain/server_probe.dart' show ServerFlavor;
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/termux/bridge.dart';
+import 'package:haizhucode/termux/opencode_ubuntu_setup.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

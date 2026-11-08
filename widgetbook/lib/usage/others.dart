@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:opencode_mobile/domain/usage_subscriptions.dart';
-import 'package:opencode_mobile/state/computer_usage_source.dart';
-import 'package:opencode_mobile/ui/kit/kit_window_row.dart';
-import 'package:opencode_mobile/ui/screens/usage/usage_add_picker_screen.dart';
-import 'package:opencode_mobile/ui/screens/usage/usage_add_screen.dart';
-import 'package:opencode_mobile/ui/screens/usage/usage_alerts_screen.dart';
-import 'package:opencode_mobile/ui/screens/usage/usage_read_from_screen.dart';
-import 'package:opencode_mobile/ui/screens/usage_widget_screen.dart';
+import 'package:haizhucode/domain/usage_subscriptions.dart';
+import 'package:haizhucode/state/computer_usage_source.dart';
+import 'package:haizhucode/ui/kit/kit_window_row.dart';
+import 'package:haizhucode/ui/screens/usage/usage_add_picker_screen.dart';
+import 'package:haizhucode/ui/screens/usage/usage_add_screen.dart';
+import 'package:haizhucode/ui/screens/usage/usage_alerts_screen.dart';
+import 'package:haizhucode/ui/screens/usage/usage_read_from_screen.dart';
+import 'package:haizhucode/ui/screens/usage_widget_screen.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import '../catalog.dart';
 import '../fakes/computer_usage_fakes.dart';
 import '../fakes/fake_app.dart';
-import 'package:opencode_mobile/state/usage_subscriptions_controller.dart';
+import 'package:haizhucode/state/usage_subscriptions_controller.dart';
 
 import '../fakes/usage_harness.dart';
 

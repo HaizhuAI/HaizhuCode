@@ -62,7 +62,7 @@ user. Its verified, unchanged APK was published as a development prerelease:
 Anonymous download returned HTTP 200, APK content type, correct ZIP/APK header
 and 186,199,352-byte length. The release asset digest matches the downloaded APK:
 `2E04BC4674E6AE0954A70D0A8AC1D30DD717805BD62C28B943850E2B919A9827`.
-Package `io.github.eslamasabry.opencode_mobile`, version `1.0.34` (35), min SDK 24,
+Package `io.github.haizhu.code`, version `1.0.34` (35), min SDK 24,
 ARM64/ARMv7/x86_64, signer `2D010C2103CB2F78ABAACA690EAD4D45F8003A6C0A02082CD2A2AE62FD18D0EC`.
 This is the CI test signer, not the public release signer. This prerelease does
 not update release-signed installations and does not include cycles 14–15.

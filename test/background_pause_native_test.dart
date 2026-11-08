@@ -15,8 +15,8 @@ void main() {
     jar = await cachedKotlinJar(
       compiler: compiler,
       sources: [
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/BackgroundPauseReceipt.kt',
-        'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/BackgroundPauseStore.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/BackgroundPauseReceipt.kt',
+        'android/app/src/main/kotlin/io/github/haizhu/code/BackgroundPauseStore.kt',
         'test/native/background_pause_harness.kt',
         'test/native/background_pause_stubs/context.kt',
         'test/native/background_pause_stubs/activity.kt',
@@ -42,7 +42,7 @@ void main() {
       final result = await Process.run('java', [
         '-cp',
         jar,
-        'io.github.eslamasabry.opencode_mobile.Background_pause_harnessKt',
+        'io.github.haizhu.code.Background_pause_harnessKt',
         scenario,
       ]);
       expect(result.exitCode, 0, reason: '${result.stdout}\n${result.stderr}');

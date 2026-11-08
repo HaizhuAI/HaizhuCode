@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/agent_account.dart';
-import 'package:opencode_mobile/state/agent_account.dart';
+import 'package:haizhucode/domain/agent_account.dart';
+import 'package:haizhucode/state/agent_account.dart';
 
 import 'support/account_fakes.dart';
 

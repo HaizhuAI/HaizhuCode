@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/attention_feed.dart';
-import 'package:opencode_mobile/domain/work_row_status.dart';
-import 'package:opencode_mobile/state/elsewhere_attention.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/attention_feed.dart';
+import 'package:haizhucode/domain/work_row_status.dart';
+import 'package:haizhucode/state/elsewhere_attention.dart';
 
 EventEnvelope _event(String type, String directory, Map<String, dynamic> p) =>
     EventEnvelope(type: type, properties: p, directory: directory);

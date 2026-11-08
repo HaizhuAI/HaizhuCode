@@ -3,11 +3,11 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/api2/client.dart';
-import 'package:opencode_mobile/api2/dialect.dart';
-import 'package:opencode_mobile/api2/setup_config_adapter.dart';
-import 'package:opencode_mobile/domain/setup_assistant.dart';
-import 'package:opencode_mobile/ui/kit/kit_redact.dart';
+import 'package:haizhucode/api2/client.dart';
+import 'package:haizhucode/api2/dialect.dart';
+import 'package:haizhucode/api2/setup_config_adapter.dart';
+import 'package:haizhucode/domain/setup_assistant.dart';
+import 'package:haizhucode/ui/kit/kit_redact.dart';
 
 class _Adapter implements HttpClientAdapter {
   final requests = <RequestOptions>[];

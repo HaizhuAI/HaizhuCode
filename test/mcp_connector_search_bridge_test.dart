@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/state/mcp_connector_search_bridge.dart';
+import 'package:haizhucode/state/mcp_connector_search_bridge.dart';
 
 void main() {
   late McpConnectorSearchBridge bridge;

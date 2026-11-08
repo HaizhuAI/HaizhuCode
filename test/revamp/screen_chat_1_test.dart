@@ -3,10 +3,10 @@
 // organization switch, and the offline demo's frame (map fixes).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
-import 'package:opencode_mobile/ui/kit/kit_page_route.dart';
-import 'package:opencode_mobile/ui/screens/demo_screen.dart';
-import 'package:opencode_mobile/ui/screens/session_destination_sheet.dart';
+import 'package:haizhucode/domain/product_repository.dart';
+import 'package:haizhucode/ui/kit/kit_page_route.dart';
+import 'package:haizhucode/ui/screens/demo_screen.dart';
+import 'package:haizhucode/ui/screens/session_destination_sheet.dart';
 
 import 'screen_chat_1_support.dart';
 

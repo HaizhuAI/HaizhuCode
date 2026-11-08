@@ -15,9 +15,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/setup/setup_contract.dart';
-import 'package:opencode_mobile/platform/platform_capabilities.dart';
-import 'package:opencode_mobile/ui/screens/phone_setup/phone_setup_termux_job_screen.dart';
+import 'package:haizhucode/builtin/setup/setup_contract.dart';
+import 'package:haizhucode/platform/platform_capabilities.dart';
+import 'package:haizhucode/ui/screens/phone_setup/phone_setup_termux_job_screen.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../support/fake_setup_engine.dart';

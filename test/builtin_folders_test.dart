@@ -3,8 +3,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_folders.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/builtin_folders.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
 
 /// A stopped Ubuntu: running anything in it, or asking about its server,
 /// fails the test.
@@ -341,7 +341,7 @@ void main() {
   test('Ubuntu\'s place on the phone matches the Android side', () {
     // BuiltinRootfsFolders.locateRootfs mirrors these three lines.
     final kotlin = File(
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile/'
+      'android/app/src/main/kotlin/io/github/haizhu/code/'
       'BuiltinLinux.kt',
     ).readAsStringSync();
     expect(kotlin, contains('val home = File(context.filesDir, "linux")'));

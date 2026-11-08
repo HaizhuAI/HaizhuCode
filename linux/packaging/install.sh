@@ -10,7 +10,7 @@
 # under <prefix>/share so the shell shows the app with its own icon.
 set -euo pipefail
 
-readonly APP_ID="io.github.eslamasabry.opencode_mobile"
+readonly APP_ID="io.github.haizhu.code"
 readonly BINARY_NAME="opencode_mobile"
 readonly INSTALL_NAME="opencode-mobile"
 

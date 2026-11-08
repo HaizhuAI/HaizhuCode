@@ -11,22 +11,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/orchestration_gateway.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/orchestration/adapters/fixture/fixture_gateway.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/orchestration.dart';
-import 'package:opencode_mobile/state/orchestration_store.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/state/team_project_demo.dart'
+import 'package:haizhucode/domain/orchestration_gateway.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/orchestration/adapters/fixture/fixture_gateway.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/orchestration.dart';
+import 'package:haizhucode/state/orchestration_store.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/state/team_project_demo.dart'
     show teamProjectDemoConfig;
-import 'package:opencode_mobile/ui/screens/settings/plugins_screen.dart'
+import 'package:haizhucode/ui/screens/settings/plugins_screen.dart'
     show teamRowSubtitle, teamFirstProbeGrace;
-import 'package:opencode_mobile/ui/screens/team/team_page.dart';
-import 'package:opencode_mobile/ui/screens/team/team_home_screen.dart';
-import 'package:opencode_mobile/ui/screens/team/team_intro_screen.dart';
-import 'package:opencode_mobile/ui/widgets/team_discovery_card.dart';
-import 'package:opencode_mobile/ui/widgets/team_host_form.dart';
+import 'package:haizhucode/ui/screens/team/team_page.dart';
+import 'package:haizhucode/ui/screens/team/team_home_screen.dart';
+import 'package:haizhucode/ui/screens/team/team_intro_screen.dart';
+import 'package:haizhucode/ui/widgets/team_discovery_card.dart';
+import 'package:haizhucode/ui/widgets/team_host_form.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'team_open_settings.dart';

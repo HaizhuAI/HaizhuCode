@@ -1,14 +1,14 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/paseo/tested_versions.dart';
+import 'package:haizhucode/paseo/tested_versions.dart';
 
 /// One Claude Code sign-in on the phone (docs/qa/claude-phone-auth-2026-10-16):
 /// the app's native side must see a sign-in made in the Terminal, and must
 /// accept every Claude build the app is qualified with.
 void main() {
   const native =
-      'android/app/src/main/kotlin/io/github/eslamasabry/opencode_mobile';
+      'android/app/src/main/kotlin/io/github/haizhu/code';
 
   test('every app launch of Claude shares the Terminal sign-in folder', () {
     final linux = File('$native/BuiltinLinux.kt').readAsStringSync();

@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/builtin/builtin_linux.dart';
-import 'package:opencode_mobile/builtin/agent_helper_diagnostics.dart';
-import 'package:opencode_mobile/domain/agent_helper_status.dart';
-import 'package:opencode_mobile/domain/app_exit_history.dart';
-import 'package:opencode_mobile/domain/turn_stall.dart';
+import 'package:haizhucode/builtin/builtin_linux.dart';
+import 'package:haizhucode/builtin/agent_helper_diagnostics.dart';
+import 'package:haizhucode/domain/agent_helper_status.dart';
+import 'package:haizhucode/domain/app_exit_history.dart';
+import 'package:haizhucode/domain/turn_stall.dart';
 
 void main() {
   final at = DateTime.utc(2026, 10, 9, 12);

@@ -8,12 +8,12 @@
 // ignore_for_file: invalid_use_of_visible_for_testing_member, invalid_use_of_protected_member
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
-import 'package:opencode_mobile/domain/server_gateway.dart';
-import 'package:opencode_mobile/state/nudges.dart';
-import 'package:opencode_mobile/state/offline_queue.dart';
-import 'package:opencode_mobile/state/prompt_shelf.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
+import 'package:haizhucode/domain/models.dart';
+import 'package:haizhucode/domain/server_gateway.dart';
+import 'package:haizhucode/state/nudges.dart';
+import 'package:haizhucode/state/offline_queue.dart';
+import 'package:haizhucode/state/prompt_shelf.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
 
 import '../../fixtures.dart';
 import '../census_core.dart';

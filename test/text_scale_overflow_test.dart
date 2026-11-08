@@ -22,25 +22,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/domain/models.dart';
+import 'package:haizhucode/domain/models.dart';
 import 'support/fake_server_gateway.dart';
-import 'package:opencode_mobile/domain/product_repository.dart';
+import 'package:haizhucode/domain/product_repository.dart';
 import 'support/fake_event_channel.dart';
-import 'package:opencode_mobile/api2/models.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
-import 'package:opencode_mobile/state/connection.dart';
-import 'package:opencode_mobile/state/profiles.dart';
-import 'package:opencode_mobile/ui/app_theme.dart';
-import 'package:opencode_mobile/ui/kit/kit_choice_list.dart'
+import 'package:haizhucode/api2/models.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
+import 'package:haizhucode/state/connection.dart';
+import 'package:haizhucode/state/profiles.dart';
+import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/kit/kit_choice_list.dart'
     show KitChoice, KitChoiceRow;
-import 'package:opencode_mobile/ui/kit/kit_segmented.dart'
+import 'package:haizhucode/ui/kit/kit_segmented.dart'
     show KitSegment, KitSegmented;
-import 'package:opencode_mobile/ui/screens/chat/permission_sheet.dart';
-import 'package:opencode_mobile/ui/screens/chat_screen.dart';
-import 'package:opencode_mobile/ui/screens/home_screen.dart';
-import 'package:opencode_mobile/ui/screens/servers_screen.dart';
-import 'package:opencode_mobile/ui/screens/settings_screen.dart';
-import 'package:opencode_mobile/ui/widgets/form_renderer.dart';
+import 'package:haizhucode/ui/screens/chat/permission_sheet.dart';
+import 'package:haizhucode/ui/screens/chat_screen.dart';
+import 'package:haizhucode/ui/screens/home_screen.dart';
+import 'package:haizhucode/ui/screens/servers_screen.dart';
+import 'package:haizhucode/ui/screens/settings_screen.dart';
+import 'package:haizhucode/ui/widgets/form_renderer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;
@@ -254,7 +254,7 @@ KitManifest readKitManifest({String kitFile = '$_kitDir/kit.dart'}) {
   }
 
   File resolve(File from, String uri) {
-    const self = 'package:opencode_mobile/';
+    const self = 'package:haizhucode/';
     if (uri.startsWith(self)) return File('lib/${uri.substring(self.length)}');
     return File.fromUri(from.absolute.uri.resolve(uri));
   }
@@ -306,7 +306,7 @@ KitManifest readKitManifest({String kitFile = '$_kitDir/kit.dart'}) {
       final uri = m[1]!;
       if (uri.startsWith('dart:') ||
           (uri.startsWith('package:') &&
-              !uri.startsWith('package:opencode_mobile/'))) {
+              !uri.startsWith('package:haizhucode/'))) {
         problems.add(
           '${shown(file)}: exports $uri, which the manifest does not follow',
         );

@@ -44,11 +44,11 @@ List<String> validateReleaseMetadata({
 
   final notesPath = 'docs/releases/v$version.md';
   if (releaseNotes == null) {
-    issues.add('Add $notesPath with header # OpenCode Mobile $version.');
+    issues.add('Add $notesPath with header # HaizhuCode $version.');
   } else {
     final firstLine = releaseNotes.split('\n').first.trim();
-    if (firstLine != '# OpenCode Mobile $version') {
-      issues.add('$notesPath must start with # OpenCode Mobile $version.');
+    if (firstLine != '# HaizhuCode $version') {
+      issues.add('$notesPath must start with # HaizhuCode $version.');
     }
   }
   return issues;

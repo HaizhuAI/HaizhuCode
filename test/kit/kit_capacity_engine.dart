@@ -21,7 +21,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:opencode_mobile/l10n/app_localizations.dart';
+import 'package:haizhucode/l10n/app_localizations.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme;
 import '../goldens/kit/kit_gallery.dart' show loadKitGalleryFonts;

@@ -44,7 +44,7 @@ readonly APK_NAME="opencode-mobile-${VERSION}-alpha.apk"
 readonly NOTES="docs/release-alpha-notes.md"
 # The published body starts at this heading; the draft preamble above it in
 # $NOTES is for the person cutting the release, not for GitHub.
-readonly NOTES_ANCHOR="# OpenCode Mobile - Alpha $VERSION"
+readonly NOTES_ANCHOR="# HaizhuCode - Alpha $VERSION"
 readonly NOTES_MIN_LINES=10
 readonly SIDELOAD_CERT="842284b27aa297fb74cf831779fd16498517e1bc2104451459fec2ea7ac11d1c"
 
@@ -162,7 +162,7 @@ step "Publishing the signed APK through Shorebird"
 [[ -f "$APK_SRC" ]] || fail "expected APK missing at $APK_SRC."
 
 step "Tagging $TAG"
-git tag -a "$TAG" -m "OpenCode Mobile $VERSION alpha"
+git tag -a "$TAG" -m "HaizhuCode $VERSION alpha"
 git push origin "$TAG"
 
 step "Assembling the release notes from the merged HEAD"
@@ -173,7 +173,7 @@ build_release_body >"$BODY_FILE"
 step "Opening the draft GitHub prerelease"
 gh release create "$TAG" \
   --draft --prerelease \
-  --title "OpenCode Mobile $VERSION alpha" \
+  --title "HaizhuCode $VERSION alpha" \
   --notes-file "$BODY_FILE" ||
   fail "draft release creation failed; inspect tag $TAG before proceeding."
 
