@@ -3827,7 +3827,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get e7SettingsDetailUi23 => 'OpenCode 服务器的桌面客户端。';
 
   @override
-  String get e7SettingsDetailUi25 => 'Built-in';
+  String get e7SettingsDetailUi25 => '内置';
 
   @override
   String get e7SettingsDetailUi26 => '技能';
@@ -8628,7 +8628,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get teamUiStartRunDirectSend => '发送给智能体';
 
   @override
-  String get teamUiStartRunRefused => 'The host did not accept this task.';
+  String get teamUiStartRunRefused => '主机未接受此任务。';
 
   @override
   String get teamUiMergeTitleNotReady => '尚不可合并';
@@ -8698,8 +8698,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get teamUiMergeRefused =>
-      'The host did not accept this, so nothing was merged.';
+  String get teamUiMergeRefused => '主机未接受此请求，因此未合并任何更改。';
 
   @override
   String teamUiMergeMerged(String branch, String commit) {
@@ -10117,12 +10116,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get agentErrorOutOfCreditHint => '请为账户充值，或切换到其他提供商或模型。';
 
   @override
-  String get agentErrorUsageLimit =>
-      'This model\'s usage limit is reached for now.';
+  String get agentErrorUsageLimit => '该模型当前已达用量上限。';
 
   @override
-  String get agentErrorUsageLimitHint =>
-      'Choose another model to keep going, or continue after the limit resets.';
+  String get agentErrorUsageLimitHint => '选择其他模型继续使用，或等待额度重置后再继续。';
 
   @override
   String get agentErrorServerDiskFull => '运行 OpenCode 的电脑磁盘空间已满。';
@@ -10156,7 +10153,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatStripAutoApprove => '自动批准';
 
   @override
-  String get chatChipAutoApproveOn => 'Auto-approve on';
+  String get chatChipAutoApproveOn => '自动批准已开启';
 
   @override
   String get chatStripAutoApprovePaused => '自动批准已暂停';
@@ -11234,10 +11231,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get workServerRestart => '重启';
 
   @override
-  String get connectionRestartAgent => 'Restart Claude Code';
+  String get connectionRestartAgent => '重启 Claude Code';
 
   @override
-  String get connectionRestartPhoneServer => 'Restart OpenCode';
+  String get connectionRestartPhoneServer => '重启 OpenCode';
 
   @override
   String get workServerRestartTitle => '在此手机上重启 OpenCode？';
@@ -12312,21 +12309,19 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get appExitQuietRestarted => 'Restarted after the app closed';
+  String get appExitQuietRestarted => '应用关闭后已重新启动';
 
   @override
-  String get appExitQuietRestarting => 'Restarting after the app closed';
+  String get appExitQuietRestarting => '应用关闭后正在重新启动';
 
   @override
-  String get thermalQuietPaused =>
-      'Phone is hot · AI Team paused until it cools';
+  String get thermalQuietPaused => '手机发热 — AI 团队已暂停，待降温后恢复';
 
   @override
-  String get thermalQuietStopped =>
-      'Phone is very hot · AI Team stopped until it cools';
+  String get thermalQuietStopped => '手机过热 — AI 团队已停止，待降温后恢复';
 
   @override
-  String get thermalQuietResumed => 'Phone cooled down · AI Team resumed';
+  String get thermalQuietResumed => '手机已降温 — AI 团队已恢复运行';
 
   @override
   String get thermalPausedNotice => '手机过热，已暂停 AI Team 以降温。它会自动恢复。';
@@ -13225,8 +13220,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get kitTopBarBack => '返回';
 
   @override
-  String get kitErrorFallbackMessage =>
-      'This part of OpenCode hit an error. Go back and try again, or open App diagnostics for details.';
+  String get kitErrorFallbackMessage => '此页面遇到错误。请返回重试，或打开“应用诊断”查看详情。';
 
   @override
   String get kitTopBarClose => '关闭';
@@ -13648,19 +13642,19 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String kitDiffLinesAdded(int start, int end) {
-    return 'Lines $start–$end added';
+    return '新增第 $start–$end 行';
   }
 
   @override
   String kitDiffLinesRemoved(int start, int end) {
-    return 'Lines $start–$end removed';
+    return '删除第 $start–$end 行';
   }
 
   @override
-  String get kitDiffShowSource => 'Source';
+  String get kitDiffShowSource => '源码';
 
   @override
-  String get kitDiffShowFormatted => 'Formatted';
+  String get kitDiffShowFormatted => '预览';
 
   @override
   String get kitDiffComment => '评论';
@@ -14303,7 +14297,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get activityOwnAnswer => '或者写下你自己的回答';
 
   @override
-  String get shortcutsPaletteSearch => 'Search or go to…';
+  String get shortcutsPaletteSearch => '搜索或跳转…';
 
   @override
   String get shortcutsHelpAnywhere => '任意位置';
@@ -20526,8 +20520,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get migrationItemAiTeam => 'AI Team';
 
   @override
-  String get migrationItemProjectsWhat =>
-      'Into a new folder in On this phone. Nothing there is overwritten.';
+  String get migrationItemProjectsWhat => '复制到“本机”下的新文件夹中，不会覆盖任何现有内容。';
 
   @override
   String get migrationItemConfigWhat => '使用前请先检查：其中的命令和路径可能只适用于 Termux。';
@@ -20561,8 +20554,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get migrationSizeUnknown => '大小未知';
 
   @override
-  String get migrationExportsNote =>
-      'Private copies stay in On this phone. Nothing in them runs or turns on by itself.';
+  String get migrationExportsNote => '私有副本保留在“本机”中，其中内容不会自行运行或启用。';
 
   @override
   String get migrationLimitNote => '每项最多 3 GB 和 20,000 个文件。';
@@ -20589,7 +20581,7 @@ class AppLocalizationsZh extends AppLocalizations {
       '复制期间请保持应用打开。离开应用时 Android 会停止它，回来后它会从当前进度继续。';
 
   @override
-  String get migrationStart => 'Copy to On this phone';
+  String get migrationStart => '复制到本机';
 
   @override
   String get migrationChooseOne => '请至少选择一项要复制的内容。';
@@ -20607,10 +20599,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get migrationVerifying => '正在检查已复制的文件…';
 
   @override
-  String get migrationSwitching => 'Connecting to On this phone…';
+  String get migrationSwitching => '正在连接到本机…';
 
   @override
-  String get migrationStepConnect => 'Connect to On this phone';
+  String get migrationStepConnect => '连接到本机';
 
   @override
   String get migrationStop => '停止复制';
@@ -20657,7 +20649,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get migrationChooseFewer => '选择更少的项';
 
   @override
-  String get migrationNeedsBuiltin => 'Set up On this phone first.';
+  String get migrationNeedsBuiltin => '请先设置本机服务。';
 
   @override
   String migrationNeedsBuiltinBody(String runtime) {
@@ -20665,7 +20657,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get migrationSetUpBuiltin => 'Set up On this phone';
+  String get migrationSetUpBuiltin => '设置本机服务';
 
   @override
   String get migrationSetupFailed => '设置无法启动。请重试，或从“此手机”中进行设置。';
@@ -20717,8 +20709,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get migrationDestinationChanged => '已导入的文件发生了变化。它们不会被覆盖。';
 
   @override
-  String get migrationDestinationChangedFix =>
-      'The files in On this phone stay as you left them.';
+  String get migrationDestinationChangedFix => '“本机”中的文件保持原样未变。';
 
   @override
   String get migrationStorageFailed => '无法保存副本。请检查手机存储后重试。';
@@ -20730,8 +20721,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get migrationSelectionChanged => '请使用已保存的迁移选择继续。';
 
   @override
-  String get migrationConnectionFailed =>
-      'Files are copied, but On this phone could not connect.';
+  String get migrationConnectionFailed => '文件已复制完成，但无法连接到本机服务。';
 
   @override
   String get migrationFailureCode => '原因';
@@ -20765,7 +20755,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String migrationProjectsWhereBody(String folder) {
-    return 'In the folder $folder in On this phone';
+    return '位于“本机”的 $folder 文件夹中';
   }
 
   @override
@@ -20773,7 +20763,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String migrationExportsWhereBody(String items) {
-    return '$items: saved in On this phone, not turned on';
+    return '$items：已保存在“本机”中，未自动启用';
   }
 
   @override
@@ -20784,7 +20774,7 @@ class AppLocalizationsZh extends AppLocalizations {
       '我们不会替你移除任何内容。在此之前它会继续工作，你可以在“服务器”中切回它。';
 
   @override
-  String get migrationOpenBuiltin => 'Open On this phone';
+  String get migrationOpenBuiltin => '打开本机服务';
 
   @override
   String get migrationDetailProjects => '项目文件夹';
@@ -20805,17 +20795,16 @@ class AppLocalizationsZh extends AppLocalizations {
   String get migrationUnavailableBody => '应用无法为复制准备私有存储。请重试；若反复出现，请重启应用。';
 
   @override
-  String get migrationRowBody =>
-      'Copy your projects to the server on this phone. Termux stays as it is.';
+  String get migrationRowBody => '将你的项目复制到本机内置服务器，Termux 保持原样不变。';
 
   @override
-  String get migrationRowResume => 'Resume moving to On this phone';
+  String get migrationRowResume => '继续迁移到本机';
 
   @override
   String get migrationRowResumeBody => '完成前已停止。已复制的内容会保留。';
 
   @override
-  String get migrationRowRunning => 'Moving to On this phone';
+  String get migrationRowRunning => '正在迁移到本机';
 
   @override
   String get migrationRowDoneBody => '准备好后移除 Termux 服务器。';
@@ -21036,7 +21025,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get manageSpaceDeleteBody => 'HaizhuCode 之后会像全新安装一样重新启动。此操作无法撤销。';
 
   @override
-  String get manageSpaceLostServer => 'On this phone and its conversations';
+  String get manageSpaceLostServer => '本机服务及其所有对话';
 
   @override
   String manageSpaceLostProjects(int count, String size) {
@@ -21071,7 +21060,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get manageSpaceDeletedLabel => '清除会删除';
 
   @override
-  String get manageSpaceServer => 'On this phone';
+  String get manageSpaceServer => '本机';
 
   @override
   String get manageSpaceServerDetail => 'Ubuntu、OpenCode、其登录信息和对话';
@@ -21115,7 +21104,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get projectExportNoProjects => 'No projects in On this phone yet';
+  String get projectExportNoProjects => '“本机”中还没有项目';
 
   @override
   String get projectExportSave => '保存为 zip 文件';
@@ -21218,10 +21207,10 @@ class AppLocalizationsZh extends AppLocalizations {
       '正在使用 OpenCode 的免费模型，速度较慢。添加你所用服务商的 API 密钥即可使用自己的模型。';
 
   @override
-  String get chatFreeModelNote => 'Free model, slower';
+  String get chatFreeModelNote => '免费模型，速度较慢';
 
   @override
-  String get chatFreeModelAddKey => 'Add your key';
+  String get chatFreeModelAddKey => '添加你自己的密钥';
 
   @override
   String get freeModelSignIn => '添加 API 密钥';
@@ -23786,7 +23775,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatsHomeRowWorking => '进行中';
 
   @override
-  String get chatsHomeStopped => 'Stopped';
+  String get chatsHomeStopped => '已停止';
 
   @override
   String get chatsHomeDone => '已完成';
@@ -23810,7 +23799,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String chatsHomeIncompleteNamed(String servers) {
-    return '$servers couldn\'t load';
+    return '$servers 未能加载';
   }
 
   @override
@@ -23919,88 +23908,81 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatsNewSeparateCopy => '在单独的副本中';
 
   @override
-  String get agentPersonaClaudeCodeStrength => 'Careful with big changes';
+  String get agentPersonaClaudeCodeStrength => '擅长大型复杂改动';
 
   @override
-  String get agentPersonaClaudeCodeAbout =>
-      'Plans before it edits; good for larger changes across files.';
+  String get agentPersonaClaudeCodeAbout => '先规划再动手编辑，适合跨文件的较大改动。';
 
   @override
-  String get agentPersonaClaudeCodeNeeds => 'A Claude plan or an Anthropic key';
+  String get agentPersonaClaudeCodeNeeds => '需要 Claude 订阅或 Anthropic 密钥';
 
   @override
-  String get agentPersonaCodexStrength => 'Fast edits and reviews';
+  String get agentPersonaCodexStrength => '快速修改与代码审阅';
 
   @override
-  String get agentPersonaCodexAbout =>
-      'Quick at focused fixes and reviewing changes.';
+  String get agentPersonaCodexAbout => '擅长针对性修复与变更审阅。';
 
   @override
-  String get agentPersonaCodexNeeds => 'A ChatGPT plan or an OpenAI key';
+  String get agentPersonaCodexNeeds => '需要 ChatGPT 订阅或 OpenAI 密钥';
 
   @override
-  String get agentPersonaGeminiStrength => 'Reads a lot at once';
+  String get agentPersonaGeminiStrength => '一次读取大量内容';
 
   @override
-  String get agentPersonaGeminiAbout =>
-      'Handles long files and wide questions well.';
+  String get agentPersonaGeminiAbout => '擅长处理长文件与广域问题。';
 
   @override
-  String get agentPersonaGeminiNeeds => 'A Google account or a Gemini key';
+  String get agentPersonaGeminiNeeds => '需要 Google 账号或 Gemini 密钥';
 
   @override
-  String get agentPersonaKiloStrength => 'Your choice of provider';
+  String get agentPersonaKiloStrength => '自由选择供应商';
 
   @override
-  String get agentPersonaKiloAbout =>
-      'One agent that works with many model providers.';
+  String get agentPersonaKiloAbout => '支持接入多家模型供应商的通用智能体。';
 
   @override
-  String get agentPersonaKiloNeeds => 'A key from any supported provider';
+  String get agentPersonaKiloNeeds => '需要任意支持供应商的密钥';
 
   @override
-  String get agentPersonaClineStrength => 'Step by step, asks first';
+  String get agentPersonaClineStrength => '分步执行，先询问后操作';
 
   @override
-  String get agentPersonaClineAbout =>
-      'Works in small steps and checks in with you.';
+  String get agentPersonaClineAbout => '小步推进，每步都会先向你确认。';
 
   @override
-  String get agentPersonaClineNeeds => 'A key from any supported provider';
+  String get agentPersonaClineNeeds => '需要任意支持供应商的密钥';
 
   @override
-  String get agentPersonaOpenCodeStrength => 'Any model, free ones too';
+  String get agentPersonaOpenCodeStrength => '支持任意模型，含免费模型';
 
   @override
-  String get agentPersonaOpenCodeAbout =>
-      'Works with any provider, and has free models to start.';
+  String get agentPersonaOpenCodeAbout => '兼容所有供应商，开箱自带可用免费模型。';
 
   @override
-  String get agentPersonaOpenCodeNeeds =>
-      'Nothing to start; add a key for more models';
+  String get agentPersonaOpenCodeNeeds => '无需配置即可起步；添加密钥可解锁更多模型';
 
   @override
-  String get agentPersonaOtherName => 'Another agent';
+  String get agentPersonaOtherName => '其他智能体';
 
   @override
-  String get agentMakerAnthropic => 'by Anthropic';
+  String get agentMakerAnthropic => 'Anthropic 出品';
 
   @override
-  String get agentMakerOpenAI => 'by OpenAI';
+  String get agentMakerOpenAI => 'OpenAI 出品';
 
   @override
-  String get agentMakerGoogle => 'by Google';
+  String get agentMakerGoogle => 'Google 出品';
 
   @override
-  String get agentMakerOpenSource => 'open source';
+  String get agentMakerOpenSource => '开源';
 
   @override
   String chatsNewStartWith(String agent) {
-    return 'Start with $agent';
+    return '使用 $agent 开始';
   }
 
   @override
-  String get chatsNewSetUp => 'Set up';
+  String get chatsNewSetUp => '设置';
 
   @override
   String get chatsNewPrompt => '我们要做什么？';
@@ -24727,7 +24709,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String cardsProblemRuntimeMissingFor(String agents) {
-    return 'Install $agents on this phone first.';
+    return '请先在本机安装 $agents。';
   }
 
   @override
@@ -24895,49 +24877,48 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String chatUiToolMessageTo(String name) {
-    return 'Message to $name';
+    return '发给 $name 的消息';
   }
 
   @override
-  String get chatUiToolMessageToMain => 'Message to the main conversation';
+  String get chatUiToolMessageToMain => '发给主对话的消息';
 
   @override
-  String get chatUiToolMessageToEveryone => 'Message to the whole team';
+  String get chatUiToolMessageToEveryone => '发给全队的消息';
 
   @override
-  String get chatUiToolMessageToAgent => 'Message to an agent';
+  String get chatUiToolMessageToAgent => '发给智能体的消息';
 
   @override
-  String get toolCardMessageRecipientId => 'Recipient id';
+  String get toolCardMessageRecipientId => '接收方 ID';
 
   @override
   String chatUiToolBackgroundNamedFinished(String name) {
-    return '$name finished';
+    return '$name 已完成';
   }
 
   @override
   String chatUiToolBackgroundNamedFailed(String name) {
-    return '$name failed';
+    return '$name 已失败';
   }
 
   @override
   String chatUiToolBackgroundNamedStopped(String name) {
-    return '$name stopped';
+    return '$name 已停止';
   }
 
   @override
   String chatUiToolBackgroundNamedEnded(String name) {
-    return '$name ended';
+    return '$name 已结束';
   }
 
   @override
   String chatUiToolBackgroundNamedCutOff(String name) {
-    return '$name stopped when the last conversation ended';
+    return '$name 在上一个对话结束时已停止';
   }
 
   @override
-  String get chatUiToolBackgroundTaskCutOff =>
-      'Background task stopped when the last conversation ended';
+  String get chatUiToolBackgroundTaskCutOff => '后台任务在上一个对话结束时已停止';
 
   @override
   String get chatUiToolShowCard => '显示卡片';
@@ -27815,22 +27796,19 @@ class AppLocalizationsZh extends AppLocalizations {
   String get fbNodeRow => '使用本机上的记忆';
 
   @override
-  String get fbNodeRowDetail =>
-      'Keep your memory on this phone. Nothing leaves the phone.';
+  String get fbNodeRowDetail => '将记忆保存在本机，任何内容都不会离开手机。';
 
   @override
   String get fbNodeUnsupportedTitle => '此处不可用';
 
   @override
-  String get fbNodeUnsupportedBody =>
-      'Memory on this phone needs On this phone, which only Android phones have.';
+  String get fbNodeUnsupportedBody => '本机记忆需要依赖 Android 手机内置的“本机”环境。';
 
   @override
   String get fbNodeLinuxTitle => '请先设置本机';
 
   @override
-  String get fbNodeLinuxBody =>
-      'Memory runs in On this phone. Set that up first, then come back.';
+  String get fbNodeLinuxBody => '记忆运行在“本机”环境中，请先完成设置后再返回。';
 
   @override
   String get fbNodeLinuxAction => '设置本机';
@@ -27839,15 +27817,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get fbNodeNoBuildTitle => '尚无记忆版本';
 
   @override
-  String get fbNodeNoBuildBody =>
-      'This version of the app cannot install Memory on this phone. Update the app to a newer version, or connect to a server of your own below.';
+  String get fbNodeNoBuildBody => '当前版本无法在本机安装记忆服务。请更新应用，或在下方连接你自己的服务器。';
 
   @override
   String get fbNodeNotInstalledTitle => '记忆尚未安装';
 
   @override
-  String get fbNodeNotInstalledBody =>
-      'The app installs Memory in On this phone, starts it and connects to it by itself. It listens only inside this phone.';
+  String get fbNodeNotInstalledBody => '应用会在“本机”中自动安装、启动并连接记忆服务，仅在手机内部监听。';
 
   @override
   String get fbNodeRun => '在本机上设置记忆';
@@ -27868,8 +27844,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get fbNodeRunningTitle => '记忆正在此处运行';
 
   @override
-  String get fbNodeRunningBody =>
-      'Memory runs in On this phone and is connected to this app. It listens only inside this phone.';
+  String get fbNodeRunningBody => '记忆服务正在“本机”中运行并已连接，仅在手机内部监听。';
 
   @override
   String get fbNodeStoppedTitle => '记忆已停止';
@@ -27975,8 +27950,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get fbNodeWhatTitle => '这是什么？';
 
   @override
-  String get fbNodeWhatBody =>
-      'Memory keeps your notes, reminders and facts on this phone, private to you. It runs on this phone and never leaves it.';
+  String get fbNodeWhatBody => '记忆会将你的笔记、提醒和事实保存在本机，完全私密，永不外传。';
 
   @override
   String get fbNodeOwnServer => '连接到自己的服务器';
@@ -28456,17 +28430,17 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String quotaInAppFailLinux(String server) {
-    return '$server is not ready yet. Finish setting up On this phone, then try again.';
+    return '$server 尚未就绪。请先完成“本机”设置后再试。';
   }
 
   @override
   String quotaInAppFailNoNode(String server) {
-    return '$server has no Node yet, which usage needs. Run the On this phone setup again to add it, then try again.';
+    return '$server 尚未安装用量读取所需的 Node。请重新运行“本机”设置添加后再试。';
   }
 
   @override
   String quotaInAppFailNodeOld(String server) {
-    return 'Node on $server is older than version 20. Run the On this phone setup again to update it, then try again.';
+    return '$server 上的 Node 版本低于 20。请重新运行“本机”设置更新后再试。';
   }
 
   @override
@@ -28743,8 +28717,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get usageAddNoneBody =>
-      'Save a server, or set up On this phone, and it will appear here.';
+  String get usageAddNoneBody => '保存一台服务器或设置“本机”后，它将显示在这里。';
 
   @override
   String get usageReadFromTitleHere => '读取用量';
@@ -28762,7 +28735,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get usageReadFromBodyInApp =>
-      'To show their limits, the app starts a small reader in On this phone. It only reads how much is left, never your conversations or keys.';
+      '为显示额度余量，应用会在“本机”启动一个轻量读取器，仅读取剩余额度，绝不触碰你的对话或密钥。';
 
   @override
   String get usageReadFromSetUpInApp => '设置用量';
@@ -29614,16 +29587,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String continuedFromShort(String title) {
-    return 'from $title';
+    return '承接自 $title';
   }
 
   @override
   String continuedInShort(String agent) {
-    return 'continued in $agent';
+    return '在 $agent 中继续';
   }
 
   @override
-  String get continuedGoneShort => 'other conversation gone';
+  String get continuedGoneShort => '原对话已删除';
 
   @override
   String get continuedGone => '此对话已不可用。';
@@ -29767,11 +29740,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get widgetV2ConfigureTitle => '小组件样式';
 
   @override
-  String get widgetProjectTitle => 'Show conversations from';
+  String get widgetProjectTitle => '显示来自以下项目的对话';
 
   @override
-  String get widgetProjectUnavailable =>
-      'Couldn’t save this choice. Try again.';
+  String get widgetProjectUnavailable => '无法保存此选项，请重试。';
 
   @override
   String get widgetV2BackgroundLabel => '背景';
@@ -31064,8 +31036,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gitRepairNotRepositoryTitle => '无法修复此文件夹';
 
   @override
-  String get gitRepairNotRepositoryBody =>
-      'Only Git projects in On this phone\'s projects folder can be repaired here.';
+  String get gitRepairNotRepositoryBody => '仅支持修复“本机”项目文件夹中的 Git 仓库。';
 
   @override
   String get gitRepairClose => '关闭';
@@ -31135,10 +31106,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gitProblemRemoteNotFound => '未找到远程仓库，或你的账户无权查看它。';
 
   @override
-  String get gitProblemNothingSelected => 'Tick at least one file.';
+  String get gitProblemNothingSelected => '请至少勾选一个文件。';
 
   @override
-  String get gitProblemEmptyMessage => 'Describe what changed first.';
+  String get gitProblemEmptyMessage => '请先填写变更说明。';
 
   @override
   String get gitProblemNothingToCommit => '你所选的文件中没有可提交的内容。';
@@ -31221,8 +31192,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gitOperationRevert => '还原未完成';
 
   @override
-  String get gitUsesOwnSignIn =>
-      'Sending and getting latest use the Git sign-in already set up where this project lives.';
+  String get gitUsesOwnSignIn => '推送与拉取会使用该项目所在环境已配置好的 Git 登录凭证。';
 
   @override
   String get gitChangeAdded => '新增';
@@ -31273,13 +31243,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gitActionSaveIdentity => '保存姓名和邮箱';
 
   @override
-  String get gitBusyPull => 'Getting the latest…';
+  String get gitBusyPull => '正在获取最新更改…';
 
   @override
-  String get gitBusyPush => 'Sending…';
+  String get gitBusyPush => '正在推送…';
 
   @override
-  String get gitBusyCommit => 'Saving…';
+  String get gitBusyCommit => '正在提交保存…';
 
   @override
   String get gitBusySwitchBranch => '正在切换分支…';
@@ -31300,10 +31270,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gitDoneUpToDate => '已是最新。';
 
   @override
-  String get gitDonePulled => 'Got the latest changes.';
+  String get gitDonePulled => '已获取最新更改。';
 
   @override
-  String get gitDonePushed => 'Sent.';
+  String get gitDonePushed => '已推送。';
 
   @override
   String get gitDoneSwitched => '已切换分支。';
@@ -31321,25 +31291,25 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gitCommitMessageHint => '描述改了什么';
 
   @override
-  String get gitWriteItForMe => 'Write it for me';
+  String get gitWriteItForMe => '帮我写说明';
 
   @override
-  String get gitAskAgentFixConflicts => 'Ask the agent to fix conflicts';
+  String get gitAskAgentFixConflicts => '让智能体解决冲突';
 
   @override
   String gitConflictCount(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count files have conflicts',
-      one: '1 file has conflicts',
+      other: '$count 个文件存在冲突',
+      one: '1 个文件存在冲突',
     );
     return '$_temp0';
   }
 
   @override
   String gitAskAgentFixConflictsPrompt(String files) {
-    return 'Please resolve the merge conflicts in $files. Keep what both sides meant, then tell me what you chose.';
+    return '请解决 $files 中的合并冲突，保留双方意图并说明你的处理方式。';
   }
 
   @override
@@ -31358,7 +31328,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gitHubSignOut => '退出 GitHub 登录';
 
   @override
-  String get gitHubSignOutTitle => 'Sign out of GitHub?';
+  String get gitHubSignOutTitle => '退出 GitHub 登录？';
 
   @override
   String gitHubSignedInAs(String login) {
@@ -31415,47 +31385,43 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gitHubProblemUnexpected => 'GitHub 返回了应用无法识别的应答。请重试。';
 
   @override
-  String get gitProblemInvalidRemoteName =>
-      'That isn’t a valid remote name. Use letters, numbers, dots, dashes or underscores.';
+  String get gitProblemInvalidRemoteName => '远程名称无效，请仅使用字母、数字、点、连字符或下划线。';
 
   @override
   String get gitProblemInvalidRemoteUrl =>
-      'That address doesn’t look right. Use one like https://github.com/owner/name.';
+      '仓库地址格式有误，请使用类似 https://github.com/owner/name 的地址。';
 
   @override
   String get gitProblemRemoteAddressHasPassword =>
-      'Take the password or token out of the address. Sign in to GitHub instead, so no secret is saved in the repository.';
+      '请从地址中移除密码或令牌，改用 GitHub 登录，以免密钥明文保存在仓库中。';
 
   @override
-  String get gitProblemRemoteExists =>
-      'A remote with that name is already set up. Choose another name.';
+  String get gitProblemRemoteExists => '同名远程已存在，请换一个名称。';
 
   @override
-  String get gitProblemInvalidFolderName =>
-      'That isn’t a usable folder name. Use letters, numbers, dots, dashes or underscores.';
+  String get gitProblemInvalidFolderName => '文件夹名称无效，请仅使用字母、数字、点、连字符或下划线。';
 
   @override
-  String get gitProblemFolderExists =>
-      'A folder with that name is already there. Choose another name.';
+  String get gitProblemFolderExists => '同名文件夹已存在，请换一个名称。';
 
   @override
-  String get gitActionAddRemote => 'Add remote';
+  String get gitActionAddRemote => '添加远程';
 
   @override
-  String get gitActionClone => 'Clone';
+  String get gitActionClone => '克隆';
 
   @override
-  String get gitBusyAddRemote => 'Adding the remote…';
+  String get gitBusyAddRemote => '正在添加远程…';
 
   @override
-  String get gitBusyClone => 'Cloning…';
+  String get gitBusyClone => '正在克隆…';
 
   @override
-  String get gitDoneRemoteAdded => 'Remote added.';
+  String get gitDoneRemoteAdded => '远程已添加。';
 
   @override
   String gitDoneCloned(String path) {
-    return 'Cloned into $path. Open it from your projects.';
+    return '已克隆至 $path，可在项目列表中打开。';
   }
 
   @override
@@ -31463,148 +31429,145 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String gitSheetChipSemantics(String branch) {
-    return 'Git, branch $branch. Opens the Git actions.';
+    return 'Git，分支 $branch。打开 Git 操作。';
   }
 
   @override
-  String get gitSheetChipSemanticsPlain => 'Git. Opens the Git actions.';
+  String get gitSheetChipSemanticsPlain => 'Git。打开 Git 操作。';
 
   @override
-  String get gitGetLatest => 'Get latest';
+  String get gitGetLatest => '获取最新';
 
   @override
-  String get gitSend => 'Send';
+  String get gitSend => '推送';
 
   @override
-  String get gitSaveChanges => 'Save changes';
+  String get gitSaveChanges => '保存更改';
 
   @override
   String gitSaveChangesCount(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count changed files',
-      one: '1 changed file',
-      zero: 'No changed files',
+      other: '$count 个更改文件',
+      one: '1 个更改文件',
+      zero: '无更改文件',
     );
     return '$_temp0';
   }
 
   @override
-  String get gitSaveFilesLabel => 'Files to include';
+  String get gitSaveFilesLabel => '包含的文件';
 
   @override
   String gitSaveButton(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Save $count files',
-      one: 'Save 1 file',
+      other: '保存 $count 个文件',
+      one: '保存 1 个文件',
     );
     return '$_temp0';
   }
 
   @override
   String gitSaveOnBranch(String branch) {
-    return 'On $branch';
+    return '位于 $branch';
   }
 
   @override
-  String get gitSwitchRow => 'Switch branch';
+  String get gitSwitchRow => '切换分支';
 
   @override
   String gitSwitchRowOn(String branch) {
-    return 'On $branch';
+    return '当前 $branch';
   }
 
   @override
   String gitBranchRemoteOnly(String remote) {
-    return 'On $remote, not on this device yet';
+    return '位于 $remote，尚未检出到本机';
   }
 
   @override
-  String get gitBranchCurrent => 'Current branch';
+  String get gitBranchCurrent => '当前分支';
 
   @override
   String gitNewBranchFrom(String branch) {
-    return 'New branch from $branch';
+    return '基于 $branch 新建分支';
   }
 
   @override
-  String get gitCloneRow => 'Clone a repository';
+  String get gitCloneRow => '克隆仓库';
 
   @override
-  String get gitCloneRowHint => 'Copy a repository next to this project';
+  String get gitCloneRowHint => '将仓库复制到当前项目旁';
 
   @override
-  String get gitCloneAddressLabel => 'Repository address';
+  String get gitCloneAddressLabel => '仓库地址';
 
   @override
-  String get gitCloneFolderLabel => 'Folder name';
+  String get gitCloneFolderLabel => '文件夹名称';
 
   @override
   String gitCloneInto(String path) {
-    return 'Clones into $path';
+    return '将克隆至 $path';
   }
 
   @override
-  String get gitCloneButton => 'Clone';
+  String get gitCloneButton => '克隆';
 
   @override
-  String get gitRemotesRow => 'Remotes';
+  String get gitRemotesRow => '远程仓库';
 
   @override
-  String get gitRemotesRowNone => 'None yet';
+  String get gitRemotesRowNone => '暂无';
 
   @override
-  String get gitRemotesTitle => 'Remotes';
+  String get gitRemotesTitle => '远程仓库';
 
   @override
-  String get gitRemotesEmpty =>
-      'This project has no remote yet. Add one to send your work somewhere.';
+  String get gitRemotesEmpty => '该项目尚未配置远程仓库，添加一个即可推送代码。';
 
   @override
-  String get gitRemoteAddTitle => 'Add a remote';
+  String get gitRemoteAddTitle => '添加远程仓库';
 
   @override
-  String get gitRemotePickGitHub => 'Choose from GitHub';
+  String get gitRemotePickGitHub => '从 GitHub 选择';
 
   @override
-  String get gitRemotePickGitHubTitle => 'Choose a repository';
+  String get gitRemotePickGitHubTitle => '选择仓库';
 
   @override
-  String get gitRemotePickGitHubNone =>
-      'No repositories on this GitHub account yet.';
+  String get gitRemotePickGitHubNone => '该 GitHub 账号下暂无仓库。';
 
   @override
-  String get gitRemoteRepoPrivate => 'Private';
+  String get gitRemoteRepoPrivate => '私有';
 
   @override
-  String get gitRemoteNameLabel => 'Name';
+  String get gitRemoteNameLabel => '名称';
 
   @override
-  String get gitRemoteAddressLabel => 'Address';
+  String get gitRemoteAddressLabel => '地址';
 
   @override
-  String get gitIdentityTitle => 'Your name on saves';
+  String get gitIdentityTitle => '提交署名';
 
   @override
-  String get gitHubSignedOutHint =>
-      'Sign in once with a code. There is no token to paste.';
+  String get gitHubSignedOutHint => '使用一次性验证码登录，无需粘贴令牌。';
 
   @override
-  String get gitHubSignInTitle => 'GitHub sign-in';
+  String get gitHubSignInTitle => 'GitHub 登录';
 
   @override
   String get gitHubSignInWhy =>
-      'Sending to GitHub needs your sign-in. Get a code here, enter it on GitHub, and the app stores the sign-in on this device only.';
+      '推送到 GitHub 需要登录验证。在此获取验证码并在 GitHub 输入，凭证仅保存在本机。';
 
   @override
-  String get gitHubSignOutConfirm => 'Sign out';
+  String get gitHubSignOutConfirm => '退出登录';
 
   @override
   String gitUsesOwnSignInOn(String host) {
-    return 'Sending and getting latest use the Git sign-in set up on $host.';
+    return '推送与拉取使用 $host 上已配置的 Git 登录凭证。';
   }
 
   @override
@@ -31612,29 +31575,28 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count files',
-      one: '1 file',
+      other: '$count 个文件',
+      one: '1 个文件',
     );
-    return 'Saved $_temp0.';
+    return '已保存 $_temp0。';
   }
 
   @override
-  String get gitDoneSavedPlain => 'Saved.';
+  String get gitDoneSavedPlain => '已保存。';
 
   @override
-  String get gitChecking => 'Checking…';
+  String get gitChecking => '正在检查…';
 
   @override
-  String get gitCheckFailed => 'Couldn’t check, tap to try';
+  String get gitCheckFailed => '检查失败，点按重试';
 
   @override
   String gitNewCount(int count) {
-    return '$count new';
+    return '$count 项更新';
   }
 
   @override
-  String get gitIdentityWhy =>
-      'Saves in this project carry this name and email, so your work is yours when you send it.';
+  String get gitIdentityWhy => '该项目中的提交会附带此姓名与邮箱，标识你的工作成果。';
 
   @override
   String get kitStepSliderLess => 'A';
@@ -31643,115 +31605,112 @@ class AppLocalizationsZh extends AppLocalizations {
   String get kitStepSliderMore => 'A';
 
   @override
-  String get appearanceIntensityHelp =>
-      'Your conversation stays on top and easy to read.';
+  String get appearanceIntensityHelp => '你的对话始终在最上层且清晰易读。';
 
   @override
-  String get appearanceTextHelp =>
-      'Applies to the whole app, on top of your phone\'s text size.';
+  String get appearanceTextHelp => '作用于整个应用，叠加在手机系统字号之上。';
 
   @override
   String kitCarouselPlace(int page, int count) {
-    return '$page of $count';
+    return '$page / $count';
   }
 
   @override
-  String get gitPullNotOnRemote => 'Not on the remote yet. Send it first.';
+  String get gitPullNotOnRemote => '远程尚无此分支，请先推送。';
 
   @override
-  String get gitPullNoRemote => 'Add a remote below first.';
+  String get gitPullNoRemote => '请先在下方添加远程仓库。';
 
   @override
-  String get gitSendNoRemote => 'No remote yet. Add one below.';
+  String get gitSendNoRemote => '暂无远程仓库，请先在下方添加。';
 
   @override
-  String get chatSteerHint => 'Steer while it works…';
+  String get chatSteerHint => '在运行中追加引导…';
 
   @override
   String chatSteerReadsAfterCommand(String agent) {
-    return '$agent reads this when the command finishes';
+    return '$agent 会在当前命令结束后读取此消息';
   }
 
   @override
   String chatSteerReadsAfterStep(String agent) {
-    return '$agent reads this when this step finishes';
+    return '$agent 会在当前步骤结束后读取此消息';
   }
 
   @override
-  String get chatSteerAgentFallback => 'The agent';
+  String get chatSteerAgentFallback => '智能体';
 
   @override
-  String get chatSteerStopCommand => 'Stop the command';
+  String get chatSteerStopCommand => '停止该命令';
 
   @override
-  String get chatSteerStopStep => 'Stop this step';
+  String get chatSteerStopStep => '停止该步骤';
 
   @override
-  String get chatSendLaterOrRepeat => 'Send later or repeat';
+  String get chatSendLaterOrRepeat => '定时或重复发送';
 
   @override
-  String get chatSendLaterSaved => 'Scheduled. It is in Scheduled prompts.';
+  String get chatSendLaterSaved => '已排期，可在“定时提示词”中查看。';
 
   @override
-  String get composerSettingModel => 'Model';
+  String get composerSettingModel => '模型';
 
   @override
-  String get composerSettingPlan => 'Plan';
+  String get composerSettingPlan => '规划模式';
 
   @override
-  String get composerSettingApprovalDetail =>
-      'Allow what it asks for without asking you';
+  String get composerSettingApprovalDetail => '直接允许操作请求，不再逐次询问';
 
   @override
-  String get chatAutoApproveOn => 'Auto-approve is on';
+  String get chatAutoApproveOn => '自动批准已开启';
 
   @override
-  String get chatAutoApproveTurnOff => 'Turn off';
+  String get chatAutoApproveTurnOff => '关闭';
 
   @override
-  String get chatNoModelSignedIn => 'No model signed in';
+  String get chatNoModelSignedIn => '尚未登录任何模型';
 
   @override
-  String get chatNoModelSignIn => 'Sign in';
+  String get chatNoModelSignIn => '去登录';
 
   @override
   String gitSendTo(String place, String branch) {
-    return 'Send to $place · $branch';
+    return '推送至 $place · $branch';
   }
 
   @override
   String get gitPlaceGitHub => 'GitHub';
 
   @override
-  String get gitStateUpToDate => 'Up to date';
+  String get gitStateUpToDate => '已是最新';
 
   @override
-  String get gitStateNothingToSend => 'Nothing to send';
+  String get gitStateNothingToSend => '无待推送内容';
 
   @override
-  String get gitStateFirstSend => 'First time, links this branch';
+  String get gitStateFirstSend => '首次推送并关联此分支';
 
   @override
-  String get gitDetailsBranch => 'Branch';
+  String get gitDetailsBranch => '分支';
 
   @override
-  String get gitDetailsGetsFrom => 'Get latest from';
+  String get gitDetailsGetsFrom => '拉取自';
 
   @override
-  String get gitDetailsSendsTo => 'Send to';
+  String get gitDetailsSendsTo => '推送至';
 
   @override
-  String get gitDetailsAddress => 'Remote address';
+  String get gitDetailsAddress => '远程地址';
 
   @override
   String gitDoneGotN(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count new changes',
-      one: '1 new change',
+      other: '$count 项新更改',
+      one: '1 项新更改',
     );
-    return 'Got $_temp0.';
+    return '已获取 $_temp0。';
   }
 
   @override
@@ -31759,103 +31718,100 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       files,
       locale: localeName,
-      other: '$files files changed',
-      one: '1 file changed',
+      other: '$files 个文件已更改',
+      one: '1 个文件已更改',
     );
     return '$_temp0 · +$added −$removed';
   }
 
   @override
-  String get reviewAlreadyApplied =>
-      'The agent already made these changes in your project.';
+  String get reviewAlreadyApplied => '智能体已在你的项目中应用了这些更改。';
 
   @override
-  String get reviewLooksGood => 'Looks good';
+  String get reviewLooksGood => '确认无误';
 
   @override
-  String get reviewUndoAll => 'Undo all';
+  String get reviewUndoAll => '全部撤销';
 
   @override
-  String get reviewSendBackWithNote => 'Send back with a note';
+  String get reviewSendBackWithNote => '附言退回修改';
 
   @override
   String reviewUndoTitle(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Undo $count changed files?',
-      one: 'Undo 1 changed file?',
+      other: '撤销 $count 个更改文件？',
+      one: '撤销 1 个更改文件？',
     );
     return '$_temp0';
   }
 
   @override
-  String get reviewUndoBody =>
-      'Your project goes back to how it was before the agent started. The conversation stays.';
+  String get reviewUndoBody => '你的项目将恢复到智能体开始前的状态，对话记录会保留。';
 
   @override
-  String get chatsNewBuildPrompt => 'What would you like to build?';
+  String get chatsNewBuildPrompt => '你想构建什么？';
 
   @override
-  String get chatsNewProjectRow => 'Project';
+  String get chatsNewProjectRow => '项目';
 
   @override
-  String get chatsNewModelRow => 'Model';
+  String get chatsNewModelRow => '模型';
 
   @override
-  String get chatsNewSeparateCopyDetail =>
-      'Works on its own copy, so your files stay as they are.';
+  String get chatsNewSeparateCopyDetail => '在独立副本中工作，你的原始文件保持不变。';
 
   @override
-  String get modelPickerSheetTitle => 'Model';
+  String get modelPickerSheetTitle => '模型';
 
   @override
   String modelPickerAllModels(int count) {
-    return 'All models ($count)';
+    return '全部模型（$count）';
   }
 
   @override
-  String get modelPickerReasonDefault => 'Default';
+  String get modelPickerReasonDefault => '默认';
 
   @override
-  String get modelPickerReasonRecent => 'Recently used';
+  String get modelPickerReasonRecent => '最近使用';
 
   @override
-  String get modelPickerReasonCheapest => 'Cheapest';
+  String get modelPickerReasonCheapest => '最经济';
 
   @override
-  String get modelPickerFree => 'Free';
+  String get modelPickerFree => '免费';
 
   @override
-  String get modelPickerScopeNewSessions => 'For new conversations';
+  String get modelPickerScopeNewSessions => '用于新对话';
 
   @override
-  String get modelPickerScopeSession => 'For this conversation';
+  String get modelPickerScopeSession => '仅此对话';
 
   @override
-  String get searchRecentTitle => 'Recent';
+  String get searchRecentTitle => '最近';
 
   @override
   String chatsHomeUnreachableShort(String servers) {
-    return '$servers isn\'t answering';
+    return '$servers 无响应';
   }
 
   @override
   String chatProjectChipFilesSemantics(String name) {
-    return 'Project $name. Opens its files and tools.';
+    return '项目 $name，打开文件与工具。';
   }
 
   @override
   String chatProjectServerChipFilesSemantics(String name, String server) {
-    return 'Project $name on $server. Opens its files and tools.';
+    return '$server 上的项目 $name，打开文件与工具。';
   }
 
   @override
-  String get chatTurnAllFiles => 'All files';
+  String get chatTurnAllFiles => '全部文件';
 
   @override
   String chatTurnAllFilesMore(int count) {
-    return 'All files · $count more changed';
+    return '全部文件 · 另有 $count 个更改';
   }
 
   @override
@@ -31863,8 +31819,8 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count lines added',
-      one: '1 line added',
+      other: '新增 $count 行',
+      one: '新增 1 行',
     );
     return '$_temp0';
   }
@@ -31874,23 +31830,23 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count lines removed',
-      one: '1 line removed',
+      other: '删除 $count 行',
+      one: '删除 1 行',
     );
     return '$_temp0';
   }
 
   @override
-  String get settingsHubSearch => 'Search settings';
+  String get settingsHubSearch => '搜索设置';
 
   @override
-  String get settingsHubServer => 'Server';
+  String get settingsHubServer => '服务器';
 
   @override
-  String get settingsHubHelp => 'Help';
+  String get settingsHubHelp => '帮助';
 
   @override
-  String get settingsHubServerOnPhone => 'On this phone';
+  String get settingsHubServerOnPhone => '本机';
 
   @override
   String settingsHubServerLine(String where, String state) {
@@ -31898,15 +31854,15 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get settingsHubServerNone => 'Not set up yet';
+  String get settingsHubServerNone => '尚未设置';
 
   @override
   String gitSaveAndSendTo(int count, String place, String branch) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Save $count files and send to $place · $branch',
-      one: 'Save 1 file and send to $place · $branch',
+      other: '保存 $count 个文件并推送至 $place · $branch',
+      one: '保存 1 个文件并推送至 $place · $branch',
     );
     return '$_temp0';
   }
@@ -31916,31 +31872,31 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Send $count saves to $place · $branch',
-      one: 'Send 1 save to $place · $branch',
+      other: '推送 $count 次提交至 $place · $branch',
+      one: '推送 1 次提交至 $place · $branch',
     );
     return '$_temp0';
   }
 
   @override
-  String get gitSaveAndSendTitle => 'Save and send';
+  String get gitSaveAndSendTitle => '保存并推送';
 
   @override
-  String get gitSaveOnly => 'Save without sending';
+  String get gitSaveOnly => '仅保存不推送';
 
   @override
   String gitMessageAddOne(String file) {
-    return 'Add $file';
+    return '添加 $file';
   }
 
   @override
   String gitMessageUpdateOne(String file) {
-    return 'Update $file';
+    return '更新 $file';
   }
 
   @override
   String gitMessageUpdateTwo(String first, String second) {
-    return 'Update $first and $second';
+    return '更新 $first 与 $second';
   }
 
   @override
@@ -31948,28 +31904,28 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Update $first and $count more files',
-      one: 'Update $first and 1 more file',
+      other: '更新 $first 及另外 $count 个文件',
+      one: '更新 $first 及另外 1 个文件',
     );
     return '$_temp0';
   }
 
   @override
   String gitDoneSavedAndSent(String place, String branch) {
-    return 'Saved and sent to $place · $branch.';
+    return '已保存并推送至 $place · $branch。';
   }
 
   @override
   String gitSavedNotSent(String reason) {
-    return 'Saved here, not sent yet. $reason';
+    return '已保存在本地，尚未推送。$reason';
   }
 
   @override
-  String get gitMoreLabel => 'Remotes, clone and details';
+  String get gitMoreLabel => '远程仓库、克隆与详情';
 
   @override
   String gitBusySendingTo(String place, String branch) {
-    return 'Sending to $place · $branch…';
+    return '正在推送至 $place · $branch…';
   }
 
   @override
@@ -31977,186 +31933,181 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Get $count new changes from $place · $branch',
-      one: 'Get 1 new change from $place · $branch',
+      other: '从 $place · $branch 获取 $count 项更新',
+      one: '从 $place · $branch 获取 1 项更新',
     );
     return '$_temp0';
   }
 
   @override
   String gitSavedSignInFirst(String place) {
-    return 'Saved here, not sent yet. $place needs you to sign in first.';
+    return '已保存在本地，尚未推送。请先登录 $place。';
   }
 
   @override
-  String get thisPhoneAnswerRunning => 'Everything is running';
+  String get thisPhoneAnswerRunning => '一切运行正常';
 
   @override
   String thisPhoneAnswerMemory(String size) {
-    return 'Uses about $size of memory';
+    return '占用约 $size 内存';
   }
 
   @override
   String thisPhoneAnswerStorage(String size) {
-    return 'Takes $size of storage';
+    return '占用 $size 存储空间';
   }
 
   @override
-  String get thisPhoneAnswerConnect => 'Use this phone\'s server';
+  String get thisPhoneAnswerConnect => '使用本机服务器';
 
   @override
-  String get thisPhoneAnswerHeatPaused => 'Paused, your phone is warm';
+  String get thisPhoneAnswerHeatPaused => '已暂停，手机温度较高';
 
   @override
-  String get thisPhoneAnswerHeatStopped => 'Stopped, your phone is hot';
+  String get thisPhoneAnswerHeatStopped => '已停止，手机过热';
 
   @override
   String thisPhoneAnswerHeatResumeIn(String time) {
-    return 'The AI Team resumes by itself in $time';
+    return 'AI 团队将在 $time 后自动恢复';
   }
 
   @override
-  String get thisPhoneAnswerHeatResumeCool =>
-      'The AI Team resumes by itself once your phone cools';
+  String get thisPhoneAnswerHeatResumeCool => '手机降温后 AI 团队将自动恢复';
 
   @override
-  String get thisPhoneAnswerHeatStays =>
-      'The AI Team stays paused until you resume it';
+  String get thisPhoneAnswerHeatStays => 'AI 团队将保持暂停，直到你手动恢复';
 
   @override
-  String get thisPhoneAnswerOff => 'The server is off';
+  String get thisPhoneAnswerOff => '服务器已关闭';
 
   @override
-  String get thisPhoneAnswerOffLine => 'It stays off until you start it.';
+  String get thisPhoneAnswerOffLine => '在你启动它之前会保持关闭。';
 
   @override
-  String get thisPhoneAnswerAndroidClosed => 'Android closed the server';
+  String get thisPhoneAnswerAndroidClosed => 'Android 关闭了服务器';
 
   @override
-  String get thisPhoneAnswerStoppedItself => 'The server stopped by itself';
+  String get thisPhoneAnswerStoppedItself => '服务器自行停止';
 
   @override
   String thisPhoneAnswerRestartsIn(String time) {
-    return 'It restarts by itself in $time';
+    return '将在 $time 后自动重启';
   }
 
   @override
-  String get thisPhoneAnswerRestartsSoon => 'It restarts by itself in a moment';
+  String get thisPhoneAnswerRestartsSoon => '即将自动重启';
 
   @override
-  String get thisPhoneAnswerRestarting => 'Restarting by itself';
+  String get thisPhoneAnswerRestarting => '正在自动重启';
 
   @override
-  String get thisPhoneAnswerGaveUp =>
-      'It kept stopping, so it won\'t restart by itself.';
+  String get thisPhoneAnswerGaveUp => '多次异常停止，已不再自动重启。';
 
   @override
-  String get thisPhoneAnswerRestartNow => 'Restart now';
+  String get thisPhoneAnswerRestartNow => '立即重启';
 
   @override
-  String get thisPhoneAnswerStartFailed => 'The server didn\'t start';
+  String get thisPhoneAnswerStartFailed => '服务器未能启动';
 
   @override
-  String get thisPhoneAnswerInstallFailed => 'Setup didn\'t finish';
+  String get thisPhoneAnswerInstallFailed => '安装设置未完成';
 
   @override
-  String get thisPhoneAnswerCheckFailed => 'Couldn\'t check the server';
+  String get thisPhoneAnswerCheckFailed => '无法检查服务器状态';
 
   @override
-  String get thisPhoneAnswerStopFailed => 'The server didn\'t stop';
+  String get thisPhoneAnswerStopFailed => '服务器未能停止';
 
   @override
-  String get thisPhoneAnswerSwitchStopped => 'The switch didn\'t finish';
+  String get thisPhoneAnswerSwitchStopped => '切换未完成';
 
   @override
-  String get thisPhoneAnswerTermux => 'Can\'t reach Termux';
+  String get thisPhoneAnswerTermux => '无法连接 Termux';
 
   @override
-  String get thisPhoneAnswerRecovery => 'The server can\'t restart safely';
+  String get thisPhoneAnswerRecovery => '服务器无法安全重启';
 
   @override
-  String get thisPhoneAnswerNotSetUp => 'OpenCode isn\'t on this phone yet';
+  String get thisPhoneAnswerNotSetUp => '本机尚未安装 OpenCode';
 
   @override
-  String get thisPhoneAnswerSettingUp => 'Setting up the server';
+  String get thisPhoneAnswerSettingUp => '正在设置服务器';
 
   @override
-  String get thisPhoneAnswerStarting => 'Starting the server';
+  String get thisPhoneAnswerStarting => '正在启动服务器';
 
   @override
-  String get thisPhoneAnswerStopping => 'Stopping the server';
+  String get thisPhoneAnswerStopping => '正在停止服务器';
 
   @override
-  String get thisPhoneAnswerChecking => 'Checking the server';
+  String get thisPhoneAnswerChecking => '正在检查服务器';
 
   @override
-  String get thisPhoneAnswerRemoving => 'Removing the server';
+  String get thisPhoneAnswerRemoving => '正在移除服务器';
 
   @override
-  String get thisPhoneAnswerConnecting => 'Connecting to the server';
+  String get thisPhoneAnswerConnecting => '正在连接服务器';
 
   @override
-  String get thisPhoneRestartRow => 'Restart OpenCode on this phone';
+  String get thisPhoneRestartRow => '重启本机 OpenCode';
 
   @override
-  String get thisPhoneRestartTitle => 'Restart the server?';
+  String get thisPhoneRestartTitle => '重启服务器？';
 
   @override
-  String get thisPhoneRestartBusy =>
-      'A reply is being written. Restarting stops it; your conversations are kept.';
+  String get thisPhoneRestartBusy => '当前正在生成回复，重启会中断它；你的对话记录会保留。';
 
   @override
   String thisPhoneAboutSeconds(int seconds) {
-    return 'about $seconds s';
+    return '约 $seconds 秒';
   }
 
   @override
   String thisPhoneAboutMinutes(int minutes) {
-    return 'about $minutes min';
+    return '约 $minutes 分钟';
   }
 
   @override
-  String get thisPhoneAnswerStartFailedLine =>
-      'Start it again; Details below says what went wrong.';
+  String get thisPhoneAnswerStartFailedLine => '请重新启动；下方“详情”列出了具体原因。';
 
   @override
-  String get serverSwitcherAddServer => 'Add a server';
+  String get serverSwitcherAddServer => '添加服务器';
 
   @override
-  String get serverSwitcherNotAnswering => 'Isn\'t answering';
+  String get serverSwitcherNotAnswering => '无响应';
 
   @override
   String serverSwitcherChecksAgain(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'checks again in $count min',
-      one: 'checks again in 1 min',
+      other: '$count 分钟后重试检查',
+      one: '1 分钟后重试检查',
     );
     return '$_temp0';
   }
 
   @override
   String serverSwitcherTryAgainLabel(String server) {
-    return 'Try $server again';
+    return '重新连接 $server';
   }
 
   @override
-  String get serverSwitcherOpenRequest => 'Open';
+  String get serverSwitcherOpenRequest => '打开';
 
   @override
   String serverSwitcherOpenRequestLabel(String target) {
-    return 'Open $target';
+    return '打开 $target';
   }
 
   @override
   String serverSwitcherAllowLabel(String command, String server) {
-    return 'Allow $command once on $server';
+    return '在 $server 上允许执行一次 $command';
   }
 
   @override
   String serverSwitcherUndoLabel(String server) {
-    return 'Undo the answer on $server';
+    return '在 $server 上撤销该操作';
   }
 
   @override
@@ -32164,8 +32115,8 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '+$count more',
-      one: '+1 more',
+      other: '另有 $count 项',
+      one: '另有 1 项',
     );
     return '$_temp0';
   }
@@ -32177,22 +32128,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String chatRequestAskRunIn(String command, String project) {
-    return 'Run $command in $project?';
+    return '在 $project 中运行 $command？';
   }
 
   @override
   String chatRequestAskRunNamed(String command) {
-    return 'Run $command?';
+    return '运行 $command？';
   }
 
   @override
   String chatRequestAskRunAnyIn(String project) {
-    return 'Run a command in $project?';
+    return '在 $project 中运行命令？';
   }
 
   @override
   String chatRequestAskEditNamed(String file) {
-    return 'Edit $file?';
+    return '编辑 $file？';
   }
 
   @override
@@ -32200,15 +32151,15 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Edit $count files?',
-      one: 'Edit 1 file?',
+      other: '编辑 $count 个文件？',
+      one: '编辑 1 个文件？',
     );
     return '$_temp0';
   }
 
   @override
   String chatRequestAskCreateNamed(String file) {
-    return 'Create $file?';
+    return '创建 $file？';
   }
 
   @override
@@ -32216,15 +32167,15 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Create $count files?',
-      one: 'Create 1 file?',
+      other: '创建 $count 个文件？',
+      one: '创建 1 个文件？',
     );
     return '$_temp0';
   }
 
   @override
   String chatRequestAskDeleteNamed(String file) {
-    return 'Delete $file?';
+    return '删除 $file？';
   }
 
   @override
@@ -32232,80 +32183,80 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Delete $count files?',
-      one: 'Delete 1 file?',
+      other: '删除 $count 个文件？',
+      one: '删除 1 个文件？',
     );
     return '$_temp0';
   }
 
   @override
   String chatRequestAskReadNamed(String file) {
-    return 'Read $file?';
+    return '读取 $file？';
   }
 
   @override
   String chatRequestAlwaysAllowNamed(String what) {
-    return 'Always allow $what';
+    return '始终允许 $what';
   }
 
   @override
-  String get chatRequestAlwaysAllowEdits => 'Always allow edits';
+  String get chatRequestAlwaysAllowEdits => '始终允许文件编辑';
 
   @override
-  String get chatRequestAlwaysAllowAnyCommand => 'Always allow every command';
+  String get chatRequestAlwaysAllowAnyCommand => '始终允许所有命令';
 
   @override
-  String get chatRequestAlwaysEditsWhat => 'edits';
+  String get chatRequestAlwaysEditsWhat => '文件编辑';
 
   @override
-  String get chatRequestAlwaysAnyCommandWhat => 'every command';
+  String get chatRequestAlwaysAnyCommandWhat => '所有命令';
 
   @override
-  String get filesAskAboutFile => 'Ask about this file';
+  String get filesAskAboutFile => '询问此文件';
 
   @override
   String filesMenuChanges(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Changes · $count files',
-      one: 'Changes · 1 file',
-      zero: 'Changes',
+      other: '变更 · $count 个文件',
+      one: '变更 · 1 个文件',
+      zero: '变更',
     );
     return '$_temp0';
   }
 
   @override
   String filesProjectSwitchLabel(String name) {
-    return 'Project $name. Switch project';
+    return '项目 $name，切换项目';
   }
 
   @override
-  String get scheduleNew => 'New scheduled prompt';
+  String get scheduleNew => '新建定时提示词';
 
   @override
-  String get scheduleAsk => 'What should it do?';
+  String get scheduleAsk => '要让它做什么？';
 
   @override
-  String get scheduleAskHint => 'Run the tests and sum up what failed';
+  String get scheduleAskHint => '运行测试并汇总失败原因';
 
   @override
-  String get scheduleEveryDay => 'Every day';
+  String get scheduleEveryDay => '每天';
 
   @override
-  String get scheduleWeekdaysShort => 'Weekdays';
+  String get scheduleWeekdaysShort => '工作日';
 
   @override
-  String get scheduleCustom => 'Custom';
+  String get scheduleCustom => '自定义';
 
   @override
   String scheduleRuleDaily(String time) {
-    return 'Every day at $time';
+    return '每天 $time';
   }
 
   @override
   String scheduleRuleWeekdays(String time) {
-    return 'Every weekday at $time';
+    return '每个工作日 $time';
   }
 
   @override
@@ -32317,20 +32268,20 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       hours,
       locale: localeName,
-      other: 'Every $hoursString hours',
-      one: 'Every hour',
+      other: '每 $hoursString 小时',
+      one: '每小时',
     );
     return '$_temp0';
   }
 
   @override
   String scheduleForTime(String time) {
-    return 'Schedule for $time';
+    return '定于 $time 执行';
   }
 
   @override
   String scheduleForWhen(String when) {
-    return 'Schedule for $when';
+    return '定于 $when 执行';
   }
 
   @override
@@ -32342,194 +32293,186 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       hours,
       locale: localeName,
-      other: 'Schedule every $hoursString hours',
-      one: 'Schedule every hour',
+      other: '每 $hoursString 小时执行',
+      one: '每小时执行',
     );
     return '$_temp0';
   }
 
   @override
   String scheduleForToday(String time) {
-    return 'Schedule for today, $time';
+    return '定于今天 $time';
   }
 
   @override
   String scheduleForTomorrow(String time) {
-    return 'Schedule for tomorrow, $time';
+    return '定于明天 $time';
   }
 
   @override
   String scheduleDayAt(String day, String time) {
-    return '$day, $time';
+    return '$day $time';
   }
 
   @override
   String scheduleSent(String when) {
-    return 'Sent $when';
+    return '已于 $when 发送';
   }
 
   @override
   String scheduleNotSent(String when) {
-    return 'Didn\'t go out $when';
+    return '$when 未能发送';
   }
 
   @override
   String scheduleSkippedWhen(String when) {
-    return 'Skipped $when';
+    return '$when 已跳过';
   }
 
   @override
-  String get scheduleSendingNow => 'Sending now';
+  String get scheduleSendingNow => '正在发送';
 
   @override
-  String get scheduleDayToday => 'today';
+  String get scheduleDayToday => '今天';
 
   @override
-  String get scheduleDayYesterday => 'yesterday';
+  String get scheduleDayYesterday => '昨天';
 
   @override
-  String get scheduleWheelToday => 'Today';
+  String get scheduleWheelToday => '今天';
 
   @override
-  String get scheduleWheelTomorrow => 'Tomorrow';
+  String get scheduleWheelTomorrow => '明天';
 
   @override
-  String get scheduleWheelDay => 'Day';
+  String get scheduleWheelDay => '日期';
 
   @override
-  String get scheduleWheelHowOften => 'How often';
+  String get scheduleWheelHowOften => '频率';
 
   @override
-  String get scheduleClosedNote =>
-      'Runs even with the app closed, sometimes a little late.';
+  String get scheduleClosedNote => '应用关闭时也会执行，有时可能略有延迟。';
 
   @override
-  String get scheduleNeedPrompt => 'Write what it should do first.';
+  String get scheduleNeedPrompt => '请先填写要执行的内容。';
 
   @override
-  String get scheduleNeedFuture => 'Pick a time later than now.';
+  String get scheduleNeedFuture => '请选择未来的时间。';
 
   @override
-  String get scheduleInThisConversation => 'In this conversation';
+  String get scheduleInThisConversation => '在当前对话中';
 
   @override
-  String get scheduleOpenRun => 'Open the conversation';
+  String get scheduleOpenRun => '打开该对话';
 
   @override
-  String get scheduleDigestShort => 'A note each morning about what ran';
+  String get scheduleDigestShort => '每天早晨汇总执行结果';
 
   @override
-  String get scheduleExactNote => 'Runs may start a little late.';
+  String get scheduleExactNote => '执行时间可能略有延迟。';
 
   @override
-  String get scheduleExactAllow => 'Allow exact timing';
+  String get scheduleExactAllow => '允许准时唤醒执行';
 
   @override
-  String get scheduleNotifyOff =>
-      'Notifications are off, so a run won\'t tell you it went out.';
+  String get scheduleNotifyOff => '通知已关闭，执行完成时不会发出提醒。';
 
   @override
-  String get inboxTitle => 'Inbox';
+  String get inboxTitle => '收件箱';
 
   @override
-  String get inboxEmptyTitle => 'Nothing waits for you';
+  String get inboxEmptyTitle => '暂无待处理事项';
 
   @override
-  String get inboxFinishedLabel => 'Finished, not opened yet';
+  String get inboxFinishedLabel => '已完成，尚未查看';
 
   @override
   String inboxOpenLabel(String conversation) {
-    return 'Open $conversation';
+    return '打开 $conversation';
   }
 
   @override
   String inboxOpenOnServer(String server) {
-    return 'Open on $server';
+    return '在 $server 上打开';
   }
 
   @override
-  String get inboxWaitingForAnswer => 'Waiting for your answer';
+  String get inboxWaitingForAnswer => '等待你的回复';
 
   @override
-  String get inboxAsksPermission => 'Asks for your permission';
+  String get inboxAsksPermission => '请求你的批准';
 
   @override
-  String get inboxAsksQuestion => 'Asks you a question';
+  String get inboxAsksQuestion => '向你提问';
 
   @override
   String inboxUnreachable(String servers) {
-    return '$servers isn\'t answering. What waits there isn\'t shown.';
+    return '$servers 无响应，其上的待办事项暂未显示。';
   }
 
   @override
-  String get kitRequestOpen => 'Open';
+  String get kitRequestOpen => '打开';
 
   @override
   String goToNeedsYouHint(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count waiting',
-      one: '1 waiting',
-      zero: 'Nothing waits',
+      other: '$count 项待处理',
+      one: '1 项待处理',
+      zero: '无待办事项',
     );
     return '$_temp0';
   }
 
   @override
   String inboxEmptyPartialLine(String servers) {
-    return '$servers isn\'t answering, so it may have more';
+    return '$servers 无响应，可能还有更多事项';
   }
 
   @override
-  String get kitFieldOptional => 'Optional';
+  String get kitFieldOptional => '可选';
 
   @override
-  String get reportProblemAttachedLead =>
-      'The error details and app information are attached.';
+  String get reportProblemAttachedLead => '已附带错误详情与应用信息。';
 
   @override
-  String get reportProblemJobLead =>
-      'The job\'s log, the error details and app information are attached.';
+  String get reportProblemJobLead => '已附带任务日志、错误详情与应用信息。';
 
   @override
-  String get reportProblemJobNoLogLead =>
-      'No log was kept for this job. The error details and app information are attached.';
+  String get reportProblemJobNoLogLead => '该任务未保留日志，已附带错误详情与应用信息。';
 
   @override
   String reportProblemKeptLead(String when) {
-    return 'Noticed $when. Its details and the app information are attached.';
+    return '记录于 $when，已附带详情与应用信息。';
   }
 
   @override
-  String get reportProblemNothingTitle => 'No error noticed';
+  String get reportProblemNothingTitle => '未记录到错误';
 
   @override
-  String get reportProblemNothingLead =>
-      'Say what went wrong. Your words and the app information go with the report.';
+  String get reportProblemNothingLead => '请描述发生了什么问题，你的说明会与应用信息一并附上。';
 
   @override
-  String get reportProblemPrivacy =>
-      'Passwords, keys and server addresses are taken out.';
+  String get reportProblemPrivacy => '密码、密钥和服务器地址会自动脱敏移除。';
 
   @override
-  String get reportProblemAddLabel => 'Anything to add?';
+  String get reportProblemAddLabel => '补充说明';
 
   @override
-  String get reportProblemAddHint => 'What were you doing when it happened?';
+  String get reportProblemAddHint => '问题发生时你正在做什么？';
 
   @override
-  String get reportProblemSendGitHub => 'Send as a GitHub issue';
+  String get reportProblemSendGitHub => '作为 GitHub Issue 发送';
 
   @override
-  String get reportProblemSendHint =>
-      'Review it on GitHub before posting. It will be public.';
+  String get reportProblemSendHint => '发布前可在 GitHub 上预览确认，内容将公开可见。';
 
   @override
-  String get reportProblemCopyShort => 'Copy';
+  String get reportProblemCopyShort => '复制';
 
   @override
-  String get reportProblemKeptLink => 'Everything this phone kept';
+  String get reportProblemKeptLink => '查看本机保留的全部诊断记录';
 
   @override
   String welcomePhoneCost(String time, String size) {
@@ -32580,137 +32523,132 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String kitProgressRingSteps(String done, String total) {
-    return '$done of $total';
+    return '$done / $total';
   }
 
   @override
-  String get kitProgressRingFinished => 'Finished';
+  String get kitProgressRingFinished => '已完成';
 
   @override
   String phoneSetupRingDownloading(String name) {
-    return 'Downloading $name';
+    return '正在下载 $name';
   }
 
   @override
   String phoneSetupRingUnpacking(String name) {
-    return 'Unpacking $name';
+    return '正在解压 $name';
   }
 
   @override
   String phoneSetupRingInstalling(String name) {
-    return 'Installing $name';
+    return '正在安装 $name';
   }
 
   @override
-  String get phoneSetupRingChecking => 'Checking this phone';
+  String get phoneSetupRingChecking => '正在检查本机环境';
 
   @override
-  String get phoneSetupRingPausedTitle => 'Setup is paused';
+  String get phoneSetupRingPausedTitle => '安装已暂停';
 
   @override
-  String get phoneSetupRingInterruptedTitle => 'Setup was interrupted';
+  String get phoneSetupRingInterruptedTitle => '安装已中断';
 
   @override
-  String get phoneSetupRingStoppedNote =>
-      'Finished steps stay, and downloads pick up where they left off.';
+  String get phoneSetupRingStoppedNote => '已完成的步骤会保留，下载将从断点处继续。';
 
   @override
   String phoneSetupRingMinutesLeft(int minutes) {
     String _temp0 = intl.Intl.pluralLogic(
       minutes,
       locale: localeName,
-      other: 'About $minutes min left',
-      one: 'About 1 min left',
+      other: '剩余约 $minutes 分钟',
+      one: '剩余约 1 分钟',
     );
     return '$_temp0';
   }
 
   @override
-  String get phoneSetupRingUnderMinute => 'Less than a minute left';
+  String get phoneSetupRingUnderMinute => '剩余不到 1 分钟';
 
   @override
   String get phoneSetupRingWifi => 'Wi-Fi';
 
   @override
-  String get phoneSetupRingMobileData => 'Mobile data';
+  String get phoneSetupRingMobileData => '移动数据';
 
   @override
-  String get phoneSetupRingSafeToLeave =>
-      'Safe to leave. We\'ll let you know when it\'s ready.';
+  String get phoneSetupRingSafeToLeave => '可以放心切出应用，准备就绪后我们会通知你。';
 
   @override
-  String get phoneSetupRingSafeToLeaveQuiet =>
-      'Safe to leave. Setup keeps going in the background.';
+  String get phoneSetupRingSafeToLeaveQuiet => '可以放心切出应用，安装会在后台继续进行。';
 
   @override
-  String get phoneSetupRingPause => 'Pause setup';
+  String get phoneSetupRingPause => '暂停安装';
 
   @override
-  String get phoneSetupRingDetailsTitle => 'Setup details';
+  String get phoneSetupRingDetailsTitle => '安装详情';
 
   @override
   String kitProgressRingOfTotal(String total) {
-    return 'of $total';
+    return '/ $total';
   }
 
   @override
-  String get kitProgressRingStepsDone => 'steps done';
+  String get kitProgressRingStepsDone => '步已完成';
 
   @override
-  String get devPreviewDetails => 'Preview details';
+  String get devPreviewDetails => '预览详情';
 
   @override
-  String get devPreviewShowDetails => 'Show details';
+  String get devPreviewShowDetails => '显示详情';
 
   @override
-  String get devPreviewAddress => 'Address';
+  String get devPreviewAddress => '地址';
 
   @override
-  String get devPreviewAskHint => 'Ask for a change…';
+  String get devPreviewAskHint => '提出修改要求…';
 
   @override
-  String get devPreviewAskSend => 'Send to the conversation';
+  String get devPreviewAskSend => '发送到对话';
 
   @override
-  String get devPreviewAskStopAndSend => 'Stop the agent and send';
+  String get devPreviewAskStopAndSend => '停止智能体并发送';
 
   @override
-  String get devPreviewAskVoice => 'Speak your change';
+  String get devPreviewAskVoice => '语音输入修改要求';
 
   @override
-  String get devPreviewAskListening => 'Listening…';
+  String get devPreviewAskListening => '正在聆听…';
 
   @override
-  String get devPreviewAskDoneSpeaking => 'Done speaking';
+  String get devPreviewAskDoneSpeaking => '说完了';
 
   @override
-  String get devPreviewAskSent => 'Sent to the conversation';
+  String get devPreviewAskSent => '已发送到对话';
 
   @override
-  String get devPreviewAskSentJoins => 'Added to what the agent is doing';
+  String get devPreviewAskSentJoins => '已合并到智能体当前工作中';
 
   @override
-  String get devPreviewAskSentAfter => 'Sent. It runs after the current reply';
+  String get devPreviewAskSentAfter => '已发送，将在当前回复结束后执行';
 
   @override
-  String get devPreviewAskSentRestart =>
-      'Sent. The agent started again with it';
+  String get devPreviewAskSentRestart => '已发送，智能体已带着新要求重新开始';
 
   @override
-  String get devPreviewAskNotSent => 'Didn\'t send. Your words are still here';
+  String get devPreviewAskNotSent => '未发送，你输入的内容仍保留在此';
 
   @override
-  String get devPreviewAskNotHeard =>
-      'Didn\'t catch that. Try again, or type it';
+  String get devPreviewAskNotHeard => '未听清，请重试或直接打字输入';
 
   @override
   String teamMergeGateQuestion(int count, String branch) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Merge $count changes into $branch?',
-      one: 'Merge 1 change into $branch?',
-      zero: 'Merge the changes into $branch?',
+      other: '将 $count 项更改合并到 $branch？',
+      one: '将 1 项更改合并到 $branch？',
+      zero: '将更改合并到 $branch？',
     );
     return '$_temp0';
   }
@@ -32720,672 +32658,651 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'all $count checks passed',
-      one: 'the check passed',
+      other: '全部 $count 项检查均已通过',
+      one: '检查已通过',
     );
     return '$_temp0';
   }
 
   @override
-  String get teamMergeGateApprove => 'Approve the merge';
+  String get teamMergeGateApprove => '批准合并';
 
   @override
-  String get teamMergeGateIfIgnored =>
-      'The changes wait on their branch. Nothing is merged until you say so.';
+  String get teamMergeGateIfIgnored => '更改将保留在各自分支上，未经你批准不会合并。';
 
   @override
   String teamMergeGateAnnouncement(String question) {
-    return 'Ready to merge. $question';
+    return '已准备好合并。$question';
   }
 
   @override
-  String get teamMergeGateStale => 'Merge is off until the team answers again.';
+  String get teamMergeGateStale => '等待团队更新状态后方可合并。';
 
   @override
   String teamTaskNowOn(String who, String step) {
-    return 'Now: $who on $step';
+    return '当前：$who 正在执行 $step';
   }
 
   @override
   String teamTaskNowWorker(String who) {
-    return 'Now: $who is working';
+    return '当前：$who 正在工作';
   }
 
   @override
-  String get teamTaskNowWorking => 'Now: working on your task';
+  String get teamTaskNowWorking => '当前：正在处理你的任务';
 
   @override
   String teamTaskNowStarting(String who) {
-    return 'Now: $who is starting';
+    return '当前：$who 正在启动';
   }
 
   @override
-  String get teamTaskNowStartingWorker => 'Now: starting a worker';
+  String get teamTaskNowStartingWorker => '当前：正在启动工作节点';
 
   @override
-  String get teamTaskNowWaitingWorker => 'Now: waiting for a worker';
+  String get teamTaskNowWaitingWorker => '当前：正在等待工作节点';
 
   @override
-  String get teamTaskNowPlanning => 'Now: planning the steps';
+  String get teamTaskNowPlanning => '当前：正在规划步骤';
 
   @override
-  String get teamTaskNowReviewing => 'Now: reviewing the changes';
+  String get teamTaskNowReviewing => '当前：正在审阅更改';
 
   @override
-  String get teamTaskNextReview => 'Next: review';
+  String get teamTaskNextReview => '下一步：审阅';
 
   @override
-  String get teamTaskNextMerge => 'Next: merge';
+  String get teamTaskNextMerge => '下一步：合并';
 
   @override
-  String get teamTaskNextWork => 'Next: the worker begins';
+  String get teamTaskNextWork => '下一步：开始执行';
 
   @override
-  String get teamTaskStepsDone => 'All steps done';
+  String get teamTaskStepsDone => '全部步骤已完成';
 
   @override
   String teamTaskFinishedAgo(String age) {
-    return 'Finished $age ago';
+    return '$age前完成';
   }
 
   @override
-  String get kitComposerTrayClose => 'Close';
+  String get kitComposerTrayClose => '关闭';
 
   @override
-  String get composerTrayPhotos => 'Photos';
+  String get composerTrayPhotos => '相册';
 
   @override
-  String get composerTrayCamera => 'Camera';
+  String get composerTrayCamera => '相机';
 
   @override
-  String get composerTrayFile => 'File';
+  String get composerTrayFile => '文件';
 
   @override
-  String get composerTrayMore => 'More';
+  String get composerTrayMore => '更多';
 
   @override
   String chatLiveReading(String name) {
-    return 'Reading $name';
+    return '正在读取 $name';
   }
 
   @override
-  String get chatLiveReadingAny => 'Reading a file';
+  String get chatLiveReadingAny => '正在读取文件';
 
   @override
   String chatLiveEditing(String name) {
-    return 'Editing $name';
+    return '正在编辑 $name';
   }
 
   @override
-  String get chatLiveEditingAny => 'Editing files';
+  String get chatLiveEditingAny => '正在编辑文件';
 
   @override
   String chatLiveWriting(String name) {
-    return 'Writing $name';
+    return '正在写入 $name';
   }
 
   @override
-  String get chatLiveWritingAny => 'Writing a file';
+  String get chatLiveWritingAny => '正在写入文件';
 
   @override
   String chatLiveRunning(String name) {
-    return 'Running $name';
+    return '正在运行 $name';
   }
 
   @override
-  String get chatLiveRunningAny => 'Running a command';
+  String get chatLiveRunningAny => '正在运行命令';
 
   @override
   String chatLiveSearching(String name) {
-    return 'Searching for $name';
+    return '正在搜索 $name';
   }
 
   @override
-  String get chatLiveSearchingAny => 'Searching the project';
+  String get chatLiveSearchingAny => '正在搜索项目';
 
   @override
-  String get chatLiveSearchingWeb => 'Searching the web';
+  String get chatLiveSearchingWeb => '正在搜索网页';
 
   @override
-  String get chatLivePlanning => 'Planning the steps';
+  String get chatLivePlanning => '正在规划步骤';
 
   @override
-  String get terminalSessionsLabel => 'Open terminals';
+  String get terminalSessionsLabel => '打开的终端';
 
   @override
-  String get terminalSessionEnded => 'ended';
+  String get terminalSessionEnded => '已结束';
 
   @override
   String localTerminalStopNamed(String name) {
-    return 'Stop $name';
+    return '停止 $name';
   }
 
   @override
   String localTerminalCloseNamed(String name) {
-    return 'Close $name';
+    return '关闭 $name';
   }
 
   @override
-  String get terminalDevServerRunning => 'Dev server running';
+  String get terminalDevServerRunning => '开发服务器运行中';
 
   @override
-  String get terminalOpenPreview => 'Open preview';
+  String get terminalOpenPreview => '打开预览';
 
   @override
   String terminalPlaceLabel(String place) {
-    return 'Runs on $place';
+    return '运行于 $place';
   }
 
   @override
   String terminalPlaceSwitchLabel(String place) {
-    return 'Runs on $place, change where it runs';
+    return '运行于 $place，切换运行位置';
   }
 
   @override
-  String get terminalScreenDetailState => 'State';
+  String get terminalScreenDetailState => '状态';
 
   @override
-  String get terminalStateRunning => 'Running';
+  String get terminalStateRunning => '运行中';
 
   @override
-  String get terminalStateEnded => 'Ended';
+  String get terminalStateEnded => '已结束';
 
   @override
   String connectionTryingAgainIn(int seconds) {
-    return 'trying again in $seconds s';
+    return '$seconds 秒后重试';
   }
 
   @override
-  String get connectionTryingAgainNow => 'trying again now…';
+  String get connectionTryingAgainNow => '正在重试…';
 
   @override
-  String get chatsHomeNothingRunning => 'Nothing running';
+  String get chatsHomeNothingRunning => '暂无运行中的对话';
 
   @override
-  String get chatsHomeNothingRunningBody =>
-      'Start a conversation, or open one to pick up where you left off.';
+  String get chatsHomeNothingRunningBody => '发起新对话，或打开已有对话继续之前的工作。';
 
   @override
-  String get chatsHomeShowAll => 'Show all conversations';
+  String get chatsHomeShowAll => '显示全部对话';
 
   @override
-  String get chatsHomeEmptyCalmBody =>
-      'Say what you want to build, and an agent gets to work.';
+  String get chatsHomeEmptyCalmBody => '说出你想构建什么，智能体即刻开工。';
 
   @override
-  String get chatsHomeConnectComputer => 'Connect a computer';
+  String get chatsHomeConnectComputer => '连接电脑服务器';
 
   @override
-  String get chatsHomeProjectEmptyBody =>
-      'Ask for something in this project, and it shows up here.';
+  String get chatsHomeProjectEmptyBody => '在此项目中提出需求后，对话会显示在这里。';
 
   @override
-  String get scheduleEmptyBody =>
-      'Pick a time, and this phone sends the prompt for you.';
+  String get scheduleEmptyBody => '设定时间后，手机会自动为你发送提示词。';
 
   @override
-  String get projectsLoadFailedTitle => 'Projects didn\'t load';
+  String get projectsLoadFailedTitle => '项目未能加载';
 
   @override
-  String get chatStopAfterStep => 'Stop after this step';
+  String get chatStopAfterStep => '在此步骤后停止';
 
   @override
-  String get chatStopAfterStepPrompt =>
-      'Please stop after the step you are on now and wait for me before doing anything else.';
+  String get chatStopAfterStepPrompt => '请在你当前正在执行的这一步完成后暂停，等待我的下一步指示。';
 
   @override
-  String get appearanceModeAuto => 'Auto';
+  String get appearanceModeAuto => '自动';
 
   @override
-  String get appearanceModeSaver => 'Saver';
+  String get appearanceModeSaver => '省电';
 
   @override
-  String get appearanceSaverNote =>
-      'True black, no motion. Saves battery on OLED screens.';
+  String get appearanceSaverNote => '纯黑底色、无动效，在 OLED 屏幕上节省电量。';
 
   @override
-  String get appearanceAccentTitle => 'Accent';
+  String get appearanceAccentTitle => '点缀色';
 
   @override
-  String get appearanceAccentMint => 'Mint';
+  String get appearanceAccentMint => '薄荷绿';
 
   @override
-  String get appearanceAccentTeal => 'Teal';
+  String get appearanceAccentTeal => '青绿';
 
   @override
-  String get appearanceAccentBlue => 'Blue';
+  String get appearanceAccentBlue => '蓝色';
 
   @override
-  String get appearanceAccentViolet => 'Violet';
+  String get appearanceAccentViolet => '紫罗兰';
 
   @override
-  String get appearanceAccentPink => 'Pink';
+  String get appearanceAccentPink => '粉红';
 
   @override
-  String get appearanceAccentMono => 'Mono';
+  String get appearanceAccentMono => '单色';
 
   @override
-  String get appearanceAccentSilver => 'Silver';
+  String get appearanceAccentSilver => '银灰';
 
   @override
-  String get appearanceSurfaceSolid => 'Solid';
+  String get appearanceSurfaceSolid => '实色';
 
   @override
-  String get appearanceSurfaceSoft => 'Soft';
+  String get appearanceSurfaceSoft => '柔光';
 
   @override
-  String get appearanceSurfaceBrutal => 'Brutal';
+  String get appearanceSurfaceBrutal => '硬朗';
 
   @override
-  String get appearanceSurfacePaper => 'Paper';
+  String get appearanceSurfacePaper => '纸面';
 
   @override
-  String get signalStyleName => 'Signal';
+  String get signalStyleName => '信号';
 
   @override
-  String get signalShow => 'Show';
+  String get signalShow => '展开';
 
   @override
-  String get signalHide => 'Hide';
+  String get signalHide => '收起';
 
   @override
   String signalRowRunningCommand(String command) {
-    return 'Running $command';
+    return '正在运行 $command';
   }
 
   @override
-  String get appearanceFineTuneCorners => 'Corners';
+  String get appearanceFineTuneCorners => '圆角';
 
   @override
-  String get appearanceFineTuneCornersRound => 'Round';
+  String get appearanceFineTuneCornersRound => '圆润';
 
   @override
-  String get appearanceFineTuneCornersSoft => 'Soft';
+  String get appearanceFineTuneCornersSoft => '微圆';
 
   @override
-  String get appearanceFineTuneCornersSharp => 'Sharp';
+  String get appearanceFineTuneCornersSharp => '直角';
 
   @override
-  String get appearanceFineTuneDepth => 'Depth';
+  String get appearanceFineTuneDepth => '层次';
 
   @override
-  String get appearanceFineTuneEdges => 'Edges';
+  String get appearanceFineTuneEdges => '边框';
 
   @override
   String appearanceFineTuneReset(String style) {
-    return 'Reset to $style defaults';
+    return '重置为 $style 默认值';
   }
 
   @override
-  String get kitTourNext => 'Next';
+  String get kitTourNext => '下一步';
 
   @override
-  String get kitTourSkip => 'Skip';
+  String get kitTourSkip => '跳过';
 
   @override
-  String get kitTourDone => 'Done';
+  String get kitTourDone => '完成';
 
   @override
   String kitTourStep(int current, int total) {
-    return 'Step $current of $total';
+    return '第 $current / $total 步';
   }
 
   @override
-  String get tipStopAfterStep => 'Hold to stop after this step';
+  String get tipStopAfterStep => '长按以在此步骤后停止';
 
   @override
-  String get tipStopAfterStepTitle => 'Stop after this step';
+  String get tipStopAfterStepTitle => '在此步骤后停止';
 
   @override
-  String get tipSendLater => 'Hold Send to send later or repeat';
+  String get tipSendLater => '长按发送以定时或重复发送';
 
   @override
-  String get tipSendLaterTitle => 'Send later or repeat';
+  String get tipSendLaterTitle => '定时或重复发送';
 
   @override
-  String get tourAppearanceStart => 'Show me how · 30 s';
+  String get tourAppearanceStart => '带我看 · 30 秒';
 
   @override
-  String get tourNotNow => 'Not now';
+  String get tourNotNow => '暂不';
 
   @override
-  String get tipsTitle => 'Tips';
+  String get tipsTitle => '技巧';
 
   @override
-  String get tipsHubSubtitle => 'Hidden gestures and short tours';
+  String get tipsHubSubtitle => '隐藏手势与简短导览';
 
   @override
-  String get tipsSearchAliases =>
-      'tips tutorial tour hints gestures hold long-press how to learn';
+  String get tipsSearchAliases => '技巧 教程 导览 提示 手势 长按 怎么用';
 
   @override
-  String get tipsIntro =>
-      'Each tip shows at its moment, at most twice. Replay any of them here.';
+  String get tipsIntro => '每条提示在恰当时机出现，最多两次。你也可以在这里随时重看。';
 
   @override
-  String get tipsShowMe => 'Show me';
+  String get tipsShowMe => '演示';
 
   @override
-  String get tipsTipsLabel => 'Tips';
+  String get tipsTipsLabel => '操作技巧';
 
   @override
-  String get tipsToursLabel => 'Mini tutorials';
+  String get tipsToursLabel => '简短导览';
 
   @override
-  String get chatStopAfterStepPending => 'Stopping after this step';
+  String get chatStopAfterStepPending => '将在此步骤后停止';
 
   @override
-  String get chatStopAfterStepUndo => 'Undo';
+  String get chatStopAfterStepUndo => '撤销';
 
   @override
-  String get chatStopAfterStepUndone => 'It will carry on.';
+  String get chatStopAfterStepUndone => '将继续执行。';
 
   @override
-  String get chatStopAfterStepTooLate =>
-      'Too late: the agent already has the note.';
+  String get chatStopAfterStepTooLate => '太晚了：智能体已收到该指令。';
 
   @override
-  String get chatLiveShowSteps => 'Show steps';
+  String get chatLiveShowSteps => '显示步骤';
 
   @override
-  String get chatLiveHideSteps => 'Hide steps';
+  String get chatLiveHideSteps => '隐藏步骤';
 
   @override
-  String get kitComposerStopPending => 'stopping after this step';
+  String get kitComposerStopPending => '将在此步骤后停止';
 
   @override
-  String get phraseChipsRetryStarter => 'Try again';
+  String get phraseChipsRetryStarter => '重试';
 
   @override
-  String get tourMakeItYoursTitle => 'Make it yours';
+  String get tourMakeItYoursTitle => '打造专属外观';
 
   @override
-  String get tourMakeItYoursOffer =>
-      'Make it yours: light or dark, colours and style, in four steps';
+  String get tourMakeItYoursOffer => '四步打造专属外观：明暗、配色与面板风格';
 
   @override
-  String get tourMakeItYoursColours =>
-      'Start here: light or dark, a theme and an accent. The preview above shows every change at once.';
+  String get tourMakeItYoursColours => '从这里开始：明暗模式、主题配色与点缀色。页面会实时呈现每项改动。';
 
   @override
-  String get tourMakeItYoursStyle =>
-      'Pick how cards and bars feel: Solid, Soft, Brutal or Paper.';
+  String get tourMakeItYoursStyle => '选择卡片与栏目的质感：实色、柔光、硬朗或纸面。';
 
   @override
-  String get kitGuideChanges => 'Changes';
+  String get kitGuideChanges => '作用范围';
 
   @override
-  String get kitGuideAll => 'All';
+  String get kitGuideAll => '全部';
 
   @override
-  String get kitGuideBack => 'Back to all chips';
+  String get kitGuideBack => '返回全部分类';
 
   @override
-  String get appearanceGroupColours => 'Colours';
+  String get appearanceGroupColours => '配色';
 
   @override
-  String get appearanceGroupStyle => 'Style';
+  String get appearanceGroupStyle => '质感';
 
   @override
-  String get appearanceGroupBackground => 'Background';
+  String get appearanceGroupBackground => '背景';
 
   @override
-  String get appearanceGroupComfort => 'Text & motion';
+  String get appearanceGroupComfort => '文字与动效';
 
   @override
   String appearanceGroupPair(String first, String second) {
-    return '$first, $second';
+    return '$first、$second';
   }
 
   @override
-  String get appearanceChipMode => 'Mode';
+  String get appearanceChipMode => '模式';
 
   @override
-  String get appearanceChipTheme => 'Theme';
+  String get appearanceChipTheme => '主题';
 
   @override
-  String get appearanceChipAccent => 'Accent';
+  String get appearanceChipAccent => '点缀色';
 
   @override
-  String get appearanceChipStyle => 'Style';
+  String get appearanceChipStyle => '质感';
 
   @override
-  String get appearanceChipShape => 'Shape';
+  String get appearanceChipShape => '形态';
 
   @override
-  String get appearanceChipLook => 'Look';
+  String get appearanceChipLook => '背景动效';
 
   @override
-  String get appearanceChipStrength => 'Strength';
+  String get appearanceChipStrength => '强度';
 
   @override
-  String get appearanceChipText => 'Text size';
+  String get appearanceChipText => '字号';
 
   @override
-  String get appearanceChipMotion => 'Motion';
+  String get appearanceChipMotion => '动效';
 
   @override
-  String get appearanceChipGlow => 'Reply glow';
+  String get appearanceChipGlow => '回复流光';
 
   @override
-  String get appearanceAskMode => 'Light or dark?';
+  String get appearanceAskMode => '浅色还是深色？';
 
   @override
-  String get appearanceAskTheme => 'Which colours?';
+  String get appearanceAskTheme => '选择哪套配色？';
 
   @override
-  String get appearanceAskAccent => 'Which accent colour?';
+  String get appearanceAskAccent => '选择哪种点缀色？';
 
   @override
-  String get appearanceAskStyle => 'How should surfaces feel?';
+  String get appearanceAskStyle => '面板采用哪种质感？';
 
   @override
-  String get appearanceAskShape => 'Corners and spacing';
+  String get appearanceAskShape => '圆角与间距';
 
   @override
-  String get appearanceAskLook => 'What moves behind your pages?';
+  String get appearanceAskLook => '页面背后呈现什么背景？';
 
   @override
-  String get appearanceAskStrength => 'How strong?';
+  String get appearanceAskStrength => '背景显示多强？';
 
   @override
-  String get appearanceAskText => 'How big should text be?';
+  String get appearanceAskText => '文字显示多大？';
 
   @override
-  String get appearanceAskMotion => 'How much should move?';
+  String get appearanceAskMotion => '动效幅度多大？';
 
   @override
-  String get appearanceAskGlow => 'Glow while a reply is written?';
+  String get appearanceAskGlow => '生成回复时显示流光边框？';
 
   @override
-  String get appearanceChangesMode => 'Every page, light or dark';
+  String get appearanceChangesMode => '所有页面的浅色或深色模式';
 
   @override
-  String get appearanceChangesTheme => 'The colours of every page';
+  String get appearanceChangesTheme => '所有页面的整体配色';
 
   @override
-  String get appearanceChangesAccent =>
-      'Buttons, links, the send key and the glow';
+  String get appearanceChangesAccent => '按钮、链接、发送键与流光边框';
 
   @override
-  String get appearanceChangesStyle => 'Every card, bar and message bubble';
+  String get appearanceChangesStyle => '所有卡片、栏目与消息气泡';
 
   @override
-  String get appearanceChangesShape => 'Corners and spacing of this style';
+  String get appearanceChangesShape => '当前质感下的圆角与间距';
 
   @override
-  String get appearanceChangesLook => 'The background of every page';
+  String get appearanceChangesLook => '所有页面的底层背景';
 
   @override
-  String get appearanceChangesStrength =>
-      'How much of the background shows through';
+  String get appearanceChangesStrength => '背景透出的强弱程度';
 
   @override
-  String get appearanceChangesText =>
-      'Text everywhere, on top of your phone\'s size';
+  String get appearanceChangesText => '全局文字大小（叠加在系统字号之上）';
 
   @override
-  String get appearanceChangesMotion => 'Animations across the app';
+  String get appearanceChangesMotion => '全应用的过渡与动画';
 
   @override
-  String get appearanceChangesGlow => 'The border of the message box';
+  String get appearanceChangesGlow => '消息输入框的流光边框';
 
   @override
-  String get appearanceOffInSaver => 'Off in Saver';
+  String get appearanceOffInSaver => '省电模式下关闭';
 
   @override
-  String get appearanceLookOff => 'Off';
+  String get appearanceLookOff => '关闭';
 
   @override
-  String get appearanceStrengthNoLook => 'No look';
+  String get appearanceStrengthNoLook => '无背景';
 
   @override
   String appearanceShapeValue(String corners, String spacing) {
-    return '$corners, $spacing';
+    return '$corners、$spacing';
   }
 
   @override
-  String get appearanceShapeSpacing => 'Spacing';
+  String get appearanceShapeSpacing => '间距';
 
   @override
-  String get appearanceSpacingRoomy => 'Roomy';
+  String get appearanceSpacingRoomy => '舒展';
 
   @override
-  String get appearanceSpacingCompact => 'Compact';
+  String get appearanceSpacingCompact => '紧凑';
 
   @override
   String appearanceShapeNote(String style, String corners, String spacing) {
-    return '$style starts at $corners and $spacing. Picking another style starts these over.';
+    return '$style 默认采用$corners与$spacing。切换其他质感会重置这两项。';
   }
 
   @override
-  String get appearanceMotionPhraseFull => 'full motion';
+  String get appearanceMotionPhraseFull => '完整动效';
 
   @override
-  String get appearanceMotionPhraseCalm => 'calm motion';
+  String get appearanceMotionPhraseCalm => '舒缓动效';
 
   @override
-  String get appearanceMotionPhraseOff => 'no motion';
+  String get appearanceMotionPhraseOff => '关闭动效';
 
   @override
-  String get appearanceGlowOff => 'Off';
+  String get appearanceGlowOff => '关闭';
 
   @override
-  String get appearanceGlowOffHint => 'A plain border';
+  String get appearanceGlowOffHint => '普通静止边框';
 
   @override
-  String get appearanceGlowClassicHint => 'A light that circles the box';
+  String get appearanceGlowClassicHint => '光点沿边框环绕流动';
 
   @override
-  String get appearanceGlowSoftHint => 'A ring that slowly breathes';
+  String get appearanceGlowSoftHint => '柔和光环缓慢呼吸';
 
   @override
-  String get appearanceModeAutoNote =>
-      'Follows your phone: light by day, dark at night.';
+  String get appearanceModeAutoNote => '跟随手机系统：白天浅色，夜间深色。';
 
   @override
   String appearanceSeeAllThemes(int count) {
-    return 'See all $count themes';
+    return '查看全部 $count 套主题';
   }
 
   @override
   String appearanceSeeAllLooks(int count) {
-    return 'See all $count looks';
+    return '查看全部 $count 种背景';
   }
 
   @override
   String appearanceAccentMatchNote(String theme) {
-    return '“Match” uses $theme\'s own accent.';
+    return '“匹配”将使用 $theme 自带的点缀色。';
   }
 
   @override
-  String get appearanceStrengthNeedsLook =>
-      'The background is off, so there is nothing to strengthen.';
+  String get appearanceStrengthNeedsLook => '动态背景已关闭，因此无需调节强度。';
 
   @override
-  String get appearanceChooseLookFirst => 'Choose a look first';
+  String get appearanceChooseLookFirst => '先选择一种背景';
 
   @override
   String get appearanceSaverHoldsStyle =>
-      'Saver keeps cards solid and the background still, to save battery on this screen. Your style comes back when Saver is off.';
+      '省电模式会保持卡片实色且背景静止以节省电量。关闭省电模式后将恢复你选择的质感。';
 
   @override
   String get appearanceSaverHoldsBackground =>
-      'Saver keeps cards solid and the background still, to save battery on this screen. Your background comes back when Saver is off.';
+      '省电模式会保持卡片实色且背景静止以节省电量。关闭省电模式后将恢复你选择的背景。';
 
   @override
-  String get appearanceTurnOffSaver => 'Turn off Saver';
+  String get appearanceTurnOffSaver => '关闭省电模式';
 
   @override
-  String get appearanceSaverMotion => 'Saver keeps motion off.';
+  String get appearanceSaverMotion => '省电模式会保持动效关闭。';
 
   @override
-  String get appearanceGuideStart =>
-      'Start with Colours, the biggest change. Every choice saves as you go, and you can tap any row at any time.';
+  String get appearanceGuideStart => '从变化最明显的“配色”开始。每次点选都会即时保存，你也可以随时点按任意分类。';
 
   @override
-  String get appearanceGuideSkip => 'Skip the guide';
+  String get appearanceGuideSkip => '跳过向导';
 
   @override
-  String get appearanceGuideResume =>
-      'Pick up where you left off, or tap any chip.';
+  String get appearanceGuideResume => '从上次停下的地方继续，或直接点选任意标签。';
 
   @override
-  String get appearanceGuideAllSetTitle => 'All set.';
+  String get appearanceGuideAllSetTitle => '全部就绪。';
 
   @override
-  String get appearanceGuideAllSet =>
-      'Your choices are saved. Tap any chip to change one.';
+  String get appearanceGuideAllSet => '你的选择已保存。点按任意标签即可随时调整。';
 
   @override
-  String get appearanceGuideAgain => 'Guide me again';
+  String get appearanceGuideAgain => '重新开启向导';
 
   @override
-  String get appearanceGuideReset => 'Reset to defaults';
+  String get appearanceGuideReset => '恢复默认外观';
 
   @override
   String get appearanceGuideResetConfirm =>
-      'Put every Appearance choice back to the defaults? Light or dark, theme, accent, style, background, text size, motion and the reply glow all reset.';
+      '将所有外观选项恢复为默认值？明暗模式、主题、点缀色、质感、背景、字号、动效和回复流光都会重置。';
 
   @override
-  String get appearanceGuideResetDo => 'Reset';
+  String get appearanceGuideResetDo => '恢复默认';
 
   @override
-  String get appearanceGuideResetKeep => 'Keep my choices';
+  String get appearanceGuideResetKeep => '保留当前选择';
 
   @override
   String appearanceGuideCountIntro(int count) {
-    return '$count quick questions, all optional';
+    return '$count 个快速选项，全部可选';
   }
 
   @override
   String appearanceGuideCountSeen(int seen, int total) {
-    return '$seen of $total seen';
+    return '已看 $seen / $total';
   }
 
   @override
   String appearanceGuideCountAt(int at, int total) {
-    return '$at of $total';
+    return '$at / $total';
   }
 
   @override
-  String get appearanceGuideSavesAsYouGo => 'Everything saves as you go';
+  String get appearanceGuideSavesAsYouGo => '所有改动即时保存';
 
   @override
-  String get appearanceGuideStartButton => 'Start with Colours';
+  String get appearanceGuideStartButton => '从配色开始';
 
   @override
   String appearanceGuideContinue(String group) {
-    return 'Continue: $group';
+    return '继续：$group';
   }
 
   @override
   String appearanceGuideNext(String name) {
-    return 'Next: $name';
+    return '下一项：$name';
   }
 
   @override
-  String get appearanceGuideFinish => 'Finish';
+  String get appearanceGuideFinish => '完成';
 
   @override
   String appearanceGuidePlace(
@@ -33395,75 +33312,66 @@ class AppLocalizationsZh extends AppLocalizations {
     int count,
     String group,
   ) {
-    return '$label, $value, question $at of $count in $group';
+    return '$label，$value，$group 中的第 $at/$count 项';
   }
 
   @override
-  String get tourMakeItYoursBackground =>
-      'Pick what moves behind your pages, or turn it off.';
+  String get tourMakeItYoursBackground => '选择页面背后的动态背景，或将其关闭。';
 
   @override
-  String get tourMakeItYoursComfort =>
-      'Make text bigger, calm the motion and choose the glow while a reply is written.';
+  String get tourMakeItYoursComfort => '调大字号、放缓动效，并选择回复生成时的流光边框。';
 
   @override
-  String get appearanceAccentMatchShort => 'Match';
+  String get appearanceAccentMatchShort => '匹配';
 
   @override
-  String get chatTurnStoppedElsewhere =>
-      'This reply was stopped from another app or device.';
+  String get chatTurnStoppedElsewhere => '此回复已在其他应用或设备上停止。';
 
   @override
-  String get chatTurnPausedInactive =>
-      'The server paused this reply after an hour with no new work.';
+  String get chatTurnPausedInactive => '由于一小时内无新进展，服务器已暂停此回复。';
 
   @override
-  String get chatTurnStoppedServerRestart =>
-      'The server restarted, so this reply stopped.';
+  String get chatTurnStoppedServerRestart => '服务器已重启，此回复随之停止。';
 
   @override
-  String get chatTurnSuperseded => 'A newer run took this reply\'s place.';
+  String get chatTurnSuperseded => '新的运行已接替此回复。';
 
   @override
-  String get chatTurnStoppedEarly =>
-      'This reply was stopped before it finished.';
+  String get chatTurnStoppedEarly => '此回复在完成前已被停止。';
 
   @override
-  String get settingsV3ModelNewOnPhone => 'New conversations on this phone';
+  String get settingsV3ModelNewOnPhone => '本机上的新对话';
 
   @override
   String chatLoadAgentMissing(String agent) {
-    return '$agent on this phone doesn\'t have this conversation. Go back and open it from your conversations.';
+    return '本机上的 $agent 没有找到此对话，请返回对话列表重新打开。';
   }
 
   @override
   String chatLoadAgentUnreadable(String agent) {
-    return '$agent on this phone answered, but this app couldn\'t read the reply. Try again, or report a problem.';
+    return '本机上的 $agent 已回复，但应用无法解析其内容。请重试或反馈问题。';
   }
 
   @override
-  String get productErrorUnreadableReply =>
-      'It answered, but this app couldn\'t read the reply. Try again, or report a problem.';
+  String get productErrorUnreadableReply => '服务端已回复，但应用无法解析其内容。请重试或反馈问题。';
 
   @override
-  String get settingsV3SavedOnPhone =>
-      'Saved on this phone. Other apps using this phone\'s server get this too.';
+  String get settingsV3SavedOnPhone => '已保存在本机，使用本机服务器的其他应用也会同步生效。';
 
   @override
   String settingsV3UseMyDefaultDonePhone(String what) {
-    return 'Reset on this phone to your own choices: $what.';
+    return '已在本机重置为你自己的默认选项：$what。';
   }
 
   @override
-  String get chatStallSubagent =>
-      'This sub-agent has been quiet for a while. It stops with its main conversation: stop the reply there.';
+  String get chatStallSubagent => '该子智能体已静默较长时间；它会随主对话一同停止，请在主对话中停止回复。';
 
   @override
-  String get serverPageThisPhonesServer => 'this phone\'s server';
+  String get serverPageThisPhonesServer => '本机服务器';
 
   @override
   String kitBackgroundWorkOne(String task, String time) {
-    return 'Still running in the background · $task · $time';
+    return '后台仍在运行 · $task · $time';
   }
 
   @override
@@ -33471,8 +33379,8 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count tasks still running in the background',
-      one: '1 task still running in the background',
+      other: '$count 个任务仍在后台运行',
+      one: '1 个任务仍在后台运行',
     );
     return '$_temp0';
   }
@@ -33487,23 +33395,23 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       minutes,
       locale: localeName,
-      other: '$minutes min',
-      zero: 'under a minute',
+      other: '$minutes 分钟',
+      zero: '不到 1 分钟',
     );
     return '$_temp0';
   }
 
   @override
   String kitBackgroundWorkHours(int hours, int minutes) {
-    return '$hours h $minutes min';
+    return '$hours 小时 $minutes 分钟';
   }
 
   @override
-  String get kitBackgroundWorkGoToStep => 'Shows the step that started it';
+  String get kitBackgroundWorkGoToStep => '跳转到启动它的步骤';
 
   @override
   String kitBackgroundWorkOneAfterStop(String task, String time) {
-    return 'Still running after the turn stopped · $task · $time';
+    return '本轮停止后仍在后台运行 · $task · $time';
   }
 
   @override
@@ -33511,135 +33419,133 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count tasks still running after the turn stopped',
-      one: '1 task still running after the turn stopped',
+      other: '本轮停止后仍有 $count 个任务在后台运行',
+      one: '本轮停止后仍有 1 个任务在后台运行',
     );
     return '$_temp0';
   }
 
   @override
   String chatAgentTurnLostConnectionTo(String agent, String company) {
-    return '$agent lost its connection to $company, so the turn stopped.';
+    return '$agent 与 $company 的连接中断，本轮已停止。';
   }
 
   @override
   String chatAgentTurnLostConnection(String agent) {
-    return '$agent lost its connection to its model provider, so the turn stopped.';
+    return '$agent 与模型供应商的连接中断，本轮已停止。';
   }
 
   @override
   String chatSendFailureLostConnectionTo(String agent, String company) {
-    return '$agent lost its connection to $company';
+    return '$agent 与 $company 的连接中断';
   }
 
   @override
   String chatSendFailureLostConnection(String agent) {
-    return '$agent lost its connection to its model provider';
+    return '$agent 与模型供应商的连接中断';
   }
 
   @override
   String chatBackgroundWorkWaitingFor(String program) {
-    return 'Waiting for $program';
+    return '正在等待 $program';
   }
 
   @override
   String chatSendFailureSignIn(String agent) {
-    return '$agent needs you to sign in';
+    return '$agent 需要你先登录';
   }
 
   @override
   String chatSendFailureNoCredit(String agent) {
-    return '$agent has no credits for this model';
+    return '$agent 在此模型上的额度已用尽';
   }
 
   @override
-  String get chatSendFailureModelUnavailable => 'This model isn\'t available';
+  String get chatSendFailureModelUnavailable => '当前模型不可用';
 
   @override
   String chatSendFailureBusy(String agent) {
-    return '$agent is busy';
+    return '$agent 当前繁忙';
   }
 
   @override
-  String get chatSendFailureAgentFallback => 'The agent';
+  String get chatSendFailureAgentFallback => '智能体';
 
   @override
-  String get chatSendFailureSignInAction => 'Sign in';
+  String get chatSendFailureSignInAction => '去登录';
 
   @override
-  String get chatSendFailureAccountAction => 'Open account';
+  String get chatSendFailureAccountAction => '打开账户';
 
   @override
-  String get chatSendFailureDetailsAgent => 'Agent';
+  String get chatSendFailureDetailsAgent => '智能体';
 
   @override
-  String get chatSendFailureDetailsModel => 'Model';
+  String get chatSendFailureDetailsModel => '模型';
 
   @override
-  String get chatSendFailureDetailsCode => 'Error code';
+  String get chatSendFailureDetailsCode => '错误代码';
 
   @override
-  String get chatSendFailureNewConversation =>
-      'This agent can\'t continue this conversation';
+  String get chatSendFailureNewConversation => '该智能体无法继续此对话';
 
   @override
   String chatSendFailureNeedsAccount(String agent) {
-    return 'This model needs a $agent account';
+    return '此模型需要 $agent 账户';
   }
 
   @override
   String chatSendFailureSignInToAgent(String agent) {
-    return 'Sign in to $agent';
+    return '登录 $agent';
   }
 
   @override
-  String get chatComposerNoteDismiss => 'Dismiss note';
+  String get chatComposerNoteDismiss => '关闭提示';
 
   @override
-  String get chatAnnounceReplyFinished => 'Reply finished';
+  String get chatAnnounceReplyFinished => '回复已完成';
 
   @override
-  String get chatAnnounceNeedsYou => 'The agent needs you';
+  String get chatAnnounceNeedsYou => '智能体需要你的确认';
 
   @override
-  String get runningPhoneTitle => 'Running on this phone';
+  String get runningPhoneTitle => '本机运行中进程';
 
   @override
   String runningPhoneSummary(int count, String memory) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count running · $memory',
-      one: '1 running · $memory',
+      other: '$count 个运行中 · $memory',
+      one: '1 个运行中 · $memory',
     );
     return '$_temp0';
   }
 
   @override
-  String get runningPhoneAutoRefresh =>
-      'Checks again every 5 seconds while open';
+  String get runningPhoneAutoRefresh => '页面打开时每 5 秒自动刷新';
 
   @override
-  String get runningPhoneLimitTitle => 'Servers may be stopped';
+  String get runningPhoneLimitTitle => '服务器可能被系统终止';
 
   @override
   String runningPhoneLimitBody(int count, int limit) {
-    return '$count of $limit background processes: above $limit, Android stops this app\'s oldest processes first, and those are the servers. Stop what was left behind or isn\'t needed, or lift the limit with Developer options › Disable child process restrictions.';
+    return '当前后台进程 $count/$limit：超过 $limit 后 Android 会优先终止本应用最早启动的进程（即服务器）。请停止残留或不再需要的进程，或在系统“开发者选项 › 禁用子进程限制”中解除上限。';
   }
 
   @override
   String runningPhoneGroup(String kind) {
     String _temp0 = intl.Intl.selectLogic(kind, {
-      'leftBehind': 'Left behind',
+      'leftBehind': '残留进程',
       'openCode': 'OpenCode',
       'claudeCode': 'Claude Code',
-      'agentHelper': 'Agent helper',
-      'aiTeam': 'AI Team',
-      'terminal': 'Terminal',
-      'setup': 'Setup and checks',
-      'helpers': 'Helpers',
-      'app': 'This app',
-      'other': 'Other',
+      'agentHelper': '智能体辅助进程',
+      'aiTeam': 'AI 团队',
+      'terminal': '终端',
+      'setup': '安装与检查',
+      'helpers': '辅助服务',
+      'app': '本应用',
+      'other': '其他',
     });
     return '$_temp0';
   }
@@ -33652,14 +33558,14 @@ class AppLocalizationsZh extends AppLocalizations {
   @override
   String runningPhoneName(String kind) {
     String _temp0 = intl.Intl.selectLogic(kind, {
-      'flutterTest': 'Flutter test',
-      'command': 'Command',
+      'flutterTest': 'Flutter 测试',
+      'command': '命令',
       'linux': 'Linux',
       'openCode': 'OpenCode',
       'claudeCode': 'Claude Code',
-      'agentHelper': 'Agent helper',
-      'signIn': 'Agent sign-in',
-      'team': 'AI Team engine',
+      'agentHelper': '智能体辅助进程',
+      'signIn': '智能体登录',
+      'team': 'AI 团队引擎',
       'node': 'Node.js',
       'python': 'Python',
       'git': 'Git',
@@ -33668,9 +33574,9 @@ class AppLocalizationsZh extends AppLocalizations {
       'flutter': 'Flutter',
       'gradle': 'Gradle',
       'java': 'Java',
-      'search': 'Search',
-      'app': 'This app',
-      'other': 'Program',
+      'search': '搜索',
+      'app': '本应用',
+      'other': '程序',
     });
     return '$_temp0';
   }
@@ -33678,69 +33584,67 @@ class AppLocalizationsZh extends AppLocalizations {
   @override
   String runningPhoneCpu(String level, String percent) {
     String _temp0 = intl.Intl.selectLogic(level, {
-      'idle': 'Idle',
-      'light': 'Light',
-      'busy': 'Busy',
-      'other': 'Very busy',
+      'idle': '空闲',
+      'light': '轻载',
+      'busy': '繁忙',
+      'other': '高负载',
     });
     return '$_temp0 · $percent%';
   }
 
   @override
-  String get runningPhoneMarkHeavy => 'Heavy';
+  String get runningPhoneMarkHeavy => '高占用';
 
   @override
-  String get runningPhoneMarkStuck => 'May be stuck';
+  String get runningPhoneMarkStuck => '可能卡住';
 
   @override
-  String get runningPhoneMarkLeftBehind => 'Left behind';
+  String get runningPhoneMarkLeftBehind => '残留';
 
   @override
   String runningPhoneFromChat(String title) {
-    return 'Started by Claude Code · $title';
+    return '由 Claude Code 启动 · $title';
   }
 
   @override
-  String get runningPhoneFromClaude => 'Started by Claude Code';
+  String get runningPhoneFromClaude => '由 Claude Code 启动';
 
   @override
-  String get runningPhoneStop => 'Stop';
+  String get runningPhoneStop => '停止';
 
   @override
   String runningPhoneStopNamed(String name) {
-    return 'Stop $name';
+    return '停止 $name';
   }
 
   @override
   String runningPhoneStopTitle(String name) {
-    return 'Stop $name?';
+    return '停止 $name？';
   }
 
   @override
-  String get runningPhoneStopBody =>
-      'It gets a polite stop first, then a forced one if it keeps running.';
+  String get runningPhoneStopBody => '将先发送温和停止信号，若仍不退出再强制终止。';
 
   @override
   String runningPhoneStopAllLeftBehind(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Stop all $count left behind',
-      one: 'Stop the 1 left behind',
+      other: '停止全部 $count 个残留进程',
+      one: '停止 1 个残留进程',
     );
     return '$_temp0';
   }
 
   @override
-  String get runningPhoneStopAllDetail =>
-      'Nothing else stops them, and stopping them is safe.';
+  String get runningPhoneStopAllDetail => '已无任何任务等待它们，可安全停止。';
 
   @override
-  String get runningPhoneStopAllTitle => 'Stop everything left behind?';
+  String get runningPhoneStopAllTitle => '停止所有残留进程？';
 
   @override
   String runningPhoneStopAllBody(String names) {
-    return '$names. Each gets a polite stop first, then a forced one if it keeps running.';
+    return '$names。每个进程将先温和停止，若仍不退出再强制终止。';
   }
 
   @override
@@ -33748,8 +33652,8 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Stopped $count',
-      one: 'Stopped 1',
+      other: '已停止 $count 个',
+      one: '已停止 1 个',
     );
     return '$_temp0';
   }
@@ -33759,96 +33663,92 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count had already ended',
-      one: '1 had already ended',
+      other: '$count 个此前已退出',
+      one: '1 个此前已退出',
     );
     return '$_temp0';
   }
 
   @override
-  String get runningPhoneNotStoppedTitle => 'Not everything stopped';
+  String get runningPhoneNotStoppedTitle => '部分进程未能停止';
 
   @override
   String runningPhoneRefusedApp(String name) {
-    return '$name: this app itself can\'t be stopped here.';
+    return '$name：无法在此停止本应用自身。';
   }
 
   @override
   String runningPhoneRefusedServer(String name) {
-    return '$name: it runs a server. Stop the server from This phone.';
+    return '$name：它承载着服务器，请在“本机”页面停止服务器。';
   }
 
   @override
   String runningPhoneRefusedStillRunning(String name) {
-    return '$name: it kept running after a forced stop. Try again, or restart the phone.';
+    return '$name：强制终止后仍在运行，请重试或重启手机。';
   }
 
   @override
-  String get runningPhoneStopFailed => 'Couldn\'t stop it. Try again.';
+  String get runningPhoneStopFailed => '未能停止，请重试。';
 
   @override
-  String get runningPhoneLoadFailedTitle => 'Couldn\'t read what\'s running';
+  String get runningPhoneLoadFailedTitle => '无法读取运行状态';
 
   @override
-  String get runningPhoneLoadFailedBody =>
-      'The phone didn\'t answer. Try again.';
+  String get runningPhoneLoadFailedBody => '本机未响应，请重试。';
 
   @override
-  String get runningPhoneRefreshFailed =>
-      'Couldn\'t check again, so this shows the last reading.';
+  String get runningPhoneRefreshFailed => '刷新失败，当前显示的是上一次读取结果。';
 
   @override
-  String get runningPhoneEmpty => 'Nothing else is running';
+  String get runningPhoneEmpty => '没有其他运行中的进程';
 
   @override
   String get runningPhoneEmptyBody =>
-      'When OpenCode, Claude Code or a terminal runs here, it shows up in this list.';
+      '当 OpenCode、Claude Code 或终端在本机运行时，会显示在此列表中。';
 
   @override
   String runningPhoneAbout(String kind) {
     String _temp0 = intl.Intl.selectLogic(kind, {
-      'leftBehind':
-          'Left running after its Linux ended. Nothing is waiting on it, so stopping it is safe.',
-      'openCode': 'Part of the OpenCode server on this phone.',
-      'claudeCode': 'Part of a Claude Code conversation.',
-      'agentHelper': 'Runs Claude Code and other agents on this phone.',
-      'aiTeam': 'Part of the AI Team.',
-      'terminal': 'Runs in a terminal on this phone.',
-      'setup': 'A setup step or a check.',
-      'helpers': 'A helper service of this app.',
-      'app': 'This app itself.',
-      'other': 'Started by this app.',
+      'leftBehind': '所属 Linux 会话结束后遗留的进程，已无任务等待它，可安全停止。',
+      'openCode': '本机 OpenCode 服务器的组成部分。',
+      'claudeCode': 'Claude Code 对话的组成部分。',
+      'agentHelper': '负责在本机运行 Claude Code 及其他智能体。',
+      'aiTeam': 'AI 团队的组成部分。',
+      'terminal': '在本机终端中运行。',
+      'setup': '安装步骤或环境检查。',
+      'helpers': '本应用的辅助服务。',
+      'app': '本应用自身。',
+      'other': '由本应用启动。',
     });
     return '$_temp0';
   }
 
   @override
   String runningPhoneHeavyFor(String elapsed) {
-    return 'It has used more than 80% of a processor core for $elapsed.';
+    return '已持续占用单核 80% 以上达 $elapsed。';
   }
 
   @override
   String runningPhoneStuckWhy(String elapsed) {
-    return 'It has run near 100% for $elapsed with no conversation waiting on it.';
+    return '已接近 100% 满载运行达 $elapsed，且没有任何对话在等待它。';
   }
 
   @override
-  String get runningPhoneServerRoot =>
-      'It runs a server. Stop the server from This phone.';
+  String get runningPhoneServerRoot => '它承载着服务器，请在“本机”页面停止服务器。';
 
   @override
-  String get runningPhoneConversationId => 'Claude Code conversation ID';
+  String get runningPhoneConversationId => 'Claude Code 对话 ID';
 
   @override
-  String get runningPhoneOwner => 'Belongs to';
+  String get runningPhoneOwner => '归属';
 
   @override
   String runningPhoneRowNormal(int count, String memory) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count running · $memory',
-      one: '1 running · $memory',
+      other: '$count 个运行中 · $memory',
+      one: '1 个运行中 · $memory',
     );
     return '$_temp0';
   }
@@ -33858,8 +33758,8 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count left behind, still using the phone',
-      one: '1 left behind, still using the phone',
+      other: '$count 个残留进程仍在耗电',
+      one: '1 个残留进程仍在耗电',
     );
     return '$_temp0';
   }
@@ -33869,143 +33769,134 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count heavy, $name the most · $percent%',
-      one: '$name is heavy · $percent%',
+      other: '$count 个高负载，$name 最高 · $percent%',
+      one: '$name 高负载 · $percent%',
     );
     return '$_temp0';
   }
 
   @override
   String runningPhoneRowNearLimit(int count, int limit) {
-    return '$count of $limit: Android may stop the servers';
+    return '进程 $count/$limit：Android 可能会终止服务器';
   }
 
   @override
-  String get runningPhoneRowIdle => 'See what runs and what heats the phone';
+  String get runningPhoneRowIdle => '查看正在运行的进程与发热来源';
 
   @override
   String chatStuckCommand(String time) {
-    return '$time · may be stuck';
+    return '$time · 可能已卡住';
   }
 
   @override
   String chatStuckMinutes(int minutes) {
-    return '$minutes min';
+    return '$minutes 分钟';
   }
 
   @override
   String chatStuckHours(int hours, int minutes) {
-    return '$hours h $minutes min';
+    return '$hours 小时 $minutes 分钟';
   }
 
   @override
   String chatStuckUnnamed(String time) {
-    return 'Still running · $time · may be stuck';
+    return '仍在运行 · $time · 可能已卡住';
   }
 
   @override
   String chatStuckWaitsNote(String command) {
-    return 'Waits for $command to finish. Stop it to get through now.';
+    return '正在等待 $command 完成。停止它即可立即继续。';
   }
 
   @override
-  String get chatStuckNeverEnds =>
-      'This reply may never end. Stop and send gets your message through now.';
+  String get chatStuckNeverEnds => '此回复可能不会自行结束。点按“停止并发送”可立即发出你的消息。';
 
   @override
-  String get chatStuckThisStep => 'this step';
+  String get chatStuckThisStep => '当前步骤';
 
   @override
-  String get kitComposerAddsToReply => 'Adds to this reply';
+  String get kitComposerAddsToReply => '将追加到当前回复中';
 
   @override
   String kitComposerCantTakeMidReply(String agent) {
-    return '$agent can\'t take a message mid-reply.';
+    return '$agent 不支持在回复中途插入消息。';
   }
 
   @override
-  String get kitTurnLiveStopShort => 'Stop';
+  String get kitTurnLiveStopShort => '停止';
 
   @override
-  String get frostGlassQuestion => 'Glass';
+  String get frostGlassQuestion => '毛玻璃';
 
   @override
-  String get frostGlassOff => 'Off';
+  String get frostGlassOff => '关闭';
 
   @override
-  String get frostGlassWeak => 'Weak';
+  String get frostGlassWeak => '轻度';
 
   @override
-  String get frostGlassBalanced => 'Balanced';
+  String get frostGlassBalanced => '均衡';
 
   @override
-  String get frostGlassStrong => 'Strong';
+  String get frostGlassStrong => '浓郁';
 
   @override
-  String get frostGlassHint =>
-      'When the conversation scrolls under the message box or the header, they softly blur it. Off keeps them solid.';
+  String get frostGlassHint => '对话内容滚过输入框或顶栏下方时柔和虚化背景；关闭则保持实色。';
 
   @override
-  String get frostGlassHeldSaver =>
-      'Saver is on, so the message box and header stay solid.';
+  String get frostGlassHeldSaver => '省电模式已开启，输入框与顶栏保持实色。';
 
   @override
-  String get frostGlassHeldMotion =>
-      'Reduced motion is on, so the message box and header stay solid.';
+  String get frostGlassHeldMotion => '减弱动态效果已开启，输入框与顶栏保持实色。';
 
   @override
-  String get frostGlassHeldContrast =>
-      'High contrast is on, so the message box and header stay solid.';
+  String get frostGlassHeldContrast => '高对比度已开启，输入框与顶栏保持实色。';
 
   @override
-  String get frostGlassHeldStyle =>
-      'This style keeps its own look, so the message box and header stay solid.';
+  String get frostGlassHeldStyle => '当前质感固定自有外观，输入框与顶栏保持实色。';
 
   @override
   String stopRowSemantics(String agent) {
-    return 'Stop $agent';
+    return '停止 $agent';
   }
 
   @override
   String phoneTeamProofSignal(int signal) {
-    return 'The safety test was closed by Android (signal $signal) before it could finish.';
+    return '安全自检在完成前被 Android 终止（信号 $signal）。';
   }
 
   @override
   String phoneTeamProofCheckSignal(String check, int signal) {
-    return 'The safety check “$check” was closed by Android (signal $signal).';
+    return '安全自检项“$check”被 Android 终止（信号 $signal）。';
   }
 
   @override
   String phoneTeamProofNotBlocked(String check) {
-    return 'The safety check “$check” failed: this phone did not block it the way the team\'s sandbox needs.';
+    return '安全自检项“$check”未通过：本机未能按团队沙箱要求拦截该操作。';
   }
 
   @override
-  String get phoneTeamProofSandbox =>
-      'The team\'s sandbox could not start on this phone.';
+  String get phoneTeamProofSandbox => '团队沙箱无法在本机启动。';
 
   @override
   String phoneTeamProofUbuntu(String check) {
-    return 'The Ubuntu step “$check” failed inside the team\'s sandbox.';
+    return 'Ubuntu 步骤“$check”在团队沙箱内执行失败。';
   }
 
   @override
-  String get phoneTeamProofFixture =>
-      'The safety check\'s private test files changed or could not be set up.';
+  String get phoneTeamProofFixture => '安全自检的私有测试文件被改动或无法准备。';
 
   @override
-  String get phoneTeamProofNoAnswer =>
-      'The safety test did not answer in time.';
+  String get phoneTeamProofNoAnswer => '安全自检未在规定时间内响应。';
 
   @override
   String phoneTeamProofProot(String check) {
-    return 'The proot safety check “$check” did not pass.';
+    return 'proot 安全自检项“$check”未通过。';
   }
 
   @override
   String phoneTeamProofOther(String check) {
-    return 'The safety check stopped at “$check”.';
+    return '安全自检在“$check”处停止。';
   }
 
   @override
