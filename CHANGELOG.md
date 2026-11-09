@@ -2,6 +2,18 @@
 
 This project is in public alpha. Only the newest preview is supported.
 
+## 1.0.1+2 — 2026-11-09
+
+Release infrastructure and documentation; same app code as 1.0.0+1.
+Full notes: [docs/releases/v1.0.1+2.md](docs/releases/v1.0.1+2.md).
+- New: `haizhu-release` workflow — a pushed v* tag builds the signed APK
+  and publishes it on the GitHub release.
+- New: `tool/haizhu_release.py` — local one-command release (bump, build,
+  tag, publish).
+- Changed: README rewritten around HaizhuCode in English and 简体中文;
+  downloads point at this repo's releases.
+- Docs: docs/releasing.md sets the one-change-one-release convention.
+
 ## 1.0.0+1 — 2026-11-08
 
 HaizhuCode: a community fork of OpenCode Mobile embedding the Haizhu
