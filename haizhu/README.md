@@ -62,11 +62,21 @@ hz provider add deepseek https://api.deepseek.com/v1 deepseek-chat \
   --key $DEEPSEEK_KEY --default   # 自定义 OpenAI/Anthropic 兼容 provider
 hz provider list                 # 列出 provider.<id> 条目
 hz provider remove deepseek      # 删除条目（连带清理指向它的默认模型）
+hz assistant add reviewer --prompt-file review.md \
+  --desc "审查 diff" --mode primary --temp 0.3   # 助手预设写 agent.<id>
+hz assistant list                # 列出 agent.<id> 条目
+hz assistant remove reviewer     # 删除条目
 ```
 
 App 侧 Providers 页的 "Add a custom API" 走同一条数据面（PATCH
 `/experimental/config` 写 `provider.<id>`），保存后重建实例加载配置。
 `--npm` 默认 `@ai-sdk/openai-compatible`，Anthropic 兼容端点传
 `@ai-sdk/anthropic`。key 只进配置文件，任何输出不回显。
+
+助手预设（RikkaHub 式人格包）同样走 `agent.<id>`：App 的 Assistants 区
+新建/编辑/删除，`hz assistant` 在装机环境写同一文件；支持
+`--prompt/--prompt-file`、`--desc`、`--mode primary|subagent|all`、
+`--model provider/model`、`--temp 0-2`、`--top-p (0,1]`、
+`--color #rrggbb`、`--disable`。写后重启实例加载。
 
 仅在你拥有或已获书面授权的环境使用渗透/红队能力。

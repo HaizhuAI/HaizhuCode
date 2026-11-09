@@ -1,5 +1,5 @@
 {
- "generatedFrom": "ddaa3f1b59302b86a54743eb2206313c88610863",
+ "generatedFrom": "51df30f73f163b40f96788e0dba6b7426880f566",
  "pages": [
   {
    "id": "system",
@@ -40617,6 +40617,11 @@
    "file": "lib/ui/screens/keep_running_screen.dart",
    "reason": "Helpers and sections of merged pages; the standalone page was retired (Notifications and background; Settings > This server).",
    "part": "j1-settings-more"
+  },
+  {
+   "file": "lib/ui/screens/library/assistant_preset_sheet.dart",
+   "reason": "Part file of lib/ui/screens/library_screen.dart (same screen, same library): its elements are listed under that screen's ledger entries; no separate surface.",
+   "part": "j2-library"
   },
   {
    "file": "lib/ui/screens/library/custom_provider_sheet.dart",

@@ -11,6 +11,12 @@ import on the Providers page. Full notes:
 [docs/releases/v1.0.0+1.md](docs/releases/v1.0.0+1.md).
 - New: Haizhu setup component installs `/opt/haizhu` and seeds every agent home.
 - New: import custom OpenAI/Anthropic-compatible providers (app and `hz provider`).
+- New: assistant presets — named personas (instructions, mode, model,
+  sampling, colour) written to `agent.<id>` (app Assistants section and
+  `hz assistant`).
+- New: `haizhu-skill-creator` skill pack turns a workflow into a reusable
+  SKILL.md.
+- Perf: theme builds memoized per palette; Arabic face adaptation cached.
 - New: Claude theme pack — warm cream, terracotta actions, a serif reading
   face — and it is the default look.
 - New: HaizhuCode launcher icon (shield + prompt) on Android/iOS/Linux.

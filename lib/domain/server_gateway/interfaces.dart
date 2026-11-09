@@ -468,6 +468,23 @@ abstract interface class CustomProviderGateway {
   Future<void> setServerDefaultModel(String providerID, String modelID);
 }
 
+/// Assistant presets authored in the app: each writes an `agent.<id>`
+/// entry into the server's configuration (OpenCode 2's config patch), so
+/// the agent picker offers the persona after the instance reloads.
+/// Implemented only where the server accepts configuration patches;
+/// [removeAssistantPreset] deletes the key.
+abstract interface class AssistantPresetGateway {
+  /// Writes `agent.<spec.id>` from [spec]. The same id rewrites the entry.
+  Future<void> upsertAssistantPreset(AssistantPresetSpec spec);
+
+  /// Deletes `agent.<id>` from the server configuration.
+  Future<void> removeAssistantPreset(String agentID);
+
+  /// The `agent.*` keys the server configuration currently declares — used
+  /// to tell config-authored assistants apart from `.md`-file agents.
+  Future<List<AssistantPresetSpec>> configuredAssistants();
+}
+
 /// Provider integrations: keys, OAuth attempts, and runtime refresh.
 abstract class IntegrationGateway {
   Future<List<IntegrationInfo>> listIntegrations();

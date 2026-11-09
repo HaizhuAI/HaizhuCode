@@ -56,6 +56,7 @@ class _IntegrationsScreenState extends State<IntegrationsScreen>
   List<McpServerInfo>? _servers;
   List<McpResourceInfo>? _resources;
   List<IntegrationInfo>? _integrations;
+  List<AssistantPresetSpec>? _assistants;
   Object? _integrationsSource;
   String? _serverError;
   String? _removalError;
@@ -199,7 +200,24 @@ class _IntegrationsScreenState extends State<IntegrationsScreen>
       if (_showMcp) _loadServers(repository),
       if (_showMcp) _loadResources(repository),
       if (_showProviders) _loadIntegrations(repository),
+      if (_showProviders && widget.controller.capabilities.assistantPresets)
+        _loadAssistants(),
     ]);
+  }
+
+  /// The `agent.*` entries the server configuration declares — the
+  /// assistants this page can edit or remove (`.md`-file agents live on
+  /// disk, not in the config). A read failure leaves the group hidden.
+  Future<void> _loadAssistants() async {
+    final source = _mcpSource;
+    try {
+      final assistants = await widget.controller.configuredAssistants();
+      if (mounted && source == _mcpSource) {
+        setState(() => _assistants = assistants);
+      }
+    } catch (_) {
+      // The group simply does not render; the providers section still can.
+    }
   }
 
   Future<void> _loadServers(ServerOperationsGateway repository) async {

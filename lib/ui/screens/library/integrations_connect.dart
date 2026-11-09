@@ -639,4 +639,60 @@ extension _IntegrationsConnect on _IntegrationsScreenState {
     _say(l10n.customProviderRemoved(presented.name));
     await _load();
   }
+
+  /// "Add an assistant" / editing one: the form writes `agent.<id>` into
+  /// the server's configuration; the controller reloads the location so a
+  /// fresh instance loads it, then the picker offers the persona.
+  Future<void> _openAssistantPreset({AssistantPresetSpec? existing}) async {
+    final l10n = _l10n;
+    final saved = await showKitSheet<String>(
+      context,
+      title: existing == null
+          ? l10n.assistantSheetTitle
+          : l10n.assistantSheetEditTitle(existing.id),
+      icon: existing == null ? AppIconography.add : AppIconography.edit,
+      height: KitSheetHeight.full,
+      sheetKey: const ValueKey('assistant-preset-sheet'),
+      body: (_) => _AssistantPresetSheet(
+        controller: widget.controller,
+        existing: existing,
+      ),
+    );
+    if (!mounted || saved == null) return;
+    _say(l10n.assistantSaved(saved));
+    await _load();
+  }
+
+  /// Removing an assistant the configuration file declared: the confirm
+  /// names the entry's deletion from `agent.<id>`.
+  Future<void> _removeAssistantPreset(AssistantPresetSpec spec) async {
+    final l10n = _l10n;
+    var failed = false;
+    final confirmed = await showKitConfirm(
+      context,
+      icon: AppIconography.delete,
+      title: l10n.assistantRemoveTitle(spec.id),
+      body: l10n.assistantRemoveBody(spec.id),
+      confirmLabel: l10n.assistantRemove(spec.id),
+      kind: KitConfirmKind.destructive,
+      confirmKey: const ValueKey('confirm-assistant-remove'),
+      action: () async {
+        try {
+          await widget.controller.removeAssistantPreset(
+            spec.id,
+            locationRevision: widget.controller.locationRevision,
+          );
+        } catch (_) {
+          failed = true;
+        }
+      },
+    );
+    if (!confirmed || !mounted) return;
+    if (failed) {
+      _say(l10n.assistantRemoveFailed, tone: AppStatusTone.failure);
+      return;
+    }
+    _say(l10n.assistantRemoved(spec.id));
+    await _load();
+  }
 }

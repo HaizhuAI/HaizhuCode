@@ -36048,4 +36048,157 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get customProviderErrorHeaders =>
       'Write each header as Header-Name: value.';
+
+  @override
+  String get assistantsLabel => 'Assistants';
+
+  @override
+  String get assistantsLabelTerm =>
+      'A named persona saved in the server\'s configuration: its own instructions, and optionally its own model and creativity settings. Pick it from the agent picker in the composer.';
+
+  @override
+  String get assistantAddTitle => 'Add an assistant';
+
+  @override
+  String get assistantAddHint =>
+      'Save a persona — instructions, model and creativity — into the server\'s configuration';
+
+  @override
+  String assistantActions(String name) {
+    return '$name actions';
+  }
+
+  @override
+  String get assistantEdit => 'Edit';
+
+  @override
+  String get assistantSheetTitle => 'New assistant';
+
+  @override
+  String assistantSheetEditTitle(String name) {
+    return 'Edit $name';
+  }
+
+  @override
+  String get assistantSheetIntro =>
+      'The server saves this persona in its configuration and offers it in the agent picker. Saving an existing ID replaces it.';
+
+  @override
+  String get assistantIdField => 'Assistant ID';
+
+  @override
+  String get assistantIdHelper =>
+      'Lowercase letters, digits and dashes; the name the agent picker shows.';
+
+  @override
+  String get assistantDescriptionField => 'Description (optional)';
+
+  @override
+  String get assistantDescriptionHint =>
+      'Reviews code changes before they merge';
+
+  @override
+  String get assistantModeLabel => 'Where it runs';
+
+  @override
+  String get assistantModePrimary => 'Conversation';
+
+  @override
+  String get assistantModeSubagent => 'Sub-agent';
+
+  @override
+  String get assistantModeAll => 'Both';
+
+  @override
+  String get assistantModelField => 'Model (optional)';
+
+  @override
+  String get assistantModelHelper =>
+      'provider/model, such as anthropic/claude-sonnet-4-5. Empty inherits the conversation\'s model.';
+
+  @override
+  String get assistantPromptField => 'Instructions';
+
+  @override
+  String get assistantPromptHint =>
+      'You are a careful reviewer. Read the diff first, name concrete issues, then suggest the smallest fix.';
+
+  @override
+  String get assistantTemperatureField => 'Temperature (optional)';
+
+  @override
+  String get assistantTemperatureHelper =>
+      '0-2; higher is more creative. Empty keeps the server default.';
+
+  @override
+  String get assistantTopPField => 'Top P (optional)';
+
+  @override
+  String get assistantTopPHelper =>
+      '(0, 1]; lower is more focused. Empty keeps the server default.';
+
+  @override
+  String get assistantColorField => 'Colour (optional)';
+
+  @override
+  String get assistantColorHelper =>
+      '#RRGGBB — the picker\'s swatch for this assistant.';
+
+  @override
+  String get assistantSave => 'Save assistant';
+
+  @override
+  String get assistantSaveChanges => 'Save changes';
+
+  @override
+  String assistantSaved(String name) {
+    return '$name saved — pick it from the agent picker.';
+  }
+
+  @override
+  String get assistantSaveFailed =>
+      'Could not save the assistant. Refresh and try again.';
+
+  @override
+  String assistantRemoveTitle(String name) {
+    return 'Remove $name?';
+  }
+
+  @override
+  String assistantRemoveBody(String name) {
+    return 'The server\'s configuration stops declaring $name; it leaves the agent picker after reload.';
+  }
+
+  @override
+  String assistantRemove(String name) {
+    return 'Remove $name';
+  }
+
+  @override
+  String assistantRemoved(String name) {
+    return '$name removed.';
+  }
+
+  @override
+  String get assistantRemoveFailed =>
+      'Could not remove the assistant. Refresh and try again.';
+
+  @override
+  String get assistantErrorId =>
+      'Start with a letter or digit; lowercase letters, digits, dashes and underscores only.';
+
+  @override
+  String get assistantErrorPrompt => 'Write the assistant\'s instructions.';
+
+  @override
+  String get assistantErrorModel => 'Model must look like provider/model.';
+
+  @override
+  String get assistantErrorTemperature => 'Temperature stays between 0 and 2.';
+
+  @override
+  String get assistantErrorTopP => 'Top P stays within (0, 1].';
+
+  @override
+  String get assistantErrorColor => 'Colour must be #RRGGBB.';
 }

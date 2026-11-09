@@ -122,6 +122,32 @@ mixin _ConnectionControllerIntegrationCommands on ChangeNotifier {
     locationRevision: locationRevision,
   );
 
+  /// Writes `agent.<spec.id>` into the server's configuration through the
+  /// config patch, then rebuilds the location so a fresh instance loads it
+  /// and the agent picker offers the assistant.
+  Future<void> importAssistantPreset(
+    AssistantPresetSpec spec, {
+    required int locationRevision,
+  }) => _self._mutateAssistantPreset(
+    spec: spec,
+    locationRevision: locationRevision,
+  );
+
+  /// Deletes `agent.<agentID>` from the server's configuration and rebuilds
+  /// the location.
+  Future<void> removeAssistantPreset(
+    String agentID, {
+    required int locationRevision,
+  }) => _self._mutateAssistantPreset(
+    removeID: agentID,
+    locationRevision: locationRevision,
+  );
+
+  /// The `agent.*` keys the server configuration declares — the assistants
+  /// the app can edit or remove (`.md`-file agents are managed on disk).
+  Future<List<AssistantPresetSpec>> configuredAssistants() =>
+      _self._configuredAssistants();
+
   /// Rebuilds the selected location after a configuration patch invalidates
   /// the OpenCode instance that served it.
   Future<void> reloadAfterConfigurationChange() =>
@@ -808,6 +834,108 @@ extension _ConnectionControllerIntegrationCommandsImpl on ConnectionController {
     // The patch lands in the config file; only a fresh instance loads it.
     await _reloadAfterConfigurationChange();
     await refreshCatalog();
+  }
+
+  /// The body of [importAssistantPreset] and [removeAssistantPreset]: the
+  /// same pinned profile/location scope and instance rebuild as a provider
+  /// patch — `agent.<id>` joins the picker only on a fresh instance.
+  Future<void> _mutateAssistantPreset({
+    AssistantPresetSpec? spec,
+    String? removeID,
+    required int locationRevision,
+  }) async {
+    // Validate before any wire work so a bad spec reports its own reason.
+    spec?.toConfigJson();
+    final saved = profile;
+    final connected = _connectedProfile;
+    if (saved == null || connected == null) {
+      throw StateError('Assistant configuration is unavailable.');
+    }
+    final owner = saved.id;
+    final savedOrigin = saved.baseUrl;
+    final connectedOrigin = connected.baseUrl;
+    final location = (directory, workspace);
+    final deletion = _profileDeletionRevisions[owner] ?? 0;
+    void checkScope() {
+      if (!isProfileReadable(owner) ||
+          store.activeId != owner ||
+          !identical(profile, saved) ||
+          !identical(_connectedProfile, connected) ||
+          connected.id != owner ||
+          saved.baseUrl != savedOrigin ||
+          connected.baseUrl != connectedOrigin ||
+          savedOrigin != connectedOrigin ||
+          this.locationRevision != locationRevision ||
+          (directory, workspace) != location ||
+          (_profileDeletionRevisions[owner] ?? 0) != deletion) {
+        throw StateError(
+          'The provider location changed. Refresh and try again.',
+        );
+      }
+    }
+
+    checkScope();
+    try {
+      final actionRepository = await prepareActionRepository();
+      checkScope();
+      final actionApi = api;
+      final generation = _generation;
+      void checkTransport() {
+        checkScope();
+        if (_lifecycleSuspended ||
+            actionApi == null ||
+            actionRepository == null ||
+            generation != _generation ||
+            !identical(api, actionApi) ||
+            !identical(repository, actionRepository)) {
+          throw StateError(
+            'The provider connection changed. Refresh and try again.',
+          );
+        }
+      }
+
+      checkTransport();
+      if (actionRepository == null ||
+          !capabilities.assistantPresets ||
+          actionRepository is! AssistantPresetGateway) {
+        throw StateError('Assistants are unavailable on this server.');
+      }
+      final gateway = actionRepository as AssistantPresetGateway;
+      final entry = spec;
+      final removed = removeID?.trim();
+      if (entry != null) {
+        await gateway.upsertAssistantPreset(entry);
+        checkTransport();
+      } else if (removed != null && removed.isNotEmpty) {
+        await gateway.removeAssistantPreset(removed);
+        checkTransport();
+      } else {
+        throw StateError('Assistant configuration is unavailable.');
+      }
+    } on ProductException {
+      checkScope();
+      rethrow;
+    } catch (_) {
+      checkScope();
+      throw StateError(
+        'Could not confirm the assistant change. Refresh and try again.',
+      );
+    }
+    // The patch lands in the config file; only a fresh instance loads it.
+    await _reloadAfterConfigurationChange();
+    await refreshCatalog();
+  }
+
+  /// The body of [configuredAssistants]: a read through the same pinned
+  /// scope, without the instance rebuild.
+  Future<List<AssistantPresetSpec>> _configuredAssistants() async {
+    final actionRepository = await prepareActionRepository();
+    if (actionRepository == null ||
+        !capabilities.assistantPresets ||
+        actionRepository is! AssistantPresetGateway) {
+      return const [];
+    }
+    return (actionRepository as AssistantPresetGateway).configuredAssistants();
   }
 
   /// The body of [reloadAfterConfigurationChange].

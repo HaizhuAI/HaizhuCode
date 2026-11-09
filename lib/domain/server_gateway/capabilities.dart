@@ -174,6 +174,12 @@ class ServerCapabilities {
   /// (OpenCode 2's config patch), so a custom API endpoint can be added
   /// from the providers page ([CustomProviderGateway]).
   final bool customProviders;
+
+  /// The server accepts `agent.<id>` entries written into its
+  /// configuration, so an assistant preset (a named persona bundling a
+  /// model, sampling params and a system prompt) can be authored from the
+  /// app ([AssistantPresetGateway]).
+  final bool assistantPresets;
   final bool configuredProviderFallback;
   final bool globalEventStream;
   final bool worktreeReset;
@@ -296,6 +302,7 @@ class ServerCapabilities {
     this.gitInit = true,
     this.providerRuntimeRefresh = true,
     this.customProviders = false,
+    this.assistantPresets = false,
     this.configuredProviderFallback = true,
     this.globalEventStream = true,
     this.worktreeReset = true,
@@ -387,6 +394,7 @@ class ServerCapabilities {
         gitInit: gitInit,
         providerRuntimeRefresh: providerRuntimeRefresh,
         customProviders: customProviders,
+        assistantPresets: assistantPresets,
         configuredProviderFallback: configuredProviderFallback,
         globalEventStream: globalEventStream,
         worktreeReset: worktreeReset,

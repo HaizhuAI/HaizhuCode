@@ -85,6 +85,17 @@ abstract final class AppTheme {
   /// Latin display metrics. Zero tracking preserves connected glyph shaping.
   static ThemeData forLocale(ThemeData theme, Locale locale) {
     if (locale.languageCode != 'ar') return theme;
+    // The adapted variant is the same for every 'ar' locale, and the base
+    // themes come out of the palette cache below — one Expando entry per
+    // base theme is enough and avoids rebuilding the text themes and
+    // button styles on every MaterialApp builder pass.
+    return _arabicThemes[theme] ??= _adaptForArabic(theme);
+  }
+
+  /// Identity-keyed Arabic adaptations, one per base [ThemeData].
+  static final _arabicThemes = Expando<ThemeData>();
+
+  static ThemeData _adaptForArabic(ThemeData theme) {
     TextStyle? arabic(TextStyle? style) => style?.copyWith(
       fontFamily: 'sans-serif',
       fontFamilyFallback: const [
@@ -232,15 +243,30 @@ abstract final class AppTheme {
     saver: true,
   );
 
+  /// Whole-theme builds memoized per (palette, accent, saver): a palette is
+  /// a static or harvested object whose identity only changes when its
+  /// colours do, and MaterialApp rebuilds ask for the same theme far more
+  /// often than the choices change. Bounded — a pack sweep during
+  /// appearance browsing cannot grow it past a few dozen entries.
+  static final _themeCache = <(ThemePalette, Color?, bool), ThemeData>{};
+
   static ThemeData fromPalette(
     ThemePalette palette, {
     Color? partner,
     bool saver = false,
   }) {
+    final key = (palette, partner, saver);
+    final hit = _themeCache[key];
+    if (hit != null) return hit;
+    if (_themeCache.length >= 64) _themeCache.clear();
     var roles = palette.themeRoles;
     if (partner != null) roles = roles.withPartner(partner);
     if (saver) roles = roles.saver;
-    return fromRoles(roles, base: palette.scheme, face: palette.fontFamily);
+    return _themeCache[key] = fromRoles(
+      roles,
+      base: palette.scheme,
+      face: palette.fontFamily,
+    );
   }
 
   /// The whole theme from a role set: the seam a custom theme uses

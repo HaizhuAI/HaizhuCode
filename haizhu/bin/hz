@@ -450,6 +450,103 @@ provider_remove() {
   '
 }
 
+# ---- assistant --------------------------------------------------------------
+# assistant 预设写进 OC2 的 opencode.json `agent.<id>`（与 App 的 PATCH
+# /experimental/config 同一数据面；RikkaHub 式的人格包：指令+模型+采样参数）。
+assistant_list() {
+  [ -f "$OC2_JSON" ] || die "no $OC2_JSON (seed first)"
+  command -v node >/dev/null 2>&1 || die "assistant needs node"
+  HZ_JSON="$OC2_JSON" node -e '
+    const fs = require("fs");
+    const j = JSON.parse(fs.readFileSync(process.env.HZ_JSON, "utf8"));
+    const a = j.agent || {};
+    const ids = Object.keys(a);
+    if (!ids.length) { console.log("(no config assistants)"); process.exit(0); }
+    for (const id of ids) {
+      const v = a[id] || {};
+      console.log(`${id}\t${v.mode || "-"}\t${v.model || "-"}\t${(v.description || "").slice(0, 60)}`);
+    }
+  '
+}
+# assistant add <id> --prompt TEXT | --prompt-file PATH [--desc D]
+#   [--mode primary|subagent|all] [--model provider/model]
+#   [--temp 0-2] [--top-p 0-1] [--color #rrggbb] [--disable]
+assistant_add() {
+  local id="${1:?assistant add <id> --prompt ...}"; shift || true
+  command -v node >/dev/null 2>&1 || die "assistant needs node"
+  local desc="" mode="" model="" temp="" topp="" color="" dis="" prompt="" pfile=""
+  while [ $# -gt 0 ]; do
+    case "$1" in
+      --prompt) prompt="$2"; shift 2 ;;
+      --prompt-file) pfile="$2"; shift 2 ;;
+      --desc) desc="$2"; shift 2 ;;
+      --mode) mode="$2"; shift 2 ;;
+      --model) model="$2"; shift 2 ;;
+      --temp) temp="$2"; shift 2 ;;
+      --top-p) topp="$2"; shift 2 ;;
+      --color) color="$2"; shift 2 ;;
+      --disable) dis="1"; shift ;;
+      *) die "assistant add: unknown option $1" ;;
+    esac
+  done
+  if [ -n "$pfile" ]; then
+    [ -f "$pfile" ] || die "no prompt file $pfile"
+    prompt="$(cat "$pfile")"
+  fi
+  [ -n "$prompt" ] || die "assistant add: --prompt or --prompt-file required"
+  [ -d "${OC2_JSON%/*}" ] || mkdir -p "${OC2_JSON%/*}"
+  HZ_JSON="$OC2_JSON" HZ_ID="$id" HZ_DESC="$desc" HZ_MODE="$mode" \
+    HZ_MODEL="$model" HZ_TEMP="$temp" HZ_TOPP="$topp" HZ_COLOR="$color" \
+    HZ_DIS="$dis" HZ_PROMPT="$prompt" node -e '
+    const fs = require("fs"), e = process.env;
+    const f = e.HZ_JSON;
+    let j = {};
+    try { j = JSON.parse(fs.readFileSync(f, "utf8")); } catch (x) {}
+    if (!/^[a-z0-9][a-z0-9-_]{0,62}$/.test(e.HZ_ID)) {
+      console.error("hz: bad assistant id"); process.exit(1);
+    }
+    if (e.HZ_MODE && !["primary","subagent","all"].includes(e.HZ_MODE)) {
+      console.error("hz: bad mode"); process.exit(1);
+    }
+    const t = e.HZ_TEMP === "" ? null : Number(e.HZ_TEMP);
+    if (t !== null && !(t >= 0 && t <= 2)) { console.error("hz: temp 0-2"); process.exit(1); }
+    const p = e.HZ_TOPP === "" ? null : Number(e.HZ_TOPP);
+    if (p !== null && !(p > 0 && p <= 1)) { console.error("hz: top-p (0,1]"); process.exit(1); }
+    if (e.HZ_COLOR && !/^#[0-9a-fA-F]{6}$/.test(e.HZ_COLOR)) {
+      console.error("hz: color #rrggbb"); process.exit(1);
+    }
+    if (e.HZ_MODEL && !e.HZ_MODEL.includes("/")) {
+      console.error("hz: model must look like provider/model"); process.exit(1);
+    }
+    const entry = { mode: e.HZ_MODE || "primary", prompt: e.HZ_PROMPT };
+    if (e.HZ_DESC.trim() !== "") entry.description = e.HZ_DESC.trim();
+    if (e.HZ_MODEL) entry.model = e.HZ_MODEL;
+    if (t !== null) entry.temperature = t;
+    if (p !== null) entry.top_p = p;
+    if (e.HZ_COLOR) entry.color = e.HZ_COLOR;
+    if (e.HZ_DIS === "1") entry.disable = true;
+    j.agent = j.agent || {};
+    j.agent[e.HZ_ID] = entry;
+    fs.writeFileSync(f, JSON.stringify(j, null, 2) + "\n");
+    console.log("hz: assistant", e.HZ_ID, "->", f);
+    console.log("hz: restart the OpenCode instance to load it");
+  '
+}
+assistant_remove() {
+  local id="${1:?assistant remove <id>}"
+  command -v node >/dev/null 2>&1 || die "assistant needs node"
+  [ -f "$OC2_JSON" ] || die "no $OC2_JSON"
+  HZ_JSON="$OC2_JSON" HZ_ID="$id" node -e '
+    const fs = require("fs"), e = process.env;
+    const f = e.HZ_JSON;
+    const j = JSON.parse(fs.readFileSync(f, "utf8"));
+    if (!j.agent || !(e.HZ_ID in j.agent)) { console.error("hz: no such assistant"); process.exit(1); }
+    delete j.agent[e.HZ_ID];
+    fs.writeFileSync(f, JSON.stringify(j, null, 2) + "\n");
+    console.log("hz: assistant", e.HZ_ID, "removed");
+  '
+}
+
 verb="${1:-help}"; shift || true
 case "$verb" in
   seed) [ $# -gt 0 ] && { for h in "$@"; do seed_home "$h"; done; seed_oc2; } || seed_all ;;
@@ -490,5 +587,12 @@ case "$verb" in
       remove|rm) shift; provider_remove "$@" ;;
       *) die "provider: list|add|remove" ;;
     esac ;;
-  version|*) echo "haizhu $VERSION — hz seed|status|kernel|agents|skills|prompts|mcp|provider|red" ;;
+  assistant)
+    case "${1:-list}" in
+      list) assistant_list ;;
+      add) shift; assistant_add "$@" ;;
+      remove|rm) shift; assistant_remove "$@" ;;
+      *) die "assistant: list|add|remove" ;;
+    esac ;;
+  version|*) echo "haizhu $VERSION — hz seed|status|kernel|agents|skills|prompts|mcp|provider|assistant|red" ;;
 esac

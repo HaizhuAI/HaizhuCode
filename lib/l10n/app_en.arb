@@ -40592,13 +40592,21 @@
   },
   "gitRemoteAddTitle": "Add a remote",
   "gitRemotePickGitHub": "Choose from GitHub",
-  "@gitRemotePickGitHub": {"description": "Button on the Git remotes step: pick the remote address from the signed-in GitHub account's repositories."},
+  "@gitRemotePickGitHub": {
+    "description": "Button on the Git remotes step: pick the remote address from the signed-in GitHub account's repositories."
+  },
   "gitRemotePickGitHubTitle": "Choose a repository",
-  "@gitRemotePickGitHubTitle": {"description": "Title of the sheet listing the GitHub account's repositories."},
+  "@gitRemotePickGitHubTitle": {
+    "description": "Title of the sheet listing the GitHub account's repositories."
+  },
   "gitRemotePickGitHubNone": "No repositories on this GitHub account yet.",
-  "@gitRemotePickGitHubNone": {"description": "Shown under the button when the GitHub account has no repositories (or they could not be listed)."},
+  "@gitRemotePickGitHubNone": {
+    "description": "Shown under the button when the GitHub account has no repositories (or they could not be listed)."
+  },
   "gitRemoteRepoPrivate": "Private",
-  "@gitRemoteRepoPrivate": {"description": "Supporting line on a private repository in the GitHub repository list."},
+  "@gitRemoteRepoPrivate": {
+    "description": "Supporting line on a private repository in the GitHub repository list."
+  },
   "@gitRemoteAddTitle": {
     "description": "Git remotes step: form heading"
   },
@@ -44052,5 +44060,208 @@
   "customProviderErrorHeaders": "Write each header as Header-Name: value.",
   "@customProviderErrorHeaders": {
     "description": "Custom provider form: malformed header line"
+  },
+  "assistantsLabel": "Assistants",
+  "@assistantsLabel": {
+    "description": "Providers page: label of the assistants section"
+  },
+  "assistantsLabelTerm": "A named persona saved in the server's configuration: its own instructions, and optionally its own model and creativity settings. Pick it from the agent picker in the composer.",
+  "@assistantsLabelTerm": {
+    "description": "Providers page: glossary term explaining the assistants label"
+  },
+  "assistantAddTitle": "Add an assistant",
+  "@assistantAddTitle": {
+    "description": "Providers page: row opening the assistant form"
+  },
+  "assistantAddHint": "Save a persona — instructions, model and creativity — into the server's configuration",
+  "@assistantAddHint": {
+    "description": "Providers page: hint under the add-assistant row"
+  },
+  "assistantActions": "{name} actions",
+  "@assistantActions": {
+    "description": "Providers page: menu label for one assistant",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantEdit": "Edit",
+  "@assistantEdit": {
+    "description": "Providers page: edit menu item for an assistant"
+  },
+  "assistantSheetTitle": "New assistant",
+  "@assistantSheetTitle": {
+    "description": "Assistant form: title when adding"
+  },
+  "assistantSheetEditTitle": "Edit {name}",
+  "@assistantSheetEditTitle": {
+    "description": "Assistant form: title when editing",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantSheetIntro": "The server saves this persona in its configuration and offers it in the agent picker. Saving an existing ID replaces it.",
+  "@assistantSheetIntro": {
+    "description": "Assistant form: intro line"
+  },
+  "assistantIdField": "Assistant ID",
+  "@assistantIdField": {
+    "description": "Assistant form: id field label"
+  },
+  "assistantIdHelper": "Lowercase letters, digits and dashes; the name the agent picker shows.",
+  "@assistantIdHelper": {
+    "description": "Assistant form: id field helper"
+  },
+  "assistantDescriptionField": "Description (optional)",
+  "@assistantDescriptionField": {
+    "description": "Assistant form: description field label"
+  },
+  "assistantDescriptionHint": "Reviews code changes before they merge",
+  "@assistantDescriptionHint": {
+    "description": "Assistant form: description hint"
+  },
+  "assistantModeLabel": "Where it runs",
+  "@assistantModeLabel": {
+    "description": "Assistant form: mode label"
+  },
+  "assistantModePrimary": "Conversation",
+  "@assistantModePrimary": {
+    "description": "Assistant form: primary mode"
+  },
+  "assistantModeSubagent": "Sub-agent",
+  "@assistantModeSubagent": {
+    "description": "Assistant form: subagent mode"
+  },
+  "assistantModeAll": "Both",
+  "@assistantModeAll": {
+    "description": "Assistant form: all mode"
+  },
+  "assistantModelField": "Model (optional)",
+  "@assistantModelField": {
+    "description": "Assistant form: model field label"
+  },
+  "assistantModelHelper": "provider/model, such as anthropic/claude-sonnet-4-5. Empty inherits the conversation's model.",
+  "@assistantModelHelper": {
+    "description": "Assistant form: model field helper"
+  },
+  "assistantPromptField": "Instructions",
+  "@assistantPromptField": {
+    "description": "Assistant form: prompt field label"
+  },
+  "assistantPromptHint": "You are a careful reviewer. Read the diff first, name concrete issues, then suggest the smallest fix.",
+  "@assistantPromptHint": {
+    "description": "Assistant form: prompt hint"
+  },
+  "assistantTemperatureField": "Temperature (optional)",
+  "@assistantTemperatureField": {
+    "description": "Assistant form: temperature field label"
+  },
+  "assistantTemperatureHelper": "0-2; higher is more creative. Empty keeps the server default.",
+  "@assistantTemperatureHelper": {
+    "description": "Assistant form: temperature helper"
+  },
+  "assistantTopPField": "Top P (optional)",
+  "@assistantTopPField": {
+    "description": "Assistant form: top_p field label"
+  },
+  "assistantTopPHelper": "(0, 1]; lower is more focused. Empty keeps the server default.",
+  "@assistantTopPHelper": {
+    "description": "Assistant form: top_p helper"
+  },
+  "assistantColorField": "Colour (optional)",
+  "@assistantColorField": {
+    "description": "Assistant form: colour field label"
+  },
+  "assistantColorHelper": "#RRGGBB — the picker's swatch for this assistant.",
+  "@assistantColorHelper": {
+    "description": "Assistant form: colour helper"
+  },
+  "assistantSave": "Save assistant",
+  "@assistantSave": {
+    "description": "Assistant form: save button"
+  },
+  "assistantSaveChanges": "Save changes",
+  "@assistantSaveChanges": {
+    "description": "Assistant form: save button when editing"
+  },
+  "assistantSaved": "{name} saved — pick it from the agent picker.",
+  "@assistantSaved": {
+    "description": "Providers page: notice after an assistant was saved",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantSaveFailed": "Could not save the assistant. Refresh and try again.",
+  "@assistantSaveFailed": {
+    "description": "Assistant form: save failure"
+  },
+  "assistantRemoveTitle": "Remove {name}?",
+  "@assistantRemoveTitle": {
+    "description": "Providers page: confirm title for removing an assistant",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantRemoveBody": "The server's configuration stops declaring {name}; it leaves the agent picker after reload.",
+  "@assistantRemoveBody": {
+    "description": "Providers page: confirm body for removing an assistant",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantRemove": "Remove {name}",
+  "@assistantRemove": {
+    "description": "Providers page: menu item removing an assistant",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantRemoved": "{name} removed.",
+  "@assistantRemoved": {
+    "description": "Providers page: notice after an assistant was removed",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantRemoveFailed": "Could not remove the assistant. Refresh and try again.",
+  "@assistantRemoveFailed": {
+    "description": "Providers page: remove failure"
+  },
+  "assistantErrorId": "Start with a letter or digit; lowercase letters, digits, dashes and underscores only.",
+  "@assistantErrorId": {
+    "description": "Assistant form: invalid id"
+  },
+  "assistantErrorPrompt": "Write the assistant's instructions.",
+  "@assistantErrorPrompt": {
+    "description": "Assistant form: missing prompt"
+  },
+  "assistantErrorModel": "Model must look like provider/model.",
+  "@assistantErrorModel": {
+    "description": "Assistant form: invalid model"
+  },
+  "assistantErrorTemperature": "Temperature stays between 0 and 2.",
+  "@assistantErrorTemperature": {
+    "description": "Assistant form: invalid temperature"
+  },
+  "assistantErrorTopP": "Top P stays within (0, 1].",
+  "@assistantErrorTopP": {
+    "description": "Assistant form: invalid top_p"
+  },
+  "assistantErrorColor": "Colour must be #RRGGBB.",
+  "@assistantErrorColor": {
+    "description": "Assistant form: invalid colour"
   }
 }

@@ -33,6 +33,7 @@ part 'library/integrations_autowait.dart';
 part 'library/integration_tiles.dart';
 part 'library/credential_sheet.dart';
 part 'library/custom_provider_sheet.dart';
+part 'library/assistant_preset_sheet.dart';
 part 'library/command_auth_sheet.dart';
 part 'library/pending_auth_recovery.dart';
 part 'library/commands_screen.dart';

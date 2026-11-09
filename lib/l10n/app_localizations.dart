@@ -56603,6 +56603,258 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Write each header as Header-Name: value.'**
   String get customProviderErrorHeaders;
+
+  /// Providers page: label of the assistants section
+  ///
+  /// In en, this message translates to:
+  /// **'Assistants'**
+  String get assistantsLabel;
+
+  /// Providers page: glossary term explaining the assistants label
+  ///
+  /// In en, this message translates to:
+  /// **'A named persona saved in the server\'s configuration: its own instructions, and optionally its own model and creativity settings. Pick it from the agent picker in the composer.'**
+  String get assistantsLabelTerm;
+
+  /// Providers page: row opening the assistant form
+  ///
+  /// In en, this message translates to:
+  /// **'Add an assistant'**
+  String get assistantAddTitle;
+
+  /// Providers page: hint under the add-assistant row
+  ///
+  /// In en, this message translates to:
+  /// **'Save a persona — instructions, model and creativity — into the server\'s configuration'**
+  String get assistantAddHint;
+
+  /// Providers page: menu label for one assistant
+  ///
+  /// In en, this message translates to:
+  /// **'{name} actions'**
+  String assistantActions(String name);
+
+  /// Providers page: edit menu item for an assistant
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get assistantEdit;
+
+  /// Assistant form: title when adding
+  ///
+  /// In en, this message translates to:
+  /// **'New assistant'**
+  String get assistantSheetTitle;
+
+  /// Assistant form: title when editing
+  ///
+  /// In en, this message translates to:
+  /// **'Edit {name}'**
+  String assistantSheetEditTitle(String name);
+
+  /// Assistant form: intro line
+  ///
+  /// In en, this message translates to:
+  /// **'The server saves this persona in its configuration and offers it in the agent picker. Saving an existing ID replaces it.'**
+  String get assistantSheetIntro;
+
+  /// Assistant form: id field label
+  ///
+  /// In en, this message translates to:
+  /// **'Assistant ID'**
+  String get assistantIdField;
+
+  /// Assistant form: id field helper
+  ///
+  /// In en, this message translates to:
+  /// **'Lowercase letters, digits and dashes; the name the agent picker shows.'**
+  String get assistantIdHelper;
+
+  /// Assistant form: description field label
+  ///
+  /// In en, this message translates to:
+  /// **'Description (optional)'**
+  String get assistantDescriptionField;
+
+  /// Assistant form: description hint
+  ///
+  /// In en, this message translates to:
+  /// **'Reviews code changes before they merge'**
+  String get assistantDescriptionHint;
+
+  /// Assistant form: mode label
+  ///
+  /// In en, this message translates to:
+  /// **'Where it runs'**
+  String get assistantModeLabel;
+
+  /// Assistant form: primary mode
+  ///
+  /// In en, this message translates to:
+  /// **'Conversation'**
+  String get assistantModePrimary;
+
+  /// Assistant form: subagent mode
+  ///
+  /// In en, this message translates to:
+  /// **'Sub-agent'**
+  String get assistantModeSubagent;
+
+  /// Assistant form: all mode
+  ///
+  /// In en, this message translates to:
+  /// **'Both'**
+  String get assistantModeAll;
+
+  /// Assistant form: model field label
+  ///
+  /// In en, this message translates to:
+  /// **'Model (optional)'**
+  String get assistantModelField;
+
+  /// Assistant form: model field helper
+  ///
+  /// In en, this message translates to:
+  /// **'provider/model, such as anthropic/claude-sonnet-4-5. Empty inherits the conversation\'s model.'**
+  String get assistantModelHelper;
+
+  /// Assistant form: prompt field label
+  ///
+  /// In en, this message translates to:
+  /// **'Instructions'**
+  String get assistantPromptField;
+
+  /// Assistant form: prompt hint
+  ///
+  /// In en, this message translates to:
+  /// **'You are a careful reviewer. Read the diff first, name concrete issues, then suggest the smallest fix.'**
+  String get assistantPromptHint;
+
+  /// Assistant form: temperature field label
+  ///
+  /// In en, this message translates to:
+  /// **'Temperature (optional)'**
+  String get assistantTemperatureField;
+
+  /// Assistant form: temperature helper
+  ///
+  /// In en, this message translates to:
+  /// **'0-2; higher is more creative. Empty keeps the server default.'**
+  String get assistantTemperatureHelper;
+
+  /// Assistant form: top_p field label
+  ///
+  /// In en, this message translates to:
+  /// **'Top P (optional)'**
+  String get assistantTopPField;
+
+  /// Assistant form: top_p helper
+  ///
+  /// In en, this message translates to:
+  /// **'(0, 1]; lower is more focused. Empty keeps the server default.'**
+  String get assistantTopPHelper;
+
+  /// Assistant form: colour field label
+  ///
+  /// In en, this message translates to:
+  /// **'Colour (optional)'**
+  String get assistantColorField;
+
+  /// Assistant form: colour helper
+  ///
+  /// In en, this message translates to:
+  /// **'#RRGGBB — the picker\'s swatch for this assistant.'**
+  String get assistantColorHelper;
+
+  /// Assistant form: save button
+  ///
+  /// In en, this message translates to:
+  /// **'Save assistant'**
+  String get assistantSave;
+
+  /// Assistant form: save button when editing
+  ///
+  /// In en, this message translates to:
+  /// **'Save changes'**
+  String get assistantSaveChanges;
+
+  /// Providers page: notice after an assistant was saved
+  ///
+  /// In en, this message translates to:
+  /// **'{name} saved — pick it from the agent picker.'**
+  String assistantSaved(String name);
+
+  /// Assistant form: save failure
+  ///
+  /// In en, this message translates to:
+  /// **'Could not save the assistant. Refresh and try again.'**
+  String get assistantSaveFailed;
+
+  /// Providers page: confirm title for removing an assistant
+  ///
+  /// In en, this message translates to:
+  /// **'Remove {name}?'**
+  String assistantRemoveTitle(String name);
+
+  /// Providers page: confirm body for removing an assistant
+  ///
+  /// In en, this message translates to:
+  /// **'The server\'s configuration stops declaring {name}; it leaves the agent picker after reload.'**
+  String assistantRemoveBody(String name);
+
+  /// Providers page: menu item removing an assistant
+  ///
+  /// In en, this message translates to:
+  /// **'Remove {name}'**
+  String assistantRemove(String name);
+
+  /// Providers page: notice after an assistant was removed
+  ///
+  /// In en, this message translates to:
+  /// **'{name} removed.'**
+  String assistantRemoved(String name);
+
+  /// Providers page: remove failure
+  ///
+  /// In en, this message translates to:
+  /// **'Could not remove the assistant. Refresh and try again.'**
+  String get assistantRemoveFailed;
+
+  /// Assistant form: invalid id
+  ///
+  /// In en, this message translates to:
+  /// **'Start with a letter or digit; lowercase letters, digits, dashes and underscores only.'**
+  String get assistantErrorId;
+
+  /// Assistant form: missing prompt
+  ///
+  /// In en, this message translates to:
+  /// **'Write the assistant\'s instructions.'**
+  String get assistantErrorPrompt;
+
+  /// Assistant form: invalid model
+  ///
+  /// In en, this message translates to:
+  /// **'Model must look like provider/model.'**
+  String get assistantErrorModel;
+
+  /// Assistant form: invalid temperature
+  ///
+  /// In en, this message translates to:
+  /// **'Temperature stays between 0 and 2.'**
+  String get assistantErrorTemperature;
+
+  /// Assistant form: invalid top_p
+  ///
+  /// In en, this message translates to:
+  /// **'Top P stays within (0, 1].'**
+  String get assistantErrorTopP;
+
+  /// Assistant form: invalid colour
+  ///
+  /// In en, this message translates to:
+  /// **'Colour must be #RRGGBB.'**
+  String get assistantErrorColor;
 }
 
 class _AppLocalizationsDelegate

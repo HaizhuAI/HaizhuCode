@@ -34003,4 +34003,146 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get customProviderErrorHeaders => '每个请求头按 Header-Name: 值 的格式书写。';
+
+  @override
+  String get assistantsLabel => '助手';
+
+  @override
+  String get assistantsLabelTerm =>
+      '保存在服务器配置里的具名人格：自带指令，也可自带模型与创造力参数。在输入区的智能体选择器里启用。';
+
+  @override
+  String get assistantAddTitle => '添加助手';
+
+  @override
+  String get assistantAddHint => '把人格（指令、模型、创造力）写进服务器配置';
+
+  @override
+  String assistantActions(String name) {
+    return '$name 操作';
+  }
+
+  @override
+  String get assistantEdit => '编辑';
+
+  @override
+  String get assistantSheetTitle => '新建助手';
+
+  @override
+  String assistantSheetEditTitle(String name) {
+    return '编辑 $name';
+  }
+
+  @override
+  String get assistantSheetIntro => '服务器把这个人格存进配置并在智能体选择器中提供。保存同名 ID 会整体覆盖。';
+
+  @override
+  String get assistantIdField => '助手 ID';
+
+  @override
+  String get assistantIdHelper => '小写字母、数字、短横线；智能体选择器里显示的名字。';
+
+  @override
+  String get assistantDescriptionField => '描述（可选）';
+
+  @override
+  String get assistantDescriptionHint => '在合并前审查代码改动';
+
+  @override
+  String get assistantModeLabel => '运行位置';
+
+  @override
+  String get assistantModePrimary => '对话';
+
+  @override
+  String get assistantModeSubagent => '子智能体';
+
+  @override
+  String get assistantModeAll => '两者';
+
+  @override
+  String get assistantModelField => '模型（可选）';
+
+  @override
+  String get assistantModelHelper =>
+      'provider/model，例如 anthropic/claude-sonnet-4-5。留空则沿用对话所用模型。';
+
+  @override
+  String get assistantPromptField => '指令';
+
+  @override
+  String get assistantPromptHint => '你是一名谨慎的审查者。先读 diff，指出具体问题，再给出最小修改。';
+
+  @override
+  String get assistantTemperatureField => '温度（可选）';
+
+  @override
+  String get assistantTemperatureHelper => '0-2；越高越有创造力。留空用服务器默认。';
+
+  @override
+  String get assistantTopPField => 'Top P（可选）';
+
+  @override
+  String get assistantTopPHelper => '(0, 1]；越低越聚焦。留空用服务器默认。';
+
+  @override
+  String get assistantColorField => '颜色（可选）';
+
+  @override
+  String get assistantColorHelper => '#RRGGBB——选择器里该助手的色标。';
+
+  @override
+  String get assistantSave => '保存助手';
+
+  @override
+  String get assistantSaveChanges => '保存更改';
+
+  @override
+  String assistantSaved(String name) {
+    return '已保存 $name——在智能体选择器中启用。';
+  }
+
+  @override
+  String get assistantSaveFailed => '保存助手失败。请刷新后重试。';
+
+  @override
+  String assistantRemoveTitle(String name) {
+    return '移除 $name？';
+  }
+
+  @override
+  String assistantRemoveBody(String name) {
+    return '服务器配置将不再声明 $name；重载后它会离开智能体选择器。';
+  }
+
+  @override
+  String assistantRemove(String name) {
+    return '移除 $name';
+  }
+
+  @override
+  String assistantRemoved(String name) {
+    return '已移除 $name。';
+  }
+
+  @override
+  String get assistantRemoveFailed => '移除助手失败。请刷新后重试。';
+
+  @override
+  String get assistantErrorId => '以字母或数字开头；仅限小写字母、数字、短横线和下划线。';
+
+  @override
+  String get assistantErrorPrompt => '请填写助手指令。';
+
+  @override
+  String get assistantErrorModel => '模型须为 provider/model 形式。';
+
+  @override
+  String get assistantErrorTemperature => '温度须在 0 到 2 之间。';
+
+  @override
+  String get assistantErrorTopP => 'Top P 须在 (0, 1] 内。';
+
+  @override
+  String get assistantErrorColor => '颜色须为 #RRGGBB。';
 }

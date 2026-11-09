@@ -80,6 +80,9 @@ const ServerCapabilities api2ServerCapabilities = ServerCapabilities(
   // `PATCH /experimental/config` writes provider entries into the server's
   // config file; the instance reload picks them up (protocol notes §config).
   customProviders: true,
+  // The same config patch writes `agent.<id>` entries; they join the agent
+  // picker after the reload like `.md` agents do.
+  assistantPresets: true,
   pluginInventory: true,
   webSearch: true,
   sessionShare: false,

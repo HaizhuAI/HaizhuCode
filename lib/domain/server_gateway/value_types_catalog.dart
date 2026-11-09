@@ -303,6 +303,118 @@ class CustomProviderSpec {
   }
 }
 
+/// An assistant preset: a named agent the app writes into the server's
+/// configuration (`agent.<id>`), after which the agent picker offers it like
+/// any built-in agent. The shape mirrors the client-side assistants other
+/// agent apps ship — a persona bundling its own model, sampling params and
+/// system prompt — flattened onto the keys OpenCode's `agent` config takes.
+class AssistantPresetSpec {
+  /// The `agent.<id>` key; also the id the picker shows.
+  final String id;
+
+  /// `agent.<id>.description` — the picker's one-line summary.
+  final String description;
+
+  /// `agent.<id>.mode`: `primary`, `subagent` or `all`.
+  final String mode;
+
+  /// `agent.<id>.model` (`provider/model`); null keeps the server's default.
+  final String? model;
+
+  /// `agent.<id>.prompt` — the system prompt body.
+  final String prompt;
+
+  /// `agent.<id>.temperature` / `top_p`; null leaves the server defaults.
+  final double? temperature;
+  final double? topP;
+
+  /// `agent.<id>.color` (hex `#RRGGBB`) — the picker's swatch; null keeps the
+  /// server-chosen colour.
+  final String? color;
+
+  /// `agent.<id>.disable` — kept in config but hidden from the picker.
+  final bool disable;
+
+  const AssistantPresetSpec({
+    required this.id,
+    required this.description,
+    required this.prompt,
+    this.mode = 'primary',
+    this.model,
+    this.temperature,
+    this.topP,
+    this.color,
+    this.disable = false,
+  });
+
+  static final _idPattern = RegExp(r'^[a-z0-9][a-z0-9-_]{0,62}$');
+  static final _modeValues = {'primary', 'subagent', 'all'};
+  static final _colorPattern = RegExp(r'^#[0-9A-Fa-f]{6}$');
+
+  /// Reads one `agent.<id>` config entry back (the keys this spec writes;
+  /// `.md`-file fields like `hidden` pass through untouched by a rewrite).
+  factory AssistantPresetSpec.fromConfigJson(
+    String id,
+    Map<String, Object?> json,
+  ) {
+    double? num_(Object? v) => v is num ? v.toDouble() : double.tryParse('$v');
+    return AssistantPresetSpec(
+      id: id,
+      description: json['description'] as String? ?? '',
+      mode: json['mode'] as String? ?? 'primary',
+      model: json['model'] as String?,
+      prompt: json['prompt'] as String? ?? '',
+      temperature: num_(json['temperature']),
+      topP: num_(json['top_p']),
+      color: json['color'] as String?,
+      disable: json['disable'] == true,
+    );
+  }
+
+  /// The `agent.<id>` config value the patch writes.
+  Map<String, Object?> toConfigJson() {
+    final agentID = id.trim();
+    if (!_idPattern.hasMatch(agentID)) {
+      throw const ProductException(
+        'Enter an assistant id in lowercase letters, digits, dashes',
+      );
+    }
+    if (!_modeValues.contains(mode)) {
+      throw const ProductException('Choose where the assistant can run');
+    }
+    if (prompt.trim().isEmpty) {
+      throw const ProductException('Enter the assistant instructions');
+    }
+    final temperature = this.temperature;
+    if (temperature != null &&
+        (temperature.isNaN || temperature < 0 || temperature > 2)) {
+      throw const ProductException('Temperature must stay between 0 and 2');
+    }
+    final topP = this.topP;
+    if (topP != null && (topP.isNaN || topP <= 0 || topP > 1)) {
+      throw const ProductException('Top P must stay within (0, 1]');
+    }
+    final color = this.color;
+    if (color != null && color.isNotEmpty && !_colorPattern.hasMatch(color)) {
+      throw const ProductException('Colour must be #RRGGBB');
+    }
+    final model = this.model;
+    if (model != null && model.trim().isNotEmpty && !model.contains('/')) {
+      throw const ProductException('Model must look like provider/model');
+    }
+    return {
+      if (description.trim().isNotEmpty) 'description': description.trim(),
+      'mode': mode,
+      if (model != null && model.trim().isNotEmpty) 'model': model.trim(),
+      'prompt': prompt,
+      'temperature': ?temperature,
+      'top_p': ?topP,
+      if (color != null && color.isNotEmpty) 'color': color,
+      if (disable) 'disable': true,
+    };
+  }
+}
+
 class IntegrationAuthLaunch {
   final String attemptID;
   final String url;

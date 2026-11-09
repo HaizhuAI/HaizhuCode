@@ -113,6 +113,9 @@ extension _IntegrationsPage on _IntegrationsScreenState {
                     // Providers lead: a new user needs a model before
                     // anything else.
                     if (_showProviders) ..._providerSection(context),
+                    if (_showProviders &&
+                        widget.controller.capabilities.assistantPresets)
+                      ..._assistantSection(context),
                     if (_showMcp) ...[
                       ..._mcpSection(context),
                       ..._resourceSection(context),
@@ -341,6 +344,69 @@ extension _IntegrationsPage on _IntegrationsScreenState {
       id,
       widget.controller.catalog?.providers ?? const <CatalogProvider>[],
     );
+  }
+
+  /// The assistants the server configuration declares. Tapping a row edits
+  /// its `agent.<id>` entry through the same config patch the providers
+  /// above use; a fresh instance joins it to the agent picker.
+  List<Widget> _assistantSection(BuildContext context) {
+    final l10n = _l10n;
+    final assistants = _assistants;
+    return [
+      SizedBox(height: KitTokens.of(context).sectionGap),
+      KitRowGroup(
+        label: l10n.assistantsLabel,
+        labelTerm: l10n.assistantsLabelTerm,
+        children: [
+          for (final spec in assistants ?? const <AssistantPresetSpec>[])
+            KitRow(
+              key: ValueKey('assistant-${spec.id}'),
+              leading: KitRow.icon(context, AppIconography.agent),
+              title: spec.id,
+              supporting: TextSpan(
+                children: [
+                  if (spec.description.isNotEmpty)
+                    TextSpan(text: spec.description),
+                  if (spec.model case final model?) ...[
+                    if (spec.description.isNotEmpty)
+                      const TextSpan(text: ' · '),
+                    TextSpan(text: model),
+                  ],
+                ],
+              ),
+              supportingMaxLines: 2,
+              menuLabel: l10n.assistantActions(spec.id),
+              menu: [
+                KitMenuItem(
+                  key: ValueKey('edit-assistant-${spec.id}'),
+                  label: l10n.assistantEdit,
+                  icon: AppIconography.edit,
+                  onSelected: () =>
+                      unawaited(_openAssistantPreset(existing: spec)),
+                ),
+                KitMenuItem(
+                  key: ValueKey('remove-assistant-${spec.id}'),
+                  label: l10n.assistantRemove(spec.id),
+                  icon: AppIconography.delete,
+                  destructive: true,
+                  onSelected: () => unawaited(_removeAssistantPreset(spec)),
+                ),
+              ],
+              trailing: const KitChevron(),
+              onTap: () => unawaited(_openAssistantPreset(existing: spec)),
+            ),
+          KitRow(
+            key: const ValueKey('add-assistant'),
+            leading: KitRow.icon(context, AppIconography.add),
+            title: l10n.assistantAddTitle,
+            supporting: TextSpan(text: l10n.assistantAddHint),
+            supportingMaxLines: 2,
+            trailing: const KitChevron(),
+            onTap: () => unawaited(_openAssistantPreset()),
+          ),
+        ],
+      ),
+    ];
   }
 
   List<Widget> _mcpSection(BuildContext context) {

@@ -521,4 +521,49 @@ mixin _Api2IntegrationOps on _Api2Core {
           body: {'model': '${providerID.trim()}/${modelID.trim()}'},
         );
       });
+
+  /// `agent.<id>` sits next to `provider.<id>` in the same config file; a
+  /// `null` value deletes the key exactly like a provider entry.
+  Future<void> _patchAgentEntry(String agentID, Object? value) =>
+      _transport.patchJson(
+        '/experimental/config',
+        query: _loc(),
+        body: {
+          'agent': {agentID: value},
+        },
+      );
+
+  @override
+  Future<void> upsertAssistantPreset(AssistantPresetSpec spec) =>
+      _guard('Could not save the assistant', () async {
+        // Validation lives in toConfigJson so a bad spec never reaches the
+        // wire.
+        await _patchAgentEntry(spec.id, spec.toConfigJson());
+      });
+
+  @override
+  Future<void> removeAssistantPreset(String agentID) =>
+      _guard('Could not remove the assistant', () async {
+        final id = agentID.trim();
+        if (id.isEmpty) {
+          throw const ProductException('Enter an assistant id');
+        }
+        await _patchAgentEntry(id, null);
+      });
+
+  @override
+  Future<List<AssistantPresetSpec>> configuredAssistants() =>
+      _guard('Could not read the assistants', () async {
+        final config = await _transport.getJson('/config', query: _loc());
+        final agents = config['agent'];
+        if (agents is! Map) return const [];
+        return [
+          for (final entry in agents.entries)
+            if (entry.value is Map)
+              AssistantPresetSpec.fromConfigJson(
+                '${entry.key}',
+                (entry.value as Map).cast<String, Object?>(),
+              ),
+        ];
+      });
 }
