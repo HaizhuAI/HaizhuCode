@@ -3,7 +3,7 @@ import '../../domain/termux_migration.dart';
 /// Per-item bounds shared by migration review and start. The archive bound
 /// includes conservative tar headers; the disk budget also allows allocation
 /// overhead and three simultaneously retained copies across both sandboxes.
-const migrationMaxArchiveBytes = 512 * 1024 * 1024;
+const migrationMaxArchiveBytes = 3 * 1024 * 1024 * 1024;
 const migrationMaxEntries = 20000;
 const migrationReserveBytes = 64 * 1024 * 1024;
 

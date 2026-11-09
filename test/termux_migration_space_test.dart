@@ -5,7 +5,10 @@ import 'package:haizhucode/domain/termux_migration.dart';
 void main() {
   const projects = TermuxMigrationItem.projects;
   const config = TermuxMigrationItem.config;
-  const largeFree = 2 * 1024 * 1024 * 1024;
+
+  /// Free space that clears any boundary budget: three retained copies of a
+  /// per-item-limit archive plus the reserve, rounded up past the cap.
+  const largeFree = 4 * migrationMaxArchiveBytes + migrationReserveBytes;
 
   TermuxMigrationSource source(
     List<TermuxMigrationSize> sizes, {

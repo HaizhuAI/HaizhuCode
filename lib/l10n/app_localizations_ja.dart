@@ -21785,6 +21785,10 @@ class AppLocalizationsJa extends AppLocalizations {
       'Private copies stay in On this phone. Nothing in them runs or turns on by itself.';
 
   @override
+  String get migrationLimitNote =>
+      'Each item can hold up to 3 GB and 20,000 files.';
+
+  @override
   String get migrationNotMovedSignIn =>
       'Sign-ins to AI providers: sign in again after the move';
 
@@ -21934,7 +21938,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get migrationTooLargeFix =>
-      'Each item can hold up to 512 MB and 20,000 files. Delete build folders such as node_modules in Termux, then try again.';
+      'Each item can hold up to 3 GB and 20,000 files. Delete build folders such as node_modules in Termux, then try again.';
 
   @override
   String get migrationVerificationFailed =>

@@ -14,7 +14,7 @@ class TermuxMigrationArchiveStore {
   TermuxMigrationArchiveStore({required this.support});
 
   final Directory support;
-  static const maxBytes = 512 * 1024 * 1024;
+  static const maxBytes = 3 * 1024 * 1024 * 1024;
   static const maxEntries = 20000;
   static const _manifest = '.oc-migration-manifest.json';
 

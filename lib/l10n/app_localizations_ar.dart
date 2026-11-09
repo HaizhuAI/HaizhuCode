@@ -21903,6 +21903,10 @@ class AppLocalizationsAr extends AppLocalizations {
       'تبقى النسخ الخاصة في «على هذا الهاتف». لا يُشغّل أو يُفعّل شيء فيها تلقائيًا.';
 
   @override
+  String get migrationLimitNote =>
+      'يمكن أن يحتوي كل عنصر على ما يصل إلى 3 غيغابايت و20,000 ملف.';
+
+  @override
   String get migrationNotMovedSignIn =>
       'تسجيل الدخول إلى مزوّدي الذكاء الاصطناعي: سجّل الدخول مجددًا بعد النقل';
 
@@ -22052,7 +22056,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get migrationTooLargeFix =>
-      'يمكن أن يحتوي كل عنصر على ما يصل إلى 512 ميغابايت و20,000 ملف. احذف مجلدات البناء مثل node_modules في Termux، ثم حاول مجددًا.';
+      'يمكن أن يحتوي كل عنصر على ما يصل إلى 3 غيغابايت و20,000 ملف. احذف مجلدات البناء مثل node_modules في Termux، ثم حاول مجددًا.';
 
   @override
   String get migrationVerificationFailed =>

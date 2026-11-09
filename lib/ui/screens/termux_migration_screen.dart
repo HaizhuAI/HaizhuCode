@@ -132,7 +132,7 @@ IconData _itemIcon(TermuxMigrationItem item) => switch (item) {
 };
 
 /// Why [size] cannot be copied, or null: Termux's own refusal, or the
-/// backend's per-item limit (512 MB with its per-file overhead, 20,000
+/// backend's per-item limit (3 GB with its per-file overhead, 20,000
 /// files), said before starting rather than after packing.
 TermuxMigrationFailure? migrationItemProblem(TermuxMigrationSize size) =>
     size.problem ??
@@ -1053,12 +1053,14 @@ class _TermuxMigrationScreenState extends ConsumerState<TermuxMigrationScreen> {
           padding: EdgeInsetsDirectional.symmetric(horizontal: tokens.gutter),
           child: KitText(l10n.migrationReviewIntro, role: KitTextRole.body),
         ),
-        if (projects.isNotEmpty)
+        if (projects.isNotEmpty) ...[
           KitRowGroup(
             key: const ValueKey('migration-moves'),
             label: l10n.migrationGroupMoves,
             children: [for (final size in projects) _itemRow(l10n, size)],
           ),
+          KitGroupNote(message: l10n.migrationLimitNote),
+        ],
         if (exports.isNotEmpty) ...[
           KitRowGroup(
             key: const ValueKey('migration-exports'),

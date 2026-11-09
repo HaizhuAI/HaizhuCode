@@ -34524,6 +34524,12 @@ abstract class AppLocalizations {
   /// **'Private copies stay in On this phone. Nothing in them runs or turns on by itself.'**
   String get migrationExportsNote;
 
+  /// Moving from Termux to the in-app server: note under the copied group stating the per-item archive bound.
+  ///
+  /// In en, this message translates to:
+  /// **'Each item can hold up to 3 GB and 20,000 files.'**
+  String get migrationLimitNote;
+
   /// Moving from Termux to the in-app server: not moved: provider sign-ins, when their names are unknown.
   ///
   /// In en, this message translates to:
@@ -34779,7 +34785,7 @@ abstract class AppLocalizations {
   /// Moving from Termux to the in-app server: way forward for an item that is too big.
   ///
   /// In en, this message translates to:
-  /// **'Each item can hold up to 512 MB and 20,000 files. Delete build folders such as node_modules in Termux, then try again.'**
+  /// **'Each item can hold up to 3 GB and 20,000 files. Delete build folders such as node_modules in Termux, then try again.'**
   String get migrationTooLargeFix;
 
   /// Moving from Termux to the in-app server: failure: the copied archive did not match.

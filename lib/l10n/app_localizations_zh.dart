@@ -20565,6 +20565,9 @@ class AppLocalizationsZh extends AppLocalizations {
       'Private copies stay in On this phone. Nothing in them runs or turns on by itself.';
 
   @override
+  String get migrationLimitNote => '每项最多 3 GB 和 20,000 个文件。';
+
+  @override
   String get migrationNotMovedSignIn => 'AI 提供商的登录：迁移后需重新登录';
 
   @override
@@ -20705,7 +20708,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get migrationTooLargeFix =>
-      '每项最多 512 MB 和 20,000 个文件。请在 Termux 中删除 node_modules 等构建目录，然后重试。';
+      '每项最多 3 GB 和 20,000 个文件。请在 Termux 中删除 node_modules 等构建目录，然后重试。';
 
   @override
   String get migrationVerificationFailed => '无法验证副本。你的 Termux 文件未被更改。';

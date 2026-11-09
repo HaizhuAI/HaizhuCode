@@ -40,7 +40,7 @@ class BridgeTermuxMigrationTransport implements TermuxMigrationTransport {
 
   final MigrationTermuxRun _run;
   final _cancelledJobs = <String>{};
-  static const maximumBytes = 512 * 1024 * 1024;
+  static const maximumBytes = 3 * 1024 * 1024 * 1024;
   static const chunkBytes = 1024 * 1024;
   static const commandTimeout = Duration(seconds: 110);
 
@@ -165,13 +165,13 @@ measure_item() {
         [ -f "$entry" ] && [ -r "$entry" ] || fail linkedFileUnreadable
         size=$(stat -L -c %s "$entry") || fail linkedFileUnreadable
         count=$((count + 1)); bytes=$((bytes + size))
-        [ "$count" -le 20000 ] && [ "$bytes" -le 536870912 ] || fail tooLarge
+        [ "$count" -le 20000 ] && [ "$bytes" -le 3221225472 ] || fail tooLarge
       else fail unsupportedEntry; fi
     done < <(find "$path" ! -type f ! -type d -print0)
     if [ "$selected" = projects ] && [ -n "$(find "$path" -name .git -type f -print -quit)" ]; then fail unsupportedEntry; fi
     while IFS= read -r size; do
       count=$((count + 1)); bytes=$((bytes + size))
-      [ "$count" -le 20000 ] && [ "$bytes" -le 536870912 ] || fail tooLarge
+      [ "$count" -le 20000 ] && [ "$bytes" -le 3221225472 ] || fail tooLarge
     done < <(find "$path" -type f -printf '%s\n')
     dirs=$(find "$path" -type d -printf 'x\n' | wc -l)
     count=$((count + dirs)); [ "$count" -le 20000 ] || fail tooLarge
