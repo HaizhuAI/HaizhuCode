@@ -499,6 +499,12 @@ mixin _Api2IntegrationOps on _Api2Core {
         // Validation lives in toConfigJson so a bad spec never reaches the
         // wire. The apiKey inside the patch body is never logged: _guard
         // wraps errors without echoing request data.
+        //
+        // The patch merge-patches: writing the entry alone would keep keys
+        // the form just cleared (a removed header, a dropped model). The
+        // entry is wholly owned by the form, so delete-then-write lands the
+        // exact JSON the person submitted.
+        await _patchProviderEntry(spec.id, null);
         await _patchProviderEntry(spec.id, spec.toConfigJson());
       });
 
@@ -537,7 +543,9 @@ mixin _Api2IntegrationOps on _Api2Core {
   Future<void> upsertAssistantPreset(AssistantPresetSpec spec) =>
       _guard('Could not save the assistant', () async {
         // Validation lives in toConfigJson so a bad spec never reaches the
-        // wire.
+        // wire. Like the provider upsert, delete-then-write so a cleared
+        // model, colour or sampling field does not linger under the entry.
+        await _patchAgentEntry(spec.id, null);
         await _patchAgentEntry(spec.id, spec.toConfigJson());
       });
 
@@ -554,16 +562,28 @@ mixin _Api2IntegrationOps on _Api2Core {
   @override
   Future<List<AssistantPresetSpec>> configuredAssistants() =>
       _guard('Could not read the assistants', () async {
+        // `/config` answers `{data: [{type, path, info}]}` — one entry per
+        // config document, lowest to highest priority; each `info` is that
+        // document's parsed body. `agent.*` entries merge the same way the
+        // server does: a later document wins, a `null` value deletes.
         final config = await _transport.getJson('/config', query: _loc());
-        final agents = config['agent'];
-        if (agents is! Map) return const [];
+        final merged = <String, Map<String, Object?>>{};
+        for (final entry in _dataMaps(config)) {
+          final info = entry['info'];
+          final agents = info is Map ? info['agent'] : null;
+          if (agents is! Map) continue;
+          for (final agent in agents.entries) {
+            final id = '${agent.key}';
+            if (agent.value is Map) {
+              merged[id] = (agent.value as Map).cast<String, Object?>();
+            } else if (agent.value == null) {
+              merged.remove(id);
+            }
+          }
+        }
         return [
-          for (final entry in agents.entries)
-            if (entry.value is Map)
-              AssistantPresetSpec.fromConfigJson(
-                '${entry.key}',
-                (entry.value as Map).cast<String, Object?>(),
-              ),
+          for (final entry in merged.entries)
+            AssistantPresetSpec.fromConfigJson(entry.key, entry.value),
         ];
       });
 }

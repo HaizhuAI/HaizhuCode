@@ -47,8 +47,15 @@ extension _ChatCommands on _ChatScreenState {
   }
 
   List<CatalogAgent> get _subagents {
+    // Mentionable means "can run as a subagent": mode subagent, and also
+    // `all` — the dual-mode assistants config declares. Only `primary`
+    // mode stays out.
     final agents = (_conn.catalog?.agents ?? const <CatalogAgent>[])
-        .where((agent) => !agent.hidden && agent.mode == 'subagent')
+        .where(
+          (agent) =>
+              !agent.hidden &&
+              (agent.mode == 'subagent' || agent.mode == 'all'),
+        )
         .toList();
     agents.sort((a, b) => a.id.compareTo(b.id));
     return agents;

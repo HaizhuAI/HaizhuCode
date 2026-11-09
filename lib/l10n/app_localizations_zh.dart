@@ -4360,7 +4360,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatUiAttachmentLimitReached => '已达附件上限';
 
   @override
-  String get chatUiAttachmentsMustTotalNoMoreThan20 => '附件总大小不能超过 20 MB。';
+  String get chatUiAttachmentsMustTotalNoMoreThan20 => '附件总大小不能超过 256 MB。';
 
   @override
   String get chatUiAvailableWhenTheCurrentRunFinishes => '当前运行结束后可用';
@@ -4516,7 +4516,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatUiDismissPromptError => '关闭提示词错误';
 
   @override
-  String get chatUiEachAttachmentMustBe10MBOr => '每个附件不能超过 10 MB。';
+  String get chatUiEachAttachmentMustBe10MBOr =>
+      '每个附件不能超过 256 MB。更大的文件请放进项目目录，用 @ 路径引用附加。';
 
   @override
   String get chatUiEdit => '编辑';
@@ -34145,4 +34146,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get assistantErrorColor => '颜色须为 #RRGGBB。';
+
+  @override
+  String get assistantDisableTitle => '隐藏此助手';
+
+  @override
+  String get assistantDisableHint => '保留配置条目，但从智能体选择器中移除。';
 }

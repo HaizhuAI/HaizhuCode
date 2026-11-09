@@ -122,21 +122,24 @@ void main() {
     await gateway.setServerDefaultModel('deepseek', 'deepseek-chat');
     await gateway.removeCustomProvider('deepseek');
 
-    expect(calls.length, 3);
+    expect(calls.length, 4);
     for (final call in calls) {
       expect(call.method, 'PATCH');
       expect(call.uri.path, endsWith('/experimental/config'));
       expect(call.uri.queryParameters['location[directory]'], '/work/first');
     }
 
-    final provider = calls[0].body['provider'] as Map<String, dynamic>;
+    // The upsert clears the entry first so dropped models or headers do not
+    // linger under a merge patch.
+    expect(calls[0].body['provider'], {'deepseek': null});
+    final provider = calls[1].body['provider'] as Map<String, dynamic>;
     final entry = provider['deepseek'] as Map<String, dynamic>;
     expect(entry['npm'], '@ai-sdk/openai-compatible');
     expect((entry['options'] as Map)['baseURL'], 'https://api.deepseek.com/v1');
     expect((entry['options'] as Map)['apiKey'], 'sk-fixture');
     expect((entry['models'] as Map).keys, ['deepseek-chat']);
 
-    expect(calls[1].body['model'], 'deepseek/deepseek-chat');
-    expect(calls[2].body['provider'], {'deepseek': null});
+    expect(calls[2].body['model'], 'deepseek/deepseek-chat');
+    expect(calls[3].body['provider'], {'deepseek': null});
   });
 }

@@ -44,6 +44,7 @@ class _AssistantPresetSheetState extends State<_AssistantPresetSheet> {
   );
 
   String _mode = 'primary';
+  bool _disabled = false;
   bool _saving = false;
   bool _showErrors = false;
   String? _error;
@@ -60,6 +61,7 @@ class _AssistantPresetSheetState extends State<_AssistantPresetSheet> {
     super.initState();
     final mode = widget.existing?.mode;
     if (mode == 'subagent' || mode == 'all') _mode = mode!;
+    _disabled = widget.existing?.disable ?? false;
   }
 
   String? get _idError {
@@ -143,6 +145,7 @@ class _AssistantPresetSheetState extends State<_AssistantPresetSheet> {
       temperature: _temperatureValue,
       topP: _topPValue,
       color: _color.text.trim().isEmpty ? null : _color.text.trim(),
+      disable: _disabled,
     );
     setState(() => _saving = true);
     try {
@@ -291,6 +294,17 @@ class _AssistantPresetSheetState extends State<_AssistantPresetSheet> {
           helper: l10n.assistantColorHelper,
           error: _showErrors ? _colorError : null,
           enabled: !_saving,
+          disabledReason: _saving ? l10n.e7LibraryUpdating : null,
+        ),
+        gap,
+        KitSwitchRow(
+          title: l10n.assistantDisableTitle,
+          supporting: l10n.assistantDisableHint,
+          value: _disabled,
+          switchKey: const ValueKey('assistant-disable'),
+          onChanged: _saving
+              ? null
+              : (value) => setState(() => _disabled = value),
           disabledReason: _saving ? l10n.e7LibraryUpdating : null,
         ),
         gap,

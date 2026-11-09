@@ -58,12 +58,17 @@ class _ChatApi extends FakeServerGateway with CompleteMessageHistory {
   Future<Session> session(String id) async => Session(id: id);
 }
 
-DroppedFile _file(String name, {required int bytes, String? mimeType}) {
+DroppedFile _file(
+  String name, {
+  required int bytes,
+  int? reported,
+  String? mimeType,
+}) {
   final payload = Uint8List.fromList(List<int>.filled(bytes, 0x61));
   return DroppedFile(
     name: name,
     mimeType: mimeType,
-    length: () async => bytes,
+    length: () async => reported ?? bytes,
     readBytes: () async => payload,
   );
 }
@@ -129,11 +134,14 @@ void main() {
   ) async {
     await _pumpChat(tester);
 
-    await _drop(tester, [_file('huge.bin', bytes: 10 * 1024 * 1024 + 1)]);
+    await _drop(tester, [
+      // The reported length alone trips the cap; the payload stays tiny.
+      _file('huge.bin', bytes: 4, reported: 256 * 1024 * 1024 + 1),
+    ]);
 
     expect(find.text('huge.bin'), findsNothing);
     expect(
-      find.textContaining('10 MB or smaller'),
+      find.textContaining('256 MB or smaller'),
       findsOneWidget,
       reason: 'the drop path reuses the picker\'s per-file cap',
     );

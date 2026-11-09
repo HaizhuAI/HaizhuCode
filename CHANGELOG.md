@@ -22,6 +22,16 @@ import on the Providers page. Full notes:
 - New: HaizhuCode launcher icon (shield + prompt) on Android/iOS/Linux.
 - Fixed: Simplified Chinese translation completed (723 messages no longer
   fall back to English).
+- Fixed: chat attachments accept files up to 256 MB each (256 MB together)
+  instead of refusing past 10 MB; archives and other binaries attach under
+  their real MIME instead of "unsupported format" — an APK or a zip reaches
+  the agent now. The app requests `largeHeap` so large attachments encode
+  safely, and draft storage scales to keep them across restarts.
+- Fixed: the Assistants section listed nothing on a real server — `/config`
+  answers priority-ordered documents, not a bare map — and editing a
+  preset or provider left cleared fields behind under the merge patch
+  (upserts now delete-then-write). Dual-mode (`all`) assistants can be
+  @-mentioned, and the assistant form gains a Hide switch.
 
 ## 2.1.1+59 — 2026-11-04
 

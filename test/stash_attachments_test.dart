@@ -538,8 +538,8 @@ void main() {
   test(
     'oversized legacy attachment counts defer without truncation or eviction',
     () async {
-      expect(PromptShelfStore.maxAttachmentBytes, 32 * 1024 * 1024);
-      expect(PromptShelfStore.maxDiskBytes, 256 * 1024 * 1024);
+      expect(PromptShelfStore.maxAttachmentBytes, 384 * 1024 * 1024);
+      expect(PromptShelfStore.maxDiskBytes, 768 * 1024 * 1024);
       expect(
         PromptShelfStore.attachmentDirectoryName,
         isNot('draft-attachments-v1'),

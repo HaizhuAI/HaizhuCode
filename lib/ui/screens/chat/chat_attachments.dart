@@ -5,9 +5,17 @@ part of '../chat_screen.dart';
 
 const _maxAttachmentCount = 5;
 
-const _maxAttachmentBytes = 10 * 1024 * 1024;
+/// One attachment as it reaches the prompt: a `data:` URL string, so a file
+/// this size occupies ~1.4x its bytes while staged and again inside the send
+/// body. 256 MiB is the ceiling that stays within a `largeHeap` budget for
+/// one attachment plus its encode copy; bigger files belong to the project
+/// tree, where `@path` file mentions attach by reference with no size cap.
+const _maxAttachmentBytes = 256 * 1024 * 1024;
 
-const _maxAggregateAttachmentBytes = 20 * 1024 * 1024;
+/// All staged attachments together. Matching the single-file cap means one
+/// large file plus small extras, and keeps the whole prompt body — payload
+/// strings plus their JSON copy — under ~700 MB at send time.
+const _maxAggregateAttachmentBytes = 256 * 1024 * 1024;
 
 @visibleForTesting
 Future<Uint8List?> readAttachmentBytesWithinLimit(
@@ -522,6 +530,15 @@ extension _ChatAttachments on _ChatScreenState {
       'webp' => 'image/webp',
       'svg' => 'image/svg+xml',
       'pdf' => 'application/pdf',
+      'zip' => 'application/zip',
+      '7z' => 'application/x-7z-compressed',
+      'rar' => 'application/vnd.rar',
+      'tar' => 'application/x-tar',
+      'gz' || 'tgz' => 'application/gzip',
+      'bz2' => 'application/x-bzip2',
+      'xz' => 'application/x-xz',
+      'zst' => 'application/zstd',
+      'apk' => 'application/vnd.android.package-archive',
       'json' => 'application/json',
       'md' || 'txt' || 'log' => 'text/plain',
       'dart' ||

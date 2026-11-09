@@ -1052,7 +1052,7 @@
   "chatUiAttachment": "附件",
   "chatUiAttachmentCountLimit": "最多可附加 {count} 个文件。",
   "chatUiAttachmentLimitReached": "已达附件上限",
-  "chatUiAttachmentsMustTotalNoMoreThan20": "附件总大小不能超过 20 MB。",
+  "chatUiAttachmentsMustTotalNoMoreThan20": "附件总大小不能超过 256 MB。",
   "chatUiAvailableWhenTheCurrentRunFinishes": "当前运行结束后可用",
   "chatUiBackgroundCancelled": "已取消",
   "chatUiBackgroundComplete": "已完成",
@@ -1129,7 +1129,7 @@
   "chatUiDraftsQueued": "{count, plural, other{有 {count} 份草稿在排队，重新连接后发送。}}",
   "chatUiDurationMinutesSeconds": "{minutes}分 {seconds}秒",
   "chatUiDurationSeconds": "{seconds}秒",
-  "chatUiEachAttachmentMustBe10MBOr": "每个附件不能超过 10 MB。",
+  "chatUiEachAttachmentMustBe10MBOr": "每个附件不能超过 256 MB。更大的文件请放进项目目录，用 @ 路径引用附加。",
   "chatUiEarlierMessageCount": "{count, plural, one{1 条更早的消息} other{{count} 条更早的消息}}",
   "chatUiEdit": "编辑",
   "chatUiEditDraft": "编辑草稿",
@@ -9449,5 +9449,7 @@
   "assistantErrorModel": "模型须为 provider/model 形式。",
   "assistantErrorTemperature": "温度须在 0 到 2 之间。",
   "assistantErrorTopP": "Top P 须在 (0, 1] 内。",
-  "assistantErrorColor": "颜色须为 #RRGGBB。"
+  "assistantErrorColor": "颜色须为 #RRGGBB。",
+  "assistantDisableTitle": "隐藏此助手",
+  "assistantDisableHint": "保留配置条目，但从智能体选择器中移除。"
 }

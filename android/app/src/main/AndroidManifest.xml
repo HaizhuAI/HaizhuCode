@@ -60,6 +60,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:usesCleartextTraffic="false"
+        android:largeHeap="true"
         android:enableOnBackInvokedCallback="true"
         android:manageSpaceActivity=".ManageSpaceActivity"
         android:networkSecurityConfig="@xml/network_security_config">

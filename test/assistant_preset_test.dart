@@ -118,72 +118,92 @@ void main() {
     expect(api2ServerCapabilities.assistantPresets, isTrue);
   });
 
-  test(
-    'upsert/remove hit PATCH /experimental/config; read hits /config',
-    () async {
-      final server = await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
-      addTearDown(() => server.close(force: true));
-      final calls = <({String method, Uri uri, dynamic body})>[];
-      server.listen((request) async {
-        final text = await utf8.decoder.bind(request).join();
-        calls.add((
-          method: request.method,
-          uri: request.uri,
-          body: text.isEmpty ? null : jsonDecode(text),
-        ));
-        if (request.method == 'GET' && request.uri.path.endsWith('/config')) {
-          request.response.headers.contentType = ContentType.json;
-          request.response.write(
-            jsonEncode({
-              'agent': {
-                'ops': {'mode': 'subagent', 'prompt': 'Check.'},
-                'notes': true, // non-map entries are ignored
+  test('upsert clears the entry then writes it; remove deletes; read merges '
+      'the priority-ordered /config documents', () async {
+    final server = await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
+    addTearDown(() => server.close(force: true));
+    final calls = <({String method, Uri uri, dynamic body})>[];
+    server.listen((request) async {
+      final text = await utf8.decoder.bind(request).join();
+      calls.add((
+        method: request.method,
+        uri: request.uri,
+        body: text.isEmpty ? null : jsonDecode(text),
+      ));
+      if (request.method == 'GET' && request.uri.path.endsWith('/config')) {
+        request.response.headers.contentType = ContentType.json;
+        request.response.write(
+          // The real envelope: one entry per config document, lowest to
+          // highest priority, each `info` holding the parsed body.
+          jsonEncode({
+            'data': [
+              {
+                'type': 'config',
+                'path': '/etc/opencode/opencode.json',
+                'info': {
+                  'agent': {
+                    'ops': {'mode': 'primary', 'prompt': 'Old.'},
+                    'gone': {'prompt': 'Gone.'},
+                  },
+                },
               },
-            }),
-          );
-        } else {
-          request.response.statusCode = 204;
-        }
-        await request.response.close();
-      });
-      final client = Api2Client.connect(
-        baseUrl: 'http://${server.address.host}:${server.port}',
-        password: 'fixture',
-        directory: '/work/first',
-      );
-      addTearDown(client.close);
-      final gateway = Api2OperationsGateway(client: client);
+              {
+                'type': 'config',
+                'path': '/work/first/opencode.json',
+                'info': {
+                  'agent': {
+                    'ops': {'mode': 'subagent', 'prompt': 'Check.'},
+                    'gone': null,
+                    'notes': true, // non-map entries are ignored
+                  },
+                },
+              },
+            ],
+          }),
+        );
+      } else {
+        request.response.statusCode = 204;
+      }
+      await request.response.close();
+    });
+    final client = Api2Client.connect(
+      baseUrl: 'http://${server.address.host}:${server.port}',
+      password: 'fixture',
+      directory: '/work/first',
+    );
+    addTearDown(client.close);
+    final gateway = Api2OperationsGateway(client: client);
 
-      await gateway.upsertAssistantPreset(
-        const AssistantPresetSpec(
-          id: 'code-reviewer',
-          description: 'Reviews diffs',
-          prompt: 'Be careful.',
-          temperature: 0.2,
-        ),
-      );
-      await gateway.removeAssistantPreset('code-reviewer');
-      final configured = await gateway.configuredAssistants();
+    await gateway.upsertAssistantPreset(
+      const AssistantPresetSpec(
+        id: 'code-reviewer',
+        description: 'Reviews diffs',
+        prompt: 'Be careful.',
+        temperature: 0.2,
+      ),
+    );
+    await gateway.removeAssistantPreset('code-reviewer');
+    final configured = await gateway.configuredAssistants();
 
-      expect(calls.length, 3);
-      expect(calls[0].method, 'PATCH');
-      expect(calls[0].uri.path, endsWith('/experimental/config'));
-      expect(
-        calls[0].uri.queryParameters['location[directory]'],
-        '/work/first',
-      );
-      final agent = calls[0].body['agent'] as Map<String, dynamic>;
-      final entry = agent['code-reviewer'] as Map<String, dynamic>;
-      expect(entry['prompt'], 'Be careful.');
-      expect(entry['temperature'], 0.2);
+    expect(calls.length, 4);
+    expect(calls[0].method, 'PATCH');
+    expect(calls[0].uri.path, endsWith('/experimental/config'));
+    expect(calls[0].uri.queryParameters['location[directory]'], '/work/first');
+    // Delete first so cleared optional fields cannot linger.
+    expect(calls[0].body['agent'], {'code-reviewer': null});
+    final agent = calls[1].body['agent'] as Map<String, dynamic>;
+    final entry = agent['code-reviewer'] as Map<String, dynamic>;
+    expect(entry['prompt'], 'Be careful.');
+    expect(entry['temperature'], 0.2);
 
-      expect(calls[1].body['agent'], {'code-reviewer': null});
+    expect(calls[2].body['agent'], {'code-reviewer': null});
 
-      expect(calls[2].method, 'GET');
-      expect(calls[2].uri.path, endsWith('/config'));
-      expect(configured.length, 1);
-      expect(configured.single.id, 'ops');
-      expect(configured.single.mode, 'subagent');
-    },
-  );
+    expect(calls[3].method, 'GET');
+    expect(calls[3].uri.path, endsWith('/config'));
+    // Higher-priority document wins; a `null` in it deletes the id.
+    expect(configured.length, 1);
+    expect(configured.single.id, 'ops');
+    expect(configured.single.mode, 'subagent');
+    expect(configured.single.prompt, 'Check.');
+  });
 }

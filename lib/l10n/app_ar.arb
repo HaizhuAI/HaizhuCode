@@ -1757,7 +1757,7 @@
   "chatUiAttachToPrompt": "إرفاق بالطلب",
   "chatUiAttachment": "مرفق",
   "chatUiAttachmentLimitReached": "بلغت الحد الأقصى للمرفقات",
-  "chatUiAttachmentsMustTotalNoMoreThan20": "يجب ألا يتجاوز إجمالي حجم المرفقات 20 MB.",
+  "chatUiAttachmentsMustTotalNoMoreThan20": "يجب ألا يتجاوز إجمالي حجم المرفقات 256 MB.",
   "chatUiAvailableWhenTheCurrentRunFinishes": "متاح عند انتهاء التشغيل الحالي",
   "chatUiBrowseProjectAndGlobalSkills": "تصفّح مهارات المشروع والمهارات العامة",
   "chatUiBrowsePreviewDownloadAndAttachProjectFiles": "تصفّح ملفات المشروع ومعاينتها وتنزيلها وإرفاقها",
@@ -1819,7 +1819,7 @@
   "chatUiDiscardPromptChanges": "هل تريد تجاهل تغييرات الطلب؟",
   "chatUiDiscardQueuedDraft": "هل تريد تجاهل المسودة في قائمة الانتظار؟",
   "chatUiDismissPromptError": "إخفاء خطأ الطلب",
-  "chatUiEachAttachmentMustBe10MBOr": "يجب ألا يتجاوز حجم كل مرفق 10 MB.",
+  "chatUiEachAttachmentMustBe10MBOr": "يجب ألا يتجاوز حجم كل مرفق 256 MB.",
   "chatUiEdit": "تحرير",
   "chatUiEditDraft": "تحرير المسودة",
   "chatUiEditTheCurrentPromptInAFocused": "تحرير الطلب الحالي في عرض مخصّص بملء الشاشة",
@@ -10933,5 +10933,7 @@
   "phoneTeamProofFixture": "تغيرت ملفات الاختبار الخاصة بفحص الأمان أو تعذر إعدادها.",
   "phoneTeamProofNoAnswer": "لم يستجب اختبار الأمان في الوقت المحدد.",
   "phoneTeamProofProot": "لم ينجح فحص أمان proot «{check}».",
-  "phoneTeamProofOther": "توقف فحص الأمان عند «{check}»."
+  "phoneTeamProofOther": "توقف فحص الأمان عند «{check}».",
+  "assistantDisableTitle": "إخفاء هذا المساعد",
+  "assistantDisableHint": "يحتفظ بإدخال الإعداد لكنه يزيله من منتقي الوكيل."
 }

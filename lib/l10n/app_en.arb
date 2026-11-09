@@ -3827,7 +3827,7 @@
   "@chatUiAttachmentLimitReached": {
     "description": "Chat journey: Attachment limit reached"
   },
-  "chatUiAttachmentsMustTotalNoMoreThan20": "Attachments must total no more than 20 MB.",
+  "chatUiAttachmentsMustTotalNoMoreThan20": "Attachments must total no more than 256 MB.",
   "@chatUiAttachmentsMustTotalNoMoreThan20": {
     "description": "Chat journey: Attachments must total no more than 20 MB."
   },
@@ -4032,7 +4032,7 @@
   "@chatUiDismissPromptError": {
     "description": "Chat journey: Dismiss prompt error"
   },
-  "chatUiEachAttachmentMustBe10MBOr": "Each attachment must be 10 MB or smaller.",
+  "chatUiEachAttachmentMustBe10MBOr": "Each attachment must be 256 MB or smaller. Bigger files belong under the project folder, where @-mentions attach them by path.",
   "@chatUiEachAttachmentMustBe10MBOr": {
     "description": "Chat journey: Each attachment must be 10 MB or smaller."
   },
@@ -44263,5 +44263,9 @@
   "assistantErrorColor": "Colour must be #RRGGBB.",
   "@assistantErrorColor": {
     "description": "Assistant form: invalid colour"
-  }
+  },
+  "assistantDisableTitle": "Hide this assistant",
+  "@assistantDisableTitle": {"description": "Assistant form: title of the disable switch"},
+  "assistantDisableHint": "Keeps the configuration entry but takes it out of the agent picker.",
+  "@assistantDisableHint": {"description": "Assistant form: hint under the disable switch"}
 }

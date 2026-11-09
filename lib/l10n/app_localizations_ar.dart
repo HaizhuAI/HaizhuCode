@@ -4742,7 +4742,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get chatUiAttachmentsMustTotalNoMoreThan20 =>
-      'يجب ألا يتجاوز إجمالي حجم المرفقات 20 MB.';
+      'يجب ألا يتجاوز إجمالي حجم المرفقات 256 MB.';
 
   @override
   String get chatUiAvailableWhenTheCurrentRunFinishes =>
@@ -4913,7 +4913,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get chatUiEachAttachmentMustBe10MBOr =>
-      'يجب ألا يتجاوز حجم كل مرفق 10 MB.';
+      'يجب ألا يتجاوز حجم كل مرفق 256 MB.';
 
   @override
   String get chatUiEdit => 'تحرير';
@@ -36240,4 +36240,11 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get assistantErrorColor => 'Colour must be #RRGGBB.';
+
+  @override
+  String get assistantDisableTitle => 'إخفاء هذا المساعد';
+
+  @override
+  String get assistantDisableHint =>
+      'يحتفظ بإدخال الإعداد لكنه يزيله من منتقي الوكيل.';
 }

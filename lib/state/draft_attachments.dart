@@ -58,8 +58,12 @@ class DraftAttachmentVault {
               'draft-attachments-v1',
             ),
           ));
-  static const maxDiskBytes = 256 * 1024 * 1024;
-  static const maxDraftBytes = 32 * 1024 * 1024;
+
+  /// The vault holds attachment `data:` URLs as UTF-8 files, so a 256 MiB
+  /// picked file lands as ~341 MB — one maxed-out staged file plus the
+  /// smaller ones that fit the aggregate cap stay under the draft budget.
+  static const maxDiskBytes = 768 * 1024 * 1024;
+  static const maxDraftBytes = 384 * 1024 * 1024;
   final Future<Directory> Function() _directory;
   final _cache = Expando<DraftAttachmentRef>();
   static final _hash = RegExp(r'^[0-9a-f]{64}$');

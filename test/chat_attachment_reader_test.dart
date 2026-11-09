@@ -98,11 +98,12 @@ void main() {
           filename: 'corrupt.txt',
           bytes: Uint8List.fromList([0xc3, 0x28]),
         ),
-        isNull,
+        // Binary bytes under a text extension attach as binary, not "bad".
+        'application/octet-stream',
       );
     });
 
-    test('detects generic textual bytes and rejects unknown binary bytes', () {
+    test('detects generic textual bytes and refuses dishonest text claims', () {
       expect(
         promptAttachmentMime(
           filename: 'README',
@@ -117,7 +118,7 @@ void main() {
           bytes: Uint8List.fromList([0, 1, 2, 255]),
           declaredMime: 'application/octet-stream',
         ),
-        isNull,
+        'application/octet-stream',
       );
       expect(
         promptAttachmentMime(
@@ -125,7 +126,7 @@ void main() {
           bytes: Uint8List.fromList([0, 1, 2, 255]),
           declaredMime: 'application/octet-stream',
         ),
-        isNull,
+        'application/octet-stream',
       );
       expect(
         promptAttachmentMime(
@@ -145,7 +146,7 @@ void main() {
       );
     });
 
-    test('preserves supported images and PDFs', () {
+    test('preserves images and PDFs, trusting the platform MIME', () {
       expect(
         promptAttachmentMime(
           filename: 'photo.jpg',
@@ -166,7 +167,7 @@ void main() {
           bytes: Uint8List.fromList([0x42, 0x4D, 0, 1]),
           declaredMime: 'image/bmp',
         ),
-        isNull,
+        'image/bmp',
       );
       expect(
         promptAttachmentMime(
@@ -174,7 +175,47 @@ void main() {
           bytes: Uint8List.fromList([0x42, 0x4D, 0, 1]),
           declaredMime: 'image/bmp',
         ),
-        isNull,
+        // The bytes are a bitmap; the platform said so too.
+        'image/bmp',
+      );
+    });
+
+    test('attaches archives and binaries under their real MIME', () {
+      final zip = Uint8List.fromList([0x50, 0x4B, 0x03, 0x04]);
+      expect(
+        promptAttachmentMime(filename: 'bundle.zip', bytes: zip),
+        'application/zip',
+      );
+      expect(
+        promptAttachmentMime(
+          filename: 'backup.7z',
+          bytes: zip,
+          declaredMime: 'application/octet-stream',
+        ),
+        'application/x-7z-compressed',
+      );
+      expect(
+        promptAttachmentMime(
+          filename: 'app.apk',
+          bytes: zip,
+          declaredMime: 'application/vnd.android.package-archive',
+        ),
+        'application/vnd.android.package-archive',
+      );
+      expect(
+        promptAttachmentMime(
+          filename: 'firmware',
+          bytes: Uint8List.fromList([0x00, 0x7F, 0x45, 0x4C, 0x46]),
+        ),
+        'application/octet-stream',
+      );
+      expect(
+        promptAttachmentMime(
+          filename: 'odd.xyz',
+          bytes: zip,
+          declaredMime: 'application/x-custom-format',
+        ),
+        'application/x-custom-format',
       );
     });
   });

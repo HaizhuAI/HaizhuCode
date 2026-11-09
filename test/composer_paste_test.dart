@@ -147,7 +147,7 @@ void main() {
       KeyboardInsertedContent(
         mimeType: 'image/png',
         uri: 'content://media/huge.png',
-        data: Uint8List(10 * 1024 * 1024 + 1),
+        data: Uint8List(256 * 1024 * 1024 + 1),
       ),
     );
     await tester.pump();
@@ -155,7 +155,7 @@ void main() {
 
     expect(find.textContaining('pasted-image-'), findsNothing);
     expect(
-      find.textContaining('Each attachment must be 10 MB or smaller.'),
+      find.textContaining('Each attachment must be 256 MB or smaller.'),
       findsOneWidget,
     );
   });

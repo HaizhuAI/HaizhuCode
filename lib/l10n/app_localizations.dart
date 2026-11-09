@@ -7941,7 +7941,7 @@ abstract class AppLocalizations {
   /// Chat journey: Attachments must total no more than 20 MB.
   ///
   /// In en, this message translates to:
-  /// **'Attachments must total no more than 20 MB.'**
+  /// **'Attachments must total no more than 256 MB.'**
   String get chatUiAttachmentsMustTotalNoMoreThan20;
 
   /// Chat journey: Available when the current run finishes
@@ -8241,7 +8241,7 @@ abstract class AppLocalizations {
   /// Chat journey: Each attachment must be 10 MB or smaller.
   ///
   /// In en, this message translates to:
-  /// **'Each attachment must be 10 MB or smaller.'**
+  /// **'Each attachment must be 256 MB or smaller. Bigger files belong under the project folder, where @-mentions attach them by path.'**
   String get chatUiEachAttachmentMustBe10MBOr;
 
   /// Chat journey: Edit
@@ -56855,6 +56855,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Colour must be #RRGGBB.'**
   String get assistantErrorColor;
+
+  /// Assistant form: title of the disable switch
+  ///
+  /// In en, this message translates to:
+  /// **'Hide this assistant'**
+  String get assistantDisableTitle;
+
+  /// Assistant form: hint under the disable switch
+  ///
+  /// In en, this message translates to:
+  /// **'Keeps the configuration entry but takes it out of the agent picker.'**
+  String get assistantDisableHint;
 }
 
 class _AppLocalizationsDelegate

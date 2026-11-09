@@ -4713,7 +4713,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get chatUiAttachmentsMustTotalNoMoreThan20 =>
-      'Attachments must total no more than 20 MB.';
+      'Attachments must total no more than 256 MB.';
 
   @override
   String get chatUiAvailableWhenTheCurrentRunFinishes =>
@@ -4884,7 +4884,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get chatUiEachAttachmentMustBe10MBOr =>
-      'Each attachment must be 10 MB or smaller.';
+      'Each attachment must be 256 MB or smaller. Bigger files belong under the project folder, where @-mentions attach them by path.';
 
   @override
   String get chatUiEdit => 'Edit';
@@ -36165,4 +36165,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get assistantErrorColor => 'Colour must be #RRGGBB.';
+
+  @override
+  String get assistantDisableTitle => 'Hide this assistant';
+
+  @override
+  String get assistantDisableHint =>
+      'Keeps the configuration entry but takes it out of the agent picker.';
 }
