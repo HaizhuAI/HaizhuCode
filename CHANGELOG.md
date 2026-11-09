@@ -27,6 +27,12 @@ import on the Providers page. Full notes:
   their real MIME instead of "unsupported format" — an APK or a zip reaches
   the agent now. The app requests `largeHeap` so large attachments encode
   safely, and draft storage scales to keep them across restarts.
+- Meta: README rewritten around HaizhuCode in English and 简体中文 with
+  download links to this repo's own releases; the real sideload signer
+  fingerprint is documented.
+- Meta: one change = one release. `tool/haizhu_release.py` and the
+  `haizhu-release` GitHub workflow both build the signed APK and publish it
+  on the version's GitHub release; see docs/releasing.md.
 - Fixed: the Assistants section listed nothing on a real server — `/config`
   answers priority-ordered documents, not a bare map — and editing a
   preset or provider left cleared fields behind under the merge patch

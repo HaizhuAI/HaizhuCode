@@ -4,6 +4,32 @@ Working notes for coding agents in this repo. The human-facing equivalents are
 [CONTRIBUTING.md](CONTRIBUTING.md) (gates, boundaries) and
 [docs/technical-overview.md](docs/technical-overview.md) (architecture depth).
 
+## HaizhuCode fork — read first
+
+This repo is **HaizhuCode** (`io.github.haizhu.code`), a fork of
+opencode-mobile-next. Where this section conflicts with the upstream notes
+below, this section wins.
+
+- Working branch is **`main`**, pushed to the **`haizhu`** remote
+  (`HaizhuAI/HaizhuCode`); `origin` is the upstream read-only mirror.
+- **One change = one version = one published APK.** After the change is
+  verified: write `docs/releases/v<x.y.z+N>.md`, bump `version:` in
+  `pubspec.yaml`, then `python tool/haizhu_release.py --no-build` (or let it
+  rebuild) — it tags, pushes, and uploads the signed
+  `HaizhuCode-release.apk` to the GitHub release. Pushing a `v*` tag also
+  fires `.github/workflows/haizhu-release.yml`, which does the same in CI.
+  Convention: [docs/releasing.md](docs/releasing.md).
+- Sideload signing lineage is the local debug-lineage keystore, SHA-256
+  `24CE74B61F293402F98483AFBA7745CC95F5E3D538DEEA2DF8DEB5AEA91C6D19`
+  (`android/key.properties` → `android/release-debug.keystore`, both
+  gitignored). Never substitute it: installs only upgrade over this signer.
+- Local builds here use `GRADLE_USER_HOME=D:\Devin\gradle-home` — it carries
+  the Aliyun mirrors, the `storage.flutter-io.cn` engine mirror, and the
+  proxy/timeout properties that keep dependency downloads from stalling.
+  CI needs none of that; GitHub runners reach the real repos directly.
+- The Shorebird/`scripts/release.sh` machinery below is upstream's and is
+  not used for HaizhuCode releases.
+
 ## Toolchain — pinned, not advisory
 
 - Flutter **3.47.1** from Shorebird's cache:
