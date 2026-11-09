@@ -11,6 +11,9 @@ import on the Providers page. Full notes:
 [docs/releases/v1.0.0+1.md](docs/releases/v1.0.0+1.md).
 - New: Haizhu setup component installs `/opt/haizhu` and seeds every agent home.
 - New: import custom OpenAI/Anthropic-compatible providers (app and `hz provider`).
+- New: HaizhuCode launcher icon (shield + prompt) on Android/iOS/Linux.
+- Fixed: Simplified Chinese translation completed (723 messages no longer
+  fall back to English).
 
 ## 2.1.1+59 — 2026-11-04
 
