@@ -11,6 +11,7 @@ import 'package:haizhucode/ui/app_theme.dart';
 import 'package:haizhucode/ui/screens/team/agent_screen.dart';
 import 'package:haizhucode/ui/screens/team_conversation/team_conversation.dart'
     show TeamConversationScreen;
+import 'package:haizhucode/ui/theme_packs.dart';
 
 /// One recorded control call.
 class Call {
@@ -299,7 +300,7 @@ Widget app(
   double scale = 1,
 }) => MaterialApp(
   debugShowCheckedModeBanner: false,
-  theme: AppTheme.dark(),
+  theme: AppTheme.dark(themePack(ThemePackId.opencode)),
   locale: locale,
   localizationsDelegates: AppLocalizations.localizationsDelegates,
   supportedLocales: AppLocalizations.supportedLocales,

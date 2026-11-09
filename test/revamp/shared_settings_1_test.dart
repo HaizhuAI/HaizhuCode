@@ -182,7 +182,7 @@ void main() {
     testWidgets('the pack in use says so in words, not a disabled button', (
       tester,
     ) async {
-      await open(tester, ThemePackId.opencode);
+      await open(tester, ThemePackId.claude);
       expect(find.text(_l10n.appearancePickerInUse), findsOneWidget);
       expect(find.text(_l10n.e7AppearanceApply), findsNothing);
       expect(find.text(_l10n.e7AppearanceCurrent), findsNothing);
@@ -213,8 +213,8 @@ void main() {
       );
       await tester.tap(find.text(_l10n.kitUndoAction));
       await tester.pumpAndSettle();
-      expect(controller.themePack.value, ThemePackId.opencode);
-      expect(controller.store.themePack, ThemePackId.opencode);
+      expect(controller.themePack.value, ThemePackId.claude);
+      expect(controller.store.themePack, ThemePackId.claude);
       KitUndo.commitPending();
     });
   });

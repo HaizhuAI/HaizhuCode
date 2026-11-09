@@ -14,6 +14,7 @@ import 'package:haizhucode/ui/app_theme.dart';
 import 'package:haizhucode/ui/kit/kit.dart';
 
 import 'fixtures.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 const _out = 'docs/qa/motion-app-2026-09-25/frames';
 const _size = Size(412, 915);
@@ -40,7 +41,7 @@ Widget _frame(Widget home, GlobalKey boundary, PageTransitionsBuilder page) =>
       key: boundary,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: AppTheme.dark().copyWith(
+        theme: AppTheme.dark(themePack(ThemePackId.opencode)).copyWith(
           pageTransitionsTheme: PageTransitionsTheme(
             builders: {TargetPlatform.android: page},
           ),

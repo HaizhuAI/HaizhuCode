@@ -104,8 +104,8 @@ void main() {
         same(ReadStateConsentStore.forPreferences(prefs)),
       );
       expect(owner.privacyEpoch, owner.readStateConsent.epoch);
-      expect(owner.value.appearance, AppAppearance.dark);
-      expect(owner.value.themePack, ThemePackId.opencode);
+      expect(owner.value.appearance, AppAppearance.light);
+      expect(owner.value.themePack, ThemePackId.claude);
       expect(owner.value.locale, isNull);
       expect(owner.value.effects, KitEffects.defaults);
       expect(owner.value.reasoningExpanded, isFalse);
@@ -131,7 +131,7 @@ void main() {
         'oc.transcript.timestampsVisible': 'invalid',
       });
       expect(owner.value.appearance, AppAppearance.light);
-      expect(owner.value.themePack, ThemePackId.opencode);
+      expect(owner.value.themePack, ThemePackId.claude);
       expect(owner.value.locale, const Locale('ar'));
       expect(owner.value.effects.motion, KitMotionLevel.calm);
       expect(owner.value.effects.celebrations, isFalse);
@@ -149,15 +149,15 @@ void main() {
     final gate = disk.gate = Completer<void>();
     final seen = <AppAppearance>[];
     owner.addListener(() => seen.add(owner.value.appearance));
-    final first = owner.setAppearance(AppAppearance.light);
+    final first = owner.setAppearance(AppAppearance.dark);
     final second = owner.setAppearance(AppAppearance.system);
     await Future<void>.delayed(Duration.zero);
-    expect(disk.calls, [('flutter.oc.appearance', 'light')]);
+    expect(disk.calls, [('flutter.oc.appearance', 'dark')]);
     expect(seen, isEmpty);
-    expect(owner.value.appearance, AppAppearance.dark);
+    expect(owner.value.appearance, AppAppearance.light);
     gate.complete();
     await Future.wait([first, second]);
-    expect(seen, [AppAppearance.light, AppAppearance.system]);
+    expect(seen, [AppAppearance.dark, AppAppearance.system]);
     expect(owner.revision, 2);
     expect((await disk.getAll())['flutter.oc.appearance'], 'system');
   });

@@ -168,7 +168,9 @@ Future<void> _focusedGridShot(
         key: boundary,
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: light ? AppTheme.light() : AppTheme.dark(),
+          theme: light
+              ? AppTheme.light(themePack(ThemePackId.opencode))
+              : AppTheme.dark(themePack(ThemePackId.opencode)),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           builder: (context, child) => MediaQuery(

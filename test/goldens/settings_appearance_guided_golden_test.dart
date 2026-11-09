@@ -12,6 +12,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:haizhucode/ui/kit/kit.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
 import '../support/settings_scenes.dart';
@@ -41,6 +42,9 @@ Future<void> _shot(
     boundary: boundary,
     followAppearance: true,
     configure: (controller) {
+      // The baselines were drawn in Graphite; keep the pack pinned so the
+      // shots do not drift with the app's default theme.
+      controller.themePack.value = ThemePackId.opencode;
       controller.effects.value = KitSurfaceLook.choose(
         KitEffects.defaults,
         style,

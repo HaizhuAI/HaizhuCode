@@ -12,6 +12,7 @@ import 'package:haizhucode/ui/kit/style/kit_style_theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'kit_gallery.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 /// The one shot the ceiling holds; tests that exercise the baseline use it.
 const _ceilingShot = 'kit_confirm_destructive_text2_1280x800_light';
@@ -123,7 +124,7 @@ void main() {
 
     Widget card() => MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.light(),
+      theme: AppTheme.light(themePack(ThemePackId.opencode)),
       home: KitEffectsScope(
         effects: const KitEffects(surfaceStyle: KitSurfaceStyle.soft),
         child: kitStyleTheme(

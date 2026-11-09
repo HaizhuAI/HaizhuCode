@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../state/profiles.dart' show ThemePackId;
+import '../state/profiles.dart' show ThemePackId, defaultThemePackId;
 
-export '../state/profiles.dart' show ThemePackId;
+export '../state/profiles.dart' show ThemePackId, defaultThemePackId;
 
 import 'theme_packs_generated.dart';
 import 'theme_roles.dart';
@@ -13,10 +13,10 @@ export 'theme_roles.dart';
 /// when unavailable (below Android 12, desktop, tests).
 final ValueNotifier<ThemePack?> harvestedDynamicPack = ValueNotifier(null);
 
-/// Resolves the effective pack for a selection, falling back to OpenCode
-/// when Material You was chosen but never harvested.
+/// Resolves the effective pack for a selection, falling back to the
+/// default pack when Material You was chosen but never harvested.
 ThemePack effectiveThemePack(ThemePackId id) => id == ThemePackId.dynamic
-    ? (harvestedDynamicPack.value ?? themePack(ThemePackId.opencode))
+    ? (harvestedDynamicPack.value ?? themePack(defaultThemePackId))
     : themePack(id);
 
 /// One brightness variant of a pack: the pack's own colours (a scheme plus
@@ -31,12 +31,16 @@ class ThemePalette {
   /// The pack's own roles; null derives them ([themeRoles]).
   final ThemeRoles? roles;
 
+  /// The pack's own face (Claude's serif); null keeps the bundled sans.
+  final String? fontFamily;
+
   const ThemePalette({
     required this.scheme,
     required this.background,
     required this.navigation,
     required this.success,
     this.roles,
+    this.fontFamily,
   });
 
   /// The whole role set: [roles], or derived from the pack's accent,
@@ -77,8 +81,9 @@ class ThemePack {
 
 /// Resolves a static pack. [ThemePackId.dynamic] has no static palettes —
 /// callers must use [dynamicThemePack] with harvested schemes, or fall back
-/// to [ThemePackId.opencode].
+/// to [defaultThemePackId].
 ThemePack themePack(ThemePackId id) => switch (id) {
+  ThemePackId.claude => _claude,
   ThemePackId.catppuccin => _catppuccin,
   ThemePackId.gruvbox => _gruvbox,
   ThemePackId.solarized => _solarized,
@@ -90,6 +95,7 @@ ThemePack themePack(ThemePackId id) => switch (id) {
 /// The packs spelled out by hand, role by role. They have goldens; the
 /// generated ones are held to a contrast floor by test instead.
 const curatedThemePacks = [
+  ThemePackId.claude,
   ThemePackId.opencode,
   ThemePackId.catppuccin,
   ThemePackId.gruvbox,
@@ -97,6 +103,7 @@ const curatedThemePacks = [
 ];
 
 final themePackLabels = <ThemePackId, String>{
+  ThemePackId.claude: 'Claude',
   ThemePackId.opencode: 'Graphite',
   ThemePackId.catppuccin: 'Catppuccin',
   ThemePackId.gruvbox: 'Gruvbox',
@@ -144,12 +151,26 @@ final ThemePack _opencode = ThemePack(
   light: _fromRoles(graphiteLight),
 );
 
-ThemePalette _fromRoles(ThemeRoles roles) => ThemePalette(
+ThemePalette _fromRoles(ThemeRoles roles, {String? fontFamily}) => ThemePalette(
   scheme: schemeFromRoles(roles),
   background: roles.ground,
   navigation: roles.surface2,
   success: roles.success,
   roles: roles,
+  fontFamily: fontFamily,
+);
+
+// ---------------------------------------------------------------------------
+// Claude — the Claude app's own look: warm cream, terracotta actions and a
+// serif face, measured from its screens (see claudeLight/claudeDark).
+// ---------------------------------------------------------------------------
+
+final ThemePack _claude = ThemePack(
+  id: ThemePackId.claude,
+  label: themePackLabels[ThemePackId.claude]!,
+  tagline: 'Warm cream, terracotta, a serif face',
+  dark: _fromRoles(claudeDark, fontFamily: 'serif'),
+  light: _fromRoles(claudeLight, fontFamily: 'serif'),
 );
 
 // ---------------------------------------------------------------------------

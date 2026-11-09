@@ -21,23 +21,23 @@ void main() {
 
   tearDown(() => harvestedDynamicPack.value = null);
 
-  test('the default pack is Graphite, the visual language palette', () {
+  test('the default pack is Claude, the warm cream palette', () {
     final dark = AppTheme.dark();
-    expect(dark.colorScheme.primary, const Color(0xFF3DDC8A));
-    expect(dark.colorScheme.onPrimary, const Color(0xFF03140B));
-    expect(dark.colorScheme.surface, const Color(0xFF0B0C0E));
-    expect(dark.colorScheme.onSurface, const Color(0xFFF3F3F1));
-    expect(dark.colorScheme.surfaceContainerLow, const Color(0xFF141518));
+    expect(dark.colorScheme.primary, const Color(0xFFDF8465));
+    expect(dark.colorScheme.onPrimary, const Color(0xFF1F140E));
+    expect(dark.colorScheme.surface, const Color(0xFF211F1C));
+    expect(dark.colorScheme.onSurface, const Color(0xFFEDE8DE));
+    expect(dark.colorScheme.surfaceContainerLow, const Color(0xFF2A2824));
     // Never red: Material's error role is the neutral ink.
-    expect(dark.colorScheme.error, const Color(0xFFF3F3F1));
-    expect(dark.scaffoldBackgroundColor, const Color(0xFF0B0C0E));
-    expect(AppTheme.successOf(dark), const Color(0xFF3DDC8A));
+    expect(dark.colorScheme.error, const Color(0xFFEDE8DE));
+    expect(dark.scaffoldBackgroundColor, const Color(0xFF211F1C));
+    expect(AppTheme.successOf(dark), const Color(0xFF9DBF7E));
 
     final light = AppTheme.light();
-    expect(light.colorScheme.primary, const Color(0xFF087F43));
-    expect(light.colorScheme.surfaceContainerLow, const Color(0xFFFAFAF8));
-    expect(light.scaffoldBackgroundColor, const Color(0xFFF3F3F1));
-    expect(AppTheme.successOf(light), const Color(0xFF087F43));
+    expect(light.colorScheme.primary, const Color(0xFFA64F2E));
+    expect(light.colorScheme.surfaceContainerLow, const Color(0xFFF6F4ED));
+    expect(light.scaffoldBackgroundColor, const Color(0xFFF1EEE5));
+    expect(AppTheme.successOf(light), const Color(0xFF4C6B23));
   });
 
   test('every static pack has complete, distinct dark and light palettes', () {
@@ -145,7 +145,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     final preferences = await SharedPreferences.getInstance();
     final store = ProfileStore(prefs: preferences);
-    expect(store.themePack, ThemePackId.opencode);
+    expect(store.themePack, ThemePackId.claude);
     await store.setThemePack(ThemePackId.gruvbox);
     expect(ProfileStore(prefs: preferences).themePack, ThemePackId.gruvbox);
   });
@@ -174,7 +174,7 @@ void main() {
       ),
     );
     BuildContext context = tester.element(find.text('themed'));
-    expect(Theme.of(context).colorScheme.primary, const Color(0xFF3DDC8A));
+    expect(Theme.of(context).colorScheme.primary, const Color(0xFFDF8465));
 
     await controller.setThemePack(ThemePackId.gruvbox);
     await tester.pumpAndSettle();
@@ -222,7 +222,7 @@ void main() {
     );
     await tester.tap(dynamicTile, warnIfMissed: false);
     await tester.pump();
-    expect(controller.themePack.value, ThemePackId.opencode);
+    expect(controller.themePack.value, ThemePackId.claude);
 
     // A theme card applies at once, and the preview follows.
     final solarized = find.byKey(const ValueKey('theme-pack-solarized'));

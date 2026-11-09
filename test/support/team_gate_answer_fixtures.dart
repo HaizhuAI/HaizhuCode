@@ -11,6 +11,7 @@ import 'package:haizhucode/ui/app_theme.dart';
 import 'package:haizhucode/ui/kit/kit.dart' show KitReceipt;
 import 'package:haizhucode/ui/screens/team/gate_sheet.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 const gateProfileId = 'srv-1';
 
@@ -309,7 +310,7 @@ Widget app(
   TextDirection? direction,
   double textScale = 1,
 }) => MaterialApp(
-  theme: AppTheme.dark(),
+  theme: AppTheme.dark(themePack(ThemePackId.opencode)),
   locale: locale,
   localizationsDelegates: AppLocalizations.localizationsDelegates,
   supportedLocales: AppLocalizations.supportedLocales,

@@ -28,6 +28,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 // AUDIT TOOLING (audit/style-coherence): no-op unless AUDIT_STYLE is set.
 import 'audit/audit_env.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 // ---------------------------------------------------------------------------
 // Fonts and viewport
@@ -156,8 +157,8 @@ ThemeData captureTheme({bool light = false}) => auditTheme(
   light,
   (light) =>
       (light || const bool.fromEnvironment('CENSUS_LIGHT')
-              ? AppTheme.light()
-              : AppTheme.dark())
+              ? AppTheme.light(themePack(ThemePackId.opencode))
+              : AppTheme.dark(themePack(ThemePackId.opencode)))
           .copyWith(platform: TargetPlatform.android),
 );
 

@@ -174,20 +174,20 @@ void main() {
   });
 
   test(
-    'persists app-wide appearance with a migration-safe dark default',
+    'persists app-wide appearance with a migration-safe light default',
     () async {
       SharedPreferences.setMockInitialValues({});
       final prefs = await SharedPreferences.getInstance();
       final store = ProfileStore(prefs: prefs);
 
-      expect(store.appearance, AppAppearance.dark);
+      expect(store.appearance, AppAppearance.light);
 
       await store.setAppearance(AppAppearance.system);
       expect(ProfileStore(prefs: prefs).appearance, AppAppearance.system);
 
-      await store.setAppearance(AppAppearance.light);
+      await store.setAppearance(AppAppearance.dark);
       final controller = ConnectionController(ProfileStore(prefs: prefs));
-      expect(controller.appearance.value, AppAppearance.light);
+      expect(controller.appearance.value, AppAppearance.dark);
       controller.dispose();
 
       // A fresh application owner reads malformed durable data with fallback.
@@ -197,7 +197,7 @@ void main() {
       final restartedPrefs = await SharedPreferences.getInstance();
       expect(
         ProfileStore(prefs: restartedPrefs).appearance,
-        AppAppearance.dark,
+        AppAppearance.light,
       );
     },
   );

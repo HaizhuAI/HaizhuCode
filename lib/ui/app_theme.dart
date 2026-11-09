@@ -204,30 +204,30 @@ abstract final class AppTheme {
   static bool stackedActions(BuildContext context) =>
       MediaQuery.textScalerOf(context).scale(bodyFontSize) > bodyFontSize * 1.6;
 
-  /// The default theme's grounds and accents (Graphite).
-  static const background = Color(0xFF0B0C0E);
-  static const surface = Color(0xFF141518);
-  static const accent = Color(0xFF3DDC8A);
-  static const lightBackground = Color(0xFFF3F3F1);
-  static const lightSurface = Color(0xFFFFFFFF);
-  static const lightAccent = Color(0xFF087F43);
+  /// The default theme's grounds and accents (Claude).
+  static const background = Color(0xFF211F1C);
+  static const surface = Color(0xFF2A2824);
+  static const accent = Color(0xFFDF8465);
+  static const lightBackground = Color(0xFFF1EEE5);
+  static const lightSurface = Color(0xFFFAF8F2);
+  static const lightAccent = Color(0xFFA64F2E);
 
   /// [partner] is the Accent swatch the person picked (null: the pack's
   /// own partner colour).
   static ThemeData dark([ThemePack? pack, Color? partner]) => fromPalette(
-    (pack ?? themePack(ThemePackId.opencode)).dark,
+    (pack ?? themePack(defaultThemePackId)).dark,
     partner: partner,
   );
 
   static ThemeData light([ThemePack? pack, Color? partner]) => fromPalette(
-    (pack ?? themePack(ThemePackId.opencode)).light,
+    (pack ?? themePack(defaultThemePackId)).light,
     partner: partner,
   );
 
   /// Saver: the pack's dark theme on a true black ground
   /// ([ThemeRoles.saver]).
   static ThemeData saver([ThemePack? pack, Color? partner]) => fromPalette(
-    (pack ?? themePack(ThemePackId.opencode)).dark,
+    (pack ?? themePack(defaultThemePackId)).dark,
     partner: partner,
     saver: true,
   );
@@ -240,16 +240,23 @@ abstract final class AppTheme {
     var roles = palette.themeRoles;
     if (partner != null) roles = roles.withPartner(partner);
     if (saver) roles = roles.saver;
-    return fromRoles(roles, base: palette.scheme);
+    return fromRoles(roles, base: palette.scheme, face: palette.fontFamily);
   }
 
   /// The whole theme from a role set: the seam a custom theme uses
   /// (`AppTheme.fromRoles(deriveRoles(accent: …, ground: …, …))`).
-  static ThemeData fromRoles(ThemeRoles roles, {ColorScheme? base}) {
+  /// [face] is the pack's own type family (Claude's serif); null keeps
+  /// the bundled sans.
+  static ThemeData fromRoles(
+    ThemeRoles roles, {
+    ColorScheme? base,
+    String? face,
+  }) {
     final dark = roles.isDark;
     return _build(
       roles: roles,
       scheme: schemeFromRoles(roles, base: base),
+      fontFamily: face,
       overlayStyle: SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: dark ? Brightness.light : Brightness.dark,
@@ -266,6 +273,7 @@ abstract final class AppTheme {
     required ThemeRoles roles,
     required ColorScheme scheme,
     required SystemUiOverlayStyle overlayStyle,
+    String? fontFamily,
   }) {
     final r = roles;
     final base = ThemeData(
@@ -292,7 +300,26 @@ abstract final class AppTheme {
         },
       ),
     );
-    final text = KitText.textTheme(base.textTheme, r);
+    var text = KitText.textTheme(base.textTheme, r);
+    if (fontFamily != null) {
+      // A pack's own face (Claude's serif) dresses the reading roles —
+      // titles, headlines and body copy; controls keep the bundled sans.
+      TextStyle? serif(TextStyle? style) =>
+          style?.copyWith(fontFamily: fontFamily);
+      text = text.copyWith(
+        displayLarge: serif(text.displayLarge),
+        displayMedium: serif(text.displayMedium),
+        displaySmall: serif(text.displaySmall),
+        headlineLarge: serif(text.headlineLarge),
+        headlineMedium: serif(text.headlineMedium),
+        headlineSmall: serif(text.headlineSmall),
+        titleLarge: serif(text.titleLarge),
+        titleMedium: serif(text.titleMedium),
+        titleSmall: serif(text.titleSmall),
+        bodyLarge: serif(text.bodyLarge),
+        bodyMedium: serif(text.bodyMedium),
+      );
+    }
     // A button's style replaces the ambient text style, so it carries the
     // face itself.
     final button = text.labelLarge!.merge(KitText.styleFor(KitTextRole.button));

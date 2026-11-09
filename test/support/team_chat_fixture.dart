@@ -25,6 +25,7 @@ import 'package:haizhucode/ui/app_theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'complete_message_history.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 const teamRig = '/root/projects/my-app';
 const teamPolecatDir =
@@ -446,7 +447,7 @@ Widget teamChatApp(
   overrides: [connProvider.overrideWithValue(connection)],
   child: MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: AppTheme.dark(),
+    theme: AppTheme.dark(themePack(ThemePackId.opencode)),
     locale: locale,
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,

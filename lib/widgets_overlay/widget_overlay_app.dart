@@ -26,15 +26,15 @@ void runWidgetOverlayApp() {
 }
 
 Future<void> _start() async {
-  var appearance = AppAppearance.dark;
-  var themePack = ThemePackId.opencode;
+  var appearance = AppAppearance.light;
+  var themePack = ThemePackId.claude;
   try {
     // Only the plain display preferences; no secure storage is touched.
     final store = ProfileStore(prefs: await SharedPreferences.getInstance());
     appearance = store.appearance;
     themePack = store.themePack;
   } on Object {
-    // Unreadable preferences: the app's defaults (dark, OpenCode).
+    // Unreadable preferences: the app's defaults (light, Claude).
   }
   const api = PortWidgetOverlayApi();
   WidgetOverlayLaunch? launch;
@@ -63,8 +63,8 @@ class WidgetOverlayApp extends StatelessWidget {
     super.key,
     required this.api,
     required this.launch,
-    this.appearance = AppAppearance.dark,
-    this.themePack = ThemePackId.opencode,
+    this.appearance = AppAppearance.light,
+    this.themePack = ThemePackId.claude,
   });
 
   final WidgetOverlayApi api;

@@ -16,6 +16,7 @@ import 'package:haizhucode/ui/kit/chat/kit_tool_row.dart';
 import 'package:haizhucode/ui/kit/kit_motion.dart';
 
 import 'kit_gallery.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 const _shot = ValueKey('step-light-shot');
 
@@ -65,7 +66,9 @@ Widget _app(
   child: MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: AppTheme.forLocale(
-      light ? AppTheme.light() : AppTheme.dark(),
+      light
+          ? AppTheme.light(themePack(ThemePackId.opencode))
+          : AppTheme.dark(themePack(ThemePackId.opencode)),
       rtl ? const Locale('ar') : const Locale('en'),
     ),
     localizationsDelegates: AppLocalizations.localizationsDelegates,

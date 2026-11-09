@@ -23,6 +23,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:haizhucode/ui/app_theme.dart';
 import 'package:haizhucode/ui/kit/kit.dart';
 import 'package:haizhucode/ui/kit/style/kit_style_theme.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 abstract final class AuditEnv {
   static Map<String, String> get _env => Platform.environment;
@@ -86,7 +87,9 @@ ThemeData auditTheme(bool light, ThemeData Function(bool light) fallback) {
   final isLight = AuditEnv.light ?? light;
   ThemeData theme = AuditEnv.saver
       ? AppTheme.saver()
-      : (isLight ? AppTheme.light() : AppTheme.dark());
+      : (isLight
+            ? AppTheme.light(themePack(ThemePackId.opencode))
+            : AppTheme.dark(themePack(ThemePackId.opencode)));
   theme = theme.copyWith(platform: TargetPlatform.android);
   final locale = AuditEnv.locale;
   return locale == null ? theme : AppTheme.forLocale(theme, locale);

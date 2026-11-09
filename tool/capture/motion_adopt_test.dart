@@ -17,6 +17,7 @@ import 'package:haizhucode/ui/app_theme.dart';
 import 'package:haizhucode/ui/kit/kit.dart';
 
 import 'fixtures.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 const _out = 'docs/qa/motion-adopt-2026-09-25/frames';
 const _size = Size(412, 915);
@@ -33,7 +34,7 @@ Widget _frame(Widget home, GlobalKey boundary) => RepaintBoundary(
   key: boundary,
   child: MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: AppTheme.dark(),
+    theme: AppTheme.dark(themePack(ThemePackId.opencode)),
     home: home,
   ),
 );

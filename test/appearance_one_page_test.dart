@@ -337,7 +337,7 @@ void main() {
     addTearDown(controller.dispose);
     await _mount(tester, controller);
 
-    final note = _en.appearanceAccentMatchNote('Graphite');
+    final note = _en.appearanceAccentMatchNote('Claude');
     final node = tester.getSemantics(find.text(note));
     expect(node.label, isNot(contains(_en.appearanceShapeSpacing)));
     handle.dispose();

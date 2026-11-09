@@ -163,7 +163,7 @@ void main() {
         tester,
         find.byKey(const ValueKey('appearance-turn-off-saver')),
       );
-      expect(controller.appearance.value, AppAppearance.dark);
+      expect(controller.appearance.value, AppAppearance.light);
       expect(find.text(_en.appearanceSaverHoldsStyle), findsNothing);
       expect(_inForce(tester).surfaceStyle, KitSurfaceStyle.soft);
       expect(

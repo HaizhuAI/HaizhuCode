@@ -118,7 +118,7 @@ void main() {
       expect(_item(tester, 'colours').next, isTrue);
       expect(_item(tester, 'style').next, isFalse);
       // Each chip shows what is set now.
-      expect(_item(tester, 'colours').value, 'Dark, Graphite');
+      expect(_item(tester, 'colours').value, 'Light, Claude');
       expect(_item(tester, 'comfort').value, 'Default, full motion');
       expect(find.text(_en.appearanceGuideStart), findsOneWidget);
       expect(
@@ -148,8 +148,8 @@ void main() {
       expect(_item(tester, 'theme').next, isFalse);
 
       // An answer fills the Next button in and puts the dot on Theme.
-      await _tap(tester, 'appearance-mode-light');
-      expect(controller.appearance.value, AppAppearance.light);
+      await _tap(tester, 'appearance-mode-dark');
+      expect(controller.appearance.value, AppAppearance.dark);
       expect(_guide(tester).next!.ready, isTrue);
       expect(_item(tester, 'theme').next, isTrue);
 
@@ -280,8 +280,8 @@ void main() {
 
       await _tap(tester, 'appearance-reset');
       await _tap(tester, 'appearance-reset-do');
-      expect(controller.themePack.value, ThemePackId.opencode);
-      expect(controller.appearance.value, AppAppearance.dark);
+      expect(controller.themePack.value, ThemePackId.claude);
+      expect(controller.appearance.value, AppAppearance.light);
       expect(controller.appearanceAccent.value, isNull);
       expect(controller.textSize.value, KitTextSize.normal);
       expect(controller.effects.value.surfaceStyle, KitSurfaceStyle.solid);

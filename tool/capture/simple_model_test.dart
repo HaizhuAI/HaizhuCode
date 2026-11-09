@@ -10,6 +10,7 @@ import 'package:haizhucode/ui/widgets/provider_logo.dart';
 
 import '../../test/support/setup_capture_preferences.dart';
 import 'fixtures.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -69,7 +70,9 @@ void main() {
         final boundary = GlobalKey();
         await tester.pumpWidget(
           MaterialApp(
-            theme: light ? AppTheme.light() : AppTheme.dark(),
+            theme: light
+                ? AppTheme.light(themePack(ThemePackId.opencode))
+                : AppTheme.dark(themePack(ThemePackId.opencode)),
             builder: (context, child) => MediaQuery(
               data: MediaQuery.of(
                 context,

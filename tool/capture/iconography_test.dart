@@ -6,6 +6,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -39,7 +40,9 @@ void main() {
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
       final boundary = GlobalKey();
-      final theme = dark ? AppTheme.dark() : AppTheme.light();
+      final theme = dark
+          ? AppTheme.dark(themePack(ThemePackId.opencode))
+          : AppTheme.light(themePack(ThemePackId.opencode));
       await tester.pumpWidget(
         MaterialApp(
           theme: theme,

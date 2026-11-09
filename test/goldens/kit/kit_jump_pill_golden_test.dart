@@ -30,6 +30,7 @@ import 'package:haizhucode/ui/kit/kit_text.dart';
 import 'package:haizhucode/ui/kit/kit_tokens.dart';
 
 import 'kit_gallery.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 /// A composer-height bottom bar, published through [KitBottomInset] exactly
 /// as the real composer will (file header note).
@@ -110,7 +111,9 @@ Future<void> _pillGalleryShot(
           key: boundary,
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            theme: pass ? AppTheme.light() : AppTheme.dark(),
+            theme: pass
+                ? AppTheme.light(themePack(ThemePackId.opencode))
+                : AppTheme.dark(themePack(ThemePackId.opencode)),
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
             builder: (context, child) => MediaQuery(

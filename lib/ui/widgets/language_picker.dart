@@ -44,7 +44,7 @@ const Map<String, int> languageTranslatedPercent = {
   'ja': 9,
   'pt': 9,
   'ru': 9,
-  'zh': 92,
+  'zh': 100,
 };
 
 /// Opens the Language sheet.

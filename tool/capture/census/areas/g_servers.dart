@@ -38,6 +38,7 @@ import '../../../../test/support/profile_monitor_fixture.dart';
 import '../../../../test/support/servers_motion_scenes.dart';
 import '../../fixtures.dart';
 import '../census_core.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 // ---------------------------------------------------------------------------
 // Shared helpers
@@ -45,7 +46,9 @@ import '../census_core.dart';
 
 Widget _rawApp(Widget home, {bool light = false}) => MaterialApp(
   debugShowCheckedModeBanner: false,
-  theme: light ? AppTheme.light() : AppTheme.dark(),
+  theme: light
+      ? AppTheme.light(themePack(ThemePackId.opencode))
+      : AppTheme.dark(themePack(ThemePackId.opencode)),
   localizationsDelegates: AppLocalizations.localizationsDelegates,
   supportedLocales: AppLocalizations.supportedLocales,
   home: home,

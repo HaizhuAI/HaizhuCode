@@ -18,6 +18,7 @@ import 'package:haizhucode/ui/app_theme.dart';
 import 'package:haizhucode/ui/kit/kit.dart';
 
 import 'kit_gallery.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 /// What the glass lies over: words and a dark code block.
 Widget _behind(KitTokens tokens) => Column(
@@ -82,7 +83,9 @@ Widget _chat({required bool light}) => KitStatusScope(
   conditions: ValueNotifier(const []),
   child: MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: light ? AppTheme.light() : AppTheme.dark(),
+    theme: light
+        ? AppTheme.light(themePack(ThemePackId.opencode))
+        : AppTheme.dark(themePack(ThemePackId.opencode)),
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
     home: KitScreen(

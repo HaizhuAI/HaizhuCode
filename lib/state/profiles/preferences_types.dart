@@ -10,6 +10,7 @@ enum AppAppearance { system, light, dark, saver }
 /// Stored by name, so new packs can be added anywhere; `dynamic` stays last
 /// because the theme list shows them in this order.
 enum ThemePackId {
+  claude,
   opencode,
   catppuccin,
   gruvbox,
@@ -42,6 +43,9 @@ enum ThemePackId {
   highContrast,
   dynamic,
 }
+
+/// The pack a fresh install (or an unreadable/reset preference) opens on.
+const defaultThemePackId = ThemePackId.claude;
 
 /// What a profile deletion actually erased, so the UI can say so and tests
 /// can assert it rather than inferring from side effects.

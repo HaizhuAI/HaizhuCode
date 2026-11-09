@@ -324,6 +324,68 @@ const graphiteLight = ThemeRoles(
   elevationShadow: Color(0x4D000000), // black .30 in both brightnesses
 );
 
+// ---------------------------------------------------------------------------
+// Claude — warm cream with a terracotta accent and a serif face, the palette
+// measured from the Claude app's own screens (bone ground, clay buttons,
+// warm near-black ink). The dark side keeps the same warmth on charcoal.
+// ---------------------------------------------------------------------------
+
+/// Claude, light: the bone ground (#F1EEE5) with clay (#B95B37) actions.
+const claudeLight = ThemeRoles(
+  brightness: Brightness.light,
+  ground: Color(0xFFF1EEE5),
+  surface1: Color(0xFFF6F4ED),
+  surface2: Color(0xFFFAF8F2),
+  surface3: Color(0xFFECE8DC),
+  hairline: Color(0x14000000), // rgba(0,0,0,.08)
+  text1: Color(0xFF2C2920),
+  text2: Color(0xFF655F50),
+  text3: Color(0xFF6E6859),
+  accent: Color(0xFFA64F2E),
+  onAccent: Color(0xFFFFFFFF),
+  partner: Color(0xFF3E6384),
+  onPartner: Color(0xFFFFFFFF),
+  attention: Color(0xFF6E5900),
+  attentionFill: Color(0xFFE0B34A),
+  onAttentionFill: Color(0xFF241C00),
+  attentionSurface: Color(0x1A6E5900), // .10
+  attentionLine: Color(0x4D6E5900), // .30
+  success: Color(0xFF4C6B23),
+  scrim: Color(0x94000000),
+  codeKeyword: Color(0xFF9A4B28),
+  codeString: Color(0xFF556227),
+  codeType: Color(0xFF3E6384),
+  elevationShadow: Color(0x4D000000), // black .30 in both brightnesses
+);
+
+/// Claude, dark: warm charcoal with a lightened clay accent.
+const claudeDark = ThemeRoles(
+  brightness: Brightness.dark,
+  ground: Color(0xFF211F1C),
+  surface1: Color(0xFF2A2824),
+  surface2: Color(0xFF332F29),
+  surface3: Color(0xFF3E3A32),
+  hairline: Color(0x14EDE6D8), // rgba(237,230,216,.08)
+  text1: Color(0xFFEDE8DE),
+  text2: Color(0xFFC0BAAE),
+  text3: Color(0xFFB2AC9F),
+  accent: Color(0xFFDF8465),
+  onAccent: Color(0xFF1F140E),
+  partner: Color(0xFF9FBAD0),
+  onPartner: Color(0xFF1F140E),
+  attention: Color(0xFFC9B04A),
+  attentionFill: Color(0xFFC9B04A),
+  onAttentionFill: Color(0xFF241C00),
+  attentionSurface: Color(0x1AC9B04A), // .10
+  attentionLine: Color(0x4DC9B04A), // .30
+  success: Color(0xFF9DBF7E),
+  scrim: Color(0x94000000),
+  codeKeyword: Color(0xFFE8A37F),
+  codeString: Color(0xFFC9C48A),
+  codeType: Color(0xFF9FBAD0),
+  elevationShadow: Color(0x4D000000), // black .30 in both brightnesses
+);
+
 /// The accents the canvas offers for Graphite, dark and light (§3, theme
 /// packs): green (the default), blue, teal, violet. For a later accent
 /// picker: `graphiteDark.withAccent(graphiteAccents[1].dark)`.

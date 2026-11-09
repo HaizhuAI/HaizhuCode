@@ -375,10 +375,21 @@ class KitText extends StatelessWidget {
     final face = theme.textTheme.bodyLarge;
     // Arabic (the system face) keeps zero tracking for connected shaping.
     final arabic = face?.fontFamily == 'sans-serif';
+    // A pack face (Claude's serif) dresses the reading roles; the control
+    // roles — labels, captions, buttons, rows — keep the bundled sans.
+    final reading =
+        role == KitTextRole.largeTitle ||
+        role == KitTextRole.title ||
+        role == KitTextRole.headline ||
+        role == KitTextRole.body;
+    final packFace =
+        face != null &&
+        face.fontFamily != 'AppSans' &&
+        face.fontFamily != 'sans-serif';
     var style = styleFor(role);
     if (role != KitTextRole.mono) {
       style = style.copyWith(
-        fontFamily: face?.fontFamily,
+        fontFamily: packFace && !reading ? 'AppSans' : face?.fontFamily,
         fontFamilyFallback: face?.fontFamilyFallback,
         letterSpacing: arabic ? 0 : style.letterSpacing,
       );

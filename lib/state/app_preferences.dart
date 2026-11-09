@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../domain/settings_scope.dart';
 import 'app_locale.dart';
 import 'effects.dart';
-import 'profiles.dart' show AppAppearance, ThemePackId;
+import 'profiles.dart' show AppAppearance, ThemePackId, defaultThemePackId;
 import 'read_state_consent.dart';
 
 @immutable
@@ -145,8 +145,8 @@ class AppPreferencesStore extends ChangeNotifier {
     }
     final language = _stored(AppLocaleStore.preferenceKey);
     return AppPreferencesSnapshot(
-      appearance: _enum(_appearance, AppAppearance.values, AppAppearance.dark),
-      themePack: _enum(_themePack, ThemePackId.values, ThemePackId.opencode),
+      appearance: _enum(_appearance, AppAppearance.values, AppAppearance.light),
+      themePack: _enum(_themePack, ThemePackId.values, defaultThemePackId),
       locale:
           language is String &&
               AppLocaleStore.supportedLanguages.contains(language)

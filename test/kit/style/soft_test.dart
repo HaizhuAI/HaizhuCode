@@ -57,7 +57,9 @@ void main() {
   final themes = <String, KitTokens>{
     for (final b in Brightness.values)
       'graphite ${b.name}': KitTokens.fallback(
-        b == Brightness.dark ? AppTheme.dark() : AppTheme.light(),
+        b == Brightness.dark
+            ? AppTheme.dark(themePack(ThemePackId.opencode))
+            : AppTheme.light(themePack(ThemePackId.opencode)),
       ),
     for (final id in ThemePackId.values)
       if (id != ThemePackId.dynamic && id != ThemePackId.opencode)

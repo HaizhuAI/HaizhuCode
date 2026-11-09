@@ -141,7 +141,7 @@ void main() {
         );
         addTearDown(restarted.dispose);
         expect(restarted.appearance.value, AppAppearance.system);
-        expect(restarted.themePack.value, ThemePackId.opencode);
+        expect(restarted.themePack.value, ThemePackId.claude);
         disk.fail = false;
         disk.throwWrite = false;
         await controller.setAppearance(AppAppearance.dark);
@@ -162,12 +162,12 @@ void main() {
       expect(find.byType(KitThemePreview), findsOneWidget);
       await tester.tap(find.byKey(const Key('appearance-preview-light')));
       await tester.pumpAndSettle();
-      expect(controller.themePack.value, ThemePackId.opencode);
+      expect(controller.themePack.value, ThemePackId.claude);
       expect(controller.appearance.value, AppAppearance.system);
       await tester.tap(find.byTooltip('Close'));
       await tester.pumpAndSettle();
       expect(preferences.getString('oc.themePack'), isNull);
-      expect(controller.themePack.value, ThemePackId.opencode);
+      expect(controller.themePack.value, ThemePackId.claude);
     },
   );
 
@@ -189,7 +189,7 @@ void main() {
       findsOneWidget,
     );
     expect(controller.appearance.value, AppAppearance.system);
-    expect(controller.themePack.value, ThemePackId.opencode);
+    expect(controller.themePack.value, ThemePackId.claude);
     store.fail = false;
     await _reveal(tester, find.text('Apply'));
     await tester.tap(find.text('Apply'));
@@ -214,7 +214,7 @@ void main() {
       );
       expect(find.byType(KitThemePreview), findsNothing);
       expect(find.text('Apply'), findsNothing);
-      expect(controller.themePack.value, ThemePackId.opencode);
+      expect(controller.themePack.value, ThemePackId.claude);
       await tester.tap(find.byTooltip('Close'));
       await tester.pumpAndSettle();
       final scheme = ColorScheme.fromSeed(seedColor: Colors.blue);

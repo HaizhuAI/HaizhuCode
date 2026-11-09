@@ -81,11 +81,14 @@ void main() {
     }
   });
 
-  test('every role carries Geist; the one shadow is the elevation shadow', () {
+  test('the pack face dresses reading roles; the one shadow is the '
+      'elevation shadow', () {
     for (final theme in [AppTheme.dark(), AppTheme.light()]) {
-      expect(theme.textTheme.headlineSmall?.fontFamily, AppTheme.sansFamily);
-      expect(theme.textTheme.titleLarge?.fontFamily, AppTheme.sansFamily);
-      expect(theme.textTheme.bodyMedium?.fontFamily, AppTheme.sansFamily);
+      // Claude's pack face is a serif; the control roles keep Geist.
+      expect(theme.textTheme.headlineSmall?.fontFamily, 'serif');
+      expect(theme.textTheme.titleLarge?.fontFamily, 'serif');
+      expect(theme.textTheme.bodyMedium?.fontFamily, 'serif');
+      expect(theme.textTheme.labelLarge?.fontFamily, AppTheme.sansFamily);
       expect(AppTheme.liveTint(theme).a, closeTo(.06, .001));
       // One shadow, under floating surfaces only: y 6, blur 16, the
       // elevationShadow role at 30 % black in both brightnesses; pulled in
@@ -120,7 +123,7 @@ void main() {
       expect(title.fontSize, headline.fontSize);
       expect(title.height, headline.height);
       expect(title.fontWeight, headline.fontWeight);
-      expect(title.fontFamily, AppTheme.sansFamily);
+      expect(title.fontFamily, theme.textTheme.titleMedium?.fontFamily);
       expect(title.color, ThemeRoles.resolve(theme).text1);
     }
   });

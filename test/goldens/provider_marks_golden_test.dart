@@ -17,6 +17,7 @@ import 'package:haizhucode/ui/kit/kit.dart';
 import 'package:haizhucode/ui/widgets/provider_logo.dart';
 
 import '../../tool/capture/fixtures.dart' show loadCaptureFonts;
+import 'package:haizhucode/ui/theme_packs.dart';
 
 const _providers = [
   ('anthropic', 'Anthropic'),
@@ -66,7 +67,9 @@ void main() {
           key: boundary,
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            theme: light ? AppTheme.light() : AppTheme.dark(),
+            theme: light
+                ? AppTheme.light(themePack(ThemePackId.opencode))
+                : AppTheme.dark(themePack(ThemePackId.opencode)),
             home: Scaffold(
               body: ListView(
                 children: [

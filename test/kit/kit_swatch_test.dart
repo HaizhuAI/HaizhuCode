@@ -10,6 +10,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:haizhucode/l10n/app_localizations.dart';
 import 'package:haizhucode/ui/app_theme.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 import 'package:haizhucode/ui/kit/kit_swatch.dart';
 import 'package:haizhucode/ui/kit/kit_task_mark.dart';
 import 'package:haizhucode/ui/kit/kit_text.dart';
@@ -33,7 +34,9 @@ Future<void> _pump(
   await tester.pumpWidget(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: light ? AppTheme.light() : AppTheme.dark(),
+      theme: light
+          ? AppTheme.light(themePack(ThemePackId.opencode))
+          : AppTheme.dark(themePack(ThemePackId.opencode)),
       locale: locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

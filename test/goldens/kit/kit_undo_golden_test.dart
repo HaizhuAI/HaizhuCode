@@ -24,6 +24,7 @@ import 'package:haizhucode/ui/kit/kit_tokens.dart';
 import 'package:haizhucode/ui/kit/kit_undo.dart';
 
 import 'kit_gallery.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 /// The start clearance a dock scene publishes at [size]: a rail from
 /// medium, a sidebar from expanded (KitBottomInset.md Adaptive).
@@ -128,7 +129,9 @@ Future<void> _kitUndoShot(
             debugShowCheckedModeBanner: false,
             theme: _themeFor(
               AppTheme.forLocale(
-                pass ? AppTheme.light() : AppTheme.dark(),
+                pass
+                    ? AppTheme.light(themePack(ThemePackId.opencode))
+                    : AppTheme.dark(themePack(ThemePackId.opencode)),
                 locale,
               ),
               arabic: arabic,

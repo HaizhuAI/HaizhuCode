@@ -11,6 +11,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:haizhucode/ui/app_theme.dart';
 import 'package:haizhucode/ui/kit/kit_illustration.dart';
 import 'package:haizhucode/ui/kit/scenes/team_discover_scenes.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 const _scenes = <String, (KitScene, double)>{
   'teaser': (TeamDiscoverTeaserScene(), 200),
@@ -19,8 +20,8 @@ const _scenes = <String, (KitScene, double)>{
 
 void main() {
   for (final (mode, theme) in [
-    ('dark', AppTheme.dark()),
-    ('light', AppTheme.light()),
+    ('dark', AppTheme.dark(themePack(ThemePackId.opencode))),
+    ('light', AppTheme.light(themePack(ThemePackId.opencode))),
   ]) {
     for (final MapEntry(key: name, value: (scene, width)) in _scenes.entries) {
       testWidgets('team discover scene $name, finished, $mode', (tester) async {

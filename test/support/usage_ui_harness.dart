@@ -18,6 +18,7 @@ import 'package:haizhucode/state/usage_subscriptions_controller.dart';
 import 'package:haizhucode/ui/app_theme.dart';
 import 'package:haizhucode/ui/screens/usage/usage_actions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:haizhucode/ui/theme_packs.dart';
 
 final usageNow = DateTime(2026, 10, 13, 12);
 
@@ -197,7 +198,7 @@ void usageTestWidgets(
 
 Widget usageApp(Widget home, {Locale locale = const Locale('en')}) =>
     MaterialApp(
-      theme: AppTheme.light(),
+      theme: AppTheme.light(themePack(ThemePackId.opencode)),
       locale: locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

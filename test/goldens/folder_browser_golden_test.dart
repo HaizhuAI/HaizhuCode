@@ -21,6 +21,7 @@ import 'package:haizhucode/ui/kit/scenes/folders_open_scene.dart';
 import 'package:haizhucode/ui/widgets/folder_browser.dart';
 
 import '../../tool/capture/fixtures.dart' show captureTheme, loadCaptureFonts;
+import 'package:haizhucode/ui/theme_packs.dart';
 
 enum FolderBrowserScene { projects, inside, loading, slow, empty, error }
 
@@ -152,7 +153,9 @@ void main() {
     }
 
     testWidgets('kit_folders_open · $mode', (tester) async {
-      final theme = light ? AppTheme.light() : AppTheme.dark();
+      final theme = light
+          ? AppTheme.light(themePack(ThemePackId.opencode))
+          : AppTheme.dark(themePack(ThemePackId.opencode));
       await tester.pumpWidget(
         MaterialApp(
           theme: theme,
