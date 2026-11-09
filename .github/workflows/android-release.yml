@@ -23,10 +23,9 @@
 
 name: Android release build
 
+# HaizhuCode fork: v* tags drive haizhu-release.yml instead; this upstream
+# Shorebird pipeline stays available as a manual dispatch only.
 on:
-  push:
-    tags:
-      - "v*"
   workflow_dispatch:
 
 permissions:

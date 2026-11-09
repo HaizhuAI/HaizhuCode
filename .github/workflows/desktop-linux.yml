@@ -13,8 +13,6 @@ on:
     branches:
       - master
       - dev
-    tags:
-      - "v*"
   workflow_dispatch:
 
 permissions:

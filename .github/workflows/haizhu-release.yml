@@ -59,8 +59,11 @@ jobs:
 
       - name: Android SDK pieces
         run: |
-          yes | sdkmanager --licenses > /dev/null
-          sdkmanager "platforms;android-37" "ndk;${NDK_VERSION}" \
+          SDK="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
+          SDKMANAGER="$(command -v sdkmanager \
+            || echo "$SDK/cmdline-tools/latest/bin/sdkmanager")"
+          yes | "$SDKMANAGER" --licenses > /dev/null
+          "$SDKMANAGER" "platforms;android-37" "ndk;${NDK_VERSION}" \
             "build-tools;36.0.0"
 
       - uses: subosito/flutter-action@v2
@@ -100,7 +103,8 @@ jobs:
             exit 1
           fi
           apk=build/app/outputs/flutter-apk/app-release.apk
-          signer="$(find "$ANDROID_HOME/build-tools" -name apksigner | sort | tail -1)"
+          signer="$(find "${ANDROID_HOME:-$ANDROID_SDK_ROOT}/build-tools" \
+            -name apksigner | sort | tail -1)"
           fp="$("$signer" verify --print-certs "$apk" \
             | awk '/SHA-256 digest/ {h=$NF; gsub(/:/,"",h); print toupper(h); exit}')"
           if [ "$fp" != "$SIDELOAD_CERT_SHA256" ]; then

@@ -2,10 +2,9 @@
 # No manual/PR/branch trigger, no release publication and no upstream checksum TOFU.
 name: BYO host bundle draft
 
+# HaizhuCode fork: v* tags drive haizhu-release.yml instead; manual only.
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_dispatch:
 
 permissions:
   contents: read
