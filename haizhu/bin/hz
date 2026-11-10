@@ -373,8 +373,9 @@ TXT
 }
 
 # ---- provider --------------------------------------------------------------
-# 自定义 provider 写进 OC2 的 opencode.json（与 App 的 PATCH /experimental/config
-# 同一数据面）。key 只进配置文件，不回显；remove 走置 null 的合并语义。
+# 自定义 provider 写进 OC2 的 opencode.json（与 App 的 experimental/fs/write
+# 同一数据面——PATCH /experimental/config 只收 {shell}）。key 只进配置文件，
+# 不回显；remove 直接删键。
 OC2_JSON="${OC2_CONFIG:-/root/.oc-opencode2/config/opencode}/opencode.json"
 provider_list() {
   [ -f "$OC2_JSON" ] || die "no $OC2_JSON (seed first)"
@@ -451,8 +452,8 @@ provider_remove() {
 }
 
 # ---- assistant --------------------------------------------------------------
-# assistant 预设写进 OC2 的 opencode.json `agent.<id>`（与 App 的 PATCH
-# /experimental/config 同一数据面；RikkaHub 式的人格包：指令+模型+采样参数）。
+# assistant 预设写进 OC2 的 opencode.json `agent.<id>`（与 App 的
+# experimental/fs/write 同一数据面；RikkaHub 式的人格包：指令+模型+采样参数）。
 assistant_list() {
   [ -f "$OC2_JSON" ] || die "no $OC2_JSON (seed first)"
   command -v node >/dev/null 2>&1 || die "assistant needs node"

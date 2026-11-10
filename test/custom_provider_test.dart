@@ -88,18 +88,57 @@ void main() {
     expect(api2ServerCapabilities.customProviders, isTrue);
   });
 
-  test('upsert/remove/default hit PATCH /experimental/config', () async {
+  test('upsert/remove/default rewrite the server config file', () async {
     final server = await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
     addTearDown(() => server.close(force: true));
-    final calls = <({String method, Uri uri, dynamic body})>[];
+    // The config file lives at /cfg/opencode.json; the writes go through
+    // /experimental/fs/write (PATCH /experimental/config is {shell}-only
+    // on a real server).
+    var file = jsonEncode({
+      'provider': {
+        'kept': {
+          'npm': '@ai-sdk/openai-compatible',
+          'options': {'baseURL': 'https://kept.example/v1'},
+        },
+      },
+      'other': true,
+    });
+    final writes = <({Uri uri, Map<String, dynamic> json})>[];
     server.listen((request) async {
       final text = await utf8.decoder.bind(request).join();
-      calls.add((
-        method: request.method,
-        uri: request.uri,
-        body: text.isEmpty ? null : jsonDecode(text),
-      ));
-      request.response.statusCode = 204;
+      if (request.method == 'GET' && request.uri.path.endsWith('/config')) {
+        request.response.headers.contentType = ContentType.json;
+        request.response.write(
+          jsonEncode({
+            'data': [
+              {'type': 'directory', 'path': '/cfg'},
+              {
+                'type': 'document',
+                'path': '/cfg/opencode.json',
+                'info': jsonDecode(file),
+              },
+            ],
+          }),
+        );
+      } else if (request.method == 'GET' &&
+          request.uri.path.startsWith('/api/fs/read/')) {
+        request.response.headers.contentType = ContentType.text;
+        request.response.write(file);
+      } else if (request.method == 'POST' &&
+          request.uri.path.endsWith('/experimental/fs/write')) {
+        writes.add((uri: request.uri, json: jsonDecode(text)));
+        file = text;
+        request.response.statusCode = 200;
+        request.response.headers.contentType = ContentType.json;
+        request.response.write(
+          jsonEncode({
+            'location': {},
+            'data': {'path': '/cfg/opencode.json'},
+          }),
+        );
+      } else {
+        request.response.statusCode = 204;
+      }
       await request.response.close();
     });
     final client = Api2Client.connect(
@@ -122,24 +161,30 @@ void main() {
     await gateway.setServerDefaultModel('deepseek', 'deepseek-chat');
     await gateway.removeCustomProvider('deepseek');
 
-    expect(calls.length, 4);
-    for (final call in calls) {
-      expect(call.method, 'PATCH');
-      expect(call.uri.path, endsWith('/experimental/config'));
-      expect(call.uri.queryParameters['location[directory]'], '/work/first');
+    expect(writes.length, 3);
+    for (final write in writes) {
+      expect(write.uri.queryParameters['path'], '/cfg/opencode.json');
+      expect(write.uri.queryParameters['location[directory]'], '/work/first');
     }
 
-    // The upsert clears the entry first so dropped models or headers do not
-    // linger under a merge patch.
-    expect(calls[0].body['provider'], {'deepseek': null});
-    final provider = calls[1].body['provider'] as Map<String, dynamic>;
+    // The write replaces the file wholesale, so a cleared entry cannot
+    // linger the way it could under a merge patch; unrelated keys and
+    // providers stay.
+    final saved = writes[0].json;
+    final provider = saved['provider'] as Map<String, dynamic>;
+    expect(provider.keys, containsAll(['kept', 'deepseek']));
     final entry = provider['deepseek'] as Map<String, dynamic>;
     expect(entry['npm'], '@ai-sdk/openai-compatible');
     expect((entry['options'] as Map)['baseURL'], 'https://api.deepseek.com/v1');
     expect((entry['options'] as Map)['apiKey'], 'sk-fixture');
     expect((entry['models'] as Map).keys, ['deepseek-chat']);
+    expect(saved['other'], isTrue);
 
-    expect(calls[2].body['model'], 'deepseek/deepseek-chat');
-    expect(calls[3].body['provider'], {'deepseek': null});
+    expect(writes[1].json['model'], 'deepseek/deepseek-chat');
+
+    final removed = writes[2].json;
+    expect((removed['provider'] as Map).containsKey('deepseek'), isFalse);
+    expect((removed['provider'] as Map).containsKey('kept'), isTrue);
+    expect(removed.containsKey('model'), isFalse);
   });
 }

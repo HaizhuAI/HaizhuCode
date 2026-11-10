@@ -351,23 +351,32 @@ class AssistantPresetSpec {
   static final _modeValues = {'primary', 'subagent', 'all'};
   static final _colorPattern = RegExp(r'^#[0-9A-Fa-f]{6}$');
 
-  /// Reads one `agent.<id>` config entry back (the keys this spec writes;
-  /// `.md`-file fields like `hidden` pass through untouched by a rewrite).
+  /// Reads one `agent.<id>` config entry back. Accepts both shapes: the
+  /// raw file keys this spec writes, and the normalized `info.agents`
+  /// entries `/config` serves (`model` as `{providerID, model}`, the
+  /// prompt under `system`, sampling under `request.body`, `disabled`
+  /// for `disable`).
   factory AssistantPresetSpec.fromConfigJson(
     String id,
     Map<String, Object?> json,
   ) {
     double? num_(Object? v) => v is num ? v.toDouble() : double.tryParse('$v');
+    final model = json['model'];
+    final request = json['request'];
+    final body = request is Map ? request['body'] : null;
+    final sampling = body is Map ? body : const <String, Object?>{};
     return AssistantPresetSpec(
       id: id,
       description: json['description'] as String? ?? '',
       mode: json['mode'] as String? ?? 'primary',
-      model: json['model'] as String?,
-      prompt: json['prompt'] as String? ?? '',
-      temperature: num_(json['temperature']),
-      topP: num_(json['top_p']),
+      model: model is Map
+          ? '${model['providerID']}/${model['model']}'
+          : model as String?,
+      prompt: json['prompt'] as String? ?? json['system'] as String? ?? '',
+      temperature: num_(json['temperature'] ?? sampling['temperature']),
+      topP: num_(json['top_p'] ?? sampling['top_p']),
       color: json['color'] as String?,
-      disable: json['disable'] == true,
+      disable: json['disable'] == true || json['disabled'] == true,
     );
   }
 

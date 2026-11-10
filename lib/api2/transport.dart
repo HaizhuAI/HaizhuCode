@@ -149,6 +149,20 @@ class Api2Transport {
     receiveTimeout: receiveTimeout,
   );
 
+  /// Raw bytes POST (`/api/experimental/fs/write` takes the file body as
+  /// `application/octet-stream` and answers the resolved path).
+  Future<dynamic> postBytes(
+    String path, {
+    required List<int> body,
+    Map<String, dynamic>? query,
+  }) => _send(
+    path,
+    method: 'POST',
+    body: body,
+    query: query,
+    contentType: 'application/octet-stream',
+  );
+
   Future<dynamic> putJson(
     String path, {
     Object? body,
@@ -174,6 +188,7 @@ class Api2Transport {
     Map<String, dynamic>? query,
     CancelToken? cancelToken,
     Duration? receiveTimeout,
+    String? contentType,
   }) async {
     final known = _dialect;
     final route = known == Api2Dialect.stable
@@ -187,6 +202,7 @@ class Api2Transport {
         options: Options(
           method: route.method,
           receiveTimeout: receiveTimeout ?? requestTimeout,
+          contentType: contentType,
         ),
         cancelToken: cancelToken,
       );

@@ -2,6 +2,15 @@
 
 This project is in public alpha. Only the newest preview is supported.
 
+## 1.0.2+3 — 2026-11-10
+
+Bug-fix release. Full notes: [docs/releases/v1.0.2+3.md](docs/releases/v1.0.2+3.md).
+- Fixed: custom API provider/assistant saves no longer 400 — config
+  writes moved from the `{shell}`-only `PATCH /experimental/config` to
+  `experimental/fs/write` (hot-reloads on the running server).
+- Fixed: `configuredAssistants` reads the normalized `agents` map
+  (`model` pair, `system`, `request.body`, `disabled`).
+
 ## 1.0.1+2 — 2026-11-09
 
 Release infrastructure and documentation; same app code as 1.0.0+1.

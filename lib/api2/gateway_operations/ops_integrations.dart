@@ -479,33 +479,184 @@ mixin _Api2IntegrationOps on _Api2Core {
     }
   }
 
-  /// `PATCH /experimental/config` merge-patches the server's config file;
-  /// a `null` value deletes the key (the same contract
-  /// [_Api2DevOps.selectTerminalShell] relies on to clear `shell`). The
-  /// caller reloads the location afterwards — the running instance picks
-  /// up the file only on a fresh instance.
-  Future<void> _patchProviderEntry(String providerID, Object? value) =>
-      _transport.patchJson(
-        '/experimental/config',
-        query: _loc(),
-        body: {
-          'provider': {providerID: value},
-        },
+  /// `PATCH /experimental/config` accepts `{shell}` alone (the schema is
+  /// `Config.Patch` with `additionalProperties: false`) — provider and
+  /// agent entries have no dedicated write endpoint in v2. They land in
+  /// the server's config file instead: `experimental/fs/write` replaces
+  /// the document the server already loads, and the running instance
+  /// hot-reloads it (the same file `hz provider`/`hz assistant` edits on
+  /// a managed host).
+  ///
+  /// `_serverConfigPath` picks the file: the `opencode.json`/`.jsonc`
+  /// document inside the reported config directory, or that directory's
+  /// `opencode.json` when no document exists yet. A stray project-level
+  /// document only serves as the fallback when the server reports no
+  /// config directory at all.
+  Future<String> _serverConfigPath() async {
+    final config = await _transport.getJson('/config', query: _loc());
+    String? directory;
+    final documents = <String>[];
+    for (final entry in _dataMaps(config)) {
+      final path = entry['path'];
+      if (path is! String || path.trim().isEmpty) continue;
+      switch (entry['type']) {
+        case 'directory':
+          directory ??= path;
+        case 'document':
+          final name = path.replaceAll('\\', '/').split('/').last;
+          if (name == 'opencode.json' || name == 'opencode.jsonc') {
+            documents.add(path);
+          }
+      }
+    }
+    final root = directory
+        ?.replaceAll('\\', '/')
+        .replaceAll(RegExp(r'/+$'), '');
+    String? target;
+    if (root != null) {
+      for (final document in documents) {
+        if (document.replaceAll('\\', '/').startsWith('$root/')) {
+          target = document;
+        }
+      }
+      target ??= '$root/opencode.json';
+    }
+    target ??= documents.isEmpty ? null : documents.last;
+    if (target == null || target.isEmpty) {
+      throw const ProductException('OpenCode reported no writable config file');
+    }
+    return target;
+  }
+
+  /// `/fs/read/<name>` is confined to the requested location, so the
+  /// location query points at the file's own directory. A missing file
+  /// reads as an empty document; JSONC comments and trailing commas are
+  /// tolerated on the way in (the rewrite lands plain JSON).
+  Future<Map<String, Object?>> _readServerConfig(String path) async {
+    final normalized = path.replaceAll('\\', '/');
+    final slash = normalized.lastIndexOf('/');
+    final dir = slash >= 0 ? normalized.substring(0, slash) : normalized;
+    final name = slash >= 0 ? normalized.substring(slash + 1) : normalized;
+    final List<int> bytes;
+    try {
+      bytes = await _transport.getBytes(
+        '/fs/read/${Uri.encodeComponent(name)}',
+        query: {'location[directory]': dir},
       );
+    } on Api2Error catch (error) {
+      if (error.isNotFound) return <String, Object?>{};
+      rethrow;
+    }
+    final text = utf8.decode(bytes, allowMalformed: true).trim();
+    if (text.isEmpty) return <String, Object?>{};
+    final decoded = _decodeConfig(text);
+    if (decoded is! Map) {
+      throw const ProductException('Could not parse the server config file');
+    }
+    return decoded.cast<String, Object?>();
+  }
+
+  static Object? _decodeConfig(String text) {
+    try {
+      return jsonDecode(text);
+    } on FormatException {
+      // JSONC: strip comments outside strings, then trailing commas.
+      final stripped = _stripJsonComments(text);
+      try {
+        return jsonDecode(stripped);
+      } on FormatException {
+        return jsonDecode(
+          stripped.replaceAllMapped(RegExp(r',\s*([}\]])'), (m) => m[1]!),
+        );
+      }
+    }
+  }
+
+  static String _stripJsonComments(String text) {
+    final out = StringBuffer();
+    var inString = false;
+    var escaped = false;
+    var i = 0;
+    while (i < text.length) {
+      final c = text[i];
+      if (inString) {
+        out.write(c);
+        if (escaped) {
+          escaped = false;
+        } else if (c == '\\') {
+          escaped = true;
+        } else if (c == '"') {
+          inString = false;
+        }
+        i++;
+        continue;
+      }
+      if (c == '"') {
+        inString = true;
+        out.write(c);
+        i++;
+        continue;
+      }
+      if (c == '/' && i + 1 < text.length && text[i + 1] == '/') {
+        while (i < text.length && text[i] != '\n') {
+          i++;
+        }
+        continue;
+      }
+      if (c == '/' && i + 1 < text.length && text[i + 1] == '*') {
+        i += 2;
+        while (i + 1 < text.length && !(text[i] == '*' && text[i + 1] == '/')) {
+          i++;
+        }
+        i += 2;
+        continue;
+      }
+      out.write(c);
+      i++;
+    }
+    return out.toString();
+  }
+
+  /// Read-modify-write on the server's config file: [merge] edits the
+  /// decoded document in place, then the whole body goes back through
+  /// `experimental/fs/write`. Because the write replaces the entry map
+  /// wholesale, a key the form cleared disappears for good — no stale
+  /// fields survive like they could under a merge patch.
+  Future<void> _updateServerConfig(
+    void Function(Map<String, Object?> json) merge,
+  ) async {
+    final path = await _serverConfigPath();
+    final json = await _readServerConfig(path);
+    merge(json);
+    final body = utf8.encode(
+      '${const JsonEncoder.withIndent('  ').convert(json)}\n',
+    );
+    await _transport.postBytes(
+      '/experimental/fs/write',
+      body: body,
+      query: _loc({'path': path}),
+    );
+  }
+
+  static Map<String, Object?> _entryMap(Map<String, Object?> json, String key) {
+    final section = json[key];
+    final map = section is Map
+        ? section.cast<String, Object?>()
+        : <String, Object?>{};
+    json[key] = map;
+    return map;
+  }
 
   @override
   Future<void> upsertCustomProvider(CustomProviderSpec spec) =>
       _guard('Could not save the provider', () async {
         // Validation lives in toConfigJson so a bad spec never reaches the
-        // wire. The apiKey inside the patch body is never logged: _guard
+        // wire. The apiKey inside the written file is never logged: _guard
         // wraps errors without echoing request data.
-        //
-        // The patch merge-patches: writing the entry alone would keep keys
-        // the form just cleared (a removed header, a dropped model). The
-        // entry is wholly owned by the form, so delete-then-write lands the
-        // exact JSON the person submitted.
-        await _patchProviderEntry(spec.id, null);
-        await _patchProviderEntry(spec.id, spec.toConfigJson());
+        final entry = spec.toConfigJson();
+        await _updateServerConfig((json) {
+          _entryMap(json, 'provider')[spec.id] = entry;
+        });
       });
 
   @override
@@ -515,38 +666,33 @@ mixin _Api2IntegrationOps on _Api2Core {
         if (id.isEmpty) {
           throw const ProductException('Enter a provider id');
         }
-        await _patchProviderEntry(id, null);
+        await _updateServerConfig((json) {
+          _entryMap(json, 'provider').remove(id);
+          final model = json['model'];
+          if (model is String && model.startsWith('$id/')) {
+            json.remove('model');
+          }
+        });
       });
 
   @override
   Future<void> setServerDefaultModel(String providerID, String modelID) =>
       _guard('Could not set the default model', () async {
-        await _transport.patchJson(
-          '/experimental/config',
-          query: _loc(),
-          body: {'model': '${providerID.trim()}/${modelID.trim()}'},
-        );
+        await _updateServerConfig((json) {
+          json['model'] = '${providerID.trim()}/${modelID.trim()}';
+        });
       });
-
-  /// `agent.<id>` sits next to `provider.<id>` in the same config file; a
-  /// `null` value deletes the key exactly like a provider entry.
-  Future<void> _patchAgentEntry(String agentID, Object? value) =>
-      _transport.patchJson(
-        '/experimental/config',
-        query: _loc(),
-        body: {
-          'agent': {agentID: value},
-        },
-      );
 
   @override
   Future<void> upsertAssistantPreset(AssistantPresetSpec spec) =>
       _guard('Could not save the assistant', () async {
         // Validation lives in toConfigJson so a bad spec never reaches the
-        // wire. Like the provider upsert, delete-then-write so a cleared
-        // model, colour or sampling field does not linger under the entry.
-        await _patchAgentEntry(spec.id, null);
-        await _patchAgentEntry(spec.id, spec.toConfigJson());
+        // wire. Writing the file replaces `agent.<id>` wholesale, so a
+        // cleared model, colour or sampling field does not linger.
+        final entry = spec.toConfigJson();
+        await _updateServerConfig((json) {
+          _entryMap(json, 'agent')[spec.id] = entry;
+        });
       });
 
   @override
@@ -556,7 +702,9 @@ mixin _Api2IntegrationOps on _Api2Core {
         if (id.isEmpty) {
           throw const ProductException('Enter an assistant id');
         }
-        await _patchAgentEntry(id, null);
+        await _updateServerConfig((json) {
+          _entryMap(json, 'agent').remove(id);
+        });
       });
 
   @override
@@ -564,13 +712,17 @@ mixin _Api2IntegrationOps on _Api2Core {
       _guard('Could not read the assistants', () async {
         // `/config` answers `{data: [{type, path, info}]}` — one entry per
         // config document, lowest to highest priority; each `info` is that
-        // document's parsed body. `agent.*` entries merge the same way the
-        // server does: a later document wins, a `null` value deletes.
+        // document's parsed body in the server's normalized shape, where
+        // the file's `agent.*` map surfaces as `agents` (`model` becomes a
+        // {providerID, model} pair, `prompt` is `system`, sampling lives
+        // under `request.body`, `disable` reads `disabled`). `agent` stays
+        // accepted as a fallback. Entries merge the way the server does:
+        // a later document wins, a `null` value deletes.
         final config = await _transport.getJson('/config', query: _loc());
         final merged = <String, Map<String, Object?>>{};
         for (final entry in _dataMaps(config)) {
           final info = entry['info'];
-          final agents = info is Map ? info['agent'] : null;
+          final agents = info is Map ? (info['agents'] ?? info['agent']) : null;
           if (agents is! Map) continue;
           for (final agent in agents.entries) {
             final id = '${agent.key}';

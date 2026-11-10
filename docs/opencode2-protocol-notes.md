@@ -459,7 +459,7 @@ Events: `shell.created`/`shell.exited`/`shell.deleted`.
 ### Config
 
 `GET /api/config?location[...]` → **array** of config entries, lowest→highest priority (not one merged object):
-`{type:"document", path?, info: Config.Info}` | `{type:"directory", path}` | `{type:"agents", path}` | `{type:"claude", path}`. `Config.Info` fields of client interest: `model` (selection string), `default_agent`, `share`, `username`, `permissions` (ruleset), `agents{}`, `commands{}`, `mcp{}`, `providers{}`, `compaction`, `skills[]`, `instructions[]`, `experimental{}`. There is **no config-write endpoint** in v2 (v1 had PATCH /config).
+`{type:"document", path?, info: Config.Info}` | `{type:"directory", path}` | `{type:"agents", path}` | `{type:"claude", path}`. `Config.Info` fields of client interest: `model` (selection string), `default_agent`, `share`, `username`, `permissions` (ruleset), `agents{}`, `commands{}`, `mcp{}`, `providers{}`, `compaction`, `skills[]`, `instructions[]`, `experimental{}`. There is **no generic config-merge endpoint** in v2 (v1 had PATCH /config): `PATCH /api/experimental/config` takes `Config.Patch` = `{shell: string|null}` only (`additionalProperties: false` — anything else is a 400). Config-file edits (`provider.*`, `agent.*`, `model`) instead go through `POST /api/experimental/fs/write?path=<abs>` — it writes outside the location, the file is read back with `GET /api/fs/read/<name>?location[directory]=<its dir>`, and the running instance hot-reloads it (verified live on 2.1.1). `info` is the *normalized* shape: the file's `agent.*`/`provider.*` surface as `agents`/`providers`, with `model` as `{providerID, model}`, `prompt` as `system`, sampling under `request.body`, `disable` as `disabled`.
 
 ### MCP
 

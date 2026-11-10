@@ -77,11 +77,12 @@ const ServerCapabilities api2ServerCapabilities = ServerCapabilities(
   mcpRuntimeRemovals: true,
   integrationCredentials: true,
   integrationCommandAuth: true,
-  // `PATCH /experimental/config` writes provider entries into the server's
-  // config file; the instance reload picks them up (protocol notes §config).
+  // `experimental/fs/write` rewrites the server's config document
+  // (`PATCH /experimental/config` accepts `{shell}` alone); the running
+  // instance hot-reloads the file (protocol notes §config).
   customProviders: true,
-  // The same config patch writes `agent.<id>` entries; they join the agent
-  // picker after the reload like `.md` agents do.
+  // The same file write lands `agent.<id>` entries; they join the agent
+  // picker on the reload like `.md` agents do.
   assistantPresets: true,
   pluginInventory: true,
   webSearch: true,

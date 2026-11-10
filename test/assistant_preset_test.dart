@@ -118,92 +118,121 @@ void main() {
     expect(api2ServerCapabilities.assistantPresets, isTrue);
   });
 
-  test('upsert clears the entry then writes it; remove deletes; read merges '
-      'the priority-ordered /config documents', () async {
-    final server = await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
-    addTearDown(() => server.close(force: true));
-    final calls = <({String method, Uri uri, dynamic body})>[];
-    server.listen((request) async {
-      final text = await utf8.decoder.bind(request).join();
-      calls.add((
-        method: request.method,
-        uri: request.uri,
-        body: text.isEmpty ? null : jsonDecode(text),
-      ));
-      if (request.method == 'GET' && request.uri.path.endsWith('/config')) {
-        request.response.headers.contentType = ContentType.json;
-        request.response.write(
-          // The real envelope: one entry per config document, lowest to
-          // highest priority, each `info` holding the parsed body.
-          jsonEncode({
-            'data': [
-              {
-                'type': 'config',
-                'path': '/etc/opencode/opencode.json',
-                'info': {
-                  'agent': {
-                    'ops': {'mode': 'primary', 'prompt': 'Old.'},
-                    'gone': {'prompt': 'Gone.'},
-                  },
-                },
-              },
-              {
-                'type': 'config',
-                'path': '/work/first/opencode.json',
-                'info': {
-                  'agent': {
-                    'ops': {'mode': 'subagent', 'prompt': 'Check.'},
-                    'gone': null,
-                    'notes': true, // non-map entries are ignored
-                  },
-                },
-              },
-            ],
-          }),
-        );
-      } else {
-        request.response.statusCode = 204;
-      }
-      await request.response.close();
-    });
-    final client = Api2Client.connect(
-      baseUrl: 'http://${server.address.host}:${server.port}',
-      password: 'fixture',
-      directory: '/work/first',
-    );
-    addTearDown(client.close);
-    final gateway = Api2OperationsGateway(client: client);
+  test(
+    'upsert writes the entry into the server config file; remove '
+    'deletes it; read merges the priority-ordered /config documents',
+    () async {
+      final server = await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
+      addTearDown(() => server.close(force: true));
+      var file = '{}';
+      final writes = <Map<String, dynamic>>[];
+      var configAnswer = '';
+      server.listen((request) async {
+        final text = await utf8.decoder.bind(request).join();
+        if (request.method == 'GET' && request.uri.path.endsWith('/config')) {
+          request.response.headers.contentType = ContentType.json;
+          request.response.write(
+            configAnswer.isEmpty
+                // The real envelope: one entry per config document, lowest to
+                // highest priority, each `info` holding the parsed body in the
+                // server's normalized shape (`agents`, not the file's `agent`).
+                ? jsonEncode({
+                    'data': [
+                      {
+                        'type': 'document',
+                        'path': '/cfg/opencode.json',
+                        'info': {
+                          'agents': {
+                            'ops': {'mode': 'primary', 'system': 'Old.'},
+                            'gone': {'system': 'Gone.'},
+                          },
+                        },
+                      },
+                      {'type': 'directory', 'path': '/cfg'},
+                      {
+                        'type': 'document',
+                        'path': '/work/first/opencode.json',
+                        'info': {
+                          'agents': {
+                            'ops': {
+                              'mode': 'subagent',
+                              'system': 'Check.',
+                              'model': {
+                                'providerID': 'openai',
+                                'model': 'gpt-5',
+                              },
+                              'request': {
+                                'body': {'temperature': 0.7},
+                              },
+                              'disabled': true,
+                            },
+                            'gone': null,
+                            'notes': true, // non-map entries are ignored
+                          },
+                        },
+                      },
+                    ],
+                  })
+                : configAnswer,
+          );
+        } else if (request.method == 'GET' &&
+            request.uri.path.startsWith('/api/fs/read/')) {
+          request.response.headers.contentType = ContentType.text;
+          request.response.write(file);
+        } else if (request.method == 'POST' &&
+            request.uri.path.endsWith('/experimental/fs/write')) {
+          writes.add(jsonDecode(text));
+          file = text;
+          request.response.statusCode = 200;
+          request.response.headers.contentType = ContentType.json;
+          request.response.write(
+            jsonEncode({
+              'location': {},
+              'data': {'path': '/cfg/opencode.json'},
+            }),
+          );
+        } else {
+          request.response.statusCode = 204;
+        }
+        await request.response.close();
+      });
+      final client = Api2Client.connect(
+        baseUrl: 'http://${server.address.host}:${server.port}',
+        password: 'fixture',
+        directory: '/work/first',
+      );
+      addTearDown(client.close);
+      final gateway = Api2OperationsGateway(client: client);
 
-    await gateway.upsertAssistantPreset(
-      const AssistantPresetSpec(
-        id: 'code-reviewer',
-        description: 'Reviews diffs',
-        prompt: 'Be careful.',
-        temperature: 0.2,
-      ),
-    );
-    await gateway.removeAssistantPreset('code-reviewer');
-    final configured = await gateway.configuredAssistants();
+      await gateway.upsertAssistantPreset(
+        const AssistantPresetSpec(
+          id: 'code-reviewer',
+          description: 'Reviews diffs',
+          prompt: 'Be careful.',
+          temperature: 0.2,
+        ),
+      );
+      await gateway.removeAssistantPreset('code-reviewer');
+      final configured = await gateway.configuredAssistants();
 
-    expect(calls.length, 4);
-    expect(calls[0].method, 'PATCH');
-    expect(calls[0].uri.path, endsWith('/experimental/config'));
-    expect(calls[0].uri.queryParameters['location[directory]'], '/work/first');
-    // Delete first so cleared optional fields cannot linger.
-    expect(calls[0].body['agent'], {'code-reviewer': null});
-    final agent = calls[1].body['agent'] as Map<String, dynamic>;
-    final entry = agent['code-reviewer'] as Map<String, dynamic>;
-    expect(entry['prompt'], 'Be careful.');
-    expect(entry['temperature'], 0.2);
+      expect(writes.length, 2);
+      final saved = writes[0]['agent'] as Map<String, dynamic>;
+      final entry = saved['code-reviewer'] as Map<String, dynamic>;
+      expect(entry['prompt'], 'Be careful.');
+      expect(entry['temperature'], 0.2);
 
-    expect(calls[2].body['agent'], {'code-reviewer': null});
+      expect((writes[1]['agent'] as Map).containsKey('code-reviewer'), isFalse);
 
-    expect(calls[3].method, 'GET');
-    expect(calls[3].uri.path, endsWith('/config'));
-    // Higher-priority document wins; a `null` in it deletes the id.
-    expect(configured.length, 1);
-    expect(configured.single.id, 'ops');
-    expect(configured.single.mode, 'subagent');
-    expect(configured.single.prompt, 'Check.');
-  });
+      // Higher-priority document wins; a `null` in it deletes the id, and
+      // the normalized shape maps back: model pair -> provider/model,
+      // `system` -> prompt, `request.body` -> sampling, `disabled` -> off.
+      expect(configured.length, 1);
+      expect(configured.single.id, 'ops');
+      expect(configured.single.mode, 'subagent');
+      expect(configured.single.prompt, 'Check.');
+      expect(configured.single.model, 'openai/gpt-5');
+      expect(configured.single.temperature, 0.7);
+      expect(configured.single.disable, isTrue);
+    },
+  );
 }
