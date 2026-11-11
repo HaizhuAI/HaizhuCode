@@ -1,7 +1,7 @@
 name: haizhucode
 description: "HaizhuCode - security-focused AI agent workbench (reverse engineering, CTF, authorized red-blue ops). Fork of opencode-mobile-next."
 publish_to: "none"
-version: 1.0.3+4
+version: 1.0.4+5
 
 environment:
   sdk: ^3.10.0

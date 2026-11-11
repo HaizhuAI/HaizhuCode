@@ -19,3 +19,11 @@ docs/design/ui-ledger/navigation.md merge=ours
 # GitHub's language bar: count the app, not the QA scripts, demo video or docs.
 tool/** linguist-detectable=false
 docs/** linguist-documentation
+
+# Line endings: everything below ships as phone-side text — the haizhu/
+# payload is decoded byte-for-byte into proot (a CRLF checkout turns
+# `#!/bin/sh` into `#!/bin/sh\r` and the scripts die), and Dart sources
+# embed raw shell literals that inherit the worktree's line endings.
+haizhu/** text eol=lf
+*.dart text eol=lf
+*.sh text eol=lf

@@ -2,6 +2,20 @@
 
 This project is in public alpha. Only the newest preview is supported.
 
+## 1.0.4+5 — 2026-11-10
+
+Hotfix: CRLF line endings were leaking into phone-side payloads on
+Windows checkouts. Full notes:
+[docs/releases/v1.0.4+5.md](docs/releases/v1.0.4+5.md).
+- Fixed: the embedded `hz` CLI shipped as `#!/bin/sh\r` (bad
+  interpreter) — `gen_haizhu_bundle.py` now normalizes CRLF→LF for
+  every UTF-8 payload file.
+- Fixed: `.gitattributes` pins `eol=lf` on `haizhu/**`, `*.dart`,
+  `*.sh` — embedded shell literals in Dart sources can't inherit CRLF.
+- Fixed: `builtin_linux` suite green on Windows — script hash gate
+  normalizes EOL before hashing; the POSIX-path project-folder test
+  skips on Windows.
+
 ## 1.0.3+4 — 2026-11-10
 
 Pinky phone-control integration. Full notes:

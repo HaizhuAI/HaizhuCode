@@ -24,6 +24,14 @@ def main() -> int:
     for path in files:
         rel = path.relative_to(SRC).as_posix()
         data = path.read_bytes()
+        # The payload lands in proot/Termux as shell scripts and configs: a
+        # CRLF worktree (Windows checkout) must not leak \r into the bundle.
+        try:
+            data.decode("utf-8")
+        except UnicodeDecodeError:
+            pass
+        else:
+            data = data.replace(b"\r\n", b"\n")
         total_bytes += len(data)
         digest.update(rel.encode() + b"\0" + data)
         entries.append((rel, base64.b64encode(data).decode()))
