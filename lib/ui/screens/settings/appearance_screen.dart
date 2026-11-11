@@ -46,6 +46,7 @@ class AppearanceSettingsScreen extends StatefulWidget {
 
 /// The most-used themes and looks, shown before "See all".
 const _themePicks = [
+  ThemePackId.dsha,
   ThemePackId.claude,
   ThemePackId.opencode,
   ThemePackId.nord,
@@ -308,7 +309,7 @@ class _AppearanceSettingsScreenState extends State<AppearanceSettingsScreen> {
     });
     try {
       await controller.setAppearance(AppAppearance.light);
-      await controller.setThemePack(ThemePackId.claude);
+      await controller.setThemePack(defaultThemePackId);
       await controller.setAppearanceAccent(null);
       await controller.setTextSize(KitTextSize.normal);
       await controller.setEffects(

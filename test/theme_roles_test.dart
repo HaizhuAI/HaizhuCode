@@ -72,16 +72,13 @@ List<String> _apart(String tag, Color accent, ThemeRoles r) => [
 ];
 
 void main() {
-  test('Claude is the default and keeps the spec palette', () {
+  test('DSHA is the default and keeps the spec palette', () {
     final dark = AppTheme.dark();
     final roles = dark.extension<ThemeRoles>()!;
-    expect(roles.ground, const Color(0xFF211F1C));
-    expect(roles.surface1, const Color(0xFF2A2824));
-    expect(roles.surface2, const Color(0xFF332F29));
-    expect(roles.surface3, const Color(0xFF3E3A32));
-    expect(roles.text1, const Color(0xFFEDE8DE));
-    expect(roles.accent, const Color(0xFFDF8465));
-    expect(roles.attention, const Color(0xFFC9B04A));
+    expect(roles.ground, const Color(0xFF000000));
+    expect(roles.text1, const Color(0xFFE4E8F0));
+    expect(roles.accent, const Color(0xFF6AA4FF));
+    expect(roles.success, const Color(0xFF7ED6A2));
     expect(dark.scaffoldBackgroundColor, roles.ground);
     expect(dark.colorScheme.primary, roles.accent);
     expect(dark.colorScheme.onPrimary, roles.onAccent);
@@ -91,14 +88,14 @@ void main() {
     // No red anywhere: Material's error roles are the neutral ink.
     expect(dark.colorScheme.error, roles.text1);
     expect(dark.colorScheme.errorContainer, roles.surface3);
-    expect(themePackLabels[defaultThemePackId], 'Claude');
+    expect(themePackLabels[defaultThemePackId], 'DSHA');
 
     final light = AppTheme.light().extension<ThemeRoles>()!;
-    expect(light.ground, const Color(0xFFF1EEE5));
-    expect(light.surface1, const Color(0xFFF6F4ED));
-    expect(light.surface2, const Color(0xFFFAF8F2));
-    expect(light.surface1, isNot(light.surface2));
-    expect(light.text1, const Color(0xFF2C2920));
+    expect(light.ground, const Color(0xFFF6F7F9));
+    expect(light.accent, const Color(0xFF1E50D0));
+    expect(light.success, const Color(0xFF207348));
+    expect(light.text1, const Color(0xFF152033));
+    expect(light.surface1, isNot(light.surface3));
   });
 
   test('Graphite meets every contrast floor in both modes', () {
@@ -217,8 +214,7 @@ void main() {
     }
     expect(KitText.styleFor(KitTextRole.mono).fontFamily, AppTheme.monoFamily);
     final text = AppTheme.dark().textTheme;
-    // The default pack (Claude) dresses the reading roles in its serif;
-    // the control roles — labels and the small print — keep Geist.
+    // The default pack (DSHA) keeps the bundled sans face everywhere.
     for (final style in [
       text.headlineLarge,
       text.titleLarge,
@@ -226,7 +222,7 @@ void main() {
       text.bodyLarge,
       text.bodyMedium,
     ]) {
-      expect(style?.fontFamily, 'serif');
+      expect(style?.fontFamily, isNot('serif'));
       expect(style?.fontSize, style!.fontSize!.roundToDouble());
       expect(style.color?.a, 1);
     }
@@ -495,7 +491,10 @@ void main() {
     expect(tokens.rowValue.fontSize, secondary.fontSize);
     expect(tokens.rowValue.height, secondary.height);
     expect(tokens.rowValue.fontWeight, secondary.fontWeight);
-    expect(tokens.rowValue.color, claudeDark.text3);
+    expect(
+      tokens.rowValue.color,
+      AppTheme.dark().extension<ThemeRoles>()!.text3,
+    );
     final mono = KitText.styleFor(KitTextRole.mono);
     expect(tokens.typedName.fontFamily, AppTheme.monoFamily);
     expect(tokens.typedName.fontSize, 13);

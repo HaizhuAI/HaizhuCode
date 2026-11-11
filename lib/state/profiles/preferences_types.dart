@@ -41,11 +41,12 @@ enum ThemePackId {
   slate,
   amber,
   highContrast,
+  dsha,
   dynamic,
 }
 
 /// The pack a fresh install (or an unreadable/reset preference) opens on.
-const defaultThemePackId = ThemePackId.claude;
+const defaultThemePackId = ThemePackId.dsha;
 
 /// What a profile deletion actually erased, so the UI can say so and tests
 /// can assert it rather than inferring from side effects.

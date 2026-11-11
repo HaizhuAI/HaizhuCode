@@ -11,7 +11,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../l10n/app_localizations.dart';
 import '../state/app_locale.dart' show resolveAppLocales;
-import '../state/profiles.dart' show AppAppearance, ProfileStore, ThemePackId;
+import '../state/profiles.dart'
+    show AppAppearance, ProfileStore, ThemePackId, defaultThemePackId;
 import '../ui/app_theme.dart';
 import '../ui/screens/widgets/widget_configure_screen.dart';
 import '../ui/screens/widgets/widget_project_screen.dart';
@@ -27,7 +28,7 @@ void runWidgetOverlayApp() {
 
 Future<void> _start() async {
   var appearance = AppAppearance.light;
-  var themePack = ThemePackId.claude;
+  var themePack = defaultThemePackId;
   try {
     // Only the plain display preferences; no secure storage is touched.
     final store = ProfileStore(prefs: await SharedPreferences.getInstance());
@@ -64,7 +65,7 @@ class WidgetOverlayApp extends StatelessWidget {
     required this.api,
     required this.launch,
     this.appearance = AppAppearance.light,
-    this.themePack = ThemePackId.claude,
+    this.themePack = defaultThemePackId,
   });
 
   final WidgetOverlayApi api;

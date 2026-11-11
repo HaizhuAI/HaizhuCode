@@ -2,6 +2,16 @@
 
 This project is in public alpha. Only the newest preview is supported.
 
+## 1.0.5+6 — 2026-11-10
+
+DSHA theme port — new default look. Full notes:
+[docs/releases/v1.0.5+6.md](docs/releases/v1.0.5+6.md).
+- New: `ThemePackId.dsha` — palette reverse-engineered from the DSHA
+  Android client (`dsh.android.client`): deep blue-gray dark
+  (`#0F1219`/`#5B8DEF`) and cool-paper light (`#F2F6FB`/`#3E6FD8`).
+- Changed: `defaultThemePackId` is now `dsha`; reset-to-defaults and
+  the overlay host use the constant instead of a hard-coded pack.
+
 ## 1.0.4+5 — 2026-11-10
 
 Hotfix: CRLF line endings were leaking into phone-side payloads on

@@ -105,7 +105,7 @@ void main() {
       );
       expect(owner.privacyEpoch, owner.readStateConsent.epoch);
       expect(owner.value.appearance, AppAppearance.light);
-      expect(owner.value.themePack, ThemePackId.claude);
+      expect(owner.value.themePack, ThemePackId.dsha);
       expect(owner.value.locale, isNull);
       expect(owner.value.effects, KitEffects.defaults);
       expect(owner.value.reasoningExpanded, isFalse);
@@ -131,7 +131,7 @@ void main() {
         'oc.transcript.timestampsVisible': 'invalid',
       });
       expect(owner.value.appearance, AppAppearance.light);
-      expect(owner.value.themePack, ThemePackId.claude);
+      expect(owner.value.themePack, ThemePackId.dsha);
       expect(owner.value.locale, const Locale('ar'));
       expect(owner.value.effects.motion, KitMotionLevel.calm);
       expect(owner.value.effects.celebrations, isFalse);

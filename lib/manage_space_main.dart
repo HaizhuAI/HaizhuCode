@@ -12,7 +12,8 @@ import 'builtin/project_export.dart';
 import 'builtin/project_export_controller.dart';
 import 'l10n/app_localizations.dart';
 import 'state/app_locale.dart' show resolveAppLocales;
-import 'state/profiles.dart' show AppAppearance, ProfileStore, ThemePackId;
+import 'state/profiles.dart'
+    show AppAppearance, ProfileStore, ThemePackId, defaultThemePackId;
 import 'ui/app_theme.dart';
 import 'ui/screens/manage_space_screen.dart';
 import 'ui/theme_packs.dart' show effectiveThemePack;
@@ -24,7 +25,7 @@ void runManageSpaceApp() {
 
 Future<void> _start() async {
   var appearance = AppAppearance.light;
-  var themePack = ThemePackId.claude;
+  var themePack = defaultThemePackId;
   try {
     // Only the plain display preferences; no secure storage is touched.
     final store = ProfileStore(prefs: await SharedPreferences.getInstance());
@@ -50,7 +51,7 @@ class ManageSpaceApp extends StatelessWidget {
     required this.controller,
     this.onClose,
     this.appearance = AppAppearance.light,
-    this.themePack = ThemePackId.claude,
+    this.themePack = defaultThemePackId,
   });
 
   final ProjectExportController controller;

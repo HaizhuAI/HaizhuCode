@@ -37,6 +37,26 @@ class _Spec {
 }
 
 const _specs = <ThemePackId, _Spec>{
+  // DSHA (电枢): measured from dsh.android.client 0.2.1 — pure-white /
+  // pure-black grounds, royal blue #1e50d0 → #6aa4ff, muted slate secondary,
+  // the brand's light-blue logo tint kept in the launcher palette.
+  ThemePackId.dsha: _Spec(
+    'DSHA',
+    _Tones(
+      Color(0xFF000000),
+      Color(0xFFE4E8F0),
+      Color(0xFF6AA4FF),
+      Color(0xFF9DA8BB),
+      success: Color(0xFF7ED6A2),
+    ),
+    _Tones(
+      Color(0xFFF6F7F9),
+      Color(0xFF152033),
+      Color(0xFF1E50D0),
+      Color(0xFF5B6578),
+      success: Color(0xFF207348),
+    ),
+  ),
   ThemePackId.dracula: _Spec(
     'Dracula',
     _Tones(
