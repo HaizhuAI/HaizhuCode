@@ -99,6 +99,21 @@
       ],
       "source": "https://github.com/HG-ha/Argusai",
       "note": "agent 原生安全工具台：流量、逆向、巡检。"
+    },
+    "pinky": {
+      "title": "Pinky 真机手机操控",
+      "transport": "http",
+      "url": "http://192.168.1.8:7465/mcp",
+      "headers": {
+        "Authorization": "Bearer tok_XYZ"
+      },
+      "enabled": false,
+      "requires": [
+        "remote"
+      ],
+      "source": "https://github.com/DIYgod/pinky",
+      "install": "hz phone <url> <token>",
+      "note": "PC 上跑 Pinky 网关（pinky daemon --http 或 Settings > Remote agents），把真实 Android/iPhone 暴露成 MCP：phone_* 工具让 agent 观察屏幕、点按、滑动、输入、开应用；支付等高危操作由 Pinky 网关强制人工审批，银行/钱包/密码应用默认对 agent 隐藏。"
     }
   },
   "deployables": {

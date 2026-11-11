@@ -2,6 +2,19 @@
 
 This project is in public alpha. Only the newest preview is supported.
 
+## 1.0.3+4 — 2026-11-10
+
+Pinky phone-control integration. Full notes:
+[docs/releases/v1.0.3+4.md](docs/releases/v1.0.3+4.md).
+- New: `pinky` MCP registry entry + `hz phone <url> [token] | off`
+  pairing command — agents drive a real Android/iPhone through a Pinky
+  gateway over remote HTTP MCP (bearer-token auth).
+- New: skill pack `phone-ops` — condensed Pinky agent guide (loop,
+  statuses, approvals, safety rules, files/apps/logs/device tools).
+- Changed: `hz mcp sync` propagates registry `headers` to oc2 / claude /
+  gemini / codex MCP entries; disabled servers are now removed from
+  synced configs instead of lingering.
+
 ## 1.0.2+3 — 2026-11-10
 
 Bug-fix release. Full notes: [docs/releases/v1.0.2+3.md](docs/releases/v1.0.2+3.md).

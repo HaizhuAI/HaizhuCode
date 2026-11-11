@@ -6,6 +6,7 @@
 #   kernel           打印内核文件路径（可接 > 或 |）
 #   agents|skills    列出角色/技能
 #   mcp <verb>       list|install <id>|sync|run <id>|doctor
+#   phone <url> [tok] 配对 Pinky 真机网关（off 断开 / 无参看状态）
 #   prompts          列出内置提示词库
 #   red <c2|proxy|hephaestus>  部署型红队组件引导
 set -eu
@@ -248,6 +249,7 @@ mcp_run() {
   case "$id" in
     rea) exec "$HZ_ROOT/vendor/rea/bridge/run.sh" "$@" ;;
     craft) exec craft mcp "$@" ;;
+    pinky) die "pinky 是远程手机网关（hz phone <url> <token> 管理），不支持本地 run" ;;
     *) die "mcp run: unknown server '$id'" ;;
   esac
 }
@@ -278,15 +280,24 @@ mcp_sync() {
     const fs = require("fs"), path = require("path"), cp = require("child_process");
     const reg = JSON.parse(fs.readFileSync(process.env.HZ_ROOT + "/mcp/registry.json", "utf8"));
     const on = Object.entries(reg.servers).filter(([, s]) => s.enabled);
+    const off = new Set(Object.entries(reg.servers).filter(([, s]) => !s.enabled).map(([id]) => id));
     const expand = (s, home) => s.replace(/\{HOME\}/g, home)
       .replace(/\{([A-Z_]+)\|([^}]*)\}/g, (_, k, d) => process.env[k] || d);
     const arr = (c, home) => c.map(x => expand(x, home));
+    const headersOf = (s, home) => {
+      const h = s.headers || {};
+      const out = {};
+      for (const [k, v] of Object.entries(h)) out[k] = expand(String(v), home);
+      return Object.keys(out).length ? out : null;
+    };
     const localEntry = (s, home) => s.transport === "stdio"
       ? { type: "local", command: arr(s.command, home), disabled: false }
-      : { type: "remote", url: expand(s.url || "", home), enabled: true };
+      : { type: "remote", url: expand(s.url || "", home), enabled: true,
+          ...(headersOf(s, home) ? { headers: headersOf(s, home) } : {}) };
     const stdioEntry = (s, home) => s.transport === "stdio"
       ? { type: "stdio", command: s.command[0], args: arr(s.command.slice(1), home), env: {} }
-      : { type: "http", url: expand(s.url || "", home) };
+      : { type: "http", url: expand(s.url || "", home),
+          ...(headersOf(s, home) ? { headers: headersOf(s, home) } : {}) };
     const targets = [];
     const oc2 = process.env.OC2_CONFIG || "/root/.oc-opencode2/config/opencode";
     if (fs.existsSync(oc2)) targets.push({ f: oc2 + "/opencode.json", k: "oc2", home: "/root" });
@@ -314,25 +325,81 @@ mcp_sync() {
       if (t.k === "oc2") {
         j.mcp = j.mcp || {}; j.mcp.servers = j.mcp.servers || {};
         for (const [id, s] of on) j.mcp.servers[id] = localEntry(s, t.home);
+        for (const id of off) delete j.mcp.servers[id];
       } else if (t.k === "claude" || t.k === "gemini") {
         j.mcpServers = j.mcpServers || {};
         for (const [id, s] of on) j.mcpServers[id] = stdioEntry(s, t.home);
+        for (const id of off) delete j.mcpServers[id];
       }
       fs.writeFileSync(t.f, JSON.stringify(j, null, 2) + "\n");
       console.log("hz: synced", t.f);
     }
-    // codex TOML：追加缺失段（简单幂等：已存在同名段则跳过）
+    // codex TOML：追加缺失段（简单幂等：已存在同名段则跳过）；registry 中 disabled 的段整体剔除
     for (const t of targets.filter(x => x.k === "codex")) {
       let toml = fs.existsSync(t.f) ? fs.readFileSync(t.f, "utf8") : "";
+      for (const id of off) {
+        toml = toml.replace(new RegExp("\\n*\\[mcp_servers\\." + id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\][^\\[]*", "g"), "");
+      }
       for (const [id, s] of on) {
-        if (s.transport !== "stdio" || toml.includes("[mcp_servers." + id + "]")) continue;
-        toml += `\n[mcp_servers.${id}]\ncommand = "${s.command[0]}"\nargs = [${s.command.slice(1).map(a => `"${expand(a, t.home)}"`).join(", ")}]\n`;
+        if (toml.includes("[mcp_servers." + id + "]")) continue;
+        if (s.transport === "stdio") {
+          toml += `\n[mcp_servers.${id}]\ncommand = "${s.command[0]}"\nargs = [${s.command.slice(1).map(a => `"${expand(a, t.home)}"`).join(", ")}]\n`;
+        } else {
+          const hs = headersOf(s, t.home);
+          const hh = hs
+            ? `\nhttp_headers = { ${Object.entries(hs).map(([k, v]) => `"${k}" = "${v}"`).join(", ")} }`
+            : "";
+          toml += `\n[mcp_servers.${id}]\nurl = "${expand(s.url || "", t.home)}"${hh}\n`;
+        }
       }
       fs.writeFileSync(t.f, toml);
       console.log("hz: synced", t.f);
     }
   '
 }
+phone() {
+  # hz phone <url> [token]  配对 Pinky 网关（PC 端 Settings > Remote agents）
+  # hz phone off            断开（禁用 pinky MCP 并重新同步）
+  # hz phone                查看当前配对状态
+  case "${1:-}" in
+    ""|status)
+      node -e '
+        const fs = require("fs"), r = JSON.parse(fs.readFileSync(process.env.HZ_ROOT + "/mcp/registry.json", "utf8"));
+        const s = (r.servers || {}).pinky || {};
+        console.log(JSON.stringify({ enabled: !!s.enabled, url: s.url || null,
+          hasToken: !!(s.headers && !String(s.headers.Authorization || "").endsWith("|}") && !String(s.headers.Authorization || "").endsWith("Bearer }")) }, null, 2));
+      ' || die "phone status needs node"
+      ;;
+    off)
+      command -v node >/dev/null 2>&1 || die "phone off needs node"
+      HZ_ROOT="$HZ_ROOT" node -e '
+        const fs = require("fs"), p = process.env.HZ_ROOT + "/mcp/registry.json";
+        const r = JSON.parse(fs.readFileSync(p, "utf8"));
+        if (!r.servers.pinky) { console.error("hz: no pinky entry"); process.exit(1); }
+        r.servers.pinky.enabled = false;
+        fs.writeFileSync(p, JSON.stringify(r, null, 2) + "\n");
+        console.log("hz: pinky -> false");
+      '
+      mcp_sync ;;
+    *://*)
+      url="$1"; token="${2:-}"
+      command -v node >/dev/null 2>&1 || die "phone needs node"
+      HZ_ROOT="$HZ_ROOT" HZ_URL="$url" HZ_TOKEN="$token" node -e '
+        const fs = require("fs"), p = process.env.HZ_ROOT + "/mcp/registry.json";
+        const r = JSON.parse(fs.readFileSync(p, "utf8"));
+        const s = r.servers.pinky || (r.servers.pinky = { title: "Pinky 真机手机操控", transport: "http" });
+        s.url = process.env.HZ_URL;
+        if (process.env.HZ_TOKEN) s.headers = { Authorization: "Bearer " + process.env.HZ_TOKEN };
+        s.enabled = true;
+        fs.writeFileSync(p, JSON.stringify(r, null, 2) + "\n");
+        console.log("hz: pinky ->", process.env.HZ_URL);
+      '
+      mcp_sync
+      echo "hz: pinky 已启用——agent 通过 phone_* MCP 工具操作手机；高危操作由 Pinky 网关人工审批" ;;
+    *) die "phone: <url> [token] | off | status" ;;
+  esac
+}
+
 mcp_doctor() {
   for c in node npx python3 pip3 git; do
     printf '%-6s %s\n' "$c" "$(command -v "$c" 2>/dev/null || echo MISSING)"
@@ -581,6 +648,7 @@ case "$verb" in
       *) die "mcp: list|run|install|enable|disable|sync|doctor" ;;
     esac ;;
   red) red "$@" ;;
+  phone) phone "$@" ;;
   provider)
     case "${1:-list}" in
       list) provider_list ;;
@@ -595,5 +663,5 @@ case "$verb" in
       remove|rm) shift; assistant_remove "$@" ;;
       *) die "assistant: list|add|remove" ;;
     esac ;;
-  version|*) echo "haizhu $VERSION — hz seed|status|kernel|agents|skills|prompts|mcp|provider|assistant|red" ;;
+  version|*) echo "haizhu $VERSION — hz seed|status|kernel|agents|skills|prompts|mcp|phone|provider|assistant|red" ;;
 esac

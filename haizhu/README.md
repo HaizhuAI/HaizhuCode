@@ -13,7 +13,7 @@ HaizhuCode = OpenCode Mobile 客户端 + 内置安全作业内核 + 安全技能
 | `kernel/` | `universal-kernel-v31.md`（最高优先级系统内核）+ `global-rules-lite.md`（小模型版）+ `security-research.md` |
 | `agents/` | `haizhu`（主）+ `haizhu-re`/`haizhu-ctf`/`haizhu-red`/`haizhu-blue`/`haizhu-audit`（子代理） |
 | `skills/` | 逆向、APK、CTF、pwn、Web 渗透、代码审计、红队、蓝队、MCP 目录 共 9 个技能 |
-| `mcp/registry.json` | MCP 服务注册表（内置 3 个开箱即用 + 4 个可安装安全平台） |
+| `mcp/registry.json` | MCP 服务注册表（内置 3 个开箱即用 + 4 个可安装安全平台 + pinky 真机网关） |
 | `opencode/` | OpenCode 全局配置模板（instructions→内核、agent、mcp） |
 | `prompts/builtin/` | 44 份按模型分类的内置提示词库 |
 | `bin/hz` | 管理 CLI：seed/status/agents/skills/mcp/prompts/red |
@@ -47,6 +47,7 @@ bundle（`lib/builtin/setup/haizhu_bundle.dart`，`tool/gen_haizhu_bundle.py`
 | [Kxiandaoyan/github-C2](https://github.com/Kxiandaoyan/github-C2) | 授权 C2 部署引导 `hz red c2` |
 | [honmashironeko/ProxyCat](https://github.com/honmashironeko/ProxyCat) | 代理池部署引导 `hz red proxy` |
 | [Ernket/CodeScan-Artex](https://github.com/Ernket/CodeScan-Artex) | 代码审计方法流 + mcphttp 接入 |
+| [DIYgod/pinky](https://github.com/DIYgod/pinky) | PC 端真机手机网关 → MCP 接入 `hz phone` |
 
 ## 使用
 
@@ -66,6 +67,9 @@ hz assistant add reviewer --prompt-file review.md \
   --desc "审查 diff" --mode primary --temp 0.3   # 助手预设写 agent.<id>
 hz assistant list                # 列出 agent.<id> 条目
 hz assistant remove reviewer     # 删除条目
+hz phone http://192.168.1.8:7465/mcp $PINKY_TOKEN   # 配对 PC 上的 Pinky 真机网关
+hz phone                          # 查看配对状态
+hz phone off                      # 断开（从所有 agent 配置移除 pinky MCP）
 ```
 
 App 侧 Providers 页的 "Add a custom API" 走同一条数据面（PATCH
