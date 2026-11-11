@@ -82,6 +82,94 @@ void main() {
         throwsA(isA<ProductException>()),
       );
     });
+
+    test('writes custom limits and five reasoning tiers per model', () {
+      final json = const CustomProviderSpec(
+        id: 'mygw',
+        name: 'GW',
+        baseURL: 'http://127.0.0.1:9/v1',
+        models: ['m-a', 'm-b'],
+        contextLimit: 512000,
+        inputLimit: 448000,
+        outputLimit: 64000,
+        reasoning: true,
+        defaultEffort: 'medium',
+      ).toConfigJson();
+      final models = json['models']! as Map<String, Object?>;
+      for (final entry in models.values) {
+        final model = entry! as Map<String, Object?>;
+        expect(model['limit'], {
+          'context': 512000,
+          'input': 448000,
+          'output': 64000,
+        });
+        expect(model['reasoning'], isTrue);
+        expect(model['options'], {'reasoningEffort': 'medium'});
+        final variants = model['variants']! as Map<String, Object?>;
+        expect(variants.keys, ['none', 'low', 'medium', 'high', 'xhigh']);
+        for (final variant in variants.values) {
+          expect((variant! as Map)['reasoningEffort'], isA<String>());
+        }
+        expect((variants['low']! as Map)['reasoningEffort'], 'low');
+      }
+    });
+
+    test('reasoning off keeps the server defaults', () {
+      final json = const CustomProviderSpec(
+        id: 'p',
+        name: '',
+        baseURL: 'https://x.example/v1',
+        models: ['m'],
+        contextLimit: 256000,
+        outputLimit: 16000,
+      ).toConfigJson();
+      final model =
+          (json['models']! as Map<String, Object?>)['m']!
+              as Map<String, Object?>;
+      expect(model['limit'], {'context': 256000, 'output': 16000});
+      expect(model.containsKey('reasoning'), isFalse);
+      expect(model.containsKey('variants'), isFalse);
+      expect(model.containsKey('options'), isFalse);
+    });
+
+    test('rejects unpaired or inverted token limits', () {
+      CustomProviderSpec spec({
+        int? context,
+        int? input,
+        int? output,
+        String? effort,
+      }) => CustomProviderSpec(
+        id: 'ok',
+        name: '',
+        baseURL: 'https://example.com/v1',
+        models: const ['m'],
+        contextLimit: context,
+        inputLimit: input,
+        outputLimit: output,
+        defaultEffort: effort,
+      );
+      // context without output — the server stores them as a pair.
+      expect(
+        () => spec(context: 128000).toConfigJson(),
+        throwsA(isA<ProductException>()),
+      );
+      expect(
+        () => spec(output: 8000).toConfigJson(),
+        throwsA(isA<ProductException>()),
+      );
+      expect(
+        () => spec(context: 0, output: 1).toConfigJson(),
+        throwsA(isA<ProductException>()),
+      );
+      expect(
+        () => spec(context: 100, input: 200, output: 8).toConfigJson(),
+        throwsA(isA<ProductException>()),
+      );
+      expect(
+        () => spec(effort: 'extreme').toConfigJson(),
+        throwsA(isA<ProductException>()),
+      );
+    });
   });
 
   test('api2 reports the customProviders capability', () {

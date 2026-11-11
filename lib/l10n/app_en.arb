@@ -44061,6 +44061,70 @@
   "@customProviderErrorHeaders": {
     "description": "Custom provider form: malformed header line"
   },
+  "customProviderContextField": "Context window (tokens)",
+  "@customProviderContextField": {
+    "description": "Custom provider form: the model's total context window"
+  },
+  "customProviderOutputField": "Max output tokens",
+  "@customProviderOutputField": {
+    "description": "Custom provider form: per-reply output cap"
+  },
+  "customProviderInputField": "Max input tokens (optional)",
+  "@customProviderInputField": {
+    "description": "Custom provider form: prompt-side ceiling when it differs from the window"
+  },
+  "customProviderLimitsHelper": "Applies to every model in the list. Leave empty to keep the server's defaults (200K context, 32K output).",
+  "@customProviderLimitsHelper": {
+    "description": "Custom provider form: what the token limits mean"
+  },
+  "customProviderErrorLimit": "Enter a positive whole number of tokens.",
+  "@customProviderErrorLimit": {
+    "description": "Custom provider form: a token limit is not a positive integer"
+  },
+  "customProviderErrorLimitPair": "Fill in both the context window and the max output — the server stores them as a pair.",
+  "@customProviderErrorLimitPair": {
+    "description": "Custom provider form: only one of context/output given"
+  },
+  "customProviderErrorLimitInput": "Max input cannot exceed the context window.",
+  "@customProviderErrorLimitInput": {
+    "description": "Custom provider form: input limit larger than context"
+  },
+  "customProviderThinking": "Thinking levels",
+  "@customProviderThinking": {
+    "description": "Custom provider form: reasoning-capable switch"
+  },
+  "customProviderThinkingHint": "Offer a five-step effort picker (off/low/medium/high/max) on these models.",
+  "@customProviderThinkingHint": {
+    "description": "Custom provider form: what the thinking switch does"
+  },
+  "customProviderDefaultEffort": "Default effort",
+  "@customProviderDefaultEffort": {
+    "description": "Custom provider form: effort used when the chat picks no tier"
+  },
+  "customProviderEffortServer": "Server default",
+  "@customProviderEffortServer": {
+    "description": "Custom provider form: leave the effort to the server"
+  },
+  "customProviderEffortNone": "Off",
+  "@customProviderEffortNone": {
+    "description": "Effort tier: thinking disabled"
+  },
+  "customProviderEffortLow": "Low",
+  "@customProviderEffortLow": {
+    "description": "Effort tier: low"
+  },
+  "customProviderEffortMedium": "Medium",
+  "@customProviderEffortMedium": {
+    "description": "Effort tier: medium"
+  },
+  "customProviderEffortHigh": "High",
+  "@customProviderEffortHigh": {
+    "description": "Effort tier: high"
+  },
+  "customProviderEffortXhigh": "Max",
+  "@customProviderEffortXhigh": {
+    "description": "Effort tier: maximum"
+  },
   "assistantsLabel": "Assistants",
   "@assistantsLabel": {
     "description": "Providers page: label of the assistants section"

@@ -26,8 +26,13 @@ class _CustomProviderSheetState extends State<_CustomProviderSheet> {
   final TextEditingController _key = TextEditingController();
   final TextEditingController _models = TextEditingController();
   final TextEditingController _headers = TextEditingController();
+  final TextEditingController _context = TextEditingController();
+  final TextEditingController _input = TextEditingController();
+  final TextEditingController _output = TextEditingController();
 
   String _protocol = CustomProviderSpec.openAICompatibleNpm;
+  bool _reasoning = false;
+  String? _defaultEffort;
   bool _setDefault = false;
   bool _saving = false;
   bool _showErrors = false;
@@ -39,6 +44,16 @@ class _CustomProviderSheetState extends State<_CustomProviderSheet> {
 
   AppLocalizations get _l10n =>
       lookupAppLocalizations(Localizations.localeOf(context));
+
+  /// The five wire tiers read as friendly words in the picker.
+  String _effortLabel(AppLocalizations l10n, String tier) => switch (tier) {
+    'none' => l10n.customProviderEffortNone,
+    'low' => l10n.customProviderEffortLow,
+    'medium' => l10n.customProviderEffortMedium,
+    'high' => l10n.customProviderEffortHigh,
+    'xhigh' => l10n.customProviderEffortXhigh,
+    _ => tier,
+  };
 
   List<String> get _modelIDs => _models.text
       .split(RegExp(r'[\s,]+'))
@@ -81,6 +96,39 @@ class _CustomProviderSheetState extends State<_CustomProviderSheet> {
   String? get _modelsError =>
       _modelIDs.isEmpty ? _l10n.customProviderErrorModels : null;
 
+  /// A numeric token field: empty is fine (the server default holds),
+  /// anything typed must be a positive whole number.
+  int? _limitOf(TextEditingController field) {
+    final text = field.text.trim();
+    if (text.isEmpty) return null;
+    return int.tryParse(text);
+  }
+
+  bool get _limitsValid {
+    for (final field in [_context, _input, _output]) {
+      final text = field.text.trim();
+      if (text.isNotEmpty &&
+          (_limitOf(field) == null || _limitOf(field)! <= 0)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  String? get _limitsError {
+    if (!_limitsValid) return _l10n.customProviderErrorLimit;
+    // The server's `limit` object takes context+output as a pair.
+    if ((_context.text.trim().isEmpty) != (_output.text.trim().isEmpty)) {
+      return _l10n.customProviderErrorLimitPair;
+    }
+    final context = _limitOf(_context);
+    final input = _limitOf(_input);
+    if (context != null && input != null && input > context) {
+      return _l10n.customProviderErrorLimitInput;
+    }
+    return null;
+  }
+
   String? get _headersError {
     // Every non-empty line must read "Name: value" or the person sees a
     // header that silently never reached the server.
@@ -120,7 +168,8 @@ class _CustomProviderSheetState extends State<_CustomProviderSheet> {
     if (_idError != null ||
         _urlError != null ||
         _modelsError != null ||
-        _headersError != null) {
+        _headersError != null ||
+        _limitsError != null) {
       return;
     }
     final l10n = _l10n;
@@ -132,6 +181,11 @@ class _CustomProviderSheetState extends State<_CustomProviderSheet> {
       models: _modelIDs,
       npm: _protocol,
       headers: _headerMap,
+      contextLimit: _limitOf(_context),
+      inputLimit: _limitOf(_input),
+      outputLimit: _limitOf(_output),
+      reasoning: _reasoning,
+      defaultEffort: _reasoning ? _defaultEffort : null,
     );
     setState(() => _saving = true);
     try {
@@ -165,6 +219,9 @@ class _CustomProviderSheetState extends State<_CustomProviderSheet> {
     _key.dispose();
     _models.dispose();
     _headers.dispose();
+    _context.dispose();
+    _input.dispose();
+    _output.dispose();
     super.dispose();
   }
 
@@ -245,6 +302,38 @@ class _CustomProviderSheetState extends State<_CustomProviderSheet> {
         ),
         gap,
         KitField(
+          fieldKey: const ValueKey('custom-provider-context'),
+          label: l10n.customProviderContextField,
+          controller: _context,
+          kind: KitFieldKind.number,
+          hint: '512000',
+          helper: l10n.customProviderLimitsHelper,
+          error: _showErrors ? _limitsError : null,
+          enabled: !_saving,
+          disabledReason: _saving ? l10n.e7LibraryUpdating : null,
+        ),
+        gap,
+        KitField(
+          fieldKey: const ValueKey('custom-provider-output'),
+          label: l10n.customProviderOutputField,
+          controller: _output,
+          kind: KitFieldKind.number,
+          hint: '64000',
+          enabled: !_saving,
+          disabledReason: _saving ? l10n.e7LibraryUpdating : null,
+        ),
+        gap,
+        KitField(
+          fieldKey: const ValueKey('custom-provider-input'),
+          label: l10n.customProviderInputField,
+          controller: _input,
+          kind: KitFieldKind.number,
+          hint: '448000',
+          enabled: !_saving,
+          disabledReason: _saving ? l10n.e7LibraryUpdating : null,
+        ),
+        gap,
+        KitField(
           fieldKey: const ValueKey('custom-provider-headers'),
           label: l10n.customProviderHeadersField,
           controller: _headers,
@@ -284,6 +373,33 @@ class _CustomProviderSheetState extends State<_CustomProviderSheet> {
         KitRowGroup(
           margin: EdgeInsets.zero,
           children: [
+            KitSwitchRow(
+              title: l10n.customProviderThinking,
+              supporting: l10n.customProviderThinkingHint,
+              value: _reasoning,
+              switchKey: const ValueKey('custom-provider-thinking'),
+              onChanged: _saving
+                  ? null
+                  : (value) => setState(() => _reasoning = value),
+              disabledReason: _saving ? l10n.e7LibraryUpdating : null,
+            ),
+            if (_reasoning)
+              KitPickerRow<String>(
+                title: l10n.customProviderDefaultEffort,
+                rowKey: const ValueKey('custom-provider-effort'),
+                choices: [
+                  KitChoice(value: '', title: l10n.customProviderEffortServer),
+                  for (final tier in CustomProviderSpec.reasoningEffortTiers)
+                    KitChoice(value: tier, title: _effortLabel(l10n, tier)),
+                ],
+                selected: _defaultEffort ?? '',
+                onSelected: _saving
+                    ? null
+                    : (value) => setState(
+                        () => _defaultEffort = value.isEmpty ? null : value,
+                      ),
+                disabledReason: _saving ? l10n.e7LibraryUpdating : null,
+              ),
             KitSwitchRow(
               title: l10n.customProviderSetDefault,
               supporting: l10n.customProviderSetDefaultHint,

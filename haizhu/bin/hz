@@ -461,36 +461,67 @@ provider_list() {
   '
 }
 # provider add <id> <baseURL> <model...> [--name N] [--key K] [--npm P] [--default]
+#                                     [--context N] [--output N] [--input N]
+#                                     [--thinking] [--effort none|low|medium|high|xhigh]
+# --context/--output 成对写 limit（缺省服务器给 200k/32k 假值）；
+# --thinking 写 reasoning+五档 variants（档位名→reasoningEffort）。
 provider_add() {
-  [ $# -ge 3 ] || die "provider add <id> <baseURL> <model...> [--name N] [--key K] [--npm P] [--default]"
+  [ $# -ge 3 ] || die "provider add <id> <baseURL> <model...> [--name N] [--key K] [--npm P] [--default] [--context N --output N] [--input N] [--thinking] [--effort T]"
   command -v node >/dev/null 2>&1 || die "provider needs node"
   local id="$1" url="$2"; shift 2
   local name="" key="" npm="@ai-sdk/openai-compatible" def="" models=""
+  local ctx="" out="" inp="" think="" effort=""
   while [ $# -gt 0 ]; do
     case "$1" in
       --name) name="$2"; shift 2 ;;
       --key) key="$2"; shift 2 ;;
       --npm) npm="$2"; shift 2 ;;
       --default) def="1"; shift ;;
+      --context) ctx="$2"; shift 2 ;;
+      --output) out="$2"; shift 2 ;;
+      --input) inp="$2"; shift 2 ;;
+      --thinking) think="1"; shift ;;
+      --effort) effort="$2"; shift 2 ;;
       *) models="$models $1"; shift ;;
     esac
   done
   [ -n "$models" ] || die "provider add: at least one model id"
+  if { [ -z "$ctx" ] && [ -n "$out" ]; } || { [ -n "$ctx" ] && [ -z "$out" ]; }; then
+    die "provider add: --context and --output go together"
+  fi
   [ -d "${OC2_JSON%/*}" ] || mkdir -p "${OC2_JSON%/*}"
   HZ_JSON="$OC2_JSON" HZ_ID="$id" HZ_URL="$url" HZ_NAME="$name" HZ_KEY="$key" \
-    HZ_NPM="$npm" HZ_MODELS="$models" HZ_DEF="$def" node -e '
+    HZ_NPM="$npm" HZ_MODELS="$models" HZ_DEF="$def" \
+    HZ_CTX="$ctx" HZ_OUT="$out" HZ_INP="$inp" HZ_THINK="$think" HZ_EFFORT="$effort" \
+    node -e '
     const fs = require("fs"), e = process.env;
     const f = e.HZ_JSON;
     let j = {};
     try { j = JSON.parse(fs.readFileSync(f, "utf8")); } catch (x) {}
     const models = e.HZ_MODELS.trim().split(/\s+/);
+    const num = s => { const n = parseInt(s, 10); return Number.isFinite(n) ? n : null; };
+    const ctx = num(e.HZ_CTX), out = num(e.HZ_OUT), inp = num(e.HZ_INP);
+    const tiers = ["none", "low", "medium", "high", "xhigh"];
+    const modelEntry = () => {
+      const m = {};
+      if (ctx != null && out != null) {
+        m.limit = { context: ctx, output: out };
+        if (inp != null) m.limit.input = inp;
+      }
+      if (e.HZ_THINK === "1") {
+        m.reasoning = true;
+        m.variants = Object.fromEntries(tiers.map(t => [t, { reasoningEffort: t }]));
+        if (tiers.includes(e.HZ_EFFORT)) m.options = { reasoningEffort: e.HZ_EFFORT };
+      }
+      return m;
+    };
     const entry = {
       npm: e.HZ_NPM,
       options: {
         baseURL: e.HZ_URL,
         apiKey: e.HZ_KEY.trim() === "" ? "none" : e.HZ_KEY.trim(),
       },
-      models: Object.fromEntries(models.map(m => [m, {}])),
+      models: Object.fromEntries(models.map(m => [m, modelEntry()])),
     };
     if (e.HZ_NAME.trim() !== "") entry.name = e.HZ_NAME.trim();
     j.provider = j.provider || {};

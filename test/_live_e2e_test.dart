@@ -6,6 +6,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:haizhucode/api2/client.dart';
 import 'package:haizhucode/api2/gateway_operations.dart';
+import 'package:haizhucode/api2/models.dart';
 import 'package:haizhucode/domain/server_gateway.dart';
 
 void main() {
@@ -31,6 +32,10 @@ void main() {
           baseURL: 'https://api.e2e.local/v1',
           apiKey: 'sk-e2e',
           models: ['e2e-model'],
+          contextLimit: 256000,
+          outputLimit: 32000,
+          reasoning: true,
+          defaultEffort: 'low',
         ),
       );
       await gateway.setServerDefaultModel('e2e-check', 'e2e-model');
@@ -43,12 +48,37 @@ void main() {
           temperature: 0.4,
         ),
       );
-      final configured = await gateway.configuredAssistants();
-      final found = configured.where((a) => a.id == 'e2e-ast');
+      // fs/write hot-reloads asynchronously — poll /config until the
+      // write is reflected rather than racing it.
+      List<AssistantPresetSpec> found = const [];
+      for (var i = 0; i < 20; i++) {
+        found = (await gateway.configuredAssistants())
+            .where((a) => a.id == 'e2e-ast')
+            .toList();
+        if (found.isNotEmpty) break;
+        await Future<void>.delayed(const Duration(milliseconds: 300));
+      }
       expect(found, hasLength(1));
       expect(found.single.mode, 'all');
       expect(found.single.temperature, 0.4);
       expect(found.single.prompt, 'be nice');
+
+      // The model catalog surfaces the written limit and five-tier
+      // variants (the server defaults to a fake 200k/32k + three tiers).
+      Api2ModelInfo? model;
+      for (var i = 0; i < 20; i++) {
+        for (final m in await client.models()) {
+          if (m.providerID == 'e2e-check' && m.modelID == 'e2e-model') {
+            model = m;
+          }
+        }
+        if (model != null) break;
+        await Future<void>.delayed(const Duration(milliseconds: 300));
+      }
+      expect(model, isNotNull);
+      expect(model!.limit.context, 256000);
+      expect(model.limit.output, 32000);
+      expect(model.variants, hasLength(5));
 
       await gateway.removeCustomProvider('e2e-check');
       await gateway.removeAssistantPreset('e2e-ast');

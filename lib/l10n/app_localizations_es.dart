@@ -36137,6 +36137,59 @@ class AppLocalizationsEs extends AppLocalizations {
       'Write each header as Header-Name: value.';
 
   @override
+  String get customProviderContextField => 'Context window (tokens)';
+
+  @override
+  String get customProviderOutputField => 'Max output tokens';
+
+  @override
+  String get customProviderInputField => 'Max input tokens (optional)';
+
+  @override
+  String get customProviderLimitsHelper =>
+      'Applies to every model in the list. Leave empty to keep the server\'s defaults (200K context, 32K output).';
+
+  @override
+  String get customProviderErrorLimit =>
+      'Enter a positive whole number of tokens.';
+
+  @override
+  String get customProviderErrorLimitPair =>
+      'Fill in both the context window and the max output — the server stores them as a pair.';
+
+  @override
+  String get customProviderErrorLimitInput =>
+      'Max input cannot exceed the context window.';
+
+  @override
+  String get customProviderThinking => 'Thinking levels';
+
+  @override
+  String get customProviderThinkingHint =>
+      'Offer a five-step effort picker (off/low/medium/high/max) on these models.';
+
+  @override
+  String get customProviderDefaultEffort => 'Default effort';
+
+  @override
+  String get customProviderEffortServer => 'Server default';
+
+  @override
+  String get customProviderEffortNone => 'Off';
+
+  @override
+  String get customProviderEffortLow => 'Low';
+
+  @override
+  String get customProviderEffortMedium => 'Medium';
+
+  @override
+  String get customProviderEffortHigh => 'High';
+
+  @override
+  String get customProviderEffortXhigh => 'Max';
+
+  @override
   String get assistantsLabel => 'Assistants';
 
   @override

@@ -2,6 +2,21 @@
 
 This project is in public alpha. Only the newest preview is supported.
 
+## 1.0.6+7 — 2026-11-11
+
+Custom-provider context limits + five-tier thinking. Full notes:
+[docs/releases/v1.0.6+7.md](docs/releases/v1.0.6+7.md).
+- Fixed: imported custom APIs always reported a 200k context — the
+  written model entries carried no `limit`, so the server applied its
+  200k/32k default. The form now takes context window, max output and
+  optional max input per provider.
+- New: "Thinking levels" switch writes `reasoning: true` plus the
+  five-tier effort picker (`none/low/medium/high/xhigh`) with a
+  selectable default effort — each variant carries `reasoningEffort`
+  into the request body.
+- Changed: `hz provider add` accepts `--context/--output [--input]`
+  `--thinking --effort`, writing the same verified shape.
+
 ## 1.0.5+6 — 2026-11-10
 
 DSHA theme port — new default look. Full notes:

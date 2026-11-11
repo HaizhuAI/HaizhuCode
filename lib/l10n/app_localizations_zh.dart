@@ -34006,6 +34006,55 @@ class AppLocalizationsZh extends AppLocalizations {
   String get customProviderErrorHeaders => '每个请求头按 Header-Name: 值 的格式书写。';
 
   @override
+  String get customProviderContextField => '上下文窗口（token 数）';
+
+  @override
+  String get customProviderOutputField => '最大输出 token 数';
+
+  @override
+  String get customProviderInputField => '最大输入 token 数（可选）';
+
+  @override
+  String get customProviderLimitsHelper =>
+      '对列表中每个模型生效。留空则沿用服务器默认值（上下文 200K、输出 32K）。';
+
+  @override
+  String get customProviderErrorLimit => '请输入正整数的 token 数。';
+
+  @override
+  String get customProviderErrorLimitPair => '上下文窗口和最大输出需同时填写——服务器将二者成对存储。';
+
+  @override
+  String get customProviderErrorLimitInput => '最大输入不能超过上下文窗口。';
+
+  @override
+  String get customProviderThinking => '思考档位';
+
+  @override
+  String get customProviderThinkingHint => '为这些模型提供五档思考强度选择（关/低/中/高/最高）。';
+
+  @override
+  String get customProviderDefaultEffort => '默认档位';
+
+  @override
+  String get customProviderEffortServer => '服务器默认';
+
+  @override
+  String get customProviderEffortNone => '关';
+
+  @override
+  String get customProviderEffortLow => '低';
+
+  @override
+  String get customProviderEffortMedium => '中';
+
+  @override
+  String get customProviderEffortHigh => '高';
+
+  @override
+  String get customProviderEffortXhigh => '最高';
+
+  @override
   String get assistantsLabel => '助手';
 
   @override

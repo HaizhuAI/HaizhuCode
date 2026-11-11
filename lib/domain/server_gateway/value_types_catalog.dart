@@ -235,6 +235,31 @@ class CustomProviderSpec {
   /// Extra HTTP headers merged into `options.headers`.
   final Map<String, String> headers;
 
+  /// The model's total context window (`limit.context`). Without it the
+  /// server falls back to 200k for every custom model, so the usage
+  /// meter and truncation planning lie for anything bigger or smaller.
+  final int? contextLimit;
+
+  /// `limit.output` — the maximum the model may emit per reply. Written
+  /// whenever [contextLimit] is set: the server's `limit` object requires
+  /// the pair.
+  final int? outputLimit;
+
+  /// `limit.input` — the prompt-side ceiling when it differs from the
+  /// window (the window counts input + output + thinking). Optional.
+  final int? inputLimit;
+
+  /// Marks the models as reasoning-capable (`reasoning: true`) and
+  /// declares the five-tier effort picker — [reasoningEffortTiers] —
+  /// so the variant control offers off/low/medium/high/max instead of
+  /// the server's built-in three.
+  final bool reasoning;
+
+  /// The effort the model defaults to when the chat sends no variant:
+  /// `options.reasoningEffort`. Null leaves the server/model default.
+  /// Ignored unless [reasoning] is on.
+  final String? defaultEffort;
+
   const CustomProviderSpec({
     required this.id,
     required this.name,
@@ -243,6 +268,11 @@ class CustomProviderSpec {
     this.apiKey,
     this.npm = openAICompatibleNpm,
     this.headers = const {},
+    this.contextLimit,
+    this.outputLimit,
+    this.inputLimit,
+    this.reasoning = false,
+    this.defaultEffort,
   });
 
   /// The adapter for endpoints that speak `/v1/chat/completions` (also
@@ -252,6 +282,17 @@ class CustomProviderSpec {
 
   /// The adapter for endpoints that speak Anthropic's `/v1/messages`.
   static const anthropicNpm = '@ai-sdk/anthropic';
+
+  /// The five effort tiers the variant picker offers on reasoning models,
+  /// matching the catalog convention (off → max). Each variant carries its
+  /// `reasoningEffort` so the wire call maps the pick to the adapter param.
+  static const reasoningEffortTiers = [
+    'none',
+    'low',
+    'medium',
+    'high',
+    'xhigh',
+  ];
 
   static final _idPattern = RegExp(r'^[a-z0-9][a-z0-9-_]{0,62}$');
   static final _modelPattern = RegExp(r'^[A-Za-z0-9._:/-]+$');
@@ -287,6 +328,53 @@ class CustomProviderSpec {
         );
       }
     }
+    // The server's `limit` object requires context+output together, so the
+    // pair is all-or-nothing; `input` rides along as the optional third.
+    final context = contextLimit;
+    final output = outputLimit;
+    final input = inputLimit;
+    for (final limit in [context, output, input]) {
+      if (limit != null && limit <= 0) {
+        throw const ProductException(
+          'Token limits must be positive whole numbers',
+        );
+      }
+    }
+    if ((context == null) != (output == null)) {
+      throw const ProductException(
+        'Fill in both the context window and the max output',
+      );
+    }
+    if (context != null && input != null && input > context) {
+      throw const ProductException(
+        'Max input cannot exceed the context window',
+      );
+    }
+    final effort = defaultEffort?.trim();
+    if (effort != null &&
+        effort.isNotEmpty &&
+        !reasoningEffortTiers.contains(effort)) {
+      throw const ProductException('Pick one of the five effort tiers');
+    }
+    // Every declared model gets the same limits/variants: the form is
+    // provider-wide, per-model tuning stays a config-file edit.
+    Map<String, Object?> modelEntry() => <String, Object?>{
+      if (context != null)
+        'limit': {
+          'context': context,
+          'output': output,
+          'input': ?input,
+        },
+      if (reasoning) ...{
+        'reasoning': true,
+        'variants': {
+          for (final tier in reasoningEffortTiers)
+            tier: {'reasoningEffort': tier},
+        },
+        if (effort != null && effort.isNotEmpty)
+          'options': {'reasoningEffort': effort},
+      },
+    };
     final key = apiKey;
     return {
       if (npm.trim().isNotEmpty) 'npm': npm.trim(),
@@ -298,7 +386,7 @@ class CustomProviderSpec {
         'apiKey': (key == null || key.trim().isEmpty) ? 'none' : key.trim(),
         if (headers.isNotEmpty) 'headers': Map.of(headers),
       },
-      'models': {for (final model in modelIDs) model: <String, Object?>{}},
+      'models': {for (final model in modelIDs) model: modelEntry()},
     };
   }
 }

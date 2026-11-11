@@ -56604,6 +56604,102 @@ abstract class AppLocalizations {
   /// **'Write each header as Header-Name: value.'**
   String get customProviderErrorHeaders;
 
+  /// Custom provider form: the model's total context window
+  ///
+  /// In en, this message translates to:
+  /// **'Context window (tokens)'**
+  String get customProviderContextField;
+
+  /// Custom provider form: per-reply output cap
+  ///
+  /// In en, this message translates to:
+  /// **'Max output tokens'**
+  String get customProviderOutputField;
+
+  /// Custom provider form: prompt-side ceiling when it differs from the window
+  ///
+  /// In en, this message translates to:
+  /// **'Max input tokens (optional)'**
+  String get customProviderInputField;
+
+  /// Custom provider form: what the token limits mean
+  ///
+  /// In en, this message translates to:
+  /// **'Applies to every model in the list. Leave empty to keep the server\'s defaults (200K context, 32K output).'**
+  String get customProviderLimitsHelper;
+
+  /// Custom provider form: a token limit is not a positive integer
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a positive whole number of tokens.'**
+  String get customProviderErrorLimit;
+
+  /// Custom provider form: only one of context/output given
+  ///
+  /// In en, this message translates to:
+  /// **'Fill in both the context window and the max output — the server stores them as a pair.'**
+  String get customProviderErrorLimitPair;
+
+  /// Custom provider form: input limit larger than context
+  ///
+  /// In en, this message translates to:
+  /// **'Max input cannot exceed the context window.'**
+  String get customProviderErrorLimitInput;
+
+  /// Custom provider form: reasoning-capable switch
+  ///
+  /// In en, this message translates to:
+  /// **'Thinking levels'**
+  String get customProviderThinking;
+
+  /// Custom provider form: what the thinking switch does
+  ///
+  /// In en, this message translates to:
+  /// **'Offer a five-step effort picker (off/low/medium/high/max) on these models.'**
+  String get customProviderThinkingHint;
+
+  /// Custom provider form: effort used when the chat picks no tier
+  ///
+  /// In en, this message translates to:
+  /// **'Default effort'**
+  String get customProviderDefaultEffort;
+
+  /// Custom provider form: leave the effort to the server
+  ///
+  /// In en, this message translates to:
+  /// **'Server default'**
+  String get customProviderEffortServer;
+
+  /// Effort tier: thinking disabled
+  ///
+  /// In en, this message translates to:
+  /// **'Off'**
+  String get customProviderEffortNone;
+
+  /// Effort tier: low
+  ///
+  /// In en, this message translates to:
+  /// **'Low'**
+  String get customProviderEffortLow;
+
+  /// Effort tier: medium
+  ///
+  /// In en, this message translates to:
+  /// **'Medium'**
+  String get customProviderEffortMedium;
+
+  /// Effort tier: high
+  ///
+  /// In en, this message translates to:
+  /// **'High'**
+  String get customProviderEffortHigh;
+
+  /// Effort tier: maximum
+  ///
+  /// In en, this message translates to:
+  /// **'Max'**
+  String get customProviderEffortXhigh;
+
   /// Providers page: label of the assistants section
   ///
   /// In en, this message translates to:
